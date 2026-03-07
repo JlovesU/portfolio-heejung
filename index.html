@@ -1,34 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/common.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Park Heejung Portfolio</title>
+  <meta name="keyword" content="web portfolio, web publisher, 웹포트폴리오, 웹퍼블리셔">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="박희정의 웹 포트폴리오" />
+  <meta property="og:description" content="웹퍼블리셔 박희정의 웹포트폴리오 입니다."/>
+  <meta property="og:image" content="images/share.jpg?1" />
+  <meta property="og:url" content="https://jlovesu.github.io/" />
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
 <body>
-    <div class="alert-box" id="alert">
-        <span class="alertText">얼럿내용</span>
-        <button id="alertClose">닫기</button>
+
+<!-- HEADER -->
+<header>
+  <a href="#hero" class="logo">Park Heejung's <span>portfolio ✦</span></a>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#works">Works</a>
+    <a href="#contact-sec">Contact</a>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+    <span></span><span></span><span></span>
+  </button>
+</header><!-- //HEADER -->
+
+<!-- DIMMED BG -->
+<div class="drawer-dim" id="drawerDim"></div>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#works">Works</a>
+  <a href="#contact-sec">Contact</a>
+</div><!-- //MOBILE DRAWER -->
+
+<!-- HERO -->
+<section id="hero">
+  <!-- <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div> -->
+  <div class="hero-inner">
+    <div class="hero-chips">
+      <span class="chip chip-main chip-dot">Available for work</span>
+      <span class="chip chip-outline">Web Publisher</span>
+      <span class="chip chip-outline">Web Design</span>
     </div>
-    <button onclick="alertId()">버튼1</button>
-    <button onclick="alertPw()">버튼2</button>
+    <h1 class="hero-title">
+      Park Heejung<br>
+      <span class="gr">PORTFOLIO</span>
+    </h1>
+    <!-- <p class="hero-desc">
+      안녕하세요 박희정입니다.<br>
+      세밀한 마크업과 반응형 레이아웃으로 사용자 경험을 완성합니다.
+    </p> -->
+    <!-- <div class="hero-btns">
+      <a href="#works" class="btn-grad">작업물 보기 →</a>
+      <a href="#contact-sec" class="btn-ghost">연락하기</a>
+    </div> -->
+  </div>
+  <div class="scroll-hint">
+    <div class="mouse"></div>
+    <span>scroll</span>
+  </div>
+  <div class="img-bg"></div>
+</section><!-- //HERO -->
 
-    <script>
+<div class="divider"></div>
 
-        document.getElementById('alertClose').addEventListener('click', function(){
-            document.getElementById('alert').style.display = 'none';
-        });
+<!-- ABOUT -->
+<section class="sec-wrap" id="about">
+  <div class="sec-inner">
+    <div class="sec-label fade-up">about me</div>
+    <h2 class="sec-title fade-up">안녕하세요, <span>웹 퍼블리셔</span> ○○○입니다.</h2>
+    <div class="about-wrap">
+      <div class="about-profile fade-up">
+        <div class="profile-card">
+          <div class="avatar-wrap">
+            <div class="avatar">👨‍💻</div>
+            <div class="avatar-ring"></div>
+          </div>
+          <div class="profile-name">○○○</div>
+          <div class="profile-role">Web Publisher</div>
+          <div class="profile-stats">
+            <div class="pstat"><div class="pstat-n">3+</div><div class="pstat-l">Years</div></div>
+            <div class="pstat"><div class="pstat-n">40+</div><div class="pstat-l">Projects</div></div>
+            <div class="pstat"><div class="pstat-n">∞</div><div class="pstat-l">Passion</div></div>
+          </div>
+        </div>
+      </div><!--//about-profile-->
+      <div class="about-body fade-up">
+        <p>웹 표준과 접근성을 중시하는 <strong>웹 퍼블리셔</strong>로, 디자이너의 의도를 정확히 파악하고 구현하는 데 강점을 가지고 있습니다.</p>
+        <p>픽셀 하나도 허투루 보지 않는 꼼꼼함과, 다양한 디바이스에서 완벽하게 동작하는 <strong>반응형 레이아웃</strong> 구현을 자신합니다. 크로스 브라우징 이슈도 두렵지 않습니다.</p>
+        <p>최근에는 CSS 애니메이션과 인터랙션에도 관심을 가지며 공부 중입니다. 사용자가 즐거움을 느끼는 웹을 만들고 싶습니다.</p>
+        <div class="tag-list">
+          <span class="tag">꼼꼼한 마크업</span>
+          <span class="tag">반응형 레이아웃</span>
+          <span class="tag">웹 접근성</span>
+          <span class="tag">크로스 브라우징</span>
+          <span class="tag">협업 경험</span>
+          <span class="tag">UI 구현</span>
+        </div>
+      </div><!--//about-body-->
+    </div><!--//about-wrap-->
+  </div><!--//sec-inner-->
+</section><!-- //ABOUT -->
 
-        function alertId(){
-            document.getElementsByClassName('alertText')[0].innerHTML = '아이디를 입력하세요.';
-            document.getElementById('alert').style.display = 'block';
-        }
+<div class="divider"></div>
 
-        function alertPw(){
-            document.getElementsByClassName('alertText')[0].innerHTML = '비밀번호를 입력하세요.';
-            document.getElementById('alert').style.display = 'block';
-        }
-    </script>
+<!-- SKILLS -->
+<section class="sec-wrap" id="skills">
+  <div class="sec-inner">
+    <div class="sec-label fade-up">skills</div>
+    <h2 class="sec-title fade-up">기술 <span>스택</span></h2>
+    <div class="skills-wrap">
+      <div class="skill-card fade-up"><div class="skill-icon">🎨</div><h3>HTML / CSS</h3><p>시맨틱 마크업과 BEM 방법론으로 구조적인 코드 작성</p><div class="bar"><div class="bar-fill" style="width:92%"></div></div><div class="bar-meta"><span>HTML5 / CSS3</span><span>92%</span></div></div>
+      <div class="skill-card fade-up"><div class="skill-icon">⚡</div><h3>JavaScript</h3><p>DOM 조작, 이벤트 핸들링, 인터랙티브 UI 구현</p><div class="bar"><div class="bar-fill" style="width:75%"></div></div><div class="bar-meta"><span>Vanilla JS / ES6+</span><span>75%</span></div></div>
+      <div class="skill-card fade-up"><div class="skill-icon">📱</div><h3>Responsive Web</h3><p>Flexbox/Grid와 미디어쿼리로 완벽한 반응형 레이아웃 구현</p><div class="bar"><div class="bar-fill" style="width:90%"></div></div><div class="bar-meta"><span>Mobile-First</span><span>90%</span></div></div>
+      <div class="skill-card fade-up"><div class="skill-icon">🔧</div><h3>Sass / SCSS</h3><p>변수, 믹스인, 중첩으로 유지보수 가능한 스타일 구조 관리</p><div class="bar"><div class="bar-fill" style="width:80%"></div></div><div class="bar-meta"><span>Sass / SCSS</span><span>80%</span></div></div>
+      <div class="skill-card fade-up"><div class="skill-icon">🖌️</div><h3>Figma / Zeplin</h3><p>디자인 시안 분석 및 에셋 추출, 개발 가이드 해석</p><div class="bar"><div class="bar-fill" style="width:85%"></div></div><div class="bar-meta"><span>Design Tools</span><span>85%</span></div></div>
+      <div class="skill-card fade-up"><div class="skill-icon">🔀</div><h3>Git / GitHub</h3><p>버전 관리 및 팀 협업, PR 기반 워크플로우 경험</p><div class="bar"><div class="bar-fill" style="width:70%"></div></div><div class="bar-meta"><span>Git / GitHub</span><span>70%</span></div></div>
+    </div><!--//skills-wrap-->
+  </div><!--//sec-inner-->
+</section><!-- //SKILLS -->
+
+<div class="divider"></div>
+
+<!-- WORKS -->
+<section class="sec-wrap" id="works">
+  <div class="sec-inner">
+    <div class="sec-label fade-up">works</div>
+    <h2 class="sec-title fade-up">작업 <span>포트폴리오</span></h2>
+    <div class="works-wrap">
+      <div class="work-card fade-up"><div class="work-thumb">🛍️<div class="work-thumb-overlay"></div><div class="work-num">PROJECT 01</div></div><div class="work-body"><div class="work-chips"><span class="wchip">HTML/CSS</span><span class="wchip">JavaScript</span><span class="wchip">반응형</span></div><h3>쇼핑몰 리뉴얼 퍼블리싱</h3><p>패션 이커머스 사이트 전체 퍼블리싱. 모바일 우선 반응형 레이아웃 구현 및 웹 접근성 개선.</p><a href="#" class="work-link">자세히 보기 →</a></div></div>
+      <div class="work-card fade-up"><div class="work-thumb">🏢<div class="work-thumb-overlay"></div><div class="work-num">PROJECT 02</div></div><div class="work-body"><div class="work-chips"><span class="wchip">SCSS</span><span class="wchip">jQuery</span><span class="wchip">웹 접근성</span></div><h3>기업 브랜드 사이트</h3><p>스크롤 인터랙션과 카운터 애니메이션이 포함된 기업 홍보 웹사이트. 웹 접근성 A등급 달성.</p><a href="#" class="work-link">자세히 보기 →</a></div></div>
+      <div class="work-card fade-up"><div class="work-thumb">📰<div class="work-thumb-overlay"></div><div class="work-num">PROJECT 03</div></div><div class="work-body"><div class="work-chips"><span class="wchip">SCSS</span><span class="wchip">크로스브라우징</span><span class="wchip">다크모드</span></div><h3>뉴스 포털 UI 개편</h3><p>IE11 포함 크로스 브라우징 퍼블리싱. 다크모드 테마 시스템 구현으로 사용자 편의성 향상.</p><a href="#" class="work-link">자세히 보기 →</a></div></div>
+      <div class="work-card fade-up"><div class="work-thumb">🎓<div class="work-thumb-overlay"></div><div class="work-num">PROJECT 04</div></div><div class="work-body"><div class="work-chips"><span class="wchip">JavaScript</span><span class="wchip">LMS</span><span class="wchip">반응형</span></div><h3>이러닝 플랫폼 퍼블리싱</h3><p>강의 플랫폼의 수강 UI와 관리자 페이지 퍼블리싱. 복잡한 레이아웃을 명확하게 구조화.</p><a href="#" class="work-link">자세히 보기 →</a></div></div>
+    </div><!--//works-wrap-->
+  </div><!--//sec-inner-->
+</section><!-- //WORKS -->
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section class="sec-wrap" id="contact-sec">
+  <div class="sec-inner">
+    <div class="sec-label fade-up" style="justify-content:center">contact</div>
+    <h2 class="sec-title fade-up" style="text-align:center">함께 <span>만들어요</span></h2>
+    <div class="contact-card fade-up">
+      <span class="contact-emoji">✉️</span>
+      <h3>프로젝트 문의 환영합니다</h3>
+      <p>퍼블리싱 협업, 채용 제안, 프리랜서 의뢰 등<br>어떤 내용이든 편하게 연락주세요.</p>
+      <div class="contact-items">
+        <a href="mailto:parkvamp@naver.com" class="citem">📧 parkvamp@naver.com</a>
+        <!-- <a href="#" class="citem">💼 LinkedIn</a>
+        <a href="#" class="citem">🐙 GitHub</a> -->
+      </div>
+    </div><!--//contact-card-->
+  </div><!--//sec-inner-->
+</section><!-- //CONTACT -->
+
+<footer><p>© 2026 <strong>Park Heejung</strong> · Designed &amp; Published with ❤️</p></footer>
+
+<!-- GO TO TOP -->
+<button class="goto-top" id="gotoTop" aria-label="맨 위로">
+  <svg viewBox="0 0 24 24">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
 </body>
 </html>

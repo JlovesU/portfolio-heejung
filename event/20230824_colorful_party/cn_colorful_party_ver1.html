@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8">
+	<title>现代百货网上免税店</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="../../../CN/js/CN/jquery-1.12.4.min.js"></script>
+	<script src="../../../CN/js/CN/jquery-ui.js"></script>
+	<script src="../../../CN/js/CN/jquery.bxslider.js"></script>
+	<script src="../../../CN/js/CN/swiper-bundle.min.js"></script>
+	<script src="../../../CN/js/CN/common.ui.js"></script>
+	<script src="../../../CN/js/CN/product.js"></script>
+	<link rel="stylesheet" href="../../../CN/css/CN/jquery-ui.css">
+	<link rel="stylesheet" href="../../../CN/css/CN/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../../../CN/css/CN/common.css">
+	<link rel="stylesheet" href="../../../CN/css/CN/layout.css">
+	<link rel="stylesheet" href="../../../CN/css/CN/product.css">
+	<link rel="stylesheet" href="../../../CN/css/CN/event.css">
+</head>
+<body>
+<div id="wrap">
+	<!-- S : header -->
+	<script src="../../../CN/html/include/header.js"></script>
+	<!-- E : header -->
+	<!-- S : container -->
+	<main id="container" class="container">
+		<!-- S : location -->
+		<article class="location">
+			<section class="box">
+				<a href="https://www.hddfs.com/shop/dm/main.do" class="home">主页</a> 
+				<div><a href="javascript:" class="no-link">이벤트</a></div>
+			</section>
+		</article>
+		<!-- E : location -->
+		<article id="content">
+			<section class="event">
+				<div class="event_top_share">
+					<a noHref class="ico_com round_favorite " onclick="mergeMyEvnt('0003167', this)">관심이벤트</a>
+				</div>
+				<div class="benefit_img">
+
+
+
+
+
+
+<!-- S : BO 등록 영역 -->
+<style type="text/css">
+/* reset */
+#content {width:100%;}
+.location, .event_top_share, .event_detail_ev_btn, .event_detail_con {display:none;}
+.attention_area, .tab-action, .evntGoosListArea, .spexGoosListArea {width:1080px; margin:0px auto;}
+.attention_area {margin:80px auto 100px;}
+
+/* common */
+.evt_wrap {width:100%; min-width:1340px; max-width:1920px;}
+.evt_sect {overflow:hidden; position:relative; width:100%;}
+.evt_temp {position:relative; width:1080px; height:100%; margin:0 auto;}
+.evt_temp .ev_btn {font-size:0; text-indent:-9999em; overflow:hidden;}
+
+/* event01 */
+#event01 {height:1057px; }
+#event01 .evt_visual_swiper {position:absolute; top:0; left:50%; margin-left:-960px; width:1920px; height:1057px;}
+#event01 .evt_visual_swiper .swiper-slide {position:relative; width:100%; height:100%;}
+
+/* event02 */
+#event02 {height:1740px; background:url('https://cdn.hddfs.com/files/dm/20230824/d36654c8_202308241656299250.png') top center no-repeat;}
+#event02 .img_blank {height:1740px!important;}
+#event02 .ev_btn_1 {top:1309px; left:326px; width:425px; height:94px;}
+#event02 .ev_btn_2 {bottom:0; left:0; width:100%; height:176px;}
+
+/* event03 */
+#event03 {height:1584px; background:url('https://cdn.hddfs.com/files/dm/20230824/32df5214_202308241656401760.png') top center no-repeat;}
+#event03 .img_blank {height:1584px!important;}
+#event03 .ev_btn {top:1246px; left:326px; width:425px; height:94px;}
+</style>
+<div class="evt_wrap">
+	<section class="evt_sect" id="event01">
+		<div class="swiper evt_visual_swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="https://cdn.hddfs.com/files/op/20230825/a6ab0255_202308251445002150.png" alt="[COLORFUL PARTY] Wonderful World Wonderful Sale">
+				</div>
+				<div class="swiper-slide">
+					<img src="https://cdn.hddfs.com/files/op/20230825/5452374d_202308251445092350.png" alt="[COLORFUL PARTY] Wonderful World Wonderful Sale">
+				</div>
+				<div class="swiper-slide">
+					<img src="https://cdn.hddfs.com/files/op/20230825/72e34e9f_202308251445164660.png" alt="[COLORFUL PARTY] Wonderful World Wonderful Sale">
+				</div>
+			</div>
+		</div><!--//evt_visual_swiper-->
+	</section>
+	<section class="evt_sect" id="event02" title="[Daily Benefit] 每天每日赠送活动PLUS积分！">
+		<div class="evt_temp">
+			<img class="img_blank" src="https://cdn.hddfs.com/files/editor/20190723/c02feac9_201907231257212110.gif" alt=""/>
+			<a class="ev_btn ev_btn_1" href="javascript:addEvnt('0004398');" title="立即下载">立即下载</a>
+			<a class="ev_btn ev_btn_2" href="https://cn.hd-dfs.com/event/op/bnf/listBnf.do" target="_blank" title="查看追加优惠购物更实惠">查看追加优惠购物更实惠</a>
+		</div>
+	</section>
+	<section class="evt_sect" id="event03" title="[Welcome to Hyundai] 新会员专享100%中奖优惠！">
+		<div class="evt_temp">
+			<img class="img_blank" src="https://cdn.hddfs.com/files/editor/20190723/c02feac9_201907231257212110.gif" alt=""/>
+			<a class="ev_btn" href="https://cn.hd-dfs.com/event/op/evnt/evntDetail.do?evntId=0004399" target="_blank" title="马上去查看">马上去查看</a>
+		</div>
+	</section>
+</div>
+<script>
+$(function(){
+	//swiper
+	var productSwiper = new Swiper(".evt_visual_swiper", {
+		speed: 0,
+		spaceBetween: 0,
+		loop: true,
+		allowTouchMove: false,
+		watchOverflow:true,
+		observer: true,
+		observeParents: true,
+		effect: 'fade',
+		fadeEffect: { 
+			crossFade: true,
+		},
+		autoplay: {
+			disableOnInteraction: true,
+			delay: 500,
+		},
+	});
+});
+</script>
+<!-- E : BO 등록 영역 -->
+
+
+
+
+
+				</div>
+				<div class="attention_area">
+					<p class="attention_tit">注意事项</p>
+					<ul class="attention_list">
+						<li>내용</li>
+					</ul>
+				</div>
+			</section><!--//event-->
+		</article><!--//content-->
+	</main>
+	<!-- E : container -->
+	<!-- S : footer -->
+	<script src="../../../CN/html/include/footer.js"></script>
+	<!-- E : footer -->
+</div><!--//wrap-->
+</body>

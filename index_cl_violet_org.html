@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Web Publisher</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+  :root {
+    --bg: #fafafa;
+    --bg2: #f3f0ff;
+    --surface: #ffffff;
+    --border: #e8e0ff;
+    --accent: #7c3aed;
+    --accent2: #a855f7;
+    --accent3: #c084fc;
+    --accent-light: #f5f0ff;
+    --text: #1a1a2e;
+    --muted: #6b7280;
+    --gradient: linear-gradient(135deg, #7c3aed, #a855f7, #ec4899);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ─── HEADER ─── */
+  header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+    padding: 0 5%; height: 66px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(250,250,250,0.88);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+  .logo {
+    font-size: 1.1rem; font-weight: 700; color: var(--text);
+    letter-spacing: -0.02em; text-decoration: none;
+    cursor: pointer;
+  }
+  .logo span { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+  /* Desktop nav */
+  nav { display: flex; gap: 2rem; }
+  nav a {
+    color: var(--muted); text-decoration: none; font-size: .88rem; font-weight: 500;
+    position: relative; transition: color .25s; padding-bottom: 2px;
+  }
+  nav a::after {
+    content: ''; position: absolute; bottom: -2px; left: 0;
+    width: 0; height: 2px; background: var(--gradient); border-radius: 2px; transition: width .3s;
+  }
+  nav a:hover { color: var(--accent); }
+  nav a:hover::after, nav a.active::after { width: 100%; }
+  nav a.active { color: var(--accent); }
+
+  /* ─── HAMBURGER ─── */
+  .hamburger {
+    display: none; flex-direction: column; justify-content: center;
+    gap: 5px; width: 40px; height: 40px; cursor: pointer;
+    background: none; border: none; padding: 4px;
+    border-radius: 8px;
+    position: relative; z-index: 310;
+  }
+  /* hover 없음 (요청사항) */
+  .hamburger span {
+    display: block; height: 2px; border-radius: 2px;
+    background: var(--text); transition: all .35s cubic-bezier(.4,0,.2,1);
+    transform-origin: center;
+  }
+  .hamburger span:nth-child(1) { width: 22px; }
+  .hamburger span:nth-child(2) { width: 16px; }
+  .hamburger span:nth-child(3) { width: 22px; }
+  .hamburger.open span { background: var(--text); }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); width: 22px; }
+  .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); width: 22px; }
+
+  /* ─── MOBILE MENU (Drawer + Dimmed BG) ─── */
+  /* 딤드 오버레이 — 헤더 아래부터 */
+  .drawer-dim {
+    display: none;
+    position: fixed; top: 66px; left: 0; right: 0; bottom: 0; z-index: 250;
+    background: rgba(0,0,0,0);
+    transition: background .35s ease;
+  }
+  .drawer-dim.open {
+    display: block;
+    background: rgba(0,0,0,0.45);
+  }
+
+  /* 드로어 패널 — 헤더 아래 왼쪽에서 슬라이드 */
+  .mobile-menu {
+    position: fixed; top: 66px; left: 0; bottom: 0; z-index: 300;
+    width: 80%;
+    max-width: 320px;
+    background: #fff;
+    box-shadow: 4px 0 40px rgba(0,0,0,0.12);
+    display: flex; flex-direction: column;
+    padding: 32px 36px 48px;
+    transform: translateX(-100%);
+    transition: transform .38s cubic-bezier(.4,0,.2,1);
+    pointer-events: none;
+  }
+  .mobile-menu.open {
+    transform: translateX(0);
+    pointer-events: all;
+  }
+
+  /* 드로어 메뉴 아이템 */
+  .mobile-menu a {
+    font-size: 1.1rem; font-weight: 600; color: var(--text);
+    text-decoration: none; padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    transition: color .2s;
+    text-align: left;
+    display: block;
+  }
+  .mobile-menu a:last-child { border-bottom: none; }
+  .mobile-menu a:hover { color: var(--accent); }
+
+  /* ─── HERO (full width) ─── */
+  #hero {
+    width: 100%; min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    padding: 120px 8% 100px;
+    position: relative; overflow: hidden;
+  }
+
+  /* Blobs */
+  .blob {
+    position: absolute; border-radius: 50%;
+    filter: blur(70px); pointer-events: none;
+  }
+  .blob1 {
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(168,85,247,.22), rgba(124,58,237,.10) 60%, transparent);
+    top: -200px; right: -200px;
+    animation: blobFloat1 10s ease-in-out infinite;
+  }
+  .blob2 {
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(236,72,153,.18), rgba(168,85,247,.09) 60%, transparent);
+    bottom: -150px; left: -180px;
+    animation: blobFloat2 13s ease-in-out infinite;
+  }
+  /* blob3 — 더 진하게 */
+  .blob3 {
+    width: 480px; height: 480px;
+    background: radial-gradient(circle,
+      rgba(124,58,237,.35) 0%,
+      rgba(168,85,247,.22) 40%,
+      rgba(236,72,153,.12) 70%,
+      transparent 100%
+    );
+    top: 50%; left: 50%; transform: translate(-50%,-50%);
+    filter: blur(60px);
+    animation: blobFloat3 7s ease-in-out infinite;
+  }
+  @keyframes blobFloat1 {
+    0%,100% { transform: translate(0,0) scale(1); }
+    33%      { transform: translate(-40px,30px) scale(1.05); }
+    66%      { transform: translate(30px,-40px) scale(0.95); }
+  }
+  @keyframes blobFloat2 {
+    0%,100% { transform: translate(0,0) scale(1); }
+    40%      { transform: translate(50px,-30px) scale(1.08); }
+    70%      { transform: translate(-30px,40px) scale(0.92); }
+  }
+  @keyframes blobFloat3 {
+    0%,100% { transform: translate(-50%,-50%) scale(1);   opacity: .9; }
+    50%      { transform: translate(-50%,-50%) scale(1.18); opacity: .6; }
+  }
+
+  /* Hero text */
+  .hero-inner { max-width: 960px; width: 100%; position: relative; z-index: 1; }
+  .hero-chips { display: flex; gap: .6rem; flex-wrap: wrap; margin-bottom: 2rem; animation: heroFadeUp .8s .1s both; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 5px 12px; border-radius: 100px; font-size: .72rem; font-weight: 600;
+    letter-spacing: .04em; text-transform: uppercase;
+  }
+  .chip-main { background: var(--gradient); color: #fff; }
+  .chip-outline { background: var(--accent-light); border: 1px solid var(--border); color: var(--accent); }
+  .chip-dot::before {
+    content: ''; width: 5px; height: 5px; border-radius: 50%; background: currentColor;
+    animation: blink 1.8s ease-in-out infinite;
+  }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+  .hero-title {
+    font-size: clamp(2.8rem, 6.5vw, 6rem); font-weight: 700;
+    line-height: 1.08; letter-spacing: -.03em; margin-bottom: 1.5rem; color: var(--text);
+    animation: heroFadeUp .9s .25s both;
+  }
+  .hero-title .gr {
+    background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    display: inline-block; background-size: 200% 200%;
+    animation: gradientShift 5s ease infinite;
+  }
+  @keyframes gradientShift {
+    0%,100% { background-position: 0% 50%; }
+    50%      { background-position: 100% 50%; }
+  }
+
+  .hero-desc {
+    font-size: 1.1rem; color: var(--muted); max-width: 560px;
+    margin-bottom: 2.5rem; line-height: 1.9;
+    animation: heroFadeUp .9s .4s both;
+  }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; animation: heroFadeUp .9s .55s both; }
+
+  @keyframes heroFadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .btn-grad {
+    padding: 14px 30px; background: var(--gradient); color: #fff;
+    border: none; border-radius: 12px; font-size: .92rem; font-weight: 600;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+    transition: all .3s; box-shadow: 0 6px 24px rgba(124,58,237,.3);
+    background-size: 200% 200%; animation: heroFadeUp .9s .55s both, gradientShift 4s 1s ease infinite;
+  }
+  .btn-grad:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(124,58,237,.4); }
+  .btn-ghost {
+    padding: 14px 30px; background: var(--surface); color: var(--text);
+    border: 1.5px solid var(--border); border-radius: 12px; font-size: .92rem; font-weight: 500;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all .3s;
+  }
+  .btn-ghost:hover { border-color: var(--accent2); color: var(--accent); transform: translateY(-3px); }
+
+  .scroll-hint {
+    position: absolute; bottom: 40px;
+    left: 0; right: 0;
+    margin: 0 auto;
+    width: fit-content;
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    color: var(--muted); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase;
+    animation: heroFadeUp .8s 1s both;
+  }
+  .mouse { width: 22px; height: 34px; border: 2px solid #c4b5fd; border-radius: 11px; position: relative; }
+  .mouse::before {
+    content: ''; position: absolute; top: 5px; left: 50%; transform: translateX(-50%);
+    width: 3px; height: 6px; background: var(--accent2); border-radius: 2px;
+    animation: ms 2s 1.2s infinite;
+  }
+  @keyframes ms { 0%{opacity:1;top:5px} 100%{opacity:0;top:16px} }
+
+  /* ─── GO TO TOP BUTTON ─── */
+  .goto-top {
+    position: fixed; bottom: 32px; right: 32px; z-index: 100;
+    width: 48px; height: 48px; border-radius: 50%;
+    background: var(--gradient); background-size: 200% 200%;
+    border: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 24px rgba(124,58,237,.35);
+    opacity: 0; pointer-events: none;
+    transform: translateY(16px);
+    transition: opacity .35s ease, transform .35s ease, box-shadow .25s;
+    animation: gradientShift 4s ease infinite;
+  }
+  .goto-top.visible {
+    opacity: 1; pointer-events: all; transform: translateY(0);
+  }
+  .goto-top:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(124,58,237,.5);
+  }
+  .goto-top svg {
+    width: 20px; height: 20px; stroke: #fff; stroke-width: 2.5;
+    stroke-linecap: round; stroke-linejoin: round; fill: none;
+  }
+
+  /* ─── SECTIONS ─── */
+  .sec-wrap { padding: 100px 5%; max-width: 1200px; margin: 0 auto; }
+  .sec-label {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: .72rem; font-weight: 700; color: var(--accent); letter-spacing: .1em;
+    text-transform: uppercase; margin-bottom: .8rem;
+  }
+  .sec-label::before { content: ''; display: inline-block; width: 20px; height: 2px; background: var(--gradient); border-radius: 2px; }
+  .sec-title {
+    font-size: clamp(1.8rem,3.5vw,2.8rem); font-weight: 700;
+    color: var(--text); letter-spacing: -.02em; line-height: 1.2; margin-bottom: 3rem;
+  }
+  .sec-title span { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .divider { height: 1px; background: linear-gradient(90deg,transparent,var(--border),transparent); max-width: 1200px; margin: 0 auto; }
+
+  /* ─── ABOUT ─── */
+  .about-wrap { display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: center; }
+  .profile-card {
+    width: 300px; margin: 0 auto;
+    background: var(--surface); border: 1.5px solid var(--border); border-radius: 24px;
+    padding: 2.5rem 2rem; text-align: center; position: relative; overflow: hidden;
+    box-shadow: 0 10px 40px rgba(124,58,237,.08);
+    transition: transform .3s, box-shadow .3s;
+  }
+  .profile-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(124,58,237,.14); }
+  .profile-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: var(--gradient); }
+  .avatar-wrap { position: relative; display: inline-block; margin-bottom: 1.2rem; }
+  .avatar {
+    width: 90px; height: 90px; border-radius: 50%; background: var(--gradient);
+    display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin: 0 auto;
+  }
+  .avatar-ring { position: absolute; inset: -4px; border-radius: 50%; border: 2px dashed var(--accent3); animation: spin 12s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .profile-name { font-size: 1.2rem; font-weight: 700; color: var(--text); margin-bottom: .3rem; }
+  .profile-role {
+    display: inline-block; padding: 3px 12px; border-radius: 100px;
+    background: var(--accent-light); color: var(--accent); font-size: .78rem; font-weight: 600; margin-bottom: 1.5rem;
+  }
+  .profile-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: .5rem; margin-top: 1.5rem; }
+  .pstat { background: var(--bg2); border-radius: 10px; padding: 10px 8px; }
+  .pstat-n { font-size: 1.2rem; font-weight: 700; background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .pstat-l { font-size: .65rem; color: var(--muted); }
+
+  .about-body p { color: var(--muted); line-height: 1.9; margin-bottom: 1.1rem; font-size: 1rem; }
+  .about-body strong { color: var(--text); font-weight: 600; }
+  .tag-list { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: 1.5rem; }
+  .tag { padding: 5px 12px; background: var(--accent-light); border: 1px solid var(--border); border-radius: 100px; font-size: .77rem; color: var(--accent); font-weight: 500; }
+
+  /* ─── SKILLS ─── */
+  .skills-wrap { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 1.2rem; }
+  .skill-card {
+    background: var(--surface); border: 1.5px solid var(--border); border-radius: 16px; padding: 1.6rem;
+    transition: all .3s; position: relative; overflow: hidden;
+  }
+  .skill-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: var(--gradient); transform: scaleX(0); transform-origin: left; transition: transform .4s;
+  }
+  .skill-card:hover { border-color: var(--accent3); transform: translateY(-4px); box-shadow: 0 12px 35px rgba(124,58,237,.1); }
+  .skill-card:hover::before { transform: scaleX(1); }
+  .skill-icon {
+    width: 44px; height: 44px; border-radius: 12px; background: var(--gradient);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem; margin-bottom: 1rem; box-shadow: 0 4px 12px rgba(124,58,237,.25);
+  }
+  .skill-card h3 { font-size: .95rem; font-weight: 700; color: var(--text); margin-bottom: .3rem; }
+  .skill-card p { font-size: .8rem; color: var(--muted); margin-bottom: 1.1rem; line-height: 1.7; }
+  .bar { height: 5px; background: var(--bg2); border-radius: 3px; overflow: hidden; margin-bottom: .3rem; }
+  .bar-fill { height: 100%; background: var(--gradient); border-radius: 3px; }
+  .bar-meta { display: flex; justify-content: space-between; font-size: .72rem; color: var(--muted); }
+
+  /* ─── WORKS ─── */
+  .works-wrap { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px,1fr)); gap: 1.5rem; }
+  .work-card {
+    background: var(--surface); border: 1.5px solid var(--border); border-radius: 18px;
+    overflow: hidden; transition: all .35s;
+  }
+  .work-card:hover { border-color: var(--accent3); transform: translateY(-6px); box-shadow: 0 20px 50px rgba(124,58,237,.12); }
+  .work-thumb {
+    aspect-ratio: 16/9; position: relative;
+    background: linear-gradient(135deg,#f5f0ff,#ede9fe 50%,#fdf4ff);
+    display: flex; align-items: center; justify-content: center; font-size: 3rem; overflow: hidden;
+  }
+  .work-thumb-overlay { position: absolute; inset: 0; background: linear-gradient(135deg,rgba(124,58,237,.06),rgba(236,72,153,.04)); }
+  .work-num { position: absolute; bottom: 10px; right: 14px; font-size: .7rem; font-weight: 700; color: var(--accent3); letter-spacing: .06em; }
+  .work-body { padding: 1.5rem; }
+  .work-chips { display: flex; gap: .35rem; flex-wrap: wrap; margin-bottom: .8rem; }
+  .wchip { padding: 2px 9px; border-radius: 100px; background: var(--accent-light); border: 1px solid var(--border); font-size: .68rem; color: var(--accent); font-weight: 600; }
+  .work-body h3 { font-size: 1.02rem; font-weight: 700; color: var(--text); margin-bottom: .45rem; }
+  .work-body p { font-size: .82rem; color: var(--muted); line-height: 1.7; }
+  .work-link {
+    display: inline-flex; align-items: center; gap: 5px; margin-top: 1rem;
+    font-size: .82rem; font-weight: 600;
+    background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    text-decoration: none; transition: gap .2s;
+  }
+  .work-link:hover { gap: 9px; }
+
+  /* ─── CONTACT ─── */
+  #contact-sec { text-align: center; }
+  .contact-card {
+    max-width: 660px; margin: 0 auto;
+    background: var(--surface); border: 1.5px solid var(--border); border-radius: 28px; padding: 4rem 3rem;
+    position: relative; overflow: hidden; box-shadow: 0 10px 40px rgba(124,58,237,.07);
+  }
+  .contact-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: var(--gradient); }
+  .contact-card::after {
+    content: ''; position: absolute; bottom: -100px; right: -100px;
+    width: 280px; height: 280px; background: radial-gradient(circle,rgba(168,85,247,.08),transparent 70%);
+    border-radius: 50%; pointer-events: none;
+  }
+  .contact-emoji { font-size: 3.5rem; margin-bottom: 1rem; display: block; }
+  .contact-card h3 { font-size: 1.5rem; font-weight: 700; color: var(--text); margin-bottom: .7rem; }
+  .contact-card p { color: var(--muted); margin-bottom: 2rem; line-height: 1.8; font-size: .97rem; }
+  .contact-items { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; }
+  .citem {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 20px; background: var(--bg); border: 1.5px solid var(--border); border-radius: 12px;
+    color: var(--muted); text-decoration: none; font-size: .85rem; font-weight: 500; transition: all .25s;
+  }
+  .citem:hover { border-color: var(--accent2); color: var(--accent); background: var(--accent-light); transform: translateY(-2px); }
+
+  /* ─── FOOTER ─── */
+  footer { border-top: 1px solid var(--border); padding: 2rem 5%; text-align: center; color: var(--muted); font-size: .8rem; }
+  footer strong { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+  /* ─── SCROLL FADE ─── */
+  .fade-up { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 768px) {
+    nav { display: none; }
+    .hamburger { display: flex; }
+    .about-wrap { grid-template-columns: 1fr; gap: 2.5rem; }
+    .sec-wrap { padding: 70px 5%; }
+    #hero { padding: 120px 6% 100px; }
+    .hero-title { font-size: 2.6rem; }
+    .contact-card { padding: 2.5rem 1.5rem; }
+    .goto-top { bottom: 24px; right: 20px; width: 44px; height: 44px; }
+  }
+  @media (min-width: 769px) {
+    .hamburger { display: none !important; }
+    .drawer-dim { display: none !important; }
+    .mobile-menu { display: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="#hero" class="logo">port<span>folio</span></a>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#works">Works</a>
+    <a href="#contact-sec">Contact</a>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="메뉴 열기">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- DIMMED BG -->
+<div class="drawer-dim" id="drawerDim"></div>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#works">Works</a>
+  <a href="#contact-sec">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+  <div class="hero-inner">
+    <div class="hero-chips">
+      <span class="chip chip-main chip-dot">Available for work</span>
+      <span class="chip chip-outline">Web Publisher</span>
+    </div>
+    <h1 class="hero-title">
+      Pixel-perfect<br>
+      <span class="gr">Web Publisher.</span>
+    </h1>
+    <p class="hero-desc">
+      HTML/CSS/JS로 디자인을 살아 숨쉬는 웹으로 만드는 웹 퍼블리셔입니다.<br>
+      세밀한 마크업과 반응형 레이아웃으로 사용자 경험을 완성합니다.
+    </p>
+    <div class="hero-btns">
+      <a href="#works" class="btn-grad">작업물 보기 →</a>
+      <a href="#contact-sec" class="btn-ghost">연락하기</a>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <div class="mouse"></div>
+    <span>scroll</span>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<div class="sec-wrap" id="about">
+  <div class="sec-label fade-up">about me</div>
+  <h2 class="sec-title fade-up">안녕하세요, <span>웹 퍼블리셔</span> ○○○입니다.</h2>
+  <div class="about-wrap">
+    <div class="fade-up">
+      <div class="profile-card">
+        <div class="avatar-wrap">
+          <div class="avatar">👨‍💻</div>
+          <div class="avatar-ring"></div>
+        </div>
+        <div class="profile-name">○○○</div>
+        <div class="profile-role">Web Publisher</div>
+        <div class="profile-stats">
+          <div class="pstat"><div class="pstat-n">3+</div><div class="pstat-l">Years</div></div>
+          <div class="pstat"><div class="pstat-n">40+</div><div class="pstat-l">Projects</div></div>
+          <div class="pstat"><div class="pstat-n">∞</div><div class="pstat-l">Passion</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="about-body fade-up">
+      <p>웹 표준과 접근성을 중시하는 <strong>웹 퍼블리셔</strong>로, 디자이너의 의도를 정확히 파악하고 구현하는 데 강점을 가지고 있습니다.</p>
+      <p>픽셀 하나도 허투루 보지 않는 꼼꼼함과, 다양한 디바이스에서 완벽하게 동작하는 <strong>반응형 레이아웃</strong> 구현을 자신합니다. 크로스 브라우징 이슈도 두렵지 않습니다.</p>
+      <p>최근에는 CSS 애니메이션과 인터랙션에도 관심을 가지며 공부 중입니다. 사용자가 즐거움을 느끼는 웹을 만들고 싶습니다.</p>
+      <div class="tag-list">
+        <span class="tag">꼼꼼한 마크업</span>
+        <span class="tag">반응형 레이아웃</span>
+        <span class="tag">웹 접근성</span>
+        <span class="tag">크로스 브라우징</span>
+        <span class="tag">협업 경험</span>
+        <span class="tag">UI 구현</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- SKILLS -->
+<div class="sec-wrap" id="skills">
+  <div class="sec-label fade-up">skills</div>
+  <h2 class="sec-title fade-up">기술 <span>스택</span></h2>
+  <div class="skills-wrap">
+    <div class="skill-card fade-up"><div class="skill-icon">🎨</div><h3>HTML / CSS</h3><p>시맨틱 마크업과 BEM 방법론으로 구조적인 코드 작성</p><div class="bar"><div class="bar-fill" style="width:92%"></div></div><div class="bar-meta"><span>HTML5 / CSS3</span><span>92%</span></div></div>
+    <div class="skill-card fade-up"><div class="skill-icon">⚡</div><h3>JavaScript</h3><p>DOM 조작, 이벤트 핸들링, 인터랙티브 UI 구현</p><div class="bar"><div class="bar-fill" style="width:75%"></div></div><div class="bar-meta"><span>Vanilla JS / ES6+</span><span>75%</span></div></div>
+    <div class="skill-card fade-up"><div class="skill-icon">📱</div><h3>Responsive Web</h3><p>Flexbox/Grid와 미디어쿼리로 완벽한 반응형 레이아웃 구현</p><div class="bar"><div class="bar-fill" style="width:90%"></div></div><div class="bar-meta"><span>Mobile-First</span><span>90%</span></div></div>
+    <div class="skill-card fade-up"><div class="skill-icon">🔧</div><h3>Sass / SCSS</h3><p>변수, 믹스인, 중첩으로 유지보수 가능한 스타일 구조 관리</p><div class="bar"><div class="bar-fill" style="width:80%"></div></div><div class="bar-meta"><span>Sass / SCSS</span><span>80%</span></div></div>
+    <div class="skill-card fade-up"><div class="skill-icon">🖌️</div><h3>Figma / Zeplin</h3><p>디자인 시안 분석 및 에셋 추출, 개발 가이드 해석</p><div class="bar"><div class="bar-fill" style="width:85%"></div></div><div class="bar-meta"><span>Design Tools</span><span>85%</span></div></div>
+    <div class="skill-card fade-up"><div class="skill-icon">🔀</div><h3>Git / GitHub</h3><p>버전 관리 및 팀 협업, PR 기반 워크플로우 경험</p><div class="bar"><div class="bar-fill" style="width:70%"></div></div><div class="bar-meta"><span>Git / GitHub</span><span>70%</span></div></div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- WORKS -->
+<div class="sec-wrap" id="works">
+  <div class="sec-label fade-up">works</div>
+  <h2 class="sec-title fade-up">작업 <span>포트폴리오</span></h2>
+  <div class="works-wrap">
+    <div class="work-card fade-up"><div class="work-thumb">🛍️<div class="work-thumb-overlay"></div><div class="work-num">PROJECT 01</div></div><div class="work-body"><div class="work-chips"><span class="wchip">HTML/CSS</span><span class="wchip">JavaScript</span><span class="wchip">반응형</span></div><h3>쇼핑몰 리뉴얼 퍼블리싱</h3><p>패션 이커머스 사이트 전체 퍼블리싱. 모바일 우선 반응형 레이아웃 구현 및 웹 접근성 개선.</p><a href="#" class="work-link">자세히 보기 →</a></div></div>
+    <div class="work-card fade-up"><div class="work-thumb">🏢<div class="work-thumb-overlay"></div><div class="work-num">PROJECT 02</div></div><div class="work-body"><div class="work-chips"><span class="wchip">SCSS</span><span class="wchip">jQuery</span><span class="wchip">웹 접근성</span></div><h3>기업 브랜드 사이트</h3><p>스크롤 인터랙션과 카운터 애니메이션이 포함된 기업 홍보 웹사이트. 웹 접근성 A등급 달성.</p><a href="#" class="work-link">자세히 보기 →</a></div></div>
+    <div class="work-card fade-up"><div class="work-thumb">📰<div class="work-thumb-overlay"></div><div class="work-num">PROJECT 03</div></div><div class="work-body"><div class="work-chips"><span class="wchip">SCSS</span><span class="wchip">크로스브라우징</span><span class="wchip">다크모드</span></div><h3>뉴스 포털 UI 개편</h3><p>IE11 포함 크로스 브라우징 퍼블리싱. 다크모드 테마 시스템 구현으로 사용자 편의성 향상.</p><a href="#" class="work-link">자세히 보기 →</a></div></div>
+    <div class="work-card fade-up"><div class="work-thumb">🎓<div class="work-thumb-overlay"></div><div class="work-num">PROJECT 04</div></div><div class="work-body"><div class="work-chips"><span class="wchip">JavaScript</span><span class="wchip">LMS</span><span class="wchip">반응형</span></div><h3>이러닝 플랫폼 퍼블리싱</h3><p>강의 플랫폼의 수강 UI와 관리자 페이지 퍼블리싱. 복잡한 레이아웃을 명확하게 구조화.</p><a href="#" class="work-link">자세히 보기 →</a></div></div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<div class="sec-wrap" id="contact-sec">
+  <div class="sec-label fade-up" style="justify-content:center">contact</div>
+  <h2 class="sec-title fade-up" style="text-align:center">함께 <span>만들어요</span></h2>
+  <div class="contact-card fade-up">
+    <span class="contact-emoji">✉️</span>
+    <h3>프로젝트 문의 환영합니다</h3>
+    <p>퍼블리싱 협업, 채용 제안, 프리랜서 의뢰 등<br>어떤 내용이든 편하게 연락주세요.</p>
+    <div class="contact-items">
+      <a href="mailto:hello@example.com" class="citem">📧 hello@example.com</a>
+      <a href="#" class="citem">💼 LinkedIn</a>
+      <a href="#" class="citem">🐙 GitHub</a>
+    </div>
+  </div>
+</div>
+
+<footer><p>© 2025 <strong>○○○</strong> · Designed &amp; Published with ❤️</p></footer>
+
+<!-- GO TO TOP -->
+<button class="goto-top" id="gotoTop" aria-label="맨 위로">
+  <svg viewBox="0 0 24 24">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+
+<script>
+  /* ── 햄버거 드로어 ── */
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const drawerDim  = document.getElementById('drawerDim');
+
+  function openDrawer() {
+    hamburger.classList.add('open');
+    mobileMenu.classList.add('open');
+    drawerDim.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDrawer() {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    drawerDim.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.contains('open') ? closeDrawer() : openDrawer();
+  });
+  drawerDim.addEventListener('click', closeDrawer);
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+
+  /* ── 부드러운 스크롤 ── */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) window.scrollTo({ top: t.getBoundingClientRect().top + scrollY - 66, behavior: 'smooth' });
+    });
+  });
+
+  /* ── 스크롤 fade-up ── */
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (en.isIntersecting) {
+        setTimeout(() => en.target.classList.add('visible'), +(en.target.dataset.d||0) * 120);
+        obs.unobserve(en.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach((el, i) => { el.dataset.d = i % 5; obs.observe(el); });
+
+  /* ── 현재 섹션 하이라이트 ── */
+  const navAs = document.querySelectorAll('nav a');
+  // nav 링크에 대응하는 섹션 ID만 추출
+  const navSecs = Array.from(navAs)
+    .map(a => document.querySelector(a.getAttribute('href')))
+    .filter(Boolean);
+
+  function updateActive() {
+    let cur = '';
+    navSecs.forEach(s => {
+      if (scrollY >= s.offsetTop - 90) cur = s.id;
+    });
+    navAs.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+  }
+
+  // 페이지 로드 시 초기 활성화
+  updateActive();
+
+  /* ── Go to Top 버튼 ── */
+  const gotoTop = document.getElementById('gotoTop');
+  window.addEventListener('scroll', () => {
+    updateActive();
+    gotoTop.classList.toggle('visible', scrollY > 400);
+  });
+  gotoTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+</script>
+</body>
+</html>

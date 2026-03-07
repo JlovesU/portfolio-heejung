@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>현대백화점인터넷면세점</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="../../../KO/js/KO/jquery-1.12.4.min.js"></script>
+	<script src="../../../KO/js/KO/jquery-ui.js"></script>
+	<script src="../../../KO/js/KO/jquery.bxslider.js"></script>
+	<script src="../../../KO/js/KO/swiper-bundle.min.js"></script>
+	<script src="../../../KO/js/KO/common.ui.js"></script>
+	<script src="../../../KO/js/KO/product.js"></script>
+	<link rel="stylesheet" href="../../../KO/css/KO/jquery-ui.css">
+	<link rel="stylesheet" href="../../../KO/css/KO/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../../../KO/css/KO/common.css">
+	<link rel="stylesheet" href="../../../KO/css/KO/layout.css">
+	<link rel="stylesheet" href="../../../KO/css/KO/product.css">
+</head>
+<body>
+<div id="wrap">
+	<!-- S : header -->
+	<script src="../../../KO/html/include/header.js"></script>
+	<!-- E : header -->
+	<!-- S : container -->
+	<main id="container" class="container">
+		<!-- S : location -->
+		<article class="location">
+			<section class="box">
+				<a href="https://www.hddfs.com/shop/dm/main.do" class="home">홈</a> 
+				<div><a href="javascript:" class="no-link">이벤트</a></div>
+			</section>
+		</article>
+		<!-- E : location -->
+		<article id="content">
+			<section class="event">
+				<div class="event_top_share">
+					<a noHref class="ico_com round_favorite " onclick="mergeMyEvnt('0003167', this)">관심이벤트</a>
+					<a noHref class="ico_com round_blog shareNaver">네이버블로그</a>
+					<a noHref class="ico_com round_facebook shareFacebook">페이스북</a>
+					<a noHref class="ico_com round_kakao shareKakao">카카오스토리</a>
+				</div>
+				<div class="benefit_img">
+
+
+
+
+
+
+<!-- S : BO 등록 영역 
+1 5억: 0005577
+2 쇼핑혜택 :  0005604
+3 핫딜 모음집 : 
+화장품: 0005605
+향수/헤어/바디: 0005606
+패션/라이프 : 0005607
+선글라스/시계/쥬얼리 : 0005608
+-->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+/* reset */
+#content {width:100%;}
+.event_detail_btn, .event_detail_con, .event_reserves_new, .event_random_reserves {display:none;}
+.attention_area, .benefit_content, .tab-action, .spexGoosListArea, .evntGoosListArea, #frmIntgLgin + div {width:1080px; margin:0px auto;}
+#header.area-gnb {min-width:1420px;}
+.attention_area, .benefit_content {margin-top:60px;}
+.location_all {width:1356px; padding:0;}
+.location {margin:0; padding:15px 0;}
+.event_top_share {position:absolute; top:10px; left:0; right:0; margin:0 auto; width:1356px;}
+
+/* common */
+.evt_wrap {overflow:hidden; width:100%; min-width:1420px; max-width:1920px; margin:0 auto; background-image:none;}
+.evt_wrap .abs {position:absolute;}
+.evt_wrap .obj {position:absolute; display:inline-block; z-index:2;}
+.evt_wrap .txt-info {font-size:16px; color:#373737;}
+.evt_wrap .hide {position:absolute;}
+.evt_wrap .eng {font-family: 'Montserrat', 'Noto Sans CJK KR', 'sans-serif';}
+.evt_wrap .evt_btn {position:absolute; display:inline-block; text-indent:-9999px; overflow:hidden; /*outline:1px solid red;*/}
+
+/* evt_top */
+.evt_top {width:100%; height:1214px; background:#8e9191 url('https://cdn.hddfs.com/files/op/20240628/67c492b0_202406281440262170.jpg') center top no-repeat;}
+.evt_top .wrapper {position:relative; width:1420px; height:100%; margin:0 auto; text-align:center;}
+.evt_top .wrapper .img_blank {width:100%; height:1214px !important;}
+.evt_top .wrapper .evt_tit {top:8%; left:0; right:0; transform:scale(.3); opacity:0; text-align:center; -webkit-animation:ani_zoomin .8s .5s ease-out forwards; animation:ani_zoomin .8s .5s ease-out forwards;}
+@keyframes ani_zoomin {
+	0% {transform:scale(.5); opacity:1;}
+	40% {transform:scale(1.1); opacity:1;}
+	100% {transform:scale(1); opacity:1;}
+}
+.evt_top .wrapper .txt1 {left:0; right:0; top:10%;}
+.evt_top .wrapper .txt2 {left:0; right:0; top:26.2%;}
+.evt_top .wrapper .txt3 {left:0; right:0; top:33.1%;}
+
+#evtCont {position:relative; z-index:2;}
+/* evt_nav */
+.evt_nav {overflow:hidden; width:100%; min-width:1356px; max-width:1920px; height:140px; background:#000;}
+.evt_nav .wrapper {width:100%; height:140px; background:#000; transition:all .2s;}
+.evt_nav .wrapper ul {display:flex; justify-content:center; align-items:center; width:1080px; height:100%; margin:0 auto;}
+.evt_nav .wrapper ul li {position:relative; width:calc(100% / 3); height:100%;}
+.evt_nav .wrapper ul li + li:before {content:""; position:absolute; left:0; top:50%; transform:translateY(-50%); display:block; width:1px; height:30px; background:#4d4d4d;}
+.evt_nav .wrapper ul li a {display:flex; justify-content:center; align-items:center; flex-wrap:wrap; flex-direction: column; gap:10px 0; width:100%; height:100%; color:#4d4d4d; font-size:24px; text-align:center; font-weight:700; transition:all .15s;}
+.evt_nav .wrapper ul li a span {display:block; width:100%; flex-shrink:0;}
+.evt_nav .wrapper ul li a:after {content:""; display:block; width:0; height:0; border-radius:50%; background:#ff6c00; opacity:0; transition:all .15s;}
+.evt_nav .wrapper ul li:hover a,
+.evt_nav .wrapper ul li.current a {color:#fff;}
+.evt_nav .wrapper ul li:hover a:after,
+.evt_nav .wrapper ul li.current a:after {width: 9px; height: 9px; opacity:1;}
+
+.evt_nav.fixed {height:90px;}
+.evt_nav.fixed .wrapper {position:fixed; z-index:10; top:121px!important; left:0; right:0; margin:0 auto;height:90px;}
+.evt_nav.fixed .wrapper ul li a {font-size:20px;}
+.evt_nav.stop .wrapper {position:absolute; z-index: 2; height:90px;}
+.evt_nav.stop .wrapper ul li a {font-size:20px;}
+
+/* 서브 evt_tab */
+.evt_tab {position:relative; background:#887972;}
+
+.tab_list {width:100%; background:#887972;}
+.tab_list ul {display:flex; justify-content:space-between; align-items:center; width:1050px; height:124px; margin:0 auto;} 
+.tab_list ul li {width:220px; height:55px; overflow:hidden;}
+.tab_list ul li a {display:flex; justify-content:center; align-items:center; width:100%; height:100%; border:2px solid #fff; border-radius:9999rem; opacity:.55; color:#fff; font-size:19px; font-weight:700;}
+.tab_list ul :is(li.active a, li:hover a) {opacity:1;}
+
+.tab_cont {display:none; overflow:hidden;}
+.tab_cont.active {display:block;}
+.tab_cont .wrapper {width:1080px; margin:0 auto; padding:110px 0;}
+.tab_cont .box_gray {background:#d2dfe6;}
+
+/*Title*/
+.evt_tit {text-align:center; margin-bottom:38px;}
+.evt_tit .deco_txt {font-size:13px; color:#000; font-weight:300;}
+.evt_tit .tit_txt {font-size:40px; color:#000; font-weight:700;}
+
+/* Bradn List*/
+.evt_wrap .list_brand {display:flex; flex-wrap:wrap; gap:20px 15px;}
+.evt_wrap .list_brand li {width:calc((100% - 30px) / 3)}
+.evt_wrap .list_brand li a {display:block; border-radius:14px; overflow:hidden; box-shadow:0px 0px 3px 3px rgba(0,0,0,0.04);}
+.evt_wrap .list_brand em {display:block; background:#fff; padding:18px 20px 0; text-align:center; color:#000;}
+.evt_wrap .list_brand .prod_brand {display:block; font-size:22px; font-weight:700; letter-spacing: -2px;}
+.evt_wrap .list_brand .prod_name {display:flex; justify-content:center; align-items:center; height:102px; font-size:18px; padding:5px 0 14px;}
+.evt_wrap .list_brand .prod_btn {display:flex; justify-content:center; align-items:center; background:#000; color:#fff; font-size:15px; height:44px;}
+.evt_wrap .list_brand .prod_btn:after {content:""; display:inline-block; margin-left:6px; background:url('https://cdn.hddfs.com/front/images/KO/common/n/icon_arrow_4.svg') no-repeat center center/contain; width:16px; height:16px;}
+.evt_wrap .list_brand .banner .prod_btn {display:none;}
+
+/* Coupon */
+/* .evt_box_coupon {background:#ededf0;} */
+.evt_box_coupon .list_coupon {display:flex; justify-content:space-between;}
+.evt_box_coupon .wrapper {width:1080px; margin:0 auto; padding:90px 0 140px; text-align:center;}
+.evt_box_coupon .coupon__box {position:relative; width:350px; height:190px; background:url("https://cdn.hddfs.com/files/op/20240524/977c89e0_202405240848342720.png") no-repeat center center/contain; padding:25px 120px 25px 30px; text-align:left;}
+.evt_box_coupon .coupon__box .coupon_name {color:#1b1e23; font-size:17px; font-weight:700;}
+.evt_box_coupon .coupon__box .coupon_count {margin-top:10px; color:#1b1e23; font-size:40px; font-weight:700;font-family:'Roboto', 'Noto Sans CJK KR', '본고딕', 'sans-serif', sans-serif; letter-spacing:-1px;}
+.evt_box_coupon .coupon__box .coupon_count span {font-size:13px; font-weight:700; margin-left: 5px;}
+.evt_box_coupon .coupon__box .coupon_info {margin-top:10px; color:#788497; font-size:14px;}
+
+/* Button */
+.evt_wrap .evt__btn {margin-top:15px; display:inline-flex; align-items:center; justify-content:space-between;  max-width:348px; height:69px; width:100%; padding:0 35px; font-size:20px; color:#fff; background-color:#000; border-radius:10px;}
+.evt_wrap .evt__btn + .evt__btn {margin-top:20px;}
+.evt_wrap .evt__btn::after {content:""; display: inline-block;}
+.evt_wrap .type-arrow::after {background:url("https://cdn.hddfs.com/files/editor/20221221/74de110c_202212211337092550.png") no-repeat; width:12px; height:23px;}
+.evt_wrap .type-down::after {background:url("https://cdn.hddfs.com/files/op/20240506/d2a56f38_202405061956594750.png") no-repeat; width:19px; height:19px;}
+
+/*evt_banner*/
+.evt_banner a {display:block;}
+.evt_banner a:nth-of-type(1) {margin-top:-55px;}
+</style>
+<div class="evt_wrap">
+	<div class="evt_top" data-aos="zoom-out" data-aos-offset="0" data-aos-duration="800">
+		<div class="wrapper">
+			<p class="obj txt1" data-aos="flip-down" data-aos-offset="0" data-aos-duration="600" data-aos-delay="400"><img src="https://cdn.hddfs.com/files/op/20240628/620687c8_202406281441587140.png" alt="총 5억 경품"></p>
+			<p class="obj txt2" data-aos="flip-down" data-aos-offset="0" data-aos-duration="600" data-aos-delay="700"><img src="https://cdn.hddfs.com/files/op/20240627/a202214d_202406271139321920.png" alt="현대 면세 쇼핑데이! EVERYDAY HYUNDAY"></p>
+			<p class="obj txt3" data-aos="fade" data-aos-offset="0" data-aos-duration="600" data-aos-delay="900"><img src="https://cdn.hddfs.com/files/op/20240627/075c2520_202406271139428680.png" alt="7월 1일 ~ 10월 31일"></p>
+		</div>
+	</div><!--// evt_top -->
+
+	<div id="evtCont">
+		<div class="evt_nav" id="evtTab">
+			<div class="wrapper">
+				<ul>
+					<li><a href="https://www.hddfs.com/event/op/evnt/evntDetail.do?evntId=0005577#anchor1"><span><em class="eng">5</em>억 경품</span></a></li>
+					<li><a href="https://www.hddfs.com/event/op/evnt/evntDetail.do?evntId=0005577#anchor2"><span>쇼핑 혜택</span></a></li>
+					<li class="current"><a href="https://www.hddfs.com/event/op/evnt/evntDetail.do?evntId=0005605#evtTab"><span>핫딜 모음집</span></a></li>
+				</ul>
+			</div>
+		</div><!--// evt_nav -->
+
+		<div class="evt_content" id="evtView">
+			<div class="tab_list">
+				<ul>
+					<li class="active"><a href="https://www.hddfs.com/event/op/evnt/evntDetail.do?evntId=0005605#evtTab">화장품</a></li>
+					<li><a href="https://www.hddfs.com/event/op/evnt/evntDetail.do?evntId=0005606#evtTab">향수 / 헤어 / 바디</a></li>
+					<li><a href="https://www.hddfs.com/event/op/evnt/evntDetail.do?evntId=0005607#evtTab">패션 / 라이프</a></li>
+					<li><a href="https://www.hddfs.com/event/op/evnt/evntDetail.do?evntId=0005608#evtTab">선글라스 / 시계 / 쥬얼리</a></li>
+				</ul>
+			</div><!--// tab_list -->
+		
+			<div class="tab_cont active">
+				<div class="wrapper">
+					<ul class="list_brand">
+						<li><a href="javascript:goProd('31851',0)"><img data-img="op/20240625/36076faa_202406251803558740.png"><em><span class="prod_brand">랑콤</span><span class="prod_name">선크림 라인 4종 &<br>스킨케어 3종 45% 할인</span></em></a></li>
+						<li><a href="javascript:goProd('31852',1)"><img data-img="op/20240625/75287e46_202406251813099070.png"><em><span class="prod_brand">키엘</span><span class="prod_name">여름 시즌 인기상품 7종 47% 할인</span></em></a></li>
+						<li><a href="javascript:goProd('31853',2)"><img data-img="op/20240625/9a151c94_202406251813197960.png"><em><span class="prod_brand">클라랑스</span><span class="prod_name">$1 이상 구매 시<br>추가 5,000원 브랜드플러스 적립금 증정</span></em></a></li>
+						<li><a href="javascript:goProd('31854',3)"><img data-img="op/20240625/b7e68f78_202406251813268900.png"><em><span class="prod_brand">로라메르시에</span><span class="prod_name">매트 아이 컬러 진저/<br>블러쉬 컬러 인퓨전 진저 51% 할인</span></em></a></li>
+						<li><a href="javascript:goProd('31855',4)"><img data-img="op/20240625/3d2281d1_202406251813320550.png"><em><span class="prod_brand">베네피트</span><span class="prod_name">포어페셔널 트리오, 단델리온 미니,<br> 단델리온 듀오 48% 할인</span></em></a></li>
+						<li><a href="https://www.hddfs.com/event/op/spex/dtlSpex.do?spexId=0003261"><img data-img="op/20240625/86ccf021_202406251813415800.png"><em><span class="prod_brand">루나솔</span><span class="prod_name">추천상품 4종 대상<br>스무딩 젤워시 샘플 3ea 증정</span></em></a></li>
+						<li><a href="javascript:goProd('31857',6)"><img data-img="op/20240625/155b5ce9_202406251815503620.png"><em><span class="prod_brand">맥/톰포드/에스티 로더/크리니크</span><span class="prod_name">여름 메이크업을 책임질<br>한국인 BEST 색조 상품 50%할인</span></em></a></li>
+						<li><a href="javascript:goProd('31858',7)"><img data-img="op/20240625/86b7eb1d_202406251813489500.png"><em><span class="prod_brand">에스티 로더/라 메르/맥/바비 브라운</span><span class="prod_name">한국인이 사랑하는 BEST OF BEST<br>럭셔리 클렌징 상품 50% 할인</span></em></a></li>
+						<li><a href="javascript:goProd('31859',8)"><img data-img="op/20240625/91fab826_202406251814187030.png"><em><span class="prod_brand">랩시리즈</span><span class="prod_name">BEST 데일리 레스큐 라인 2종 50% 할인</span></em></a></li>
+						<li><a href="https://www.hddfs.com/event/op/spex/dtlSpex.do?spexId=0003366"><img data-img="op/20240625/603e2c69_202406251814139520.png"><em><span class="prod_brand">브이티</span><span class="prod_name">콜라겐 리들샷 단독 25% 할인 + <br>리들샷 모델링팩 구매 시<br>본품 증정 혜택</span></em></a></li>
+						<li><a href="https://www.hddfs.com/event/op/spex/dtlSpex.do?spexId=0003370"><img data-img="op/20240625/15078521_202406251814091860.png"><em><span class="prod_brand">셀퓨전씨</span><span class="prod_name">특정 상품 구매 시<br>본품 증정 혜택</span></em></a></li>
+						<li><a href="https://www.hddfs.com/event/op/spex/dtlSpex.do?spexId=0003364"><img data-img="op/20240625/e884ee9e_202406251814035000.png"><em><span class="prod_brand">이니스프리</span><span class="prod_name">선라인 최대 38% 할인 +<br>
+							특정 상품 구매 시<br>
+							BEST 라인 샘플 증정 혜택</span></em></a></li>
+					</ul>
+				</div>
+				<div class="evt_box_coupon">
+					<div class="wrapper">
+						<div class="evt_tit">
+							<p class="deco_txt eng">SPECIAL BENEFITS</p>
+							<p class="tit_txt">국산화장품 카테고리 전용 추가 적립금 증정</p>
+						</div>
+						<ul class="list_coupon">
+							<li>
+								<div class="coupon__box">
+									<p class="coupon_name">이벤트플러스적립금</p>
+									<p class="coupon_count">3,000<span>원</span></p>
+									<p class="coupon_info">$50 이상 구매 시</p>
+								</div>
+								<a href="javascript:addEvnt('0005639', 1);" class="evt__btn type-down">다운로드 받기</a>
+							</li>
+							<li>
+								<div class="coupon__box">
+									<p class="coupon_name">이벤트플러스적립금</p>
+									<p class="coupon_count">7,000<span>원</span></p>
+									<p class="coupon_info">$100 이상 구매 시</p>
+								</div>
+								<a href="javascript:addEvnt('0005639', 2);" class="evt__btn type-down">다운로드 받기</a>
+							</li>
+							<li>
+								<div class="coupon__box">
+									<p class="coupon_name">이벤트플러스적립금</p>
+									<p class="coupon_count">12,000<span>원</span></p>
+									<p class="coupon_info">$150 이상 구매 시</p>
+								</div>
+								<a href="javascript:addEvnt('0005639', 3);" class="evt__btn type-down">다운로드 받기</a>
+							</li>
+						</ul>
+						
+					</div>
+				</div><!--//evt_box_coupon-->
+				<div class="evt_banner">
+					<a href="https://www.hddfs.com/event/op/spex/spexShop.do"><img src="https://cdn.hddfs.com/files/op/20240628/7f90c79d_202406281623185080.png" alt="더 많은 기획전 보러가기"></a>
+					<a href="https://www.hddfs.com/event/op/evnt/evntDetail.do?evntId=0005464"><img src="https://cdn.hddfs.com/files/op/20240626/459c9d81_202406261536459990.png" alt="여름 화장품의 모든것! SUMMER BEAUTY 기획전도 둘러보세요"></a>
+				</div>
+			</div><!--// [tab1] 화장품 -->
+
+		</div><!--//evt_content-->
+	</div><!--//evtCont-->
+</div><!--//evt_wrap-->
+
+<link rel="stylesheet" type="text/css" href="https://cdn.hddfs.com/front/css/KO/aos.css"><!-- aos -->
+<script type="text/javascript" src="https://cdn.hddfs.com/front/js/KO/aos.js"></script><!-- aos -->
+<script>
+$(window).load(function(){
+	// aos
+	AOS.init({
+		offset: 140,
+		duration: 650,
+		easing: 'ease-out',
+	});
+});
+
+$(function(){
+	//해시값으로 페이지 이동 시
+	var hashDiv = window.location.hash.substring().slice(0, 7);
+	if (hashDiv == "#evtTab"){
+		$('html,body').animate({scrollTop:$("#evtTab").offset().top - 120}, 500);
+	}
+
+	// tab fixed
+	var tabFix = function() {
+		var tabStr = $("#evtCont").offset();
+		var tabEnd = $("#footer").offset();
+		var tabEndHH = $("#footer").height();
+		var headerHH = $(".header").height();
+
+		if (($(window).scrollTop() > tabStr.top - 115 - headerHH) && ($(window).scrollTop() < tabEnd.top - headerHH - tabEndHH)) {
+			$("#evtTab").addClass("fixed");
+			$("#evtTab").removeClass("stop");
+			$(".evt_nav .wrapper").css("top", headerHH);
+		} else {
+			$("#evtTab").removeClass("fixed");
+			$("#evtTab").removeClass("stop");
+			$(".evt_nav .wrapper").css("top", 0);
+		}
+	}
+	$(window).scroll(function() {
+		tabFix();
+	});
+
+	// 서브탭
+	// $('.tab_list li').on('click', function(e) {
+	// 	e.preventDefault();
+	// 	$('html,body').animate({scrollTop:$('.tab_list').offset().top - 137}, 500); // header 120 + 90
+
+	// 	var tabId = $(this).attr('data-tab');
+	// 	$('.tab_list li').removeClass('active');
+	// 	$('.tab_cont').removeClass('active');
+	// 	$(this).addClass('active');
+	// 	$("#"+tabId).addClass('active');
+		
+	// 	$('.tab_cont [data-aos]').hide();
+	// 	$('.tab_cont [data-aos]').removeClass('aos-init').removeClass('aos-animate');
+
+	// 	setTimeout(function() {
+	// 		$('.tab_cont.active [data-aos]').show();
+	// 		evtAOS();
+	// 	}, 500);
+	// });
+
+	// 상품 리스트
+	function dataProd() {
+		$(".list_brand li a").each(function(){
+			// let dataLink = $(this).attr('data-url');
+			let dataImg = $(this).find('img').attr('data-img');
+			let dataBrand = $(this).find('.prod_brand').text();
+			// $(this).attr('href','https://m.hddfs.com/shop/' + dataLink);
+			$(this).find('img').attr('src','https://cdn.hddfs.com/files/' + dataImg + '?sf=webp&RS=350').attr('alt', dataBrand);
+			$(this).append('<span class="prod_btn">바로가기</span>');
+		});
+	};dataProd();
+});
+
+//하단 상품리스트 이동, 상품 탭 리스트도 변경
+function goProd(listID,index) {
+	fnViewSmalTitlList(listID);
+	$('html,body').animate({scrollTop:$('.tab_menu').offset().top - 50}, 500); //
+	$('.attention_area + div .tab-action li').eq(index).find('a').trigger('click');
+}
+</script>
+<!-- E : BO 등록 영역 -->
+
+
+
+
+
+
+				</div>
+				<div class="attention_area">
+					<p class="attention_tit">유의사항</p>
+					<ul class="attention_list">
+						<li>내용</li>
+					</ul>
+				</div>
+			</section><!--//event-->
+		</article><!--//content-->
+	</main>
+	<!-- E : container -->
+	<!-- S : footer -->
+	<script src="../../../KO/html/include/footer.js"></script>
+	<!-- E : footer -->
+</div><!--//wrap-->
+</body>
+</html>

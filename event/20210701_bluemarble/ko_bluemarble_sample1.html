@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>현대백화점인터넷면세점</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="../../../KO/js/KO/jquery-1.12.4.min.js"></script>
+	<script src="../../../KO/js/KO/jquery-ui.js"></script>
+	<script src="../../../KO/js/KO/jquery.bxslider.js"></script>
+	<script src="../../../KO/js/KO/swiper.min.js"></script>
+	<script src="../../../KO/js/KO/common.ui.js"></script>
+	<script src="../../../KO/js/KO/product.js"></script>
+	<link rel="stylesheet" href="../../../KO/css/KO/jquery-ui.css">
+	<link rel="stylesheet" href="../../../KO/css/KO/swiper.min.css">
+	<link rel="stylesheet" href="../../../KO/css/KO/common.css">
+	<link rel="stylesheet" href="../../../KO/css/KO/layout.css">
+	<link rel="stylesheet" href="../../../KO/css/KO/product.css">
+</head>
+<body>
+	<!-- S : header -->
+	<script src="../../../KO/html/include/header.js"></script>
+	<!-- E : header -->
+	<!-- S : contents -->
+	<div class="container">
+		<!-- S : left wing -->
+		<script src="../../../KO/html/include/left_wing.js"></script>
+		<!-- E : left wing -->
+		<section>
+			<!-- S : breadcrumb -->
+			<!--<script src="../include/breadcrumb_pro.js"></script>-->
+			<div class="breadcrumb type2">
+				<div class="breadcrumb_box">
+					<span class="home">홈</span>
+					<span class="depth_box"><em>이벤트/기획전</em></span>
+				</div>
+			</div>
+			<!-- E : breadcrumb -->
+			<div class="event_detail_wrap">
+
+
+
+
+
+<!-- S : BO 등록 영역 -->
+<style type="text/css">
+	/* coommon */
+	.clearfix:after {content: ""; display: table; clear: both}
+
+	/* button */
+	.roll-button {margin: 15px auto}
+	button {padding: 10px 50px; color: #ffffcc; background: #AA4F39; border: none; border-radius: 8px; box-shadow: 0 3px #802915; outline: none; transition: .3s}
+	button:hover, button:active {outline: none; background: #802915; cursor: pointer; padding: 11px 50px 9px 50px; margin-top: 15px}
+	.dice-board {width: 100%; height: 50%}
+	.container-dice {display: inline-block; margin-top: 100px; width: 300px; margin: 50px auto 0 auto}
+	.dice {position: relative; width: 200px; height: 200px; transform-style: preserve-3d; transition: transform 1s}
+	.divot {position: absolute; width: 40px; height: 40px; margin: -20px 0 0 -20px; border-radius: 20px; background: #000}
+	.dice-one {margin-left: 150px}
+	.dice-two {margin-left: 150px}
+	.side {background-color: rgba(255, 255, 204, 0.97); position: absolute; width: 200px; height: 200px; border: 2px solid black}
+	.side:nth-child(1) {transform: translateZ(100px)}
+	.side:nth-child(6) {transform: rotateY(180deg) translateZ(100px)}
+	.side:nth-child(3) {transform: rotateY(90deg) translateZ(100px)}
+	.side:nth-child(4) {transform: rotateY(-90deg) translateZ(100px)}
+	.side:nth-child(5) {transform: rotateX(90deg) translateZ(100px)}
+	.side:nth-child(2) {transform: rotateX(-90deg) translateZ(100px)}
+	.show-1 {transform: rotateX(720deg) rotateZ(-720deg)}
+	.show-6 {transform: rotateX(-900deg) rotateZ(1080deg)}
+	.show-3 {transform: rotateY(-450deg) rotateZ(-1440deg)}
+	.show-4 {transform: rotateY(810deg) rotateZ(720deg)}
+	.show-5 {transform: rotateX(-810deg) rotateZ(-1080deg)}
+	.show-2 {transform: rotateX(450deg) rotateZ(-720deg)}
+
+	/* dice dots */
+	.two-1, .three-1, .four-1, .five-1, .six-1 {top: 20%; left: 20%}
+	.four-3, .five-3, .six-4 {top: 20%; left: 80%}
+	.one-1, .three-2, .five-5 {top: 50%; left: 50%}
+	.four-2, .five-2, .six-3 {top: 80%; left: 20%}
+	.two-2, .three-3, .four-4, .five-4, .six-6 {top: 80%; left: 80%}
+	.six-2 {top: 50%; left: 20%}
+	.six-5 {top: 50%; left: 80%}
+</style>
+
+<div class="evt_temp">
+	<button id='srartButton' class='roll-button'>START!</button>
+
+	<div class="container-dice">
+		<div id='dice1' class="dice dice-one">
+			<div id="dice-one-side-one" class='side one'>
+				<div class="divot one-1"></div>
+			</div>
+			<div id="dice-one-side-two" class='side two'>
+				<div class="divot two-1"></div>
+				<div class="divot two-2"></div>
+			</div>
+			<div id="dice-one-side-three" class='side three'>
+				<div class="divot three-1"></div>
+				<div class="divot three-2"></div>
+				<div class="divot three-3"></div>
+			</div>
+			<div id="dice-one-side-four" class='side four'>
+				<div class="divot four-1"></div>
+				<div class="divot four-2"></div>
+				<div class="divot four-3"></div>
+				<div class="divot four-4"></div>
+			</div>
+			<div id="dice-one-side-five" class='side five'>
+				<div class="divot five-1"></div>
+				<div class="divot five-2"></div>
+				<div class="divot five-3"></div>
+				<div class="divot five-4"></div>
+				<div class="divot five-5"></div>
+			</div>
+			<div id="dice-one-side-six" class='side six'>
+				<div class="divot six-1"></div>
+				<div class="divot six-2"></div>
+				<div class="divot six-3"></div>
+				<div class="divot six-4"></div>
+				<div class="divot six-5"></div>
+				<div class="divot six-6"></div>
+			</div>
+		</div>
+	</div>
+	<div class="container-dice">
+		<div id='dice2' class="dice dice-two">
+			<div id="dice-two-side-one" class='side one'>
+				<div class="divot one-1"></div>
+			</div>
+			<div id="dice-two-side-two" class='side two'>
+				<div class="divot two-1"></div>
+				<div class="divot two-2"></div>
+			</div>
+			<div id="dice-two-side-three" class='side three'>
+				<div class="divot three-1"></div>
+				<div class="divot three-2"></div>
+				<div class="divot three-3"></div>
+			</div>
+			<div id="dice-two-side-four" class='side four'>
+				<div class="divot four-1"></div>
+				<div class="divot four-2"></div>
+				<div class="divot four-3"></div>
+				<div class="divot four-4"></div>
+			</div>
+			<div id="dice-two-side-five" class='side five'>
+				<div class="divot five-1"></div>
+				<div class="divot five-2"></div>
+				<div class="divot five-3"></div>
+				<div class="divot five-4"></div>
+				<div class="divot five-5"></div>
+			</div>
+			<div id="dice-two-side-six" class='side six'>
+				<div class="divot six-1"></div>
+				<div class="divot six-2"></div>
+				<div class="divot six-3"></div>
+				<div class="divot six-4"></div>
+				<div class="divot six-5"></div>
+				<div class="divot six-6"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	// Dice Roll
+	var elDiceOne  = document.getElementById('dice1');
+	var elDiceTwo  = document.getElementById('dice2');
+	var elStart  = document.getElementById('srartButton');
+
+	elStart.onclick = function () {comeOutRoll();};
+
+	// Come Out Roll Function
+	function comeOutRoll() {
+
+		// Initial dice variables
+		var diceOne   = Math.floor((Math.random() * 6) + 1);
+		var diceTwo   = Math.floor((Math.random() * 6) + 1);
+		var rollTotal = diceOne + diceTwo;
+
+		console.log(rollTotal + ' ' + diceOne + ' ' + diceTwo);
+		elDiceOne.classList.toggle('animate');
+		elDiceTwo.classList.toggle('animate');
+
+		//Dice reset and display
+		for (var i = 1; i <= 6; i++) {
+			elDiceOne.classList.remove('show-' + i);
+			if (diceOne === i) {
+				elDiceOne.classList.add('show-' + i);
+			}
+		}
+		for (var k = 1; k <= 6; k++) {
+			elDiceTwo.classList.remove('show-' + k);
+			if (diceTwo === k) {
+				elDiceTwo.classList.add('show-' + k);
+			}
+		}
+	}
+</script>
+<!-- E : BO 등록 영역 -->
+
+
+
+
+
+
+        </div>
+			<div class="attention_wrap mgtml">
+				<p class="ico_comb attention">유의사항</p>
+				<ul class="dot_list">
+					<li>이벤트 유의사항</li>
+				</ul>
+			</div>
+			<div class="event_detail_btn">
+				<a href="#;" class="btn_basic1 big">메인</a>
+			</div>
+		</section>
+	</div>
+	<!-- E : contents -->
+	<!-- S : right wing -->
+	<script src="../../../KO/html/include/right_wing.js"></script>
+	<!-- E : right wing -->
+	<!-- S : footer -->
+	<script src="../../../KO/html/include/footer.js"></script>
+	<!-- E : footer -->
+</body>
+</html>

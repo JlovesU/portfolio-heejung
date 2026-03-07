@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>현대백화점인터넷면세점</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="../../../KO/js/KO/jquery-1.12.4.min.js"></script>
+	<script src="../../../KO/js/KO/jquery-ui.js"></script>
+	<script src="../../../KO/js/KO/jquery.bxslider.js"></script>
+	<script src="../../../KO/js/KO/swiper-bundle.min.js"></script>
+	<script src="../../../KO/js/KO/common.ui.js"></script>
+	<script src="../../../KO/js/KO/product.js"></script>
+	<link rel="stylesheet" href="../../../KO/css/KO/jquery-ui.css">
+	<link rel="stylesheet" href="../../../KO/css/KO/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../../../KO/css/KO/common.css">
+	<link rel="stylesheet" href="../../../KO/css/KO/layout.css">
+	<link rel="stylesheet" href="../../../KO/css/KO/product.css">
+</head>
+<body>
+<div id="wrap">
+	<!-- S : header -->
+	<script src="../../../KO/html/include/header.js"></script>
+	<!-- E : header -->
+	<!-- S : container -->
+	<main id="container" class="container">
+		<!-- S : location -->
+		<article class="location">
+			<section class="box">
+				<a href="https://www.hddfs.com/shop/dm/main.do" class="home">홈</a> 
+				<div><a href="javascript:" class="no-link">이벤트</a></div>
+			</section>
+		</article>
+		<!-- E : location -->
+		<article id="content">
+			<section class="event">
+				<div class="event_top_share">
+					<a noHref class="ico_com round_favorite " onclick="mergeMyEvnt('0003167', this)">관심이벤트</a>
+					<a noHref class="ico_com round_blog shareNaver">네이버블로그</a>
+					<a noHref class="ico_com round_facebook shareFacebook">페이스북</a>
+					<a noHref class="ico_com round_kakao shareKakao">카카오스토리</a>
+				</div>
+				<div class="benefit_img">
+
+
+
+
+
+
+<!-- S : BO 등록 영역 -->
+<style type="text/css">
+	/* reset */
+	.location, .event_top_share, .event_detail_ev_btn {display:none;}
+	#content {width:100%;}
+	.attention_area, .tab-action, .evntGoosListArea, .spexGoosListArea {width:1080px; margin:0px auto;}
+	.attention_area {margin:80px auto 100px;}
+
+	/* common */
+	.evt_wrap {overflow:hidden; width:100%; min-width:1422px; max-width:1920px; margin:0 auto; margin-top:-60px;} /* header 121px - 섹션 위아래 60px씩 가려짐 */
+	.evt_wrap .section {overflow:hidden; text-align:normal;}
+	.evt_wrap .evt_temp {position:absolute; top:50%; left:50%; -webkit-transform:translate(-50%,-50%); -ms-transform:translate(-50%,-50%); transform:translate(-50%,-50%); width:1422px; height:calc(100% - 120px); margin:0 auto;} /* 해더값 120px 제외한 높이만큼 섹션 영역 */
+	.evt_wrap .ev_btn {z-index:2; font-size:0; text-indent:-9999px; overflow:hidden;}
+	.evt_wrap .img_blank {display:block; width:1422px;}
+	.evt_wrap .abs {display:block; position:absolute;}
+
+	.evt_wrap .section .evt_content {
+		width:100%; 
+		height:100%; 
+		-webkit-transform: translateY(20vh);
+		transform: translateY(20vh);
+		will-change: transform;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		-webkit-transition: all 2s cubic-bezier(0.22, 0.44, 0, 1);
+		transition: all 2s cubic-bezier(0.22, 0.44, 0, 1);
+	}
+	.evt_wrap .section.active .evt_content {
+		-webkit-transform: translateY(0vh);
+		transform: translateY(0vh);
+	}
+	.evt_wrap .section.stop .evt_content {
+		-webkit-transform: translateY(10vh);
+		transform: translateY(10vh);
+	}
+
+	/* fullpage custom */
+	/* fullpag nav */
+	#fp-nav ul li a span, .fp-slidesNav ul li a span {background:#313577!important;}
+	#fp-nav.fp-right {right:20px!important;}
+	
+	/*  slide effect */
+	.fp-slidesContainer {width:100%!important; transform:none!important;}
+	.fp-slide {width:100%!important; position:absolute!important; left:0; top:0; visibility:hidden; opacity:0; -webkit-transition:all 700ms ease; transition:all 700ms ease;}
+	.fp-slide.active {visibility:visible; opacity:1; z-index:1}
+
+	/* slide nav */
+	#fullpage .fp-controlArrow {display:inline-block; width:40px; height:40px; border:solid #362e68; border-width:0 1px 1px 0;}
+	#fullpage .fp-controlArrow.fp-prev {-webkit-transform:rotate(135deg); transform:rotate(135deg); left:0;}
+	#fullpage .fp-controlArrow.fp-next {-webkit-transform:rotate(-45deg); transform:rotate(-45deg); right:0;}
+	#fullpage .fp-slidesNav.fp-bottom {bottom:10%; z-index:2; text-align:center;}
+
+	/* slide pagination */
+	#fullpage #fp-nav ul li a.active, #fullpage .fp-slidesNav ul li a.active, #fullpage #fp-nav ul li:hover a.active, #fullpage .fp-slidesNav ul li:hover a.active {opacity:1;}
+	#fullpage #fp-nav ul li:hover a, #fullpage .fp-slidesNav ul li:hover a {opacity:1;}
+	#fullpage #fp-nav ul li, #fullpage .fp-slidesNav ul li {width:10px!important; height:10px!important; margin:0 5px;}
+	#fullpage #fp-nav ul li a, #fullpage .fp-slidesNav ul li a {width:100%; height:100%; opacity:.3; background-color:#544f70; border-radius:50%;}
+	#fullpage #fp-nav ul li a span, #fullpage .fp-slidesNav ul li a span {display:none;}
+
+	/* section1 */
+	#section1 {background:url('https://cdn.hddfs.com/files/editor/20230222/93d50060_202302221011195370.jpg') center center/cover no-repeat;}
+	.evt_wrap_tv {position:absolute; top:10%; left:43.9%; width:840px; height:613px; padding:9% 0 0 10%; text-align:left;}
+	.evt_wrap_tv:before {content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:url('https://cdn.hddfs.com/files/editor/20230221/1f3b4bd3_202302210920297880.png'); z-index:2;}
+	.img_title {top:22%; left:15%; width:27.5%;}
+	.img_flower1 {top:27%; left:38.5%; width:5%; -webkit-animation:ani-rotate1 3.5s linear infinite both; animation:ani-rotate1 3.5s linear infinite both;}
+	.img_flower2 {top:38%; left:-1%; -webkit-animation:ani-float1 1.5s infinite both; animation:ani-float1 1.5s infinite both;}
+	.img_flower3 {top:70%; left:28%; width:7%; -webkit-animation:ani-float2 2s infinite both; animation:ani-float2 2s infinite both;}
+	.img_flower4 {top:47%; right:-8%; width:9%; -webkit-animation:ani-float1 1.8s infinite both; animation:ani-float1 1.8s infinite both;}
+	.img_flower5 {top:48.5%; left:12.5%; width:5.5%; -webkit-animation:ani-rotate2 4s linear infinite both; animation:ani-rotate2 4s linear infinite both;}
+	.wrap_txt {position:absolute; bottom:60px; left:0; width:100%; height:69px; border-top:1px solid #313577;}
+	.img_txt1 {position:absolute; top:20px; width:1866px; -webkit-animation:ani-stream1 18s infinite linear; animation:ani-stream1 18s infinite linear; vertical-align:top;}
+	.img_txt2 {position:absolute; top:20px; width:1866px; -webkit-animation:ani-stream2 18s infinite linear; animation:ani-stream2 18s infinite linear; vertical-align:top;}
+	@keyframes ani-rotate1 {
+		0% {-webkit-transform:rotate(0deg); transform:rotate(0deg);}
+		100% {-webkit-transform:rotate(360deg); transform:rotate(360deg);}
+	}
+	@keyframes ani-rotate2 {
+		0% {-webkit-transform:rotate(0deg); transform:rotate(0deg);}
+		100% {-webkit-transform:rotate(-360deg); transform:rotate(-360deg);}
+	}
+	@keyframes ani-float1 {
+		0% {-webkit-transform:translateY(0px); transform:translateY(0px);}
+		50% {-webkit-transform:translateY(-20px); transform:translateY(-20px);}
+		200% {-webkit-transform:translateY(0px); transform:translateY(0px);}
+	}
+	@keyframes ani-float2 {
+		0% {-webkit-transform:translateY(-20px); transform:translateY(-20px);}
+		50% {-webkit-transform:translateY(0px); transform:translateY(0px);}
+		100% {-webkit-transform:translateY(-20px); transform:translateY(-20px);}
+	}
+	@keyframes ani-stream1 {
+		from {-webkit-transform:translateX(0); transform:translateX(0);}
+		to {-webkit-transform:translateX(-100%); transform:translateX(-100%);}
+	}
+	@keyframes ani-stream2 {
+		from {-webkit-transform:translateX(100%); transform:translateX(100%);}
+		to {-webkit-transform:translateX(0); transform:translateX(0);}
+	}
+
+	/* section2 */
+	#section2 {background:url('https://cdn.hddfs.com/files/editor/20230222/8407fdc8_202302221012090530.jpg') center center/cover no-repeat;}
+	.evt_main_slide {min-width:1426px; height:100%;}
+	.evt_main_slide .visual_wrap {display:flex; flex-wrap:wrap; height:100%;}
+	.evt_main_slide .visual_tit {position:absolute; top:5%; left:50%; margin-left:-74px; z-index:2;}
+	.evt_main_slide .visual_wrap .visual_left,
+	.evt_main_slide .visual_wrap .visual_right {flex:1; position:relative; height:100%;}
+	.evt_main_slide .visual_wrap .visual_left {display:flex; justify-content:center; align-items:center; margin-top:-50px;}
+	.evt_main_slide .img_prod1_1 {top:17%; left:12%;}
+	.evt_main_slide .img_prod1_2 {top:46.5%; left:45%;}
+	.evt_main_slide .img_prod1_3 {top:9.1%; left:53%;}
+	.evt_main_slide .img_prod1_4 {top:52.5%; left:17%;}
+	.evt_main_slide .img_prod2_1 {top:9%; left:13%;}
+	.evt_main_slide .img_prod2_2 {top:28%; left:59%;}
+	.evt_main_slide .img_prod2_3 {top:57%; left:18%;}
+	.evt_main_slide .img_prod3_1 {top:8%; left:12.5%;}
+	.evt_main_slide .img_prod3_2 {top:21%; left:55%;}
+	.evt_main_slide .img_prod3_3 {top:37.5%; left:15%;}
+	.evt_main_slide .img_prod3_4 {top:62%; left:30%;}
+	.evt_main_slide .img_prod4_1 {top:8.5%; left:15%;}
+	.evt_main_slide .img_prod4_2 {top:42%; left:42.5%;}
+	.evt_main_slide .img_prod4_3 {top:22%; left:62%;}
+	.evt_main_slide .img_prod4_4 {top:43%; left:19%;}
+	.evt_main_slide .img_prod5_1 {top:10.7%; left:15%;}
+	.evt_main_slide .img_prod5_2 {top:25%; left:53%;}
+	.evt_main_slide .img_prod5_3 {top:49%; left:16%;}
+
+	/* section3 */
+	#section3 {background:url('https://cdn.hddfs.com/files/editor/20230222/53f5a9dc_202302221012325500.jpg') center bottom/cover no-repeat;}
+	.evt_brand_slide {width:100%; height:665px; position:absolute; top:50%; left:0; right:0; margin:0 auto; -webkit-transform:translateY(-50%); transform:translateY(-50%);}
+	.evt_brand_slide .fp-tableCell {height:100%!important;}
+	.evt_brand_slide .ev_btn {width:230px; height:50%}
+	.evt_brand_slide .ev_btn_1 {top:0; left:100px;}
+	.evt_brand_slide .ev_btn_2 {top:0; left:348px;}
+	.evt_brand_slide .ev_btn_3 {top:0; left:597px;}
+	.evt_brand_slide .ev_btn_4 {top:0; right:348px;}
+	.evt_brand_slide .ev_btn_5 {top:0; right:100px;}
+	.evt_brand_slide .ev_btn_6 {bottom:0; left:100px;}
+	.evt_brand_slide .ev_btn_7 {bottom:0; left:348px;}
+	.evt_brand_slide .ev_btn_8 {bottom:0; left:597px;}
+	.evt_brand_slide .ev_btn_9 {bottom:0; right:348px;}
+	.evt_brand_slide .ev_btn_10 {bottom:0; right:100px;}
+
+	/* section4 - footer */
+	#section4 {}
+</style>
+<div class="evt_wrap" id="fullpage">
+    <div class="section" id="section1">
+		<div class="evt_content">
+			<div class="evt_temp">
+				<p class="abs img_title" data-aos="fade-up" data-aos-delay="100">
+					<img src="https://cdn.hddfs.com/files/editor/20230222/25592091_202302221013227560.png" alt="Fashion Brand">
+				</p>
+				<div class="evt_wrap_tv" data-aos="fade-up" data-aos-delay="100">
+					<img src="https://cdn.hddfs.com/files/op/20230223/366881e0_202302230926263240.gif" alt="TV Image 1"/>
+				</div><!--//evt_wrap_tv-->
+				<p class="abs img_flower1"><img src="https://cdn.hddfs.com/files/editor/20230221/35ad652a_202302210920134770.png" alt="Flower 1"></p>
+				<p class="abs img_flower2"><img src="https://cdn.hddfs.com/files/editor/20230221/94f6aaef_202302210919388290.png" alt="Flower 2"></p>
+				<p class="abs img_flower3"><img src="https://cdn.hddfs.com/files/editor/20230221/e0e457b8_202302210919501560.png" alt="Flower 3"></p>
+				<p class="abs img_flower4"><img src="https://cdn.hddfs.com/files/editor/20230221/41f76e0c_202302210920014090.png" alt="Flower 4"></p>
+			</div>
+		</div>
+		<div class="wrap_txt">
+			<p class="img_txt1"><img src="https://cdn.hddfs.com/files/editor/20230221/6e688d0d_202302210931315800.png" alt="MD'S PICK SPRING STYLING"></p>
+			<p class="img_txt2"><img src="https://cdn.hddfs.com/files/editor/20230221/6e688d0d_202302210931315800.png" alt="MD'S PICK SPRING STYLING"></p>
+		</div><!--//wrap_txt-->
+    </div>
+    <div class="section" id="section2">
+		<div class="evt_content">
+			<div class="evt_temp">
+				<div class="evt_main_slide">
+					<div class="evt_slide slide">
+						<div class="visual_tit"><img src="https://cdn.hddfs.com/files/editor/20230221/72295fa5_202302210905127380.png" alt="LOOK 01 Lovely Styling"></div>
+						<div class="visual_wrap">
+							<div class="visual_left">
+								<p class="img_main_visual1"><img src="https://cdn.hddfs.com/files/editor/20230222/524b26e0_202302221014392670.png" alt="main visual"></p>
+							</div>
+							<div class="visual_right">
+								<span class="hide">상품가격은 변경 될 수 있습니다.</span>
+								<a target="_blank" href="https://www.hddfs.com/shop/gd/dtl/goos.do?onlnGoosCd=56566060006501" class="abs img_prod1_1" data-aos="fade-down-right" data-aos-delay="0"><img src="https://cdn.hddfs.com/files/editor/20230222/3656f1c0_202302221013541910.png" alt="content1 Pink Jaket"></a>
+								<a target="_blank" href="https://www.hddfs.com/shop/gd/dtl/goos.do?onlnGoosCd=56566090001401" class="abs img_prod1_2"  data-aos="fade-up-left" data-aos-delay="200"><img src="https://cdn.hddfs.com/files/editor/20230222/c3400bd6_202302221014042090.png" alt="content1 Pink Skirt"></a>
+								<a target="_blank" href="https://www.hddfs.com/shop/gd/dtl/goos.do?onlnGoosCd=10475240020301" class="abs img_prod1_3" data-aos="fade-down-left" data-aos-delay="400"><img src="https://cdn.hddfs.com/files/editor/20230222/177138f9_202302221014195770.png" alt="content1 Bag"></a>
+								<a target="_blank" href="https://www.hddfs.com/shop/gd/dtl/goos.do?onlnGoosCd=10509180038801" class="abs img_prod1_4" data-aos="fade-up-right" data-aos-delay="600"><img src="https://cdn.hddfs.com/files/editor/20230222/f8cf8fa1_202302221014285670.png" alt="content1 Shoes"></a>
+							</div>
+						</div>
+					</div><!--//LOOK 01-->
+					<div class="evt_slide slide">
+						<div class="visual_tit"><img src="https://cdn.hddfs.com/files/editor/20230221/4fbe9dff_202302210907153350.png" alt="LOOK 02 Feminine Styling"></div>
+						<div class="visual_wrap">
+							<div class="visual_left">
+								<p class="img_main_visual2"><img src="https://cdn.hddfs.com/files/editor/20230222/c5cad034_202302221015342510.png" alt="main visual"></p>
+							</div>
+							<div class="visual_right">
+								<span class="hide">상품가격은 변경 될 수 있습니다.</span>
+								<a target="_blank" href="https://www.hddfs.com/shop/gd/dtl/goos.do?onlnGoosCd=10243080056101" class="abs img_prod2_1" data-aos="fade-right" data-aos-delay="0"><img src="https://cdn.hddfs.com/files/editor/20230223/483c810c_202302231046421240.png" alt="content2 Dress"></a>
+								<a target="_blank" href="https://www.hddfs.com/shop/gd/dtl/goos.do?onlnGoosCd=10225200027001" class="abs img_prod2_2" data-aos="fade-left" data-aos-delay="200"><img src="https://cdn.hddfs.com/files/editor/20230222/dfafef74_202302221015120160.png" alt="content2 Bag"></a>
+								<a target="_blank" href="https://www.hddfs.com/shop/gd/dtl/goos.do?onlnGoosCd=10535180126001" class="abs img_prod2_3" data-aos="fade-right" data-aos-delay="400"><img src="https://cdn.hddfs.com/files/editor/20230222/d16a29e3_202302221015225090.png" alt="content2 Shoes"></a>
+							</div>
+						</div>
+					</div><!--//LOOK 02-->
+					<div class="evt_slide slide">
+						<div class="visual_tit"><img src="https://cdn.hddfs.com/files/editor/20230221/022a63bf_202302210913164590.png" alt="LOOK 03 Casual Styling"></div>
+						<div class="visual_wrap">
+							<div class="visual_left">
+								<p class="img_main_visual3"><img src="https://cdn.hddfs.com/files/editor/20230222/f18bc5d8_202302221018559730.png" alt="main visual"></p>
+							</div>
+							<div class="visual_right">
+								<span class="hide">상품가격은 변경 될 수 있습니다.</span>
+								<a target="_blank" href="https://www.hddfs.com/shop/gd/dtl/goos.do?onlnGoosCd=56506050047801" class="abs img_prod3_1" data-aos="fade-down-right" data-aos-delay="0"><img src="https://cdn.hddfs.com/files/editor/20230222/58d84c50_202302221018130130.png" alt="content3 Shirt"></a>
+								<a target="_blank" href="https://www.hddfs.com/shop/gd/dtl/goos.do?onlnGoosCd=56506070018601" class="abs img_prod3_2" data-aos="fade-left" data-aos-delay="200"><img src="https://cdn.hddfs.com/files/editor/20230222/ce2226a1_202302221018229770.png" alt="content3 Pants"></a>
+								<a target="_blank" href="https://www.hddfs.com/shop/gd/dtl/goos.do?onlnGoosCd=56565040062601" class="abs img_prod3_3" data-aos="fade-right" data-aos-delay="400"><img src="https://cdn.hddfs.com/files/editor/20230222/09dd56da_202302221018345850.png" alt="content3 Bag"></a>
+								<a target="_blank" href="https://www.hddfs.com/shop/gd/dtl/goos.do?onlnGoosCd=10135180029701" class="abs img_prod3_4" data-aos="fade-up" data-aos-delay="600"><img src="https://cdn.hddfs.com/files/editor/20230222/0988da95_202302221018458560.png" alt="content3 Shoes"></a>
+							</div>
+						</div>
+					</div><!--//LOOK 03-->
+					<div class="evt_slide slide">
+						<div class="visual_tit"><img src="https://cdn.hddfs.com/files/editor/20230221/1e7a2081_202302210914265370.png" alt="LOOK 04 Comportable Styling"></div>
+						<div class="visual_wrap">
+							<div class="visual_left">
+								<p class="img_main_visual4"><img src="https://cdn.hddfs.com/files/editor/20230222/2ddc7c87_202302221020098060.png" alt="main visual"></p>
+							</div>
+							<div class="visual_right">
+								<span class="hide">상품가격은 변경 될 수 있습니다.</span>
+								<a target="_blank" href="https://www.hddfs.com/shop/gd/dtl/goos.do?onlnGoosCd=56380040231401" class="abs img_prod4_1" data-aos="fade-down-right" data-aos-delay="0"><img src="https://cdn.hddfs.com/files/editor/20230222/811d2290_202302221019330240.png" alt="content4 Hoody"></a>
+								<a target="_blank" href="https://www.hddfs.com/shop/gd/dtl/goos.do?onlnGoosCd=56380070110701" class="abs img_prod4_2" data-aos="fade-up-left" data-aos-delay="200"><img src="https://cdn.hddfs.com/files/editor/20230222/b6ed138c_202302221019208530.png" alt="content4 Pants"></a>
+								<a target="_blank" href="https://www.hddfs.com/shop/gd/dtl/goos.do?onlnGoosCd=10298190020201" class="abs img_prod4_3" data-aos="fade-down-left" data-aos-delay="400"><img src="https://cdn.hddfs.com/files/editor/20230222/6eee18b6_202302221019421530.png" alt="content4 Shoes"></a>
+								<a target="_blank" href="https://www.hddfs.com/shop/gd/dtl/goos.do?onlnGoosCd=10430200016601" class="abs img_prod4_4" data-aos="fade-up-right" data-aos-delay="600"><img src="https://cdn.hddfs.com/files/editor/20230222/eb5c6258_202302221019547000.png" alt="content4 Bag"></a>
+							</div>
+						</div>
+					</div><!--//LOOK 04-->
+					<div class="evt_slide slide">
+						<div class="visual_tit"><img src="https://cdn.hddfs.com/files/editor/20230221/bdbeaa17_202302210915287500.png" alt="LOOK 05 Street Styling"></div>
+						<div class="visual_wrap">
+							<div class="visual_left">
+								<p class="img_main_visual5"><img src="https://cdn.hddfs.com/files/editor/20230222/a705fc24_202302221020552570.png" alt="main visual"></p>
+							</div>
+							<div class="visual_right">
+								<span class="hide">상품가격은 변경 될 수 있습니다.</span>
+								<a target="_blank" href="https://www.hddfs.com/shop/gd/dtl/goos.do?onlnGoosCd=56506050045301" class="abs img_prod5_1" data-aos="fade-down-right" data-aos-delay="0"><img src="https://cdn.hddfs.com/files/editor/20230222/a3870f4b_202302221020216400.png" alt="content5 Shirt"></a>
+								<a target="_blank" href="https://www.hddfs.com/shop/gd/dtl/goos.do?onlnGoosCd=56506070017401" class="abs img_prod5_2" data-aos="fade-left" data-aos-delay="200"><img src="https://cdn.hddfs.com/files/editor/20230222/db8545c1_202302221020347910.png" alt="content5 Pants"></a>
+								<a target="_blank" href="https://www.hddfs.com/shop/gd/dtl/goos.do?onlnGoosCd=10298190013701" class="abs img_prod5_3" data-aos="fade-up-right" data-aos-delay="400"><img src="https://cdn.hddfs.com/files/editor/20230222/fc117edc_202302221020448820.png" alt="content5 Shoes"></a>
+							</div>
+						</div>
+					</div><!--//LOOK 05-->
+				</div>
+			</div>
+		</div>
+    </div>
+	<div class="section" id="section3">
+		<div class="evt_content">
+			<div class="evt_temp">
+				<div class="evt_brand_slide">
+					<div class="evt_slide slide">
+						<img src="https://cdn.hddfs.com/files/editor/20230222/20e5372d_202302221021050190.png" alt="Brand Image 1">
+						<a target="_blank" href="https://www.hddfs.com/shop/dm/bran/brand.do?onlnBranCd=610801" class="ev_btn ev_btn_1" title="쿠론"><i class="blind">쿠론</i></a>
+						<a target="_blank" href="https://www.hddfs.com/shop/dm/bran/brand.do?onlnBranCd=638101" class="ev_btn ev_btn_2" title="라코스테"><i class="blind">라코스테</i></a>
+						<a target="_blank" href="https://www.hddfs.com/shop/dm/bran/brand.do?onlnBranCd=628801" class="ev_btn ev_btn_3" title="캉골"><i class="blind">캉골</i></a>
+						<a target="_blank" href="https://www.hddfs.com/shop/dm/bran/branSub.do?onlnBranCd=642001&goosCtgId=03380211" class="ev_btn ev_btn_4" title="나인"><i class="blind">나인</i></a>
+						<a target="_blank" href="https://www.hddfs.com/shop/dm/bran/branSub.do?onlnBranCd=642001&goosCtgId=03380208" class="ev_btn ev_btn_5" title="팔렛"><i class="blind">팔렛</i></a>
+						<a target="_blank" href="https://www.hddfs.com/shop/dm/bran/branSub.do?onlnBranCd=642001&goosCtgId=03380207" class="ev_btn ev_btn_6" title="세인트페인"><i class="blind">세인트페인</i></a>
+						<a target="_blank" href="https://www.hddfs.com/shop/dm/bran/branSub.do?onlnBranCd=642001&goosCtgId=03380205" class="ev_btn ev_btn_7" title="카비시"><i class="blind">카비시</i></a>
+						<a target="_blank" href="https://www.hddfs.com/shop/dm/bran/branSub.do?onlnBranCd=642001&goosCtgId=03380210" class="ev_btn ev_btn_8" title="코드그라피"><i class="blind">코드그라피</i></a>
+						<a target="_blank" href="https://www.hddfs.com/shop/dm/bran/branSub.do?onlnBranCd=642001&goosCtgId=03380206" class="ev_btn ev_btn_9" title="로라로라"><i class="blind">로라로라</i></a>
+						<a target="_blank" href="https://www.hddfs.com/shop/dm/bran/branSub.do?onlnBranCd=642001&goosCtgId=03380203" class="ev_btn ev_btn_10" title="커버낫"><i class="blind">커버낫</i></a>
+					</div>
+					<div class="evt_slide slide">
+						<img src="https://cdn.hddfs.com/files/editor/20230222/d87d26d3_202302221021144210.png" alt="Brand Image 2"/>
+						<a target="_blank" href="https://www.hddfs.com/shop/dm/bran/branSub.do?onlnBranCd=642001&goosCtgId=03380202" class="ev_btn ev_btn_1" title="이벳필드"><i class="blind">이벳필드</i></a>
+						<a target="_blank" href="https://www.hddfs.com/shop/dm/bran/branSub.do?onlnBranCd=642001&goosCtgId=03380201" class="ev_btn ev_btn_2" title="플랙"><i class="blind">플랙</i></a>
+						<a target="_blank" href="https://www.hddfs.com/shop/dm/bran/branSub.do?onlnBranCd=642001&goosCtgId=03380209" class="ev_btn ev_btn_3" title="그레이버"><i class="blind">그레이버</i></a>
+						<a target="_blank" href="https://www.hddfs.com/shop/dm/bran/branSub.do?onlnBranCd=642001&goosCtgId=03380204" class="ev_btn ev_btn_4" title="마하그리드"><i class="blind">마하그리드</i></a>
+						<a target="_blank" href="https://www.hddfs.com/shop/dm/bran/brand.do?onlnBranCd=635101" class="ev_btn ev_btn_5" title="아크메드라비"><i class="blind">아크메드라비</i></a>
+						<a target="_blank" href="https://www.hddfs.com/shop/dm/bran/brand.do?onlnBranCd=625101" class="ev_btn ev_btn_6" title="헤지스"><i class="blind">헤지스</i></a>
+						<a target="_blank" href="https://www.hddfs.com/shop/dm/bran/brand.do?onlnBranCd=625201" class="ev_btn ev_btn_7" title="질스튜어트"><i class="blind">질스튜어트</i></a>
+						<a target="_blank" href="https://www.hddfs.com/shop/dm/bran/brand.do?onlnBranCd=638001" class="ev_btn ev_btn_8" title="널디"><i class="blind">널디</i></a>
+						<a target="_blank" href="https://www.hddfs.com/shop/dm/bran/brand.do?onlnBranCd=625501" class="ev_btn ev_btn_9" title="칼린"><i class="blind">칼린</i></a>
+						<a target="_blank" href="https://www.hddfs.com/shop/dm/bran/brand.do?onlnBranCd=650601" class="ev_btn ev_btn_10" title="로맨틱크라운"><i class="blind">로맨틱크라운</i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+    <div class="section fp-auto-height-responsive fp-auto-height" id="section4">
+		<div id="footerWrap">
+			<!-- footer -->
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(window).load(function(){
+	$('#footer').appendTo('#footerWrap');
+
+	new fullpage("#fullpage", {
+		scrollingSpeed: 900, //defualt: 700
+		// fadingEffect: true,
+		easingcss3: 'ease-out', //default: ease
+		navigation: true,
+		slidesNavigation: true,
+		onLeave: function(){
+			jQuery('.section [data-aos]').removeClass("aos-animate");
+
+			if ($('#footerWrap').parents('.section').hasClass('active') == true){
+				$('#footerWrap').parents('.section').prev().removeClass('stop');
+			}
+		},
+		onSlideLeave: function(){
+			jQuery('.evt_slide [data-aos]').removeClass("aos-animate");
+		},
+		afterSlideLoad: function(){
+			setTimeout(function() {
+				jQuery('.evt_slide.active [data-aos]').addClass("aos-animate");
+			}, 100);
+		},
+		afterLoad: function(){
+			setTimeout(function() {
+				jQuery('.section.active [data-aos]').addClass("aos-animate");
+			}, 100);
+
+			if ($('#footerWrap').parents('.section').hasClass('active') == true){
+				$('#footerWrap').parents('.section').prev().addClass('stop');
+			}
+		}
+	});
+
+	AOS.init({
+		duration: 600, //default: 400
+		easing: 'ease-out' //defualt: ease
+	});
+});
+</script>
+<!-- aos -->
+<link href="https://cdn.hddfs.com/front/css/KO/aos.css" rel="stylesheet">
+<script src="https://cdn.hddfs.com/front/js/KO/aos.js"></script>
+<!-- fullpage -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/vendors/scrolloverflow.min.js"></script>
+<!-- E : BO 등록 영역 -->
+
+
+
+
+
+
+				</div>
+				<div class="attention_area">
+					<p class="attention_tit">유의사항</p>
+					<ul class="attention_list">
+						<li>내용</li>
+					</ul>
+				</div>
+			</section><!--//event-->
+		</article><!--//content-->
+	</main>
+	<!-- E : container -->
+	<!-- S : footer -->
+	<script src="../../../KO/html/include/footer.js"></script>
+	<!-- E : footer -->
+</div><!--//wrap-->
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>현대백화점인터넷면세점</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="../../../KO/js/KO/jquery-1.12.4.min.js"></script>
+	<script src="../../../KO/js/KO/jquery-ui.js"></script>
+	<script src="../../../KO/js/KO/jquery.bxslider.js"></script>
+	<script src="../../../KO/js/KO/swiper.min.js"></script>
+	<script src="../../../KO/js/KO/jQueryRotate.js"></script>
+	<script src="../../../KO/js/KO/common.ui.js"></script>
+	<script src="../../../KO/js/KO/product.js"></script>
+	<link rel="stylesheet" href="../../../KO/css/KO/jquery-ui.css">
+	<link rel="stylesheet" href="../../../KO/css/KO/swiper.min.css">
+	<link rel="stylesheet" href="../../../KO/css/KO/common.css">
+	<link rel="stylesheet" href="../../../KO/css/KO/layout.css">
+	<link rel="stylesheet" href="../../../KO/css/KO/product.css">
+</head>
+<body>
+
+<!-- S : BO 등록 영역 -->
+<style type="text/css">
+	/* coommon */
+	.clearfix:after {content: ""; display: table; clear: both}
+
+	/* button */
+	.roll-button {margin: 15px auto}
+	.roll-button.btn_off {pointer-events: none; cursor: default;}
+	button {padding: 10px 50px; color: #ffffcc; background: #AA4F39; border: none; border-radius: 8px; box-shadow: 0 3px #802915; outline: none; transition: .3s}
+	button:hover, button:active {outline: none; background: #802915; cursor: pointer; padding: 11px 50px 9px 50px; margin-top: 15px}
+	.dice-board {width: 100%; height: 50%}
+	.container-dice {display: inline-block; margin-top: 100px; width: 200px; margin: 50px auto 0 auto}
+	.dice {position: relative; width: 100px; height: 100px; transform-style: preserve-3d; transition: transform 1s}
+	.divot {position: absolute; width: 20px; height: 20px; margin: -10px 0 0 -10px; border-radius: 20px; background: #000}
+	.dice-one {margin-left: 150px}
+	.dice-two {margin-left: 150px}
+	.side {background: rgba(255,255,255,.6); position: absolute; width: 100px; height: 100px; border: 1px solid #767676; border-radius: 5px}
+	.side:nth-child(1) {transform: translateZ(50px)}
+	.side:nth-child(6) {transform: rotateY(180deg) translateZ(50px)}
+	.side:nth-child(3) {transform: rotateY(90deg) translateZ(50px)}
+	.side:nth-child(4) {transform: rotateY(-90deg) translateZ(50px)}
+	.side:nth-child(5) {transform: rotateX(90deg) translateZ(50px)}
+	.side:nth-child(2) {transform: rotateX(-90deg) translateZ(50px)}
+	.show-1 {transform: rotateX(720deg) rotateZ(-720deg)}
+	.show-6 {transform: rotateX(-900deg) rotateZ(1080deg)}
+	.show-3 {transform: rotateY(-450deg) rotateZ(-1440deg)}
+	.show-4 {transform: rotateY(810deg) rotateZ(720deg)}
+	.show-5 {transform: rotateX(-810deg) rotateZ(-1080deg)}
+	.show-2 {transform: rotateX(450deg) rotateZ(-720deg)}
+
+	/* dice dots */
+	.two-1, .three-1, .four-1, .five-1, .six-1 {top: 20%; left: 20%}
+	.four-3, .five-3, .six-4 {top: 20%; left: 80%}
+	.one-1, .three-2, .five-5 {top: 50%; left: 50%}
+	.four-2, .five-2, .six-3 {top: 80%; left: 20%}
+	.two-2, .three-3, .four-4, .five-4, .six-6 {top: 80%; left: 80%}
+	.six-2 {top: 50%; left: 20%}
+	.six-5 {top: 50%; left: 80%}
+
+	/*game box*/
+	.game_box {position: relative; width: 1050px; height: 1050px; background:floralwhite; box-sizing: border-box; padding: 10px;}
+.game_box .dice_box {position:absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 510px; height: 510px; border: 1px solid #dfdfdf; background:cornflowerblue;box-sizing: border-box;}
+.brand_box  {position: relative; }
+.brand_box ul {margin: 0; padding: 0;}
+.brand_box li {position: absolute; width: 250px; height: 250px; border: 1px solid #dfdfdf; list-style: none;background:#fff;box-sizing: border-box;}
+.brand_box li a {display: block; width: 100%; height: 100%;}
+.brand_box li a:hover {}
+.brand_box li.on:before {content: ""; display: block; position: absolute; width: 100%; height: 100%; }
+.brand_box .brand1 {top:0; left: 260px;}
+.brand_box .brand2 {top:0; left: 520px;}
+.brand_box .brand3 {top:0; left: 780px;}
+.brand_box .brand4 {top:260px; left: 780px;}
+.brand_box .brand5 {top:520px; left: 780px;}
+.brand_box .brand6 {top:780px; left: 780px;}
+.brand_box .brand7 {top:780px; left: 520px;}
+.brand_box .brand8 {top:780px; left: 260px;}
+.brand_box .brand9 {top:780px; left: 0px;}
+.brand_box .brand10 {top:520px; left: 0px;}
+.brand_box .brand11 {top:260px; left: 0px;}
+.brand_box .brand12 {top:0px; left: 0px;}
+#planeMarker{position: absolute;display: block; width: 250px; height: 250px; top: 0; left: 0; opacity: 0; z-index:0; background: url(cat.png) center center no-repeat; background-size: 120px 120px; }
+#planeMarker.on {z-index:2; opacity: 1;}
+#planeMarker.goto2 {animation: Goto2 ease-out 1s forwards;}
+#planeMarker.goto3 {animation: Goto3 ease-out 1s forwards;}
+#planeMarker.goto4 {animation: Goto4 ease-out 1s forwards;}
+#planeMarker.goto5 {animation: Goto5 ease-out 1.5s forwards;}
+#planeMarker.goto6 {animation: Goto6 ease-out 1.5s forwards;}
+#planeMarker.goto7 {animation: Goto7 ease-out 2s forwards;}
+#planeMarker.goto8 {animation: Goto8 ease-out 2s forwards;}
+#planeMarker.goto9 {animation: Goto9 ease-out 2s forwards;}
+#planeMarker.goto10 {animation: Goto10 ease-out 2.5s forwards;}
+#planeMarker.goto11 {animation: Goto11 ease-out 2.5s forwards;}
+#planeMarker.goto12 {animation: Goto12 ease-out 2.5s forwards;}
+@keyframes Goto2 {
+	0%   {top: 0; left: 0;}
+	100% {top: 0; left: 520px;}
+}
+@keyframes Goto3 {
+	0%   {top: 0; left: 0;}
+	100% {top: 0; left: 780px;}
+}
+@keyframes Goto4 {
+	0%   {top: 0; left: 0;}
+	50%   {top: 0; left: 780px;}
+	100% {top: 260px; left: 780px;}
+}
+@keyframes Goto5 {
+	0%   {top: 0; left: 0;}
+	50%   {top: 0; left: 780px;}
+	100% {top: 520px; left: 780px;}
+}
+@keyframes Goto6 {
+	0%   {top: 0; left: 0;}
+	50%   {top: 0; left: 780px;}
+	100% {top: 780px; left: 780px;}
+}
+@keyframes Goto7 {
+	0%   {top: 0; left: 0;}
+	35%   {top: 0; left: 780px;}
+	70%   {top: 780px; left: 780px;}
+	100% {top: 780px; left: 520px;}
+}
+@keyframes Goto8 {
+	0%   {top: 0; left: 0;}
+	35%   {top: 0; left: 780px;}
+	70%   {top: 780px; left: 780px;}
+	100% {top: 780px; left: 260px;}
+}
+@keyframes Goto9 {
+	0%   {top: 0; left: 0;}
+	35%   {top:0; left: 780px;}
+	70%   {top: 780px; left: 780px;}
+	100% {top: 780px; left: 0px;}
+}
+@keyframes Goto10 {
+	0%   {top: 0; left: 0;}
+	30%   {top: 0; left: 780px;}
+	50%   {top: 780px; left: 780px;}
+	80% {top: 780px; left: 0px;}
+	100% {top: 520px; left: 0px;}
+}
+@keyframes Goto11 {
+	0%   {top: 0; left: 0;}
+	30%   {top: 0; left: 780px;}
+	50%   {top: 780px; left: 780px;}
+	80% {top: 780px; left: 0px;}
+	100% {top: 260px; left: 0px;}
+}
+@keyframes Goto12 {
+	0%   {top: 0; left: 0;}
+	30%   {top: 0; left: 780px;}
+	50%   {top: 780px; left: 780px;}
+	80% {top: 780px; left: 0px;}
+	100% {top: 0px; left: 0px;}
+}
+/*popup*/
+
+</style>
+
+<div class="evt_temp">
+	<div class="game_box">
+		<div class="dice_box">
+
+			<div class="container-dice">
+				<div id='dice1' class="dice dice-one">
+					<div id="dice-one-side-one" class='side one'>
+						<div class="divot one-1"></div>
+					</div>
+					<div id="dice-one-side-two" class='side two'>
+						<div class="divot two-1"></div>
+						<div class="divot two-2"></div>
+					</div>
+					<div id="dice-one-side-three" class='side three'>
+						<div class="divot three-1"></div>
+						<div class="divot three-2"></div>
+						<div class="divot three-3"></div>
+					</div>
+					<div id="dice-one-side-four" class='side four'>
+						<div class="divot four-1"></div>
+						<div class="divot four-2"></div>
+						<div class="divot four-3"></div>
+						<div class="divot four-4"></div>
+					</div>
+					<div id="dice-one-side-five" class='side five'>
+						<div class="divot five-1"></div>
+						<div class="divot five-2"></div>
+						<div class="divot five-3"></div>
+						<div class="divot five-4"></div>
+						<div class="divot five-5"></div>
+					</div>
+					<div id="dice-one-side-six" class='side six'>
+						<div class="divot six-1"></div>
+						<div class="divot six-2"></div>
+						<div class="divot six-3"></div>
+						<div class="divot six-4"></div>
+						<div class="divot six-5"></div>
+						<div class="divot six-6"></div>
+					</div>
+				</div>
+			</div>
+			<div class="container-dice">
+				<div id='dice2' class="dice dice-two">
+					<div id="dice-two-side-one" class='side one'>
+						<div class="divot one-1"></div>
+					</div>
+					<div id="dice-two-side-two" class='side two'>
+						<div class="divot two-1"></div>
+						<div class="divot two-2"></div>
+					</div>
+					<div id="dice-two-side-three" class='side three'>
+						<div class="divot three-1"></div>
+						<div class="divot three-2"></div>
+						<div class="divot three-3"></div>
+					</div>
+					<div id="dice-two-side-four" class='side four'>
+						<div class="divot four-1"></div>
+						<div class="divot four-2"></div>
+						<div class="divot four-3"></div>
+						<div class="divot four-4"></div>
+					</div>
+					<div id="dice-two-side-five" class='side five'>
+						<div class="divot five-1"></div>
+						<div class="divot five-2"></div>
+						<div class="divot five-3"></div>
+						<div class="divot five-4"></div>
+						<div class="divot five-5"></div>
+					</div>
+					<div id="dice-two-side-six" class='side six'>
+						<div class="divot six-1"></div>
+						<div class="divot six-2"></div>
+						<div class="divot six-3"></div>
+						<div class="divot six-4"></div>
+						<div class="divot six-5"></div>
+						<div class="divot six-6"></div>
+					</div>
+				</div>
+			</div>
+			<button id='srartButton' class='roll-button'>START!</button>
+		</div><!--//dice_box-->
+		<div class="brand_box">
+			<div id="planeMarker"></div>
+			<ul>
+				<li class="brand12" data-block="12"><a href="#;">brand12</a></li>
+				<li class="brand1" data-block="1"><a href="#;">brand1</a></li>
+				<li class="brand2" data-block="2"><a href="#;">brand2</a></li>
+				<li class="brand3" data-block="3"><a href="#;">brand3</a></li>
+				<li class="brand4" data-block="4"><a href="#;">brand4</a></li>
+				<li class="brand5" data-block="5"><a href="#;">brand5</a></li>
+				<li class="brand6" data-block="6"><a href="#;">brand6</a></li>
+				<li class="brand7" data-block="7"><a href="#;">brand7</a></li>
+				<li class="brand8" data-block="8"><a href="#;">brand8</a></li>
+				<li class="brand9" data-block="9"><a href="#;">brand9</a></li>
+				<li class="brand10" data-block="10"><a href="#;">brand10</a></li>
+				<li class="brand11" data-block="11"><a href="#;">brand11</a></li>
+			</ul>
+		</div><!-- //brand_box -->
+	</div><!--//game_box-->
+</div><!--//evt_temp-->
+<!-- S : modal -->
+<div id="brand2Pop" title="브랜드 당첨 팝업">
+	<div class="evt_temp">
+		<img alt="브랜드 당첨 팝업" src="https://cdn.hddfs.com/files/editor/20210527/c9e12a10_202105271433465610.png"> 
+		<a class="ev_btn" href="javascript:$('#brand2Pop').dialog('close');" style="height: 55px;width: 55px;right: 30px;top: 45px;" title="close"><i class="blind">닫기</i></a>
+	</div>
+</div>
+<!-- E : modal -->
+<script>
+	// Dice Roll
+	var elDiceOne  = document.getElementById('dice1');
+	var elDiceTwo  = document.getElementById('dice2');
+	var elStart  = document.getElementById('srartButton');
+
+	elStart.onclick = function () {comeOutRoll();};
+
+	// Come Out Roll Function
+	function comeOutRoll() {
+		$("#planeMarker").attr('class', '');
+		$("#srartButton").addClass('btn_off');
+		// Initial dice variables
+		var diceOne   = Math.floor((Math.random() * 6) + 1);
+		var diceTwo   = Math.floor((Math.random() * 6) + 1);
+		var rollTotal = diceOne + diceTwo;
+
+		console.log(rollTotal);
+		elDiceOne.classList.toggle('animate');
+		elDiceTwo.classList.toggle('animate');
+
+		//Dice reset and display
+		for (var i = 1; i <= 6; i++) {
+			elDiceOne.classList.remove('show-' + i);
+			if (diceOne === i) {
+				elDiceOne.classList.add('show-' + i);
+			}
+		}
+		for (var k = 1; k <= 6; k++) {
+			elDiceTwo.classList.remove('show-' + k);
+			if (diceTwo === k) {
+				elDiceTwo.classList.add('show-' + k);
+			}
+		}
+
+		var planeMove = setInterval(function(){
+			$("#planeMarker").addClass('on');
+			$("#planeMarker").addClass('goto'+rollTotal);
+			if((rollTotal==2) || (rollTotal==3) || (rollTotal==4)) {
+				var popStart1 = setInterval(function(){
+					$('#brand2Pop').dialog('open');
+					console.log("start1");
+					clearInterval(popStart1);
+					$("#srartButton").removeClass('btn_off');
+				}, 1800);
+			} else if ((rollTotal==5) || (rollTotal==6)) {
+				var popStart2 = setInterval(function(){
+					$('#brand2Pop').dialog('open');
+					console.log("start2");
+					clearInterval(popStart2);
+					$("#srartButton").removeClass('btn_off');
+				}, 2000);
+			} else if ((rollTotal==7) || (rollTotal==8) || (rollTotal==9)) {
+				var popStart3 = setInterval(function(){
+					$('#brand2Pop').dialog('open');
+					console.log("start3");
+					clearInterval(popStart3);
+					$("#srartButton").removeClass('btn_off');
+				}, 2500);
+			} else if ((rollTotal==10) || (rollTotal==11) || (rollTotal==12)) {
+				var popStart4 = setInterval(function(){
+					$('#brand2Pop').dialog('open');
+					console.log("start4");
+					clearInterval(popStart4);
+					$("#srartButton").removeClass('btn_off');
+				}, 3000);
+			}
+			clearInterval(planeMove);
+		}, 1200);
+		
+		
+
+		
+		
+		
+	}
+$(document).ready(function(){
+	$("#brand2Pop").dialog({
+		autoOpen: false,
+		resizable: false,
+		width: 758,
+		maxHeight: 950,
+		modal: true,
+		open: function() {
+				$('.ui-widget-overlay').bind('click', function() {
+				$('#brand2Pop').dialog('close');
+			});
+			$("#brand2Pop").prev(".ui-dialog-titlebar").hide();
+		}
+	});
+});
+</script>
+<!-- E : BO 등록 영역 -->
+</body>
+</html>

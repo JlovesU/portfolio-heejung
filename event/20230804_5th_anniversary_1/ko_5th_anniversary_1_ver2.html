@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>현대백화점인터넷면세점</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="../../../KO/js/KO/jquery-1.12.4.min.js"></script>
+	<script src="../../../KO/js/KO/jquery-ui.js"></script>
+	<script src="../../../KO/js/KO/jquery.bxslider.js"></script>
+	<script src="../../../KO/js/KO/swiper-bundle.min.js"></script>
+	<script src="../../../KO/js/KO/common.ui.js"></script>
+	<script src="../../../KO/js/KO/product.js"></script>
+	<link rel="stylesheet" href="../../../KO/css/KO/jquery-ui.css">
+	<link rel="stylesheet" href="../../../KO/css/KO/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../../../KO/css/KO/common.css">
+	<link rel="stylesheet" href="../../../KO/css/KO/layout.css">
+	<link rel="stylesheet" href="../../../KO/css/KO/product.css">
+</head>
+<body>
+<div id="wrap">
+	<!-- S : header -->
+	<script src="../../../KO/html/include/header.js"></script>
+	<!-- E : header -->
+	<!-- S : container -->
+	<main id="container" class="container">
+		<!-- S : location -->
+		<article class="location">
+			<section class="box">
+				<a href="https://www.hddfs.com/shop/dm/main.do" class="home">홈</a> 
+				<div><a href="javascript:" class="no-link">이벤트</a></div>
+			</section>
+		</article>
+		<!-- E : location -->
+		<article id="content">
+			<section class="event">
+				<div class="event_top_share">
+					<a noHref class="ico_com round_favorite " onclick="mergeMyEvnt('0003167', this)">관심이벤트</a>
+					<a noHref class="ico_com round_blog shareNaver">네이버블로그</a>
+					<a noHref class="ico_com round_facebook shareFacebook">페이스북</a>
+					<a noHref class="ico_com round_kakao shareKakao">카카오스토리</a>
+				</div>
+				<div class="benefit_img">
+
+
+
+
+
+
+<!-- S : BO 등록 영역 -->
+<style>
+	.event_reserves_new {display:none}
+/* 당첨팝업 */
+.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-draggable[aria-describedby="popPrize"] {border:none; background:none;}
+[aria-describedby="popPrize"] .ui-dialog-titlebar {display:none;}
+#popPrize {background-color:#fff; border-radius:20px;}
+#popPrize .evt_temp {padding:50px 30px;}
+#popPrize .evt_temp .img_rabbit {display:inline-block; vertical-align:top; width:20%;margin:0 auto;}
+#popPrize .evt_temp .box_prize {margin:20px 0 30px; text-align:center;}
+#popPrize .evt_temp .box_prize .tit {font-size:30px; font-weight:700;}
+#popPrize .evt_temp .box_prize .sub_txt {font-size:18px;}
+#popPrize .evt_temp .box_message {font-size:20px; margin-top:10px;}
+#popPrize .evt_temp .box_message span {font-weight:700;}
+#popPrize .evt_temp .save_coupon_box,
+#popPrize .evt_temp .save_coupon_box {display:none;}
+#popPrize .coupon_num {margin-top:15px; font-size:20px; font-weight:bold; color:#000; letter-spacing:-2px; line-height:1.4; word-break:keep-all;}
+#popPrize .coupon_num p {display:inline-block;}
+#popPrize .dot_list {margin-top:20px; text-align:left; font-size:12px;}
+#popPrize .dot_list a {display:inline-block; border-bottom:1px solid #88909d; margin-left:5px;}
+#popPrize .btn_close {position:absolute; top:15px; right:15px; width:8%; height:8%;display: flex; align-items: center; justify-content: center;} 
+#popPrize .btn_close i {display:inline-block; transform:rotate(45deg);}
+</style>
+<div class="evt_temp">
+	<!-- <img src="" alt=""/> -->
+	<p>적립금 받고 경품 응모</p>
+	<a href="javascript:addEvnt('0002598');" class="btnxl_type1">응모하기</a>
+	<br><br>
+	<p>신규가입 적립금</p>
+	<a href="javascript:addEvnt('0002599');" class="btnxl_type1">즉시 받기</a>
+	<br><br>
+	<p>선착순 쇼핑지원금</p>
+	<a href="javascript:addEvnt('0002600');" class="btnxl_type1">선착순 다운 받기</a>
+	<br><br>
+	<p>할인상품 추첨</p>
+	<a href="javascript:saleEvnt('0002601');" class="btnxl_type1">할인상품 응모하기</a>
+</div>
+
+<!-- S : dialog -->
+<div id="ev_random_win" title="당첨결과">
+    <div class="layer_popup">
+        <div class="message_box">
+            <p class="h5_type" id="event_result_msg"></p>
+            <div class="message_img mgtxs" id="event_msg_box"></div>
+            <p class="small_txt" id="evnt_info_msg"></p>
+            <button type="button" class="btn_basic2 mgtsm" onclick="$('#ev_random_win').dialog('close');">확인</button>
+        </div>
+    </div>
+</div>
+<!-- E : dialog -->
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	    $("#ev_random_win").dialog({
+	        autoOpen: false,
+	        resizable: false,
+	        width:400,
+	        maxHeight: 720,
+	        modal: true
+	    });
+	});
+
+	//이벤트 참여 처리
+	function addEvnt2(evntId){
+	    // 로그인체크
+	    if(!isLogin){ alert("로그인 후 이용해주세요."); login(); return; }
+
+	    // 기본값 설정
+	    var bnfSeq = typeof(bnfSeq) == "undefined" ? 0 : bnfSeq;
+
+	    // 전송
+	    $.ajax({
+	        async       : false,
+	        url         : ctx_curr + "/op/evnt/evntJoinValidation.json",
+	        dataType    : "json",
+	        type        : "POST",
+	        data        : { evntId : evntId, bnfSeq : bnfSeq },
+	        success     : function(data, textStatus, jqXHR){
+	        	if(!crew.ajaxValidate(data)){ return; }
+	            $.ajax({
+	                async       : false,
+	                url         : ctx_curr + "/op/evnt/evntJoin.json",
+	                dataType    : "json",
+	                type        : "POST",
+	                data        : { evntId : evntId, bnfSeq : bnfSeq },
+	                success     : function(data, textStatus, jqXHR){
+
+	                    if(!crew.ajaxValidate(data)){ return; }
+
+	                    // 이벤트 참여 결과 내용 구성
+	                    var winInfo = [];
+	                    var winType = "";
+	                    var svmtAmt = "";
+	                    var cupNm = "";
+	                    var cupDcAmt = "";
+	                    var cupDcRate = "";
+	                    var curCd = "";
+	                    var famtYn = "";
+
+	                    // 이벤트 당첨레이어팝업 초기화
+	                    $("#event_result_msg").html("");
+	                    $("#event_msg_box").html("");
+	                    $("#event_info_mst").html("");
+
+	                    // 상세항목 구성
+	                    var bnfListWinResult = data.info.bnfListWinResult;
+	                    for(var i=0, bnf ; bnf = bnfListWinResult[i] ; i++){
+	                        if(bnf.svmtId != null){
+	                            winInfo.push("적립금 " + comma(bnf.rsvgAmt) + "원");
+	                            winType = "svmt";
+	                            svmtAmt = comma(bnf.rsvgAmt);
+	                        }
+
+	                        if(bnf.cupId != null){
+	                            winInfo.push("쿠폰 " + bnf.cupNm);
+	                            winType = "cup";
+	                            cupNm = bnf.cupNm;
+	                            cupDcAmt = comma(bnf.cupDcAmt);
+	                            cupDcRate = bnf.cupDcRate;
+	                            curCd = bnf.curCd;
+	                            famtYn = bnf.famtYn;
+	                        }
+
+	                        if(bnf.evntGvawCommNm != null){
+	                            winInfo.push(bnf.evntGvawCommNm);
+	                            winType = "gvaw";
+	                        }
+	                    }
+
+	                    if(winInfo.length != 0){
+	                        $("#event_result_msg").html("축하합니다!<br>"+winInfo.join(",")+"에 당첨되었습니다.");
+
+	                    }else{
+	                        $("#event_result_msg").html("꽝!<br>아쉽지만 다음 기회를 노려주세요.");
+	                    }
+
+	                    var msgBox = [];
+	                    if(winType == "svmt"){  //적립금
+	                        msgBox.push('<div class="save_coupon_box sm ">');
+	                        msgBox.push('    <p class="tit">적립금</p>');
+	                        msgBox.push('    <p class="resize win"><span>￦</span>'+svmtAmt+'</p>');
+	                        msgBox.push('</div>');
+	                        $("#evnt_info_msg").html("다운로드 받은 혜택은 마이현대에서 확인하세요.");
+
+	                    }else if(winType == "cup"){ //쿠폰
+	                        msgBox.push('<div class="save_coupon_box cp">');
+	                        msgBox.push('    <p class="tit">'+cupNm+'</p>');
+	                        if(famtYn == "Y"){
+	                            if(curCd == "USD"){
+	                                msgBox.push('    <p class="sale">$<span>'+cupDcAmt+'</span></p>');
+	                            }else{
+	                                msgBox.push('    <p class="sale"><span>'+cupDcAmt+'</span>원</p>');
+	                            }
+	                        }else if(famtYn == "N"){
+	                            msgBox.push('    <p class="sale"><span>'+cupDcRate+'</span>%</p>');
+	                        }
+	                        msgBox.push('</div>');
+	                        $("#evnt_info_msg").html("다운로드 받은 혜택은 마이현대에서 확인하세요.");
+
+	                    }else if(winType == "gvaw"){ //상품
+	                        msgBox.push('<div class="save_coupon_box"><img src="http://dev.hddfs.com:9986/event/images/KO/product/ev_img01.png" alt=""></div>');
+	                        $("#evnt_info_msg").html("당첨 경품 지급 관련하여 상세내용은 페이지 하단 유의사항을 확인해주세요.");
+
+	                    }else{  //꽝
+	                        msgBox.push('<div class="save_coupon_box"><img src="http://dev.hddfs.com:9986/event/images/KO/product/ev_img02.png" alt=""></div>');
+
+	                    }
+	                    $("#event_msg_box").html(msgBox.join(''));
+
+	                    FitAll();
+	                    $("#ev_random_win").dialog('open');
+	                },
+	                error       : function(jqXHR, textStatus, errorThrown){
+	                    //console.log(jqXHR.status);
+	                }
+	            });
+	        },
+	        error       : function(jqXHR, textStatus, errorThrown){
+	            //console.log(jqXHR.status);
+	        }
+	    });
+	}
+	
+	
+	
+	
+	//리사이징 폰트
+    function measureText(pText, pFontSize) {
+        
+        var resizeFont = document.createElement('p');
+    
+        document.body.appendChild(resizeFont);
+        
+        resizeFont.style.fontSize = "" + pFontSize + "px";
+        resizeFont.style.position = "absolute";
+        resizeFont.style.left = -1000;
+        resizeFont.style.top = -1000;
+        
+        resizeFont.innerHTML = pText;
+    
+        var lResult = {
+            width: resizeFont.clientWidth,
+            height: resizeFont.clientHeight
+        };
+    
+        document.body.removeChild(resizeFont);
+        resizeFont = null;
+    
+        return lResult;
+    }
+    function fitText(el){
+        
+        var text = el.text();
+        var fsize = parseFloat(el.css('font-size'));
+        
+        var measured = measureText(text, fsize);
+        
+        if (measured.width > el.width()){
+        
+        while(true){
+            fsize = parseFloat(el.css('font-size'));
+            var m = measureText(text, fsize);
+            if(m.width > el.width()){
+            el.css('font-size', fsize-0.5 + 'px');
+            }
+            else{
+            break;
+            }
+        }
+        }
+    }
+    
+    function FitAll(){
+        $('.resize').each(function(index, el){
+            fitText($(el));
+        })
+    }
+   
+</script>
+<!-- E : BO 등록 영역 -->
+
+
+
+
+
+
+				</div>
+				<div class="attention_area">
+					<p class="attention_tit">유의사항</p>
+					<ul class="attention_list">
+						<li>내용</li>
+					</ul>
+				</div>
+			</section><!--//event-->
+		</article><!--//content-->
+	</main>
+	<!-- E : container -->
+	<!-- S : footer -->
+	<script src="../../../KO/html/include/footer.js"></script>
+	<!-- E : footer -->
+</div><!--//wrap-->
+</body>
+</html>

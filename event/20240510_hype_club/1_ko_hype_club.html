@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>현대백화점인터넷면세점</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="../../../KO/js/KO/jquery-1.12.4.min.js"></script>
+	<script src="../../../KO/js/KO/jquery-ui.js"></script>
+	<script src="../../../KO/js/KO/jquery.bxslider.js"></script>
+	<script src="../../../KO/js/KO/swiper-bundle.min.js"></script>
+	<script src="../../../KO/js/KO/common.ui.js"></script>
+	<script src="../../../KO/js/KO/product.js"></script>
+	<link rel="stylesheet" href="../../../KO/css/KO/jquery-ui.css">
+	<link rel="stylesheet" href="../../../KO/css/KO/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../../../KO/css/KO/common.css">
+	<link rel="stylesheet" href="../../../KO/css/KO/layout.css">
+	<link rel="stylesheet" href="../../../KO/css/KO/product.css">
+</head>
+<body>
+<div id="wrap">
+	<!-- S : header -->
+	<script src="../../../KO/html/include/header.js"></script>
+	<!-- E : header -->
+	<!-- S : container -->
+	<main id="container" class="container">
+		<!-- S : location -->
+		<article class="location">
+			<section class="box">
+				<a href="https://www.hddfs.com/shop/dm/main.do" class="home">홈</a> 
+				<div><a href="javascript:" class="no-link">이벤트</a></div>
+			</section>
+		</article>
+		<!-- E : location -->
+		<article id="content">
+			<section class="event">
+				<div class="event_top_share">
+					<a noHref class="ico_com round_favorite " onclick="mergeMyEvnt('0003167', this)">관심이벤트</a>
+					<a noHref class="ico_com round_blog shareNaver">네이버블로그</a>
+					<a noHref class="ico_com round_facebook shareFacebook">페이스북</a>
+					<a noHref class="ico_com round_kakao shareKakao">카카오스토리</a>
+				</div>
+				<div class="benefit_img">
+
+
+
+
+
+
+<!-- S : BO 등록 영역 운영
+노출용(껍데기) : 0005317
+세팅 가입용 : 0005331
+세팅 테디뵈르 전체 공통 응모 : 0005333
+세팅 신용산응모 : 0005334
+세팅 더현대응모 : 0005335
+세팅 쿠폰 사용 : 0005336
+하입드로우 경품 응모 5/13 ~19 : 0005406
+하입드로우 경품 응모 5/27 ~6/2 : 0005407 -->
+<style>
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+/* reset */
+#content {width:100%;}
+.event_detail_btn, .event_detail_con, .event_reserves_new, .event_random_reserves {display:none;}
+.attention_area, .benefit_content, .tab-action, .spexGoosListArea, .evntGoosListArea, #frmIntgLgin + div {width:1080px; margin:0px auto;}
+#header.area-gnb {min-width:1420px;}
+.attention_area, .benefit_content {margin-top:60px;}
+.location_all {width:1356px; padding:0;}
+.location {margin:0; padding:15px 0;}
+.event_top_share {position:absolute; top:10px; left:0; right:0; margin:0 auto; width:1356px;}
+
+/* common */
+.evt_wrap {overflow:hidden; width:100%; min-width:1420px; max-width:1920px; margin:0 auto; background-image:none;}
+.evt_wrap .abs {position:absolute;}
+.evt_wrap .obj {position:absolute; display:inline-block; z-index:2;}
+.evt_wrap .txt-info {font-size:16px; color:#373737;}
+.evt_wrap .hide {position:absolute;}
+.evt_wrap .evt_btn {position:absolute; display:inline-block; text-indent:-9999px; overflow:hidden; /*outline:1px solid red;*/}
+
+/* evt_top */
+.evt_top {width:100%; height:1386px; background:#edc6f2 url('https://cdn.hddfs.com/files/op/20240430/2938d977_202404300844322680.jpg') center top no-repeat;}
+.evt_top .wrapper {position:relative; width:1420px; height:100%; margin:0 auto;}
+.evt_top .wrapper .img_blank {width:100%; height:1386px !important;}
+.evt_top .wrapper .evt_tit {top:8%; left:0; right:0; transform:scale(.3); opacity:0; text-align:center; -webkit-animation:ani_zoomin .8s .5s ease-out forwards; animation:ani_zoomin .8s .5s ease-out forwards;}
+@keyframes ani_zoomin {
+	0% {transform:scale(.5); opacity:1;}
+	40% {transform:scale(1.1); opacity:1;}
+	100% {transform:scale(1); opacity:1;}
+}
+/*가입하기 버튼*/
+.evt_top .evt_btn_wrap {position:absolute; bottom:1.5%; left:0; right:0; margin:0 auto; width:398px; height:147px; display:block; overflow:hidden; background:url('https://cdn.hddfs.com/files/op/20240430/1ee976ef_202404300844494390.png') no-repeat; z-index:2;}
+.hype-mem .evt_top .evt_btn_wrap {background:url('https://cdn.hddfs.com/files/op/20240430/2d6edbc4_202404300845012350.png') no-repeat;}/*가입완료 처리*/
+.evt_top .evt_btn_wrap .btn_hype_join {position:absolute; top:0; left:0; right:0; margin:0 auto; width:100%; height:100%; display:block; text-indent:-9999px; overflow:hidden; background:none; z-index:2;}/*a 태그*/
+/*반짝임*/
+.evt_wrap .evt_shine {position:absolute; background:url('https://cdn.hddfs.com/files/op/20240326/0ee89320_202403261458303070.png') no-repeat; background-size:contain; text-indent:-9999px; overflow:hidden;}
+.evt_wrap .evt_shine.type1 {width:35px; height:35px; top:17%; left:8.5%; -webkit-animation:ani-shine1 1.2s ease infinite; animation:ani-shine1 1.2s ease infinite;}
+.evt_wrap .evt_shine.type2 {width:25px; height:25px; top:24.5%; left:85.5%; -webkit-animation:ani-shine2 1s ease infinite; animation:ani-shine2 1s ease infinite;}
+.evt_wrap .evt_shine.type3 {width:30px; height:30px; top:64%; left:80%; -webkit-animation:ani-shine1 1s ease infinite; animation:ani-shine1 1s ease infinite;}
+.evt_wrap .evt_shine.type4 {width:25px; height:25px; top:80%; left:74%; -webkit-animation:ani-shine2 .8s ease infinite; animation:ani-shine2 .8s ease infinite;}
+.evt_wrap .evt_shine.type5 {width:20px; height:20px; top:53.5%; left:8%; -webkit-animation:ani-shine2 .5s ease infinite; animation:ani-shine2 .5s ease infinite;}
+@keyframes ani-shine1 {
+	0% {transform:scale(1);}
+	50% {transform:scale(1.2);}
+	100% {transform:scale(1);}
+}
+@keyframes ani-shine2 {
+	0% {transform:scale(0.7);}
+	50% {transform:scale(1);}
+	100% {transform:scale(0.7);}
+}
+.evt_wrap.hype-mem .btn_hype_join {pointer-events: none;}
+
+/* evt_nav */
+.evt_nav {position:relative; overflow:hidden; width:100%; min-width:1420px; max-width:1920px; height:150px; transition: all .5s; z-index:3;}
+.evt_nav .wrapper {width:100%; height:150px; transition: all .3s;}
+.evt_nav[data-section="0"] .wrapper {background:rgba(225, 201, 244, .8);}/*보라*/
+.evt_nav[data-section="2"] .wrapper {background:rgba(255, 223, 249, .8);}/*스카이*/
+.evt_nav[data-section="1"] .wrapper {background:rgba(208, 238, 249, .8);}/*핑크*/
+.evt_nav[data-section="3"] .wrapper {background:rgba(189, 237, 230, .8);}/*그린*/
+.evt_nav .wrapper ul {display:flex; justify-content:space-between; align-items:center; width:1080px; height:100%; margin:0 auto;}
+.evt_nav .wrapper ul li {width:258px; height:79px;}
+.evt_nav .wrapper ul li a {display:block; width:100%; height:100%; background-size:100% auto; background-position:center top; background-repeat:no-repeat; font-size:0; text-indent:-9999em; overflow:hidden;}
+.evt_nav .wrapper ul li:hover a,
+.evt_nav .wrapper ul li.current a {background-position-y:bottom;}
+.evt_nav .wrapper ul li.nav1 a {background-image:url('https://cdn.hddfs.com/files/op/20240430/bb93f665_202404300845192790.png');}
+.evt_nav .wrapper ul li.nav2 a {background-image:url('https://cdn.hddfs.com/files/op/20240513/19668f33_202405131614215900.png');}
+.evt_nav .wrapper ul li.nav3 a {background-image:url('https://cdn.hddfs.com/files/op/20240513/5327fe23_202405131614337470.png');}
+.evt_nav .wrapper ul li.nav4 a {background-image:url('https://cdn.hddfs.com/files/op/20240430/05f424fc_202404300845418130.png');}
+
+.evt_nav.fixed {height:100px;}
+.evt_nav.fixed .wrapper {position:fixed; z-index:10; top:121px!important; left:0; right:0; margin:0 auto; height:100px;}
+.evt_nav.static .wrapper {position:static;}
+
+/* evt_content */
+.evt_content,
+.evt_content section {position:relative; width:100%;}
+.evt_content section .wrapper {position:relative; width:1420px; height:100%; margin:0 auto;}
+
+/*유의사항*/
+.evt_caution {width:1080px; margin:0 auto; background:rgba(255, 255, 255, .6); padding:40px 60px; border-radius:15px;}
+.evt_caution .caution_tit {display:flex; align-items:center; gap:0 7px; color:#464546; font-size:20px; font-weight:700;}
+.evt_caution .caution_tit:before {content:""; display:inline-block; background:url("https://cdn.hddfs.com/files/op/20240430/39b2108f_202404300845522260.png") no-repeat; width:25px; height:25px;}
+.evt_caution ul {margin-top:18px;}
+.evt_caution li {position:relative; padding-left:10px; color:#282828; font-size:16px;}
+.evt_caution li + li {margin-top:10px;}
+.evt_caution li:before {content:""; position:absolute; top:10px; left:0; width:2px; height:2px; background:#282828;}
+
+/*Swiper 공통*/
+.evt_swiper .swiper_pagination {position:relative; height:13px; margin-top:33px; display:flex; align-items:center; justify-content:center; gap:0 10px; bottom:0;}
+.evt_swiper .swiper-pagination-bullet {width:13px; height:13px; background:#9a9a9a;}
+.evt_swiper .swiper-pagination-bullet {margin:0; vertical-align:top;}
+.evt_swiper .swiper-pagination-bullet + .swiper-pagination-bullet {margin:0; margin-left:5px;}
+
+.evt_swiper :is(.swiper-button-next, .swiper-button-prev) {width:42px; height:42px; background-size:contain; margin:0; background: url("https://cdn.hddfs.com/files/op/20240430/15452212_202404300846028040.png") no-repeat center center; z-index:2;}
+.evt_swiper .swiper-button-prev {transform:rotate(-180deg)}
+.evt_swiper .swiper-scrollbar {position:relative; left:0; margin-top:40px; background:#fff; width:100%; border-radius: 0; z-index:1;}
+.evt_swiper .swiper-scrollbar-drag  {background:#505050; border-radius: 0;}
+
+/*anchor 1*/
+#anchor1 .evt_content1 {background:url('https://cdn.hddfs.com/files/op/20240430/95e12f1a_202404300846124730.jpg') no-repeat center center; height:3150px; margin-top:-150px;}
+#anchor1 .evt_content1 .evt_swiper {position:absolute; top:29%; left:0; right:0; width: 856px; margin:0 auto;}
+#anchor1 .evt_content1 .evt_swiper .swiper-button-prev {left:-60px;}
+#anchor1 .evt_content1 .evt_swiper .swiper-button-next {right:-60px;}
+#anchor1 .evt_content1 .evt_swiper .swiper-scrollbar {display:none;}
+#anchor1 .evt_content1 .obj_brad1 {top:29.7%; right:-1%;}
+#anchor1 .evt_content1 .obj_brad1 span {display:inline-block; animation:ani-float1 1.2s infinite both;}
+#anchor1 .evt_content1 .obj_brad2 {top:47%; left:1%;;}
+#anchor1 .evt_content1 .obj_brad2 span {display:inline-block; animation:ani-float2 2s infinite both;}
+#anchor1 .evt_content1 .obj_teddy {top:52.6%; right:0%;}
+#anchor1 .evt_content1 .obj_teddy span {display:inline-block; animation:ani-float1 1.5s infinite both;}
+@keyframes ani-float1 {
+	0% {transform:translatey(0px);}
+	50% {transform:translatey(-20px);}
+	100% {transform:translatey(0px);}
+}
+@keyframes ani-float2 {
+	0% {transform:translatey(-15px);}
+	50% {transform:translatey(0px);}
+	100% {transform:translatey(-15px);}
+}
+#anchor1 .evt_content1 .evt_tit {position:absolute; top:69%; left:43%; display:flex; align-items:center; gap:0 15px; font-size:19px; color:#000;}
+#anchor1 .evt_content1 .date-pickup {font-family: 'Montserrat', 'Noto Sans CJK KR', 'sans-serif'; font-size:21px; font-weight:700;}
+#anchor1 .evt_content1 .date-pickup:before {content:""; display:inline-block; width:1px; height:17px; margin-right:15px; background:#333;}
+.wrap-teddy__join {position:absolute; top:70%; left:0; right:0; width:856px; margin:0 auto; text-align:center;}
+.wrap-teddy__join.evt_comming:before {content:"5.13 13:00 OPEN"; position:absolute; top:18px; left:0; right:0; width:100%; height:100%; margin:0 auto; border-radius:20px; display:flex; align-items:center; justify-content:center; font-family: 'Montserrat', 'Noto Sans CJK KR', 'sans-serif'; font-size:50px; font-weight:700; color:#fff; background:rgba(0, 0, 0, .6); z-index:2;}
+.wrap-teddy__join .wrap_choose {position:relative; display:flex; flex-wrap:wrap; justify-content:space-between;}
+
+.wrap-teddy__join .wrap_choose.type-soldout:before {content:"오늘의 크루아상백 종료!\A내일 낮 1시에 다시 만나요."; position:absolute; top:18px; left:0; right:0; width:100%; height:96%; margin:0 auto; white-space: pre; border-radius:20px; display:flex; align-items:center; justify-content:center; font-size:40px; font-weight:700; color:#fff; background:rgba(0, 0, 0, .8); z-index:3;}
+.wrap-teddy__join .wrap_choose.type-finish:before {content:"이벤트가 종료되었습니다."; position:absolute; top:18px; left:0; right:0; width:100%; height:96%; margin:0 auto; white-space: pre; border-radius:20px; display:flex; align-items:center; justify-content:center; font-size:40px; font-weight:700; color:#fff; background:rgba(0, 0, 0, .8); z-index:3;}
+
+.wrap-teddy__join .box-teddy {position:relative; width:419px;}
+.wrap-teddy__join .box-teddy label {display: block; width:419px; border:2px solid #dcdcdc; border-radius:15px; text-align:center; padding:50px 50px 45px; color:#323232; cursor:pointer;}
+.wrap-teddy__join .box-teddy label:before {content:""; display:inline-block; width:33px; height:31px; background:url('https://cdn.hddfs.com/files/op/20240430/c557e9c1_202404300846229590.png') no-repeat;}/*라디오버튼*/
+.wrap-teddy__join .box-teddy .img_teddy_logo {display:block; height:31px; background:url('https://cdn.hddfs.com/files/op/20240430/83d9e950_202404300846343960.png') no-repeat center center; text-indent:-9999px; overflow:hidden; margin-top:30px;}/*테디로고*/
+.wrap-teddy__join .box-teddy .txt_store {margin-top:15px; font-size:20px }
+.wrap-teddy__join .box-teddy .wrap_amount {position:relative; margin-top:30px; padding-top:35px; font-size:20px; color:#000;}
+.wrap-teddy__join .box-teddy .wrap_amount:before {content:""; position:absolute; top:0; left:0; display:block; width:100%; height:1px; background:#444240;}
+.wrap-teddy__join .box-teddy .txt_mount {font-family: 'Montserrat', 'Noto Sans CJK KR', 'sans-serif'; font-size:57px; font-weight:700; margin-top:5px;}
+.wrap-teddy__join .box-teddy .txt_mount em {display:inline-block; margin-left:5px; font-size:21px; font-weight:700;}
+
+.wrap-teddy__join .box-teddy input:checked + label {background:#fff9ec; border-color:#ab050b;}
+.wrap-teddy__join .box-teddy input:checked + label:before {background-position-y:100%;}
+
+.wrap-teddy__join :is(.btn-teddy__join, .btn-view__coupon) {display:inline-flex; justify-content:center; align-items:center; width:499px; height:102px;  color:#fff; font-size:25px; font-weight:700;}
+.wrap-teddy__join :is(.btn-teddy__join span, .btn-view__coupon span)  {display:inline-block;}
+.wrap-teddy__join :is(.btn-teddy__join span, .btn-view__coupon span):after {content:""; display:inline-block; width:10px; height:15px; background:url('https://cdn.hddfs.com/files/op/20240430/633abd4f_202404300847214320.png') no-repeat; margin-left:25px;}/*버튼의 횐색 화살표*/
+.wrap-teddy__join .btn-teddy__join {background:url('https://cdn.hddfs.com/files/op/20240430/df64edaf_202404300847406790.png') no-repeat; margin-top:50px;}/*빨간버튼*/
+.wrap-teddy__join .btn-teddy__join.disabled {background:url('https://cdn.hddfs.com/files/op/20240430/cdd5a54b_202404300847489420.png') no-repeat; pointer-events:none;}/*회색버튼*/
+.wrap-teddy__join .btn-view__coupon {background:url('https://cdn.hddfs.com/files/op/20240430/27b2ea06_202404300848220560.png') no-repeat; margin-top:19px;}/*파란버튼*/
+.wrap-teddy__join .txt-info {margin-top:15px;}
+.wrap-teddy__join .txt-info + .txt-info {margin-top:5px;}
+
+/* .wrap-teddy__join.close .box-teddy:before {content:""; position:absolute; left:0; right:0; top:0; width:100%; height:100%;} */
+/* .wrap-teddy__join.close .btn-teddy__join {pointer-events:none;}
+
+.wrap-teddy__join .btn-view__coupon {display:none;}
+.teddy-join .wrap-teddy__join .btn-view__coupon {display:block;} */
+/*재고소진, 이벤트 종료*/
+.wrap-teddy__join .box-teddy.evt_end .btn-teddy__join {cursor:default;}
+.wrap-teddy__join .box-teddy.evt_end:before {content:""; position:absolute; left:0; right:0; top:0; width:100%; height:100%; z-index: 2;}
+.wrap-teddy__join .box-teddy.evt_end label {background:#a9a9a9; cursor:default; opacity: .5;}
+
+.wrap-teddy__join :is(.wrap_choose.type-soldout .box-teddy.evt_end label, .wrap_choose.type-finish .box-teddy.evt_end label) {background:#fff; opacity:1;}
+
+#anchor1 .evt_content2 {background:url('https://cdn.hddfs.com/files/op/20240430/fad225a5_202404300851065930.jpg') no-repeat center center; height:1643px;}/*테디 할인*/
+#anchor1 .evt_content3 {background:url('https://cdn.hddfs.com/files/op/20240430/f86a27e1_202404300901352870.jpg') no-repeat center center; height:1332px; padding-top:430px; display:none;}/*팝업스토어*/
+#anchor1 .evt_content3 .evt_swiper {position:relative; width:1080px; margin:0 auto;}
+#anchor1 .evt_content3 .evt_swiper .swiper-slide {height:756px; overflow:hidden;}
+#anchor1 .evt_content3 .evt_swiper .swiper-slide img {width:100%;}
+#anchor1 .evt_content3 .evt_swiper .swiper-button-prev {left:-80px}
+#anchor1 .evt_content3 .evt_swiper .swiper-button-next {right:-80px}
+#anchor1 .evt_content3 .evt_swiper .swiper_pagination {display:none;}
+#anchor1 .evt_content4 {position:relative; background:url('https://cdn.hddfs.com/files/op/20240430/47378a8d_202404300901447870.jpg') no-repeat center center; height:1399px;}/*테디 동영상*/
+#anchor1 .evt_content4 .wrap_video {position:absolute; top:27.7%; left:0; right:0; width:499px; margin:0 auto; margin:0 auto;}
+#anchor1 .evt_content5 {background:url('https://cdn.hddfs.com/files/op/20240514/0e80d303_202405141535484020.jpg') no-repeat top center; height:1480px; padding-top:830px;}/*이벤트 미리보기, 유의사항*/
+
+/*anchor 2*/
+#anchor2 .evt_content1 {background:url('https://cdn.hddfs.com/files/op/20240513/0338ce28_202405131614599270.jpg') no-repeat center center; height:2000px;}/*인스타 친구 https://cdn.hddfs.com/files/op/20240509/3c7e13a1_202405091603311990.jpg*/
+#anchor2 .evt_content2 {background:url('https://cdn.hddfs.com/files/op/20240430/1367e36c_202404300902203750.jpg') no-repeat center center; height:2259px;}/*인스타 친구 방법*/
+#anchor2 .evt_content2 .evt_btn {bottom:3%; left:0; right:0; margin:0 auto; width:35%; height:4.4%;}
+#anchor2 .evt_content2 .txt-info {bottom:1.54%; left:0; right:0; text-align:center;}
+#anchor2 .evt_content3 {background:url('https://cdn.hddfs.com/files/op/20240430/eb93e296_202404300903089800.jpg') no-repeat center center; height:635px;}/*유의사항*/
+#anchor2 .evt_content3 .evt_caution {background:rgba(242, 152, 230, .1);}
+
+/*anchor 3*/
+#anchor3 .evt_content1 {background:url('https://cdn.hddfs.com/files/op/20240513/9de80526_202405131619321160.jpg') no-repeat center center; height:2275px; padding-top:455px;}/*래플템 투표 및 응모 https://cdn.hddfs.com/files/op/20240502/bbd1528c_202405020929212090.jpg*/
+#anchor3 .wrap_vote {position:relative; background:url('https://cdn.hddfs.com/files/op/20240502/d15be811_202405020930241480.png') no-repeat; padding-top:63px; width:1080px; margin:0 auto; }
+#anchor3 .vote_swiper {position:relative; overflow:hidden;}
+#anchor3 .wrap_vote .img_vote {border-radius:0 0 20px 20px; border:1px solid #dadada; overflow:hidden; box-shadow: 2px 2px 4px 0px rgba(162,124,153,0.3);}
+#anchor3 .wrap_vote .box_vote {margin-top:50px; text-align:center;}
+#anchor3 .wrap_vote .evt_btn {position:relative;}
+#anchor3 .wrap_vote .evt_btn.type_vote {background:url('https://cdn.hddfs.com/files/op/20240502/65404ba3_202405020929340890.png') no-repeat; width:499px; height:102px;}/*투표하기*/
+#anchor3 .wrap_vote .evt_btn.type_vote_next {background:url('https://cdn.hddfs.com/files/op/20240502/dead0b58_202405020929429550.png') no-repeat; width:499px; height:102px;}/*투표예정*/
+#anchor3 .wrap_vote .evt_btn.type_draw {background:url('https://cdn.hddfs.com/files/op/20240502/e92d81c9_202405021021155890.png') no-repeat; width:499px; height:102px;}/*응모하기*/
+#anchor3 .wrap_vote .swiper_pagination {position:absolute; left:0; right:0; width:100%; bottom:226px; height:12px; display:flex; align-items:center; justify-content:center; gap:0 5px; z-index:2;}
+#anchor3 .wrap_vote .swiper-pagination-bullet {width:12px; height:12px; background:#fff;}
+#anchor3 .wrap_vote .swiper-pagination-bullet {margin:0; vertical-align:top;}
+#anchor3 .wrap_vote .swiper-pagination-bullet + .swiper-pagination-bullet {margin:0; margin-left:5px;}
+
+#anchor3 .wrap_vote :is(.swiper-button-next, .swiper-button-prev) {width:42px; height:42px; background-size:contain; margin:0; background: url("https://cdn.hddfs.com/files/op/20240430/15452212_202404300846028040.png") no-repeat center center; z-index:2;}
+#anchor3 .wrap_vote .swiper-button-prev {transform:rotate(-180deg)}
+#anchor3 .wrap_vote .swiper-button-prev {left:-80px}
+#anchor3 .wrap_vote .swiper-button-next {right:-80px}
+#anchor3 .evt_content1 .evt_caution {margin-top:64px;}
+
+/*anchor 4*/
+#anchor4 .evt_content1 {background:url('https://cdn.hddfs.com/files/op/20240508/b294ea6f_202405081656165570.jpg') no-repeat center center; height:2711px; padding-top:400px; text-align:center;}
+#anchor4 .evt_content1 .obj {width:546px; height:1029px; text-indent:-9999px; overflow:hidden;}
+#anchor4 .evt_content1 .img_pic1 {background:url('https://cdn.hddfs.com/files/op/20240508/22c26fae_202405081656379620.png') no-repeat;}
+#anchor4 .evt_content1 .img_pic2 {background:url('https://cdn.hddfs.com/files/op/20240508/b037324a_202405081657108730.png') no-repeat;}
+#anchor4 .evt_content1 .img_pic1.type-back {top:16%; left:4%;}
+#anchor4 .evt_content1 .img_pic1.type-front {top:17.6%; left:5%; z-index:2;}
+#anchor4 .evt_content1 .img_pic2.type-back {top:42%; right:5%;}
+#anchor4 .evt_content1 .img_pic2.type-front {top:43.5%; right:4%; z-index:2;}
+
+/*가입 완료 Popup*/
+#hypeJoinPop {display:none;}
+#hypeJoinPop button {position: absolute; top:25px; right:29px; width:50px; height:50px; text-indent:-9999px; overflow:hidden;}
+
+/*당첨 쿠폰 Popup*/
+.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-draggable[aria-describedby="teddyCoupon"] {border:none; background:none;}
+[aria-describedby="teddyCoupon"] .ui-dialog-titlebar {display:none;}
+.teddy-popup {display:none; background-color:#fff;}
+.teddy-popup .img_pop_top {position:relative;}
+.teddy-popup .teddy-shop {position:absolute; top:100px; left:0; width:100%; text-align:center; font-size:21px; color:#323232; font-weight:600;}
+.teddy-popup .box_coupon {padding:35px 55px 45px; text-align:center;}
+.teddy-popup .box_coupon .txt {font-size:25px; color:#000; font-weight:700; letter-spacing:-2px;}
+.teddy-popup .coupon_date {position:absolute; top:79%; left:26.5%; text-align:left; color:#323232; /*font-family: 'Montserrat', 'Noto Sans CJK KR', 'sans-serif';*/ word-break:keep-all; font-size:18px; font-weight:600;}
+.teddy-popup .box_coupon input {margin-top:15px; width:100%; height:65px; border:1px solid #d5d5d5; border-radius: 10px !important; font-size:20px; text-align:center; font-weight:700;}
+.teddy-popup .box_coupon  .btn-comfirm__coupon {margin-top:12px; width:100%; height:65px; background:#000; color:#fff; border-radius: 10px !important; font-size:20px; text-align:center; font-weight:700;}
+.teddy-popup .box_caution {background:#f2f2f2; border-radius:12px; margin-top:30px; padding:30px 40px;}
+.teddy-popup .box_caution .dot_list {text-align:left;}
+.teddy-popup .box_caution .dot_list li {color:#373737;}
+.teddy-popup .btn_close {position:absolute; top:40px; right:13px; width:50px; height:50px; text-indent:-9999px; overflow:hidden;}
+</style>
+<div class="evt_wrap">
+	<div class="evt_top">
+		<div class="wrapper wrap-hype__join">
+			<p class="obj evt_tit"><img src="https://cdn.hddfs.com/files/op/20240508/56d989a2_202405081756509940.png" alt="이제 HYPE하게 살기로 했어 우리 맴버가 될래? HYPE CLUB"></p>
+			<img class="img_blank" src="https://cdn.hddfs.com/files/editor/20190723/c02feac9_201907231257212110.gif" alt="모든 걸 내 스타일대로 면세하는 이곳. 현대백화점면세점의 라이프스타일 멤버십 『 HYPE CLUB 』  우리 멤버가 될래?">
+			<div class="evt_btn_wrap">
+				<a href="javascript:hypeJoin('0005331')" class="btnxl_type1 btn_hype_join">맴버 가입하기</a>
+				<div class="abs evt_shine type1">Shine1</div>
+				<div class="abs evt_shine type2">Shine2</div>
+				<div class="abs evt_shine type3">Shine3</div>
+				<div class="abs evt_shine type4">Shine4</div>
+				<div class="abs evt_shine type5">Shine5</div>
+			</div>
+			
+		</div>
+	</div><!--// evt_top -->
+	
+	<div class="evt_nav" data-section="0">
+		<div class="wrapper">
+			<ul>
+				<li class="nav1 current"><a href="#anchor1">[EVENT 1] 신상백 출시</a></li>
+				<li class="nav3"><a href="#anchor3">[EVENT 2] 품절템 드로우</a></li>
+				<li class="nav2"><a href="#anchor2">[EVENT 3] 맴버 소환</a></li>
+				<li class="nav4"><a href="#anchor4">[EVENT 4] 하입템</a></li>
+			</ul>
+		</div>
+	</div><!--// evt_nav -->
+
+	<div class="evt_content">
+		<section class="anchor" id="anchor1">
+			<div class="evt_content1">
+				<div class="wrapper">
+					<div class="evt_swiper">
+						<div class="swiper type_slider">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="https://cdn.hddfs.com/files/op/20240502/72256f80_202405021631003950.jpg" alt="Teddy Beurre 1"/></div>
+								<div class="swiper-slide"><img src="https://cdn.hddfs.com/files/op/20240502/1dd80d0b_202405021631076020.jpg" alt="Teddy Beurre 2"/></div>
+								<div class="swiper-slide"><img src="https://cdn.hddfs.com/files/op/20240502/8fbb524c_202405021631169850.jpg" alt="Teddy Beurre 3"/></div>
+								<div class="swiper-slide"><img src="https://cdn.hddfs.com/files/op/20240502/d9a9e817_202405021631244910.jpg" alt="Teddy Beurre 4"/></div>
+								<div class="swiper-slide"><img src="https://cdn.hddfs.com/files/op/20240502/7209b27a_202405021631322520.jpg" alt="Teddy Beurre 5"/></div>
+							</div>
+							<div class="swiper-button-prev"><i class="hide">Previous</i></div>
+							<div class="swiper-button-next"><i class="hide">Next</i></div>
+							<div class="swiper_pagination"><i class="hide">Pagination</i></div>
+							<div class="swiper-scrollbar"><i class="hide">Scroll Bar</i></div>
+						</div>
+					</div><!--//evt_swiper-->
+					<div class="obj obj_brad1" data-aos="fade-down-left"><span><img src="https://cdn.hddfs.com/files/op/20240430/db43a65b_202404300904202140.png" alt="Brad 1"/></span></div>
+					<div class="obj obj_brad2" data-aos="fade-right"><span><img src="https://cdn.hddfs.com/files/op/20240430/0a5fa9ea_202404300904284460.png" alt="Brad 2"/></span></div>
+					<div class="obj obj_teddy" data-aos="fade-up"><span><img src="https://cdn.hddfs.com/files/op/20240430/6d6f6a1f_202404300904360830.png" alt="Teddy"/></span></div>
+
+					<p class="evt_tit">매장 픽업일<span class="date-pickup">2024.05.14</span></p><!--픽업일자-->
+					<div class="wrap-teddy__join">
+						<div class="wrap_choose">
+							<div class="box-teddy -young"><!--품절, 종료시 evt_end 추가-->
+								<input type="radio" name="teddyStore" id="teddyStore1">
+								<label for="teddyStore1">
+									<p class="img_teddy_logo">Teddy Beurre House</p>
+									<p class="txt_store">용산점</p>
+									<div class="wrap_amount">
+										<p>잔여수량</p>
+										<p class="txt_mount"><span class="txt-teddy1">75</span> / 75<em>개</em></p>
+									</div>
+								</label>
+							</div>
+							<div class="box-teddy -hyun"><!--품절, 종료시 evt_end 추가-->
+								<input type="radio" name="teddyStore" id="teddyStore2">
+								<label for="teddyStore2">
+									<p class="img_teddy_logo">Teddy Beurre House</p>
+									<p class="txt_store">더현대서울점</p>
+									<div class="wrap_amount">
+										<p>잔여수량</p>
+										<p class="txt_mount"><span class="txt-teddy2">75</span> / 75<em>개</em></p>
+									</div>
+								</label>
+							</div>
+						</div><!--//wrap_choose-->
+						<a href="javascript:teddyJoin();" class="btn-teddy__join"><span>이벤트 응모하기</span></a> 
+						<p class="box-coupon"><a class="btn-view__coupon" href="javascript:void(0)" onclick="viewCoupon();"><span>크루아상 픽업 쿠폰 확인하기</span></a></p>
+						<p class="txt-info">· 면세점 회원가입한, 하입클럽 멤버만 응모 가능</p>
+						<p class="txt-info">· 수령일 및 수령매장 변경 불가</p>
+						<p class="txt-info">· 기간 (5/13~6/9) 내 ID당 1회만 참여 가능합니다.</p>
+					</div>
+				</div>
+			</div><!--//evt_content1-->
+			<div class="evt_content2">
+				<i class="hide">[PLUS EVENT] HYPE CLUB “리미티드 디저트” 면세하기</i>
+			</div><!--//evt_content2-->
+			<div class="evt_content3">
+				<i class="hide">[POP-UP STORE] 현대백화점면세점 팝업스토어 in 테디뵈르하우스</i>
+				<div class="evt_swiper">
+					<div class="swiper type_slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="https://cdn.hddfs.com/files/op/20240430/c177be40_202404300903365890.png" alt="Teddy Beurre 1"/></div>
+						</div>
+						<div class="swiper-button-prev"><i class="hide">Previous</i></div>
+						<div class="swiper-button-next"><i class="hide">Next</i></div>
+						<div class="swiper_pagination"><i class="hide">Pagination</i></div>
+						<div class="swiper-scrollbar"><i class="hide">Scroll Bar</i></div>
+					</div>
+				</div><!--//evt_swiper-->
+			</div><!--//evt_content3-->
+			<div class="evt_content4">
+				<i class="hide">[HYPE BAG VIDEO] 현대백화점면세점에서 테디뵈르가 “크루아상백 ” 만드는 법</i>
+				<div class="wrap_video">
+					<!-- <div style="height: 0px; padding-top: 25px; padding-bottom: 56.2%; position: relative;">
+						<iframe src="https://www.youtube.com/embed/nycq6vDEtVs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+					</div> -->
+					<video controls="" autoplay="" playsinline="" loop="" muted="" style="width:100%">
+						<source src=" https://cdn.hddfs.com/files/editor/20240507/e7d24131_202405071549338130.mp4" type="video/mp4">
+					</video>
+				</div>
+			</div><!--//evt_content4-->
+			<div class="evt_content5">
+				<i class="hide">[6월 OPEN!] UPCOMING EVENT</i>
+				<div class="evt_caution">
+					<p class="caution_tit">유의사항</p>
+					<ul>
+						<li>크루아상백 응모 기간 : 05.13(월) - 06.07 (금) 매일 13시 오픈 (온라인 선착순 마감)</li>
+						<li>크루아상백 수령 기간 : 05.14(화) - 06.10 (월) 용산점 10시 - 21시 · 더현대서울 10시 30분 - 20시까지</li>
+						<li>HYPE CLUB 전용 메뉴 '베리베리 크루아상백 XL' 는 매일 100개씩만 한정수량 판매됩니다. (용산점 50개, 더현대서울점 50개)</li>
+						<li>HYPE CLUB 전용 메뉴 '베리 HYPE 라떼' 는 일 판매수량 제한이 없습니다.</li>
+						<li>HYPE CLUB 전용 메뉴 '베리베리 크루아상백 XL' , '베리 HYPE 라떼' 판매 기간 : 05.14 (화) - 06.17 (월)</li>
+						<li>해당 이벤트는 ID당 매일 1회 참여 가능합니다.</li>
+						<li>기간 내 1회 당첨 시, 이후 응모가 불가능합니다.</li>
+						<li>크루아상백 픽업 쿠폰은 당첨 시 즉시 발급되며, “크루아상백 픽업 쿠폰 확인하기“ 버튼 클릭 시 확인 가능합니다.</li>
+						<li>이벤트 참여자의 귀책 (회원 탈퇴, 픽업일 미교환 등) 으로 혜택을 받지 못한 경우, 재 지급이 불가능합니다.</li>
+						<li>본 이벤트는 선착순 지급으로 수량 소진 시 조기종료 될 수 있습니다.</li>
+						<li>본 이벤트는 당사 사정에 의해 사전 고지 없이 내용 변경 및 조기 종료될 수 있습니다.</li>
+						<li>해당 이벤트는 내국인 회원 전용 이벤트로, 외국 국적 회원은 참여가 어렵습니다.</li>
+					</ul>
+				</div>
+			</div><!--//evt_content5-->
+			
+		</section><!--//Event1 신상백 출시-->
+
+		<section class="anchor" id="anchor3">
+			<div class="evt_content1">
+				<div class="wrapper">
+					<i class="hide">
+						[EVENT 3] 품절대란템 래플 이벤트. 
+						지금 가장 HYPE한 아이템만 골랐어요.
+						HYPE CLUB 멤버들은 원하는 아이템에 투표해주세요.
+						최종 선택된 아이템을 선물로 드려요!
+					</i>
+					<div class="wrap_vote">
+						<div class="vote_swiper">
+							<div class="swiper-wrapper">
+								
+								<!--이번주 투표-->
+								<div class="swiper-slide this-week">
+									<div class="img_vote">
+										<div class="vote_img_swiper">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<img src="https://cdn.hddfs.com/files/op/20240520/244ece2f_202405202104117530.jpg" alt="[05.20 ~ 05.26] 1. 포터 탱커 숄더백 스몰 블랙"/>
+													<!-- <img src="https://cdn.hddfs.com/files/op/20240502/fd1c31c4_202405021120050670.jpg" alt="[05.10 ~ 05.12] 1. 아식스X키코X헤븐 코스모스"/> -->
+												</div>
+												<div class="swiper-slide">
+													<img src="https://cdn.hddfs.com/files/op/20240520/5f1d3c80_202405202104252140.jpg" alt="[05.20 ~ 05.26] 2. 아식스 언리미티드 젤 카야노 14 그레이"/>
+													<!-- <img src="https://cdn.hddfs.com/files/op/20240502/c412d399_202405021120145740.jpg" alt="[05.10 ~ 05.12] 2. 아크테릭스 헬리아드 15 포리지"/> -->
+												</div>
+											</div>
+										</div>
+									</div>
+									<p class="box_vote"><a href="https://www.instagram.com/p/C7LKpHYSFby/?igsh=MW5kN2p4OTF6bTFoNA==" target="_blank" class="evt_btn type_vote">투표하기</a></p>
+								</div>
+
+								<!--응모하기-->
+								<div class="swiper-slide draw-vote" style="display:none">
+									<div class="img_vote"><img src="https://cdn.hddfs.com/files/op/20240522/25d2ccc5_202405221451372020.jpg" alt="Part2 포터 탱커 숄더백 스몰 블랙"/></div>
+									<!-- <div class="img_vote"><img src="https://cdn.hddfs.com/files/op/20240522/6a944720_202405221451510040.jpg" alt="Part2 아식스 언리미티드 젤 카야노 14 그레이"/></div> -->
+									<p class="box_vote"><a href="javascript:drawJoin('0005407')" class="evt_btn type_draw">응모하기</a></p>
+								</div><!--//응모용 선정된 상품 응모하기 이벤트 ID 주기적으로 변경-->
+
+								<!--다음주 투표-->
+								<div class="swiper-slide next-week">
+									<div class="img_vote">
+										<div class="vote_img_swiper">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide"><img src="https://cdn.hddfs.com/files/op/20240522/af916ba0_202405221454480060.jpg" alt="[06.03 ~ 06.09] 1. 크롬하츠 실리크롬"/></div>
+												<div class="swiper-slide"><img src="https://cdn.hddfs.com/files/op/20240522/473759d0_202405221454572500.jpg" alt="[06.03 ~ 06.09] 2. 호카 호파라 폴스글로브 페일 모브"/></div>
+											</div>
+										</div>
+									</div>
+									<p class="box_vote"><span class="evt_btn type_vote_next">투표예정</span></p>
+								</div>
+							</div>
+						</div><!--//vote_swiper-->
+						<div class="swiper-button-prev"><i class="hide">Previous</i></div>
+						<div class="swiper-button-next"><i class="hide">Next</i></div>
+						<div class="swiper_pagination"><i class="hide">Pagination</i></div>
+					</div><!--//wrap_vote-->
+					<div class="evt_caution">
+						<p class="caution_tit">유의사항</p>
+						<ul>
+							<li>당첨자 발표 : 5.22(수) 공지사항 당첨자발표 게시판</li>
+							<li>경품은 '투표하기' 이후 진행되는 본 이벤트 참여자 대상으로 별도 추첨이 진행되며, 당첨자 발표 후 영업일 기준 10일 내 개별 연락을 통해 안내 예정입니다.</li>
+							<li>당첨자는 경품 발송을 위한 안내에 응답하지 않을 경우 당첨이 취소됩니다.</li>
+							<li>경품은 내정보>회원정보수정>휴대폰 인증 등록되어 있는 번호로 안내되오니 반드시 본인인증 및 휴대폰 번호 등록 후 참여해주세요.</li>
+							<li>경품 이벤트 응모 이후 휴대폰 번호가 변경되는 경우, 당첨 안내가 불가하니 경품 응모 전 반드시 휴대폰 번호를 확인해 주세요.</li>
+							<li>이벤트 경품 사이즈는 랜덤이며, 재고 상황에 따라 다른 상품 및 옵션으로 변경될 수 있습니다.</li>
+							<li>이벤트 상품 수령 후 교환 및 환불은 불가능합니다.</li>
+							<li>이벤트 혜택은 타인에게 양도 및 판매할 수 없으며, 비정상적인 방법으로 참여하실 경우 현대백화점면세점 운영 정책에 따라 제재받을 수 있습니다.</li>
+							<li>해당 이벤트는 경품으로 제공되는 상품 브랜드와 무관하게 진행되는 현대백화점면세점 자체 이벤트이며,<br>경품 A/S 및 사용 문의는 경품 제조사 고객센터로 문의 부탁드립니다.</li>
+							<li>해당 이벤트는 내국인 회원 전용 이벤트로, 외국 국적 회원은 참여가 어렵습니다.</li>
+						</ul>
+					</div>
+				</div>
+			</div><!--//evt_content1-->
+		</section><!--//Event3 품절템 드로우-->
+
+		<section class="anchor" id="anchor2">
+			<div class="evt_content1">
+				<i class="hide">[EVENT 2] HYPE TYPE 인스타그램 친구 TAG EVENT</i>
+			</div>
+			<div class="evt_content2">
+				<div class="wrapper">
+					<i class="hide">[HOW TO] 이벤트 참여방법</i>
+					<a href="https://www.instagram.com/hddfs.official/" target="_blank" class="evt_btn">이벤트 참여하기</a> 
+					<p class="abs txt-info">· 면세점 회원가입한, 하입클럽 멤버만 응모 가능</p>
+				</div>
+			</div>
+			<div class="evt_content3">
+				<div class="evt_caution">
+					<p class="caution_tit">유의사항</p>
+					<ul>
+						<li>이벤트 기간 : 5.10(금) - 5.28(화) 23:59</li>
+						<li>당첨자 발표 : 6.4(화) 인스타그램 개별 DM 발표</li>
+						<!-- <li>경품은 이벤트 당첨자 대상으로 추첨 및 선정되며, 당첨자 발표 후 영업일 기준 10일 내 개별 연락을 통해 안내 예정입니다. </li> -->
+						<li>당첨자가 경품 발송을 위한 안내에 응답하지 않을 경우 당첨이 취소됩니다.</li>
+						<li>5만원 초과 경품에 대한 제세공과금 22%는 당첨자 본인 부담이며,  제세공과금 납부를 원치 않을 경우 당첨은 자동 취소됩니다.<br>
+							또한, 제세공과금 신고를 위한 신분증 사본 제출이 필요합니다.</li>
+						<li>이벤트 경품은 재고 상황에 따라 다른 상품 또는 옵션으로 변경될 수 있습니다.</li>
+						<li>본 이벤트는 당사 사정에 의해 사전 고지 없이 내용 변경 및 조기 종료될 수 있습니다.</li>
+						<li>경품 수령 후 교환 및 환불은 불가능합니다.</li>
+						<li>해당 이벤트는 경품으로 제공되는 상품 브랜드와 무관하게 진행되는 현대백화점면세점 자체 이벤트이며, <br>경품 A/S 및 사용 문의는 경품 브랜드 고객센터로 문의 부탁드립니다.</li>
+					</ul>
+				</div>
+			</div>
+		</section><!--//Event2 맴버 소환-->
+
+		<section class="anchor" id="anchor4">
+			<div class="evt_content1">
+				<div class="wrapper">
+					<p class="img_con" data-aos="fade-up"><img src="https://cdn.hddfs.com/files/op/20240508/715d2b61_202405081657479590.png" alt="[EVENT 4] HYPE ITEM 누구보다 HYPE한 취향을 가진 우리 멤버의 추천템"></p>
+					<p class="obj img_pic1 type-back" data-aos="fade-down-right">김지윤1</p>
+					<p class="obj img_pic1 type-front" data-aos="fade-down-right" data-aos-delay="200">김지윤1</p>
+					<p class="obj img_pic2 type-back" data-aos="fade-up-left">김지윤2</p>
+					<p class="obj img_pic2 type-front" data-aos="fade-up-left" data-aos-delay="200">김지윤2</p>
+				</div>
+			</div>
+		</section><!--//Event4 하입템-->
+	</div>
+	
+</div>
+
+<!--S: 하입클럽 가입완료 팝업-->
+<div class="benefit_pop" id="hypeJoinPop">
+	<img src="https://cdn.hddfs.com/files/op/20240430/33db14d8_202404300905169130.jpg" alt="감사합니다. 하입클럽 가입이 완료되었습니다. 자세한 혜택은 아래 내용을 통해 확인해 주세요."/><!-- 760 x 653 -->
+	<button type="button" onclick="javascript:modalClose();">닫기</button>
+</div>
+<!--E: 하입클럽 가입완료 팝업-->
+
+<!--S: 테디뵈르 용산점 쿠폰 확인 팝업 -->
+<div id="teddyCouponSin" title="용산점 테디뵈르 쿠폰 팝업" class="teddy-popup">
+	<div class="evt_temp">
+		<div class="img_pop_top">
+			<img src="https://cdn.hddfs.com/files/op/20240503/6fce12db_202405031515416940.jpg" alt="용산점(서울 용산구 한강대로40가길 42 1층)">
+			<p class="coupon_date"><span class="teddy-date">2024.05.14</span> 10시 - 21시까지</p>
+			<!-- <span class="teddy-shop">용산점</span> -->
+		</div>
+		<div class="box_coupon">
+			<p class="txt">직원 입력란 입니다.</p>
+			<!-- <div class="coupon_date">
+				<span class="teddy-date">Pick up date</span> PICK UP MEMBER
+			</div> -->
+			<input type="text" id="inputCustomSin" placeholder="코드 번호를 입력해주세요.">
+			<button class="btn-comfirm__coupon" onclick="javascript:couponReserve('0005336');">직원확인</button>
+			<div class="box_caution">
+				<ul class="dot_list">
+					<li>본 교환증은 매장이용 시 대기가 발생할 수 있습니다.</li>
+					<li>교환장소 및 수령일시는 변경 불가 합니다.</li>
+					<li>당일 미수령시, 다른 일자에 재수령 불가 합니다.</li>
+					<li>교환증 1건 당, 크로와상백 디저트  1개 교환이 가능하며,<br>
+						그외 디저트로는 교환 불가합니다.</li>
+					<li>수령 확인은 본 페이지에서 매장 직원 확인을 통해서만 가능합니다.</li>
+					<li>디저트 수령 이후, 교환 및 환불 불가 합니다.</li>
+				</ul>
+			</div>
+		</div>
+		<a class="abs btn_close" href="javascript:void(0);" onclick="$('#teddyCouponSin').dialog('close');" title="팝업닫기"><i class="ico_coma ic_sbox_clear">팝업닫기</i></a>
+	</div>
+</div>
+<!--E:테디뵈르 용산점 쿠폰 확인 팝업 -->
+
+<!--S: 테디뵈르 더현대점 쿠폰 확인 팝업 -->
+<div id="teddyCouponHyun" title="더현대점 테디뵈르 쿠폰 팝업" class="teddy-popup">
+	<div class="evt_temp">
+		<div class="img_pop_top">
+			<img src="https://cdn.hddfs.com/files/op/20240503/27f79d33_202405031515527920.jpg" alt="더현대서울점(서울 영등포구 여의대로 108, 더현대서울B1)">
+			<p class="coupon_date"><span class="teddy-date">2024.05.14</span> 10시 30분 - 20시까지</p>
+			<!-- <span class="teddy-shop">용산점</span> -->
+		</div>
+		<div class="box_coupon">
+			<p class="txt">직원 입력란 입니다.</p>
+			<!-- <div class="coupon_date">
+				<span class="teddy-date">Pick up date</span> PICK UP MEMBER
+			</div> -->
+			<input type="text" id="inputCustomHyun" placeholder="코드 번호를 입력해주세요.">
+			<button class="btn-comfirm__coupon" onclick="javascript:couponReserve('0005336');">직원확인</button>
+			<div class="box_caution">
+				<ul class="dot_list">
+					<li>본 교환증은 매장이용 시 대기가 발생할 수 있습니다.</li>
+					<li>교환장소 및 수령일시는 변경 불가 합니다.</li>
+					<li>당일 미수령시, 다른 일자에 재수령 불가 합니다.</li>
+					<li>교환증 1건 당, 크로와상백 디저트  1개 교환이 가능하며,<br>
+						그외 디저트로는 교환 불가합니다.</li>
+					<li>수령 확인은 본 페이지에서 매장 직원 확인을 통해서만 가능합니다.</li>
+					<li>디저트 수령 이후, 교환 및 환불 불가 합니다.</li>
+				</ul>
+			</div>
+		</div>
+		<a class="abs btn_close" href="javascript:void(0);" onclick="$('#teddyCouponHyun').dialog('close');" title="팝업닫기"><i class="ico_coma ic_sbox_clear">팝업닫기</i></a>
+	</div>
+</div>
+<!--E:테디뵈르 더현대점 쿠폰 확인 팝업 -->
+
+<link href="https://cdn.hddfs.com/front/css/KO/aos.css" rel="stylesheet"><!-- aos -->
+<script src="https://cdn.hddfs.com/front/js/KO/aos.js"></script><!-- aos -->
+<script>
+$(document).ready(function(){
+	// mainInit(); //이벤트 진입시 실행
+
+	var evtAOS = function() {
+		AOS.init({
+			offset: 200, // default: 120
+			duration: 600, //default: 400
+			easing: 'ease-out' //default: ease
+		});
+	}
+	setTimeout(function() {
+		evtAOS();
+	}, 400);
+
+	//탭버튼
+	var fixGap = 120;
+
+	// tab
+	$(".evt_nav ul li a").on("click", function(e) {
+		e.preventDefault();
+		$('html,body').animate({
+			scrollTop:$(this.hash).offset().top - fixGap - 95
+		}, 500);
+	});
+	
+	// nav
+	$(window).on("scroll", function(e) {
+		var $evt = $(".evt_wrap");
+		var $nav = $(".evt_nav");
+
+		if ($nav.length) {
+			var scrollTop = $(this).scrollTop();
+			var navHeight = $nav.height();
+			var navTop = $nav.offset().top;
+			var evtHeight = $evt.offset().top + $evt.height();
+
+			$(".anchor").each(function(i, v) {
+				if ($(this).offset().top - (fixGap + navHeight) <= scrollTop && ($(this).offset().top + $(this).parent().height()) - navHeight >= scrollTop) {
+					if (!$(".evt_nav").find("li").eq(i).is(".current")) {
+						$(".evt_nav").find("li").eq(i).addClass("current").siblings().removeClass("current");
+						$(".evt_nav").attr("data-section", i);
+					}
+				}
+			});
+			if (scrollTop >= navTop - fixGap && (evtHeight) - (fixGap + navHeight) >= scrollTop) {
+				if (!$nav.is(".fixed")) {
+					$nav.addClass("fixed").removeClass("static");
+				}
+			} else {
+				if ($nav.is(".fixed")) {
+					$nav.removeClass("fixed");
+				}
+				if ((evtHeight) - (fixGap + navHeight) <= scrollTop) {
+					if (!$nav.is(".static")) {
+						$nav.addClass("static").removeClass("fixed");
+					}
+				}
+			}
+		}
+	});
+
+	// 테디 비주얼, 팝업스토어 swiperSlider
+	setTimeout(function() {
+		$(".evt_swiper").each(function(index, element){
+			var $this = $(this);
+			$this.addClass('instance-' + index);
+			var typeSlider = $this.find('.type_slider');
+
+			var productSwiper = new Swiper(typeSlider, {
+				autoplay:{
+					delay: 2000,
+				},
+				effect : 'fade', 
+				fadeEffect: { 
+					crossFade: true 
+				},
+				speed: 500,
+				spaceBetween: 0,
+				slidesPerView: 1,
+				// centeredSlides: true,
+				roundLengths: true,
+				// loop: true,
+				observer: true,
+				observeParents: true,
+				roundLengths: true, //일반 해상도 화면에서 텍스트가 흐려지는 것을 방지하기 위해 슬라이드 너비와 높이 값을 반올림
+				pagination: {
+					el: '.instance-'+ index +' .swiper_pagination',
+				},
+				navigation: {
+					nextEl: '.instance-'+ index +' .swiper-button-next',
+					prevEl: '.instance-'+ index +' .swiper-button-prev',
+				},
+				scrollbar: {
+					el: '.instance-'+ index +' .swiper-scrollbar',
+					draggable: true,
+				},
+			});
+		});
+	}, 500);
+
+	//래플템 투표 swiperSlider
+	var voteSwiper = new Swiper(".vote_swiper", {
+		speed: 500,
+		spaceBetween: 0,
+		slidesPerView: 1,
+		// centeredSlides: true,
+		roundLengths: true,
+		observer: true,
+		observeParents: true,
+		roundLengths: true, //일반 해상도 화면에서 텍스트가 흐려지는 것을 방지하기 위해 슬라이드 너비와 높이 값을 반올림
+		// pagination: {
+		// 	el: '.wrap_vote .swiper_pagination',
+		// },
+		// navigation: {
+		// 	nextEl: '.wrap_vote .swiper-button-next',
+		// 	prevEl: '.wrap_vote .swiper-button-prev',
+		// },
+		nested: true,
+	});
+	//래플템 상품이미지 swiperSlider
+	var voteImfSwiper = new Swiper(".vote_img_swiper", {
+		speed: 1000,
+		autoplay:{
+			delay: 500,
+			disableOnInteraction: false,
+		},
+		effect : 'fade', 
+		// fadeEffect: { 
+		// 	crossFade: true 
+		// },
+		roundLengths: true, //일반 해상도 화면에서 텍스트가 흐려지는 것을 방지하기 위해 슬라이드 너비와 높이 값을 반올림
+		loop: true,
+	});
+
+
+	//용산 쿠폰 보기 팝업
+	$("#teddyCouponSin").dialog({
+		autoOpen: false,
+		resizable: false,
+		dialogClass:"event_type",
+		width: 561,
+		maxHeight: 845,
+		modal: true,
+		open: function() {
+				$('.ui-widget-overlay').bind('click', function() {
+				$('#teddyCouponSin').dialog('close');
+			})
+		}
+	});
+
+	//더현대 쿠폰 보기 팝업
+	$("#teddyCouponHyun").dialog({
+		autoOpen: false,
+		resizable: false,
+		dialogClass:"event_type",
+		width: 561,
+		maxHeight: 845,
+		modal: true,
+		open: function() {
+				$('.ui-widget-overlay').bind('click', function() {
+				$('#teddyCouponHyun').dialog('close');
+			})
+		}
+	});
+
+	//하입클럽 가입 완료 팝업
+	$("#hypeJoinPop").dialog({
+		autoOpen: false,
+		resizable: false,
+		width: 618,
+		Height: 605,
+		modal: true,
+		open: function() {
+			$('.ui-widget-overlay').bind('click', function() {
+				$('#hypeJoinPop').dialog('close');
+				location.reload();
+			});
+			$("#hypeJoinPop").prev(".ui-dialog-titlebar").hide();
+		}
+	});
+});
+//하입클럽 가입 완료 팝업 닫기
+function modalClose(){
+	$('#hypeJoinPop').dialog('close');
+	location.reload();
+	$("[data-tab='hluxury_membership_content']").click();
+};
+
+// 날짜, 시간 체크
+function getTimeFunc(){
+	const today = new Date();
+
+	const year = today.getFullYear(); // year
+	const month = today.getMonth(); // month
+	const day = today.getDate(); // day
+	
+	let hour = today.getHours();
+	let minute = today.getMinutes();
+	let second = today.getSeconds();
+
+	let monthString = (today.getMonth() + 1).toString().padStart(2, '0');
+	let dayString = day.toString().padStart(2, '0');
+
+	//테디뵈르 오픈 시간. 13:00 ~ 24:00
+	let startDate = new Date(2024,month,day,13,00,00);
+	let endDate = new Date(2024,month,day,23,59,59);
+	if (today <= endDate && today >= startDate) {
+		$(".evt_wrap").removeClass('teddy-close');
+	} else {
+		$(".evt_wrap").addClass('teddy-close');
+	}
+
+	//테디뵈르 응모 타이틀의 픽업 날짜(내일날짜 찍혀야함)
+	let pickupString = year + monthString + (today.getDate() + 1).toString().padStart(2, '0');
+	let pickupDate = pickupString.substring(0, 4)
+		+ "." + pickupString.substring(4,6)
+		+ "." + pickupString.substring(6,8);
+	$(".date-pickup").text(pickupDate); //ex: 2024.04.23
+
+	//쿠폰 날짜 체크. 날짜 지났을 경우 기한 만료.
+	const dateString = year + monthString + dayString; //오늘날짜 yyyymmdd
+	let couponDate = $(".evt_wrap").attr("data-date"); //픽업날짜(이벤트 당첨날짜 + 1) yyyymmdd
+	//픽업날짜 지났을 때
+	if(couponDate < dateString) {
+		$(".teddy-popup input").prop("disabled", true);
+		$(".btn-comfirm__coupon").prop("disabled", true);
+		$(".btn-comfirm__coupon").text("크루아상백 교환기간 만료");
+	}
+	//픽업날짜 전날
+	else if (couponDate > dateString) {
+		$(".teddy-popup input").prop("disabled", true);
+		$(".btn-comfirm__coupon").prop("disabled", true);
+		$(".btn-comfirm__coupon").text("크루아상백은 내일 수령 가능합니다.");
+	}
+	//console.log("당첨+1 날짜"+couponDate);
+
+	
+	// console.log(dateString);
+
+	//테디 이벤트 시작 전. 5월 10일 ~ 12일 까지는 준비중 노출.
+	let eventStart = new Date("2024-05-13T13:00:00");
+	if (today <= eventStart) {
+		$(".wrap-teddy__join").addClass('evt_comming');
+		$(".evt_content1 .evt_tit").remove();
+	}
+	// if (today >= eventStart) {
+	// 	$(".this-week").hide();
+	// 	$(".draw-vote").show();
+	// }
+
+	//테디 이벤트 종료. 6월 10일까지는 쿠폰 사용해야해서 노출.
+	let eventEnd = new Date("2024-06-10T00:00:00");
+	if (today >= eventEnd) {
+		$(".wrap-teddy__join .wrap_choose").addClass("type-finish");
+		$(".box-teddy").addClass('evt_end');
+		$(".evt_content1 .evt_tit").remove();//본문 픽업일 삭제
+		$(".btn-teddy__join").text("이벤트 종료").addClass("disabled");//응모버튼 비활성
+	}
+
+	//테디 이벤트 종료. 6월 11일부터는 테디 컨텐츠 삭제.
+	// let eventEnd2 = new Date("2024-06-11T00:00:00");
+	// if (today >= eventEnd2) {
+	// 	$("#anchor1 .evt_content1").remove();
+	// }
+
+	//남은 경품 수량 표기
+	// leftPrize1('0005334',1);
+	// leftPrize2('0005335',1);
+	//신용산 수량 소진
+	if($(".txt-teddy1").text() == "0") {
+		$(".box-teddy.-young").addClass("evt_end");
+	}
+	//더현대 수량 소진
+	if($(".txt-teddy2").text() == "0") {
+		$(".box-teddy.-hyun").addClass("evt_end");
+	}
+	//둘다 수량 소진
+	if ($(".txt-teddy1").text() == "0" && $(".txt-teddy2").text() == "0") {
+		$(".wrap-teddy__join .wrap_choose").addClass("type-soldout");
+		$(".btn-teddy__join").attr("href" , "javascript:void(0)").text("SOLD OUT").addClass("disabled");
+	}
+
+	// return dateString;
+}
+getTimeFunc();
+
+function initTime(){
+	setInterval(getTimeFunc, 1000);
+}
+initTime();
+
+//===+=== S: mainInit =======
+function mainInit(){
+	let evtWrap = $('.evt_wrap');
+	let btnJoin = $('.btn_hype_join');
+	let btnCoupon = $('.btn-view__coupon');
+	let teddyShop = $('.teddy-shop');//쿠폰: 지점
+	if(isLogin){
+		
+		// 하입클럽 가입 체크
+		$.ajax({
+			async: true,
+			url: ctx_curr + '/op/evnt/checkEvntJoinYn.json',
+			dataType: 'json',
+			type: 'POST',
+			data: {evntId : "0005331"},
+			success: function (data, textStatus, jqXHR) {
+				if (!crew.ajaxValidate(data)) {
+					return;
+				};
+				//이벤트 참여 확인 로직
+				if (data.checkEvntYn == 'Y') {  //이벤트 참여했으면
+					evtWrap.addClass("hype-mem"); //클래스 추가
+					btnJoin.attr("href","javascript:void(0)").text("맴버 가입완료")//가입버튼 비활성
+				};
+			},
+			error: function (jqXHR, textStatus, errorThrown) {
+				alert('오류가 발생했습니다.');
+			}
+		});
+
+		// 테디뵈르 공통 응모 체크
+		$.ajax({
+			async: true,
+			url: ctx_curr + '/op/evnt/checkEvntJoinYn.json',
+			dataType: 'json',
+			type: 'POST',
+			data: {evntId : "0005333"},
+			success: function (data, textStatus, jqXHR) {
+				if (!crew.ajaxValidate(data)) {
+					return;
+				};
+				//이벤트 참여 확인 로직
+				if (data.checkEvntYn == 'Y') {  //이벤트 참여했으면
+					evtWrap.addClass("teddy-join"); //클래스 추가
+					$(".btn-teddy__join").attr("href","javascript:void(0)").addClass('disabled');//응모버튼 무효화
+					$(".btn-teddy__join span").text('이벤트 응모 완료');//응모버튼 무효화
+				};
+			},
+			error: function (jqXHR, textStatus, errorThrown) {
+				alert('오류가 발생했습니다.');
+			}
+		});
+
+		// 테디뵈르 당첨일 체크
+		$.ajax({
+			async: true,
+			url: ctx_curr + '/op/evnt/getEvntJoinResult.json',
+			dataType: 'json',
+			type: 'POST',
+			data: { evntId: '0005333'}, //참여확인할 이벤트아이디 적기
+			success: function (data, textStatus, jqXHR) {
+				// if (!crew.ajaxValidate(data)) {
+				//	 return;
+				// }
+				var ptcpYn = data.evntPtcp.length;  // data.evntPtcp = 로그인한 회원의 해당이벤트 참여이력(리스트)
+					
+				if(ptcpYn == 0){	//참여이력이 없음
+					console.log("참여X");
+				}else{  //참여이력이 있음
+					var ptcp = data.evntPtcp[0];	//참여리스트(해당이벤트에 해당회원이 여러번참여했다면 해당 참여내역이 다 리턴됨) 中 첫번째 참여내역
+					var joinDt = new Date(ptcp.regDttm);	//이벤트참여일시
+
+					//evt_wrap에 당첨날짜 + 1일 속성 추가 yyyymmdd
+					const year = joinDt.getFullYear(); // year
+					const month = joinDt.getMonth(); // month
+					const day = joinDt.getDate(); // day
+
+					let joinDtString = year + (joinDt.getMonth() + 1).toString().padStart(2, '0') + (joinDt.getDate() + 1).toString().padStart(2, '0');
+					evtWrap.attr("data-date",joinDtString);
+
+					//쿠폰에 픽업날짜 노출
+					let pickupCoupon = joinDtString.substring(0, 4)
+						+ "." + joinDtString.substring(4,6)
+						+ "." + joinDtString.substring(6,8);
+					$('.teddy-date').text(pickupCoupon); //ex: 2024.04.23
+				}
+			},
+			error: function (jqXHR, textStatus, errorThrown) {
+				alert('오류가 발생했습니다.');
+			}
+		});
+
+		// 테디뵈르 신용산 응모 체크
+		$.ajax({
+			async: true,
+			url: ctx_curr + '/op/evnt/checkEvntJoinYn.json',
+			dataType: 'json',
+			type: 'POST',
+			data: {evntId : "0005334"},
+			success: function (data, textStatus, jqXHR) {
+				if (!crew.ajaxValidate(data)) {
+					return;
+				};
+				//이벤트 참여 확인 로직
+				if (data.checkEvntYn == 'Y') {  //이벤트 참여했으면
+					evtWrap.addClass("shop-sin");
+				};
+			},
+			error: function (jqXHR, textStatus, errorThrown) {
+				alert('오류가 발생했습니다.');
+			}
+		});
+
+		// 테디뵈르 더현대 응모 체크
+		$.ajax({
+			async: true,
+			url: ctx_curr + '/op/evnt/checkEvntJoinYn.json',
+			dataType: 'json',
+			type: 'POST',
+			data: {evntId : "0005335"},
+			success: function (data, textStatus, jqXHR) {
+				if (!crew.ajaxValidate(data)) {
+					return;
+				};
+				//이벤트 참여 확인 로직
+				if (data.checkEvntYn == 'Y') {  //이벤트 참여했으면
+					evtWrap.addClass("shop-hyun");
+				};
+			},
+			error: function (jqXHR, textStatus, errorThrown) {
+				alert('오류가 발생했습니다.');
+			}
+		});
+		
+		// 테디뵈르 쿠폰사용 체크
+		$.ajax({
+			async: true,
+			url: ctx_curr + '/op/evnt/checkEvntJoinYn.json',
+			dataType: 'json',
+			type: 'POST',
+			data: {evntId : "0005336"},
+			success: function (data, textStatus, jqXHR) {
+				if (!crew.ajaxValidate(data)) {
+					return;
+				};
+				//이벤트 참여 확인 로직
+				if (data.checkEvntYn == 'Y') {  //이벤트 참여했으면
+					//쿠폰 사용 완료 처리
+					evtWrap.addClass("coupon-used");
+					$(".teddy-popup .box_coupon input").prop("disabled", true);
+					$(".btn-comfirm__coupon").prop("disabled", true);
+					$(".btn-comfirm__coupon").text("사용 완료");
+				};
+			},
+			error: function (jqXHR, textStatus, errorThrown) {
+				alert('오류가 발생했습니다.');
+			}
+		});
+
+	}
+}
+//====== E: mainInit =======
+
+// 하입클럽 가입하기
+function hypeJoin(evntId){
+	// 로그인체크
+	if(!isLogin){ alert("로그인 후 이용해주세요."); login(); return; }
+	
+	// 전송
+	$.ajax({
+		async	   : false,
+		url		 : ctx_curr + "/op/evnt/evntJoinValidation.json",
+		dataType	: "json",
+		type		: "POST",
+		data		: { evntId : evntId },
+		success	 : function(data, textStatus, jqXHR){
+	
+			if(!crew.ajaxValidate(data)){ return; }
+			$.ajax({
+				async	   : false,
+				url		 : ctx_curr + "/op/evnt/evntJoin.json",
+				dataType	: "json",
+				type		: "POST",
+				data		: { evntId : evntId },
+				success	 : function(data, textStatus, jqXHR){
+					if(!crew.ajaxValidate(data)){ return; }
+
+					/* 이벤트 신청 및 당첨, 응모 성공 시 동작 */
+					$("#hypeJoinPop").dialog("open"); //가입성공시 팝업 띄움
+				},
+					error	   : function(jqXHR, textStatus, errorThrown){
+					//console.log(jqXHR.status);
+					/* 이벤트 신청 및 당첨, 응모 실패 시 동작 */
+				}
+			});
+		},
+			error	   : function(jqXHR, textStatus, errorThrown){
+			//console.log(jqXHR.status);
+			/* 이벤트 신청 및 당첨, 응모 실패 시 동작 */
+		}
+	});
+};
+
+// 테디 응모하기
+function teddyJoin(){
+	// 로그인체크
+	if(!isLogin){ alert("로그인 후 이용해주세요."); login(); return; }
+
+	$.ajax({
+		async: true,
+		url: ctx_curr + '/op/evnt/checkEvntJoinYn.json',
+		dataType: 'json',
+		type: 'POST',
+		data: {evntId : "0005331"}, //하입클럽 가입체크
+		success: function (data, textStatus, jqXHR) {
+			if (!crew.ajaxValidate(data)) {
+				return;
+			};
+			//이벤트 참여 확인 로직
+			if (data.checkEvntYn == 'Y') {  //하입클럽 가입했으면
+
+				$.ajax({
+					async: true,
+					url: ctx_curr + '/op/evnt/checkEvntJoinYn.json',
+					dataType: 'json',
+					type: 'POST',
+					data: {evntId : "0005333"},// 테디뵈르 공통 응모 체크
+					success: function (data, textStatus, jqXHR) {
+						if (!crew.ajaxValidate(data)) {
+							return;
+						};
+						//이벤트 참여 확인 로직
+						if (data.checkEvntYn == 'Y') {  //이벤트 참여했으면
+							alert("이미 참여하신 이벤트 입니다.\nID당 1회 참여 가능합니다.");
+						} else {
+							//10시 오픈 전
+							if($(".evt_wrap").hasClass('teddy-close')) {
+								alert("오후 1시에 만나요 :)");
+								return;
+							}
+
+							if($("#teddyStore1").is(':checked')) {
+								teddySin("0005334"); //신용산점 응모
+							} else if ($("#teddyStore2").is(':checked')) {
+								teddyHyun("0005335"); //더현대점 응모
+							} else {
+								alert("지점을 선택해 주세요.")
+							}
+						};
+					},
+					error: function (jqXHR, textStatus, errorThrown) {
+						alert('오류가 발생했습니다.');
+					}
+				});
+				//콩통응모 체크 끝
+
+			} else {
+				alert("하입클럽 멤버 가입 후 신청 가능합니다 :)");
+				$('html,body').animate({scrollTop:$(".wrap-hype__join").offset().top - 120}, 500);
+			};
+		},
+		error: function (jqXHR, textStatus, errorThrown) {
+			alert('오류가 발생했습니다.');
+		}
+	});
+}
+
+// 테디 신용산 응모하기
+function teddySin(evntId){
+	// 로그인체크
+	if(!isLogin){ alert("로그인 후 이용해주세요."); login(); return; }
+	
+	// 전송
+	$.ajax({
+		async	   : false,
+		url		 : ctx_curr + "/op/evnt/evntJoinValidation.json",
+		dataType	: "json",
+		type		: "POST",
+		data		: { evntId : evntId },
+		success	 : function(data, textStatus, jqXHR){
+
+			if(!crew.ajaxValidate(data)){ return; }
+			$.ajax({
+				async	   : false,
+				url		 : ctx_curr + "/op/evnt/evntJoin.json",
+				dataType	: "json",
+				type		: "POST",
+				data		: { evntId : evntId },
+				success	 : function(data, textStatus, jqXHR){
+					if(!crew.ajaxValidate(data)){ return; }
+					
+					/* 이벤트 신청 및 당첨, 응모 성공 시 동작 */
+					let pickupDate = $(".date-pickup").text();
+					alert("테디뵈르하우스 용산점 "+ pickupDate +" PICK UP 멤버 신청이 완료되었습니다");
+					teddyCommon("0005333"); //공통 응모 실행
+				},
+					error	   : function(jqXHR, textStatus, errorThrown){
+					//console.log(jqXHR.status);
+					/* 이벤트 신청 및 당첨, 응모 실패 시 동작 */
+				}
+			});
+		},
+			error	   : function(jqXHR, textStatus, errorThrown){
+			//console.log(jqXHR.status);
+			/* 이벤트 신청 및 당첨, 응모 실패 시 동작 */
+		}
+	});
+	
+};
+// 테디 더현대 응모하기
+function teddyHyun(evntId){
+	// 로그인체크
+	if(!isLogin){ alert("로그인 후 이용해주세요."); login(); return; }
+	// 전송
+	$.ajax({
+		async	   : false,
+		url		 : ctx_curr + "/op/evnt/evntJoinValidation.json",
+		dataType	: "json",
+		type		: "POST",
+		data		: { evntId : evntId },
+		success	 : function(data, textStatus, jqXHR){
+
+			if(!crew.ajaxValidate(data)){ return; }
+			$.ajax({
+				async	   : false,
+				url		 : ctx_curr + "/op/evnt/evntJoin.json",
+				dataType	: "json",
+				type		: "POST",
+				data		: { evntId : evntId },
+				success	 : function(data, textStatus, jqXHR){
+					if(!crew.ajaxValidate(data)){ return; }
+					
+					/* 이벤트 신청 및 당첨, 응모 성공 시 동작 */
+					let pickupDate = $(".date-pickup").text();
+					alert("테디뵈르하우스 더현대점 "+ pickupDate +" PICK UP 멤버 신청이 완료되었습니다");
+					teddyCommon("0005333"); //공통 응모 실행
+				},
+					error	   : function(jqXHR, textStatus, errorThrown){
+					//console.log(jqXHR.status);
+					/* 이벤트 신청 및 당첨, 응모 실패 시 동작 */
+				}
+			});
+		},
+			error	   : function(jqXHR, textStatus, errorThrown){
+			//console.log(jqXHR.status);
+			/* 이벤트 신청 및 당첨, 응모 실패 시 동작 */
+		}
+	});
+	
+};
+
+//테디뵈르 공통으로 응모. ID당 한번 응모가능하므로 신용산, 더현대 응모시 이것도 함께 응모.
+function teddyCommon(evntId){
+	// 로그인체크
+	if(!isLogin){ alert("로그인 후 이용해주세요."); login(); return; }
+ 
+	// 전송
+	$.ajax({
+		async	   : false,
+		url		 : ctx_curr + "/op/evnt/evntJoinValidation.json",
+		dataType	: "json",
+		type		: "POST",
+		data		: { evntId : evntId },
+		success	 : function(data, textStatus, jqXHR){
+ 
+			if(!crew.ajaxValidate(data)){ return; }
+			$.ajax({
+				async	   : false,
+				url		 : ctx_curr + "/op/evnt/evntJoin.json",
+				dataType	: "json",
+				type		: "POST",
+				data		: { evntId : evntId },
+				success	 : function(data, textStatus, jqXHR){
+					if(!crew.ajaxValidate(data)){ return; }
+ 
+					/* 이벤트 신청 및 당첨, 응모 성공 시 동작 */
+					$(".btn-teddy__join").attr("href","javascript:void(0)").addClass('disabled');//응모버튼 무효화
+					$(".btn-teddy__join span").text('이벤트 응모 완료');//응모버튼 무효화
+					location.reload();
+					
+				},
+					error	   : function(jqXHR, textStatus, errorThrown){
+					//console.log(jqXHR.status);
+					/* 이벤트 신청 및 당첨, 응모 실패 시 동작 */
+				}
+			});
+		},
+			error	   : function(jqXHR, textStatus, errorThrown){
+			//console.log(jqXHR.status);
+			/* 이벤트 신청 및 당첨, 응모 실패 시 동작 */
+		}
+	});
+};
+
+//경품 곗수 체크 신용산
+function leftPrize1(evntId,bnfSeq){
+	$.ajax({
+		async: false,
+		url: ctx_curr + "/op/evnt/otsdEvnt/otsdEvntGvawFirstCnt.json",
+		dataType: "json",
+		type: "POST",
+		data		: { evntId : evntId },
+		success: function (data, textStatus, jqXHR) {
+			var bnfList = data.bnCntfList;
+			// console.log(bnfList[bnfSeq-1]);
+			var dayMaxWinrCnt = bnfList[bnfSeq-1].dayMaxWinrCnt;	//일최대 당첨자수
+			var allWinrCnt = bnfList[bnfSeq-1].allWinrCnt;  //최대 당첨자수
+			var winrCntDay = bnfList[bnfSeq-1].winrCntDay;  //오늘 당첨자수
+			var winrCntAll = bnfList[bnfSeq-1].winrCntAll;  //전체 당첨자수
+			
+			// console.log("일최대 당첨자수: "+dayMaxWinrCnt);
+			// console.log("최대 당첨자수: "+allWinrCnt);
+			// console.log("오늘 당첨자수: "+winrCntDay);
+			// console.log("전체 당첨자수: "+winrCntAll);
+			
+			$(".txt-teddy1").text(dayMaxWinrCnt - winrCntDay);
+		},
+		error: function (jqXHR, textStatus, errorThrown) {
+			//console.log(jqXHR.status);
+		}
+	});
+}
+//경품 곗수 체크 더현대
+function leftPrize2(evntId,bnfSeq){
+	$.ajax({
+		async: false,
+		url: ctx_curr + "/op/evnt/otsdEvnt/otsdEvntGvawFirstCnt.json",
+		dataType: "json",
+		type: "POST",
+		data		: { evntId : evntId },
+		success: function (data, textStatus, jqXHR) {
+			var bnfList = data.bnCntfList;
+			// console.log(bnfList[bnfSeq-1]);
+			var dayMaxWinrCnt = bnfList[bnfSeq-1].dayMaxWinrCnt;	//일최대 당첨자수
+			var allWinrCnt = bnfList[bnfSeq-1].allWinrCnt;  //최대 당첨자수
+			var winrCntDay = bnfList[bnfSeq-1].winrCntDay;  //오늘 당첨자수
+			var winrCntAll = bnfList[bnfSeq-1].winrCntAll;  //전체 당첨자수
+			
+			// console.log("일최대 당첨자수: "+dayMaxWinrCnt);
+			// console.log("최대 당첨자수: "+allWinrCnt);
+			// console.log("오늘 당첨자수: "+winrCntDay);
+			// console.log("전체 당첨자수: "+winrCntAll);
+			
+			$(".txt-teddy2").text(dayMaxWinrCnt - winrCntDay);
+		},
+		error: function (jqXHR, textStatus, errorThrown) {
+			//console.log(jqXHR.status);
+		}
+	});
+}
+
+//쿠폰 확인
+function viewCoupon(){
+	if(!isLogin){ alert("로그인 후 이용해주세요."); login(); return; }
+
+	$.ajax({
+		async: true,
+		url: ctx_curr + '/op/evnt/checkEvntJoinYn.json',
+		dataType: 'json',
+		type: 'POST',
+		data: {evntId : "0005333"},//테디 공통 응모 체크
+		success: function (data, textStatus, jqXHR) {
+			if (!crew.ajaxValidate(data)) {
+				return;
+			};
+			//이벤트 참여 확인 로직
+			if (data.checkEvntYn == 'Y') {  //이벤트 참여했으면
+
+				//용산점 팝업
+				if($(".evt_wrap").hasClass("shop-sin")){
+					$("#teddyCouponSin").dialog("open");
+					$("#inputCustomSin").val("");//input value 삭제
+				}
+				//더현대점 팝업
+				if($(".evt_wrap").hasClass("shop-hyun")){
+					$("#teddyCouponHyun").dialog("open");
+					$("#inputCustomHyun").val("");//input value 삭제
+				}
+			} else {
+				alert("고객님의 참여내역이 없습니다.");
+			}
+		},
+		error: function (jqXHR, textStatus, errorThrown) {
+			alert('오류가 발생했습니다.');
+		}
+	});
+};
+
+//쿠폰 사용
+function couponReserve(evntId){
+	// 로그인체크
+	if(!isLogin){ alert("로그인 후 이용해주세요."); login(); return; }
+
+	//용산점 팝업일경우
+	if($(".evt_wrap").hasClass("shop-sin")){
+		var inputText1 = $("#inputCustomSin").val().replace(/(\s*)/g,"").toUpperCase();
+		if(inputText1 === "11"){
+			couponUsed(evntId); //쿠폰사용처리
+		} else if(inputText1 === ""){
+			alert("코드번호를 입력해주세요.");
+			return;
+		} else {
+			alert("입력하신 코드번호가 정확하지 않습니다.\n확인 후 다시 입력해주세요.");
+			return;
+		}
+	}
+	//더현대점 팝업일 경우
+	if($(".evt_wrap").hasClass("shop-hyun")){
+		var inputText2 = $("#inputCustomHyun").val().replace(/(\s*)/g,"").toUpperCase();
+		if(inputText2 === "22"){
+			couponUsed(evntId); //쿠폰사용처리
+		} else if(inputText2 === ""){
+			alert("코드번호를 입력해주세요.");
+			return;
+		} else {
+			alert("입력하신 코드번호가 정확하지 않습니다.\n확인 후 다시 입력해주세요.");
+			return;
+		}
+	}
+};
+//쿠폰사용처리
+function couponUsed(evntId){
+	 // 로그인체크
+	if(!isLogin){ alert("로그인 후 이용해주세요."); login(); return; }
+ 
+	// 전송
+	$.ajax({
+		async	   : false,
+		url		 : ctx_curr + "/op/evnt/evntJoinValidation.json",
+		dataType	: "json",
+		type		: "POST",
+		data		: { evntId : evntId },
+		success	 : function(data, textStatus, jqXHR){
+ 
+			if(!crew.ajaxValidate(data)){ return; }
+			$.ajax({
+				async	   : false,
+				url		 : ctx_curr + "/op/evnt/evntJoin.json",
+				dataType	: "json",
+				type		: "POST",
+				data		: { evntId : evntId },
+				success	 : function(data, textStatus, jqXHR){
+					if(!crew.ajaxValidate(data)){ return; }
+ 
+					/* 이벤트 신청 및 당첨, 응모 성공 시 동작 */
+					// alert("쿠폰 사용이 완료되었습니다.");
+					$(".evt_wrap").addClass("coupon-used");
+					$(".teddy-popup .box_coupon input").prop("disabled", true);
+					$(".teddy-popup .box_coupon input").val("");
+					$(".btn-comfirm__coupon").prop("disabled", true);
+					$(".btn-comfirm__coupon").text("사용 완료");
+				},
+					error	   : function(jqXHR, textStatus, errorThrown){
+					//console.log(jqXHR.status);
+					/* 이벤트 신청 및 당첨, 응모 실패 시 동작 */
+				}
+			});
+		},
+			error	   : function(jqXHR, textStatus, errorThrown){
+			//console.log(jqXHR.status);
+			/* 이벤트 신청 및 당첨, 응모 실패 시 동작 */
+		}
+	});
+};
+
+//HYPE DRAW
+function drawJoin(evntId){
+	// 로그인체크
+	if(!isLogin){ alert("로그인 후 이용해주세요."); login(); return; }
+
+
+	$.ajax({
+		async: true,
+		url: ctx_curr + '/op/evnt/checkEvntJoinYn.json',
+		dataType: 'json',
+		type: 'POST',
+		data: {evntId : "0005331"}, //하입클럽 가입체크
+		success: function (data, textStatus, jqXHR) {
+			if (!crew.ajaxValidate(data)) {
+				return;
+			};
+			//이벤트 참여 확인 로직
+			if (data.checkEvntYn == 'Y') {  //이벤트 참여했으면
+				// 전송
+				$.ajax({
+					async	   : false,
+					url		 : ctx_curr + "/op/evnt/evntJoinValidation.json",
+					dataType	: "json",
+					type		: "POST",
+					data		: { evntId : evntId },
+					success	 : function(data, textStatus, jqXHR){
+			
+						if(!crew.ajaxValidate(data)){ return; }
+						$.ajax({
+							async	   : false,
+							url		 : ctx_curr + "/op/evnt/evntJoin.json",
+							dataType	: "json",
+							type		: "POST",
+							data		: { evntId : evntId },
+							success	 : function(data, textStatus, jqXHR){
+								if(!crew.ajaxValidate(data)){ return; }
+			
+								/* 이벤트 신청 및 당첨, 응모 성공 시 동작 */
+								alert("응모 완료했습니다 :)");
+							},
+								error	   : function(jqXHR, textStatus, errorThrown){
+								//console.log(jqXHR.status);
+								/* 이벤트 신청 및 당첨, 응모 실패 시 동작 */
+							}
+						});
+					},
+						error	   : function(jqXHR, textStatus, errorThrown){
+						//console.log(jqXHR.status);
+						/* 이벤트 신청 및 당첨, 응모 실패 시 동작 */
+					}
+				});
+			} else {
+				alert("하입클럽 멤버 가입 후 신청 가능합니다 :)");
+				$('html,body').animate({scrollTop:$(".wrap-hype__join").offset().top - 120}, 500);
+			};
+		},
+		error: function (jqXHR, textStatus, errorThrown) {
+			alert('오류가 발생했습니다.');
+		}
+	});
+}
+</script>
+<!-- E : BO 등록 영역 -->
+
+
+
+
+
+
+				</div>
+				<div class="attention_area">
+					<p class="attention_tit">유의사항</p>
+					<ul class="attention_list">
+						<li>내용</li>
+					</ul>
+				</div>
+			</section><!--//event-->
+		</article><!--//content-->
+	</main>
+	<!-- E : container -->
+	<!-- S : footer -->
+	<script src="../../../KO/html/include/footer.js"></script>
+	<!-- E : footer -->
+</div><!--//wrap-->
+</body>
+</html>

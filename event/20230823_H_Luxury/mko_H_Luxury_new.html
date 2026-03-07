@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>현대백화점인터넷면세점</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script src="../../../M_KO/js/M_KO/jquery-1.12.4.min.js"></script>
+    <script src="../../../M_KO/js/M_KO/jquery-ui.js"></script>
+    <script src="../../../M_KO/js/M_KO/jquery.bxslider.js"></script>
+    <script src="../../../M_KO/js/M_KO/swiper.min.js"></script>
+    <script src="../../../M_KO/js/M_KO/common.ui.js"></script>
+    <link rel="stylesheet" href="../../../M_KO/css/M_KO/jquery-ui.css">
+    <link rel="stylesheet" href="../../../M_KO/css/M_KO/swiper.min.css">
+    <link rel="stylesheet" href="../../../M_KO/css/M_KO/common.css">
+    <link rel="stylesheet" href="../../../M_KO/css/M_KO/layout.css">
+</head>
+<body>
+    <!-- S : header -->
+    <script src="../../../M_KO/html/include/header.js"></script>
+    <!-- E : header-->
+    <!-- S : container -->
+    <div class="container new_type">
+        <div class="gnbev_view">
+            <div class="contents_area no_space">
+                <div class="btn_share_wrap">
+                    <div class="btn_share_area">
+                        <a href="javascript:void(0);" class="btn_ev_share sharePopup"></a>
+                        <a href="javascript:mergeMyEvnt('');" class="btn_ev_like"></a>
+                    </div> 
+                </div>
+                <div class="ev_editarea">
+
+
+
+
+
+
+
+<!-- S : BO 등록 영역 운영: 0003719, 개발: 0002613-->
+<style type="text/css">
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+/*Reset*/
+.location, .event_top_share{display:none}
+.benefit_img {overflow:hidden;}
+.hide {position:absolute;}
+
+/*Common*/
+.hluxury_section, 
+.hluxury_content {position: relative;}
+#hluxury_tab_content .cont_box {margin:0 auto; padding:0; box-sizing: border-box;}
+#hluxury_tab_content .cont_box_tit {margin: 15.33vw 0 0; font-size: 4vw; font-weight: 700; text-align: center; color: #222;}
+#hluxury_contents_box .cont_box_tit strong {display:block; font-family: 'Montserrat', 'Noto Sans CJK KR', '본고딕', 'sans-serif', sans-serif; font-size:10vw; line-height:1; margin-bottom:1.33vw;}
+.hluxury_section .blind {height: 0; width: 0; overflow: hidden; font-size: 0; line-height: 0; text-indent: -99999em;}
+.hluxury_content .ev_btn, 
+#hluxury_main_box .ev_btn {position: absolute; display: block; background: url(about:blank);}
+#hluxury_contents_box {position:relative;}
+
+
+/*Visual*/
+#hluxury_main_box {background-color:#090909;}
+#hluxury_main_box .hluxury_section {background:#090909 }
+#hluxury_main_box #btn_xluxury_join {position: absolute; top: 64%; left: 0; right: 0; margin: 0 auto; width:23.33vw; height: 7.87vw; background:url("https://cdn.hddfs.com/files/op/20230903/0464111e_202309032310569110.png") no-repeat; background-size:100% auto;} /*가입버튼*/
+#hluxury_main_box .ev_btn {bottom: 0;width: 1698px; height: 220px; left: 0; right: 0;margin: 0 auto;}
+
+/*가입 완료 Popup*/
+#benefitPop00 button {position: absolute; top:80px; right:80px; width:50px; height:50px; text-indent:-9999px; overflow:hidden;}
+
+/*Tab*/
+.evt_tab {position:relative; padding:16vw 20px 0;}
+.evt_tab ul {display:flex; position:relative; z-index:2;}
+.evt_tab li {list-style:none; width: 50%; flex:1; display:block;}
+.evt_tab li a {display:flex; align-items:center; justify-content:center; width:100%; height: 18.27vw; font-size:4.27vw; color: #e7c555; font-weight:700; background: rgb(249,222,102); background: linear-gradient(0deg, #f9de66 0%, #feed97 100%); border:1px solid #ffe87e; border-bottom:none; /*transition: all 0.2s ease;*/}
+.evt_tab li.active a {background:#fff; color:#222; border-color:#222;}
+
+/*Content*/
+#hluxury_contents_box .cont_box {display: none; position:relative; padding:16vw 20px 0;}
+#hluxury_contents_box .cont_box.active {display:block;}
+#hluxury_contents_box .cont_box:before {content:""; position:absolute; left:0; top:0; right:0; width:100%; height:42.67vw; background:#fff;}
+#hluxury_tab_content .lv_benefit {position:relative; margin-top:9.33vw;}
+#hluxury_contents_box .lv_benefit:first-child {margin-top:0;}
+
+/*디폴트 화면*/
+#hluxury_membership_content {background:#ffe87e;}
+
+/*혜택 안내 테이블*/
+.evt_wrap_tbl {padding-bottom:15.47vw;}
+.evt_wrap_tbl .tbl_tit {font-size:6.67vw; color:#222; font-weight:700; padding:10.67vw 0 6vw;}
+.evt_wrap_tbl .benefit_tbl {margin:00 -20px 6vw; height:180vw; overflow-x:auto;}
+.evt_wrap_tbl .benefit_tbl img {height:100% !important; width: auto !important;}
+
+/*혜택안내*/
+#hluxury_contents_box .evt_info_list {font-size:3.3vw; color:#543b00; text-align:left;}
+#hluxury_contents_box .evt_info_list > li {position:relative; padding-left:10px; line-height:1.8;}
+#hluxury_contents_box .evt_info_list > li:before {content:"*"; position:absolute; left:0; top:1.8vw; line-height:1;}
+#hluxury_contents_box .evt_info_list .example {padding-left:15px; text-indent:-15px;}
+
+
+#hluxury_tab_content .evt_info_list2 li {display:flex; align-items:center; flex-wrap:wrap; gap:0 1.33vw;}
+#hluxury_tab_content .evt_info_list2 li + li {margin-top:2vw;}
+#hluxury_tab_content .evt_info_list2 li i {font-style:normal;}
+
+/*유의사항*/
+.evt_precaution {margin:0 -20px; padding:14.67vw 20px 18vw; color:#222; text-align:left; background:#fff;}
+.evt_precaution dt {background:url('https://cdn.hddfs.com/files/op/20230831/e69def67_202308312341113430.png') no-repeat left top; background-size:6.93vw 6.93vw; height: 6.93vw; font-size:4.53vw; font-weight:700; margin-bottom:4.53vw; padding-left:9vw;}
+.evt_precaution dd {position:relative; font-size:3.2vw; margin-top:6px; padding-left:2vw;}
+.evt_precaution dd:before {content:"*"; position:absolute; left:0; top:0.4vw; }
+
+/*회원*/
+#hluxury_benefit_content.cont_box {background:#f3f3f3; padding-bottom:16vw;}
+#hluxury_benefit_content .user_info_box {width: 100%; }
+#hluxury_benefit_content .user_info_box .title_box {position:relative; width: 100%;}/*배경*/
+#hluxury_benefit_content .user_info_box .title_box .tit_user_name {position:absolute; top:10.5%; left:13%;}
+#hluxury_benefit_content .user_info_box .title_box .tit_user_name .ico_level {position:absolute; top:10%; left:0; display:flex; align-items:center; justify-content:center; width:13.73vw; height:15.60vw; background: url('https://cdn.hddfs.com/files/op/20230903/a1adf181_202309032309210110.png') no-repeat center center; background-size:13.73vw 15.60vw; color:#fff; font-family:'Montserrat', 'Noto Sans CJK KR', '본고딕', 'sans-serif', sans-serif; font-size:7.07vw; font-weight:700;} /*등급아이콘*/
+#hluxury_benefit_content .user_info_box .title_box .tit_user_name .title_desc {margin:2.5vw 0 0 17vw; font-size:3.2vw; color:#fff; text-align:left;}
+#hluxury_benefit_content .user_info_box .title_box .tit_user_name .txt_level {margin-top:-1vw; font-size:6.67vw; background: linear-gradient(0deg, #f6d755 0%,  #fef09f 50%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+#hluxury_benefit_content .user_info_box .title_box .tit_user_name .txt_level strong {font-family:"Montserrat", 'Noto Sans CJK KR', '본고딕', 'sans-serif', sans-serif; font-size:8vw; font-weight:700;}
+#hluxury_benefit_content .cont_box_tit span {background-image: linear-gradient(#ffe87e, #ffe87e); background-position: 0 100%; background-size: 100% 22px; background-repeat: no-repeat; padding:0 12px 7px;}
+
+/*나의 구매내역 확인 버튼*/
+#hluxury_benefit_content .user_info_box .title_box .btn_my_order {position: absolute; top:55%; left:13%; width:40%; height:11%; text-indent:-9999px; overflow:hidden;}
+
+/*등급별 혜택 버튼*/
+#hluxury_benefit_content .user_info_box .title_box .btn_lv_benefits {position: absolute; top:70%; left:0; width:100%; height: 17%; text-indent:-9999px; overflow:hidden;}
+
+.hluxury_content .lv_tit {position:relative; display:flex; align-items:center; justify-content:center; font-size:4.53vw; color:#fff; background:#222; text-align:center; height:13.33vw; font-weight:700;}
+.hluxury_content .lv_tit.type2 {color:#222; background:#ffe87e;}
+.hluxury_content .lv_con {position:relative; background:#fff; color:#222;}
+.hluxury_content .box_flex {/*display:flex; align-items:center; justify-content:center; */text-align:center;}
+.hluxury_content .con_sub_tit {margin-top: 2.67vw; display:inline-block; font-family:"Montserrat", 'Noto Sans CJK KR', '본고딕', 'sans-serif', sans-serif; font-size:2.67vw; font-weight:200; border-bottom:1px solid #222;}
+.hluxury_content .con_tit {margin-top:2.67vw; font-size:4.53vw; font-weight:700;}
+.hluxury_content .con_tit.-yellow {background: linear-gradient(0deg, #f6d755 0%, #fef09f 50%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+.hluxury_content .txt {font-size:3.47vw; font-weight:400;}
+.hluxury_content .txt em {display:inline-block; background-image: linear-gradient(#ffe388, #ffe388); background-position: center top; background-repeat: no-repeat; background-size: 100% 100%; font-weight:700;}
+.hluxury_content .lv_reserve {font-size:3.73vw; font-weight:600; margin-top:6vw;}
+.hluxury_content .evt_list_caution {display:inline-block; margin-top:5px;}
+.hluxury_content .evt_list_caution li {display:inline-block; position:relative; color:#999; font-size:2.67vw; padding-left:1.5vw;}
+.hluxury_content .evt_list_caution li + li {margin-top:0.35vw;}
+.hluxury_content .evt_list_caution li:before {content:"*"; position:absolute; left:0; top:1vw;}
+.hluxury_content .box_top {position:relative;}
+
+/*등급업 축하혜택*/
+.lv_benefit.-grade {display:none; margin-top:10.67vw;}
+.lv_benefit.-grade .lv_con {padding:12.67vw 0;}
+.lv_benefit.-grade .box_flex {display:none;}
+.lv_benefit.-grade .box_flex.active {display:block;}
+.lv_benefit.-grade .box_coupon {text-align:center; margin:6vw auto 0; width:60%; height:23.47vw; display:inline-flex; justify-content:center; align-items:center; font-size:7.33vw;}
+.lv_benefit.-grade .box_coupon p {display:inline-block; font-size:2.08vw;}
+.lv_benefit.-grade .box_coupon span {font-size:6.67vw; font-weight:700;}
+.lv_benefit.-grade .box_coupon strong {display:block; margin-top:0.35vw; font-size:2vw; font-weight:400;}
+
+.lv_benefit.-grade .lv_up .box_coupon {background:url("https://cdn.hddfs.com/files/op/20231230/0226b92f_202312300130495630.png") no-repeat center center/contain;}
+.lv_benefit.-grade .lv_up .box_coupon strong {color:#222; }
+.lv_benefit.-grade .lv_vip .box_coupon {background:url("https://cdn.hddfs.com/files/op/20231230/8b7e7951_202312300131005010.png") no-repeat center center/contain;}
+.lv_benefit.-grade .lv_vip .box_coupon p {background-image: linear-gradient(360deg, #f6d755 0%, #fef09f 60%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.lv_benefit.-grade .lv_vip .box_coupon strong {color:#fff;}
+
+/*스페셜 혜택*/
+.lv_benefit.-special {display:none; margin-top:6.67vw;}
+#hluxury_tab_content.lux3 .lv_benefit.-special,
+#hluxury_tab_content.lux4 .lv_benefit.-special,
+#hluxury_tab_content.lux5 .lv_benefit.-special {display:block;}
+.lv_benefit.-special .lv_con {padding:12vw 0 14.67vw;}
+.lv_benefit.-special .lv_con + .lv_con:before {content:""; position:absolute; top:0; left:0; right:0; display:block; width:80%; height:1px; background-color: #e8e8e8; margin:0 auto;}
+.lv_benefit.-special .box_img {display:inline-block; width:60%;}
+.lv_benefit.-special .lv_reserve {margin-top:0;}
+
+/* 레벨별 혜택 */
+#hluxury_tab_content .lv_benefit.-regular {background-color:#fff;}
+#hluxury_tab_content .lv_benefit.-regular .evt_banner {position:relative;}
+#hluxury_tab_content .lv_benefit.-regular .regular_benefit {position:absolute; top:17.5%; left:0; right:0; text-align:center; font-weight:700; font-size:7.47vw; color:#fff;}
+#hluxury_tab_content .lv_benefit.-regular .regular_benefit strong,
+#hluxury_tab_content .lv_benefit.-regular .regular_benefit .lv_num {font-family:"Montserrat", 'Noto Sans CJK KR', '본고딕', 'sans-serif', sans-serif; font-size:8vw;}
+#hluxury_tab_content .lv_benefit.-regular .regular_benefit .lv_num {display:inline-block; margin:0 4px 0 5px;}
+#hluxury_tab_content .lv_benefit.-regular .regular_benefit em {font-family:"Oswald", 'Noto Sans CJK KR', '본고딕', 'sans-serif', sans-serif; font-size:8vw;}
+#hluxury_tab_content .lv_benefit.-regular .lv_view {padding:10.67vw 0 16.67vw; border:1px solid #b4b4b4; border-top:none; margin-bottom:1px;}
+#hluxury_benefit_content .list_benefit {position:relative;}
+#hluxury_benefit_content .list_benefit .tit_lv {display:flex; justify-content:center; align-items:center; gap:0 5px; background:#ffe87e; height:11.33vw; text-align:center; font-family:"Montserrat", 'Noto Sans CJK KR', '본고딕', 'sans-serif', sans-serif !important; font-size:3.73vw; font-weight:300;}
+#hluxury_benefit_content .list_benefit .tit_lv strong {font-family:"Montserrat", 'Noto Sans CJK KR', '본고딕', 'sans-serif', sans-serif !important; font-weight:700;}
+#hluxury_benefit_content .list_benefit .lux_benefit_detail {display:none;}
+
+/* 선불카드 배너 */
+#hluxury_tab_content .lv_benefit.-prepaid {margin-top:0;}
+</style>
+
+<span class="hide hlux_prevLevel">1</span><!--작년 등급-->
+<span class="hide hlux_currentLevel">1</span><!--현재 등급-->
+<section id="hluxury_main_box">
+	<div class="hluxury_section">
+		<img src="https://cdn.hddfs.com/files/op/20230904/fd316e09_202309041550368360.gif" alt="H.LUX Club에 가입하시고 등급별 혜택을 만나보세요">
+		<a id="btn_xluxury_join" href="javascript:saveLuxMbshLvl('0003719');" title="가입하기"><span class="blind">가입하기</span></a>
+		<!-- <a class="ev_btn" href="" target="_blank" title="H.LUXURY OPEN EVENT, 푸짐한 혜택 잊지말고 챙겨가세요!">
+			<i class="blind">H.LUXURY OPEN EVENT, 푸짐한 혜택 잊지말고 챙겨가세요!</i>
+		</a> -->
+	</div>
+</section>
+<section id="hluxury_contents_box">
+	<div id="hluxury_tab_content">
+		<div class="hluxury_section">
+			<div class="hluxury_content">
+				<div class="evt_tab">
+					<ul>
+						<li class="active" data-tab="hluxury_membership_content"><a href="javascript:void(0)" >멤버십소개</a></li>
+						<li data-tab="hluxury_benefit_content"><a href="javascript:void(0)" onclick="javascript:initDisp();">나의혜택 확인하기</a></li>
+					</ul>
+				</div><!--//evt_tab-->
+
+				<!--디폴트 안내 -->
+				<div class="cont_box active" id="hluxury_membership_content">
+					<div class="evt_temp">
+						<div class="lv_benefit"><img src="https://cdn.hddfs.com/files/op/20230903/4a4523fa_202309032312039840.png" alt="혜택 정보"></div>
+
+						<div class="cont_box_tit"><strong>H.LUX Club<br>INFORMATION<br></strong>
+						등급 및 혜택안내</div>
+						
+						<div class="lv_benefit"><img src="https://cdn.hddfs.com/files/op/20230903/354dfc0c_202309032312141060.png" alt="H.LUX Club INFORMATION"></div>
+
+						<div class="evt_wrap_tbl">
+							<div class="tbl_tit">등급별 혜택</div>
+							<div class="benefit_tbl">
+								<img src="https://cdn.hddfs.com/files/op/20230903/2e31e4a7_202309032312277110.jpg" alt="혜택 안내">
+								<!-- <img src="https://cdn.hddfs.com/files/op/20240327/aeb55569_202403271617299720.png" alt="혜택 안내 with The Mall"> -->
+							</div>
+							<ul class="evt_info_list">
+								<li>공항라운지 이용권은 25년 1월 31일까지 이용 가능합니다. (24년 4월 1일부 적용)</li>
+								<!-- <li>The Mall 혜택은 Discount card, Skip Line Gucci Store, Skip Line Tax free lounge, VIP lounge (including welcome drink)로 구성되어 있습니다.  -->
+								</li>
+								<li>등급UP 축하리워드는 매년 1월 1일, 7월 1일 반기별 등급 선정시, <br>
+									지난 반기 대비 등급이 UP된 고객님께만 드리는 혜택입니다. <br>
+									<p class="example">ex) 23년 하반기 등급 LUX.3 → 24년 상반기 등급 LUX.5 일 경우, <br>
+										LUX.5 등급UP 축하리워드 10만원 증정</p></li>
+								<li>우수고객 특별혜택은 반기마다 <br>
+									연속적으로 LUX.5를 유지해주신 고객님께만 드리는 혜택입니다. <br>
+									<p class="example">ex) 23년 하반기 등급 LUX.5 → 24년 상반기 등급 LUX.5일 경우,  <br>
+										우수고객 특별혜택 5만원 증정</p>
+								</li>
+							</ul>
+
+							<!-- <img src="https://cdn.hddfs.com/files/op/20230903/4e0041af_202309032312390350.png" alt="Benefits Info"> -->
+						</div>
+						<dl class="evt_precaution">
+							<dt>유의사항</dt>
+							<dd>멤버십 추가 페이백은 1인 1일 1회 참여 가능합니다.</dd>
+							<dd>증정되는 H선불카드는 시내점용으로, 일부 브랜드 및 상품에서 사용 제외될 수 있습니다.</dd>
+							<dd>H선불카드 유효기간은 지급일 기준 3년이며, 사용기간 이후 기간 연장 불가합니다.</dd>
+							<dd>일부 브랜드 및 상품, 30% 이상 할인 상품, 할인쿠폰, H.POINT 또는 플러스 포인트 쿠폰, 선증정 H선불카드 사용 금액은 지급 기준 금액에서 제외됩니다.</dd>
+							<dd>구매 취소 혹은 반품은 구매했던 지점에서만 가능하며, 기준 금액이 충족되지 않을 경우 받은 혜택은 반납하셔야 합니다.</dd>
+							<dd>본 혜택은 회사 정책에 의해 사전 공지없이 변경 또는 종료될 수 있습니다. </dd>
+						</dl>
+					</div>
+				</div><!--//디폴트 안내 hluxury_membership_content-->
+
+				<!--회원-->
+				<div class="cont_box" id="hluxury_benefit_content">
+					<div class="evt_temp">
+						<div class="user_info_box">
+							<div class="title_box">
+								<img src="https://cdn.hddfs.com/files/op/20230903/6efedc23_202309032313166770.png">
+								<div class="tit_user_name">
+									<div class="ico_level">&nbsp;</div>
+									<div class="title_desc">
+										<p>현재 나의 등급</p>
+										<p class="txt_level"><strong>LUX.<span class="user_level_txt">&nbsp;</span> 입니다.</p>
+									</div>
+								</div><!--//tit_user_name-->
+								<a href="http://10.100.166.57:10207//shop/mm/myOrder/listOrder.do" class="btn_my_order">나의 구매내역 확인하기 ></a>
+								
+								<button type="button" class="btn_lv_benefits" onclick="hluxuryButtonController('see_benefits')">등급별 혜택 보러가기</button>
+							</div><!--//title_box-->
+						</div><!--//user_info_box-->
+
+						<div class="cont_box_tit"><strong>ONLY<br>CUSTOMERS<br></strong>
+							고객님께만 드리는 혜택</div>
+						
+						<div class="lv_benefit -grade">
+							<p class="lv_tit">등급별 축하혜택</p>
+							<div class="lv_con">
+								<!--S:등급업-->
+								<div class="box_flex lv_up">
+									<p class="con_sub_tit">BENEFIT</p>
+									<p class="con_tit">등급<span class="en">UP</span> 축하 리워드</p>
+									<div class="box_coupon">
+										<div>
+											<p><span class="en">10,000</span>원</p>
+											<strong>시내점용 (유효기간 : 지급일 기준 3년)</strong>
+										</div>
+									</div>
+									<p class="lv_reserve"><span class="en">H</span>선불카드 <span class="en hcard">1</span>만원</p>
+									<p class="txt">
+										이번반기, 등급이 <em class="en">UP</em>된 <br>
+										고객님들께만 드리는 특별 혜택입니다!
+									</p>
+								</div>
+								<!--E: 등급업-->
+								<!--S: 우수고객-->
+								<div class="box_flex lv_vip">
+									<p class="con_sub_tit">BENEFIT</p>
+									<p class="con_tit">우수고객 특별혜택</p>
+									<div class="box_coupon">
+										<div>
+											<!-- <img src="https://cdn.hddfs.com/files/op/20231217/0cd80c3d_202312172012134810.png" alt="50,000원"> -->
+											<p><span class="en">50,000</span>원</p>
+											<strong>시내점용 (유효기간 : 지급일 기준 3년)</strong>
+										</div>
+									</div>
+									<p class="lv_reserve"><span class="en">H</span>선불카드 <span class="en">5</span>만원</p>
+									<p class="txt">
+										Lux.5 최우수고객님께만 드리는 특별 혜택입니다.<br>
+										이번 반기에도 H.LUX Club과 함께해 주셔서 감사합니다.
+									</p>
+								</div>
+								<!--E: 우수고객-->
+							</div><!--//lv_con-->
+						</div><!--//lv_benefit -grade-->
+
+						<div class="lv_benefit -special">
+							<p class="lv_tit type2"><span class="en">SPECIAL</span>&nbsp;혜택</p>
+							<div class="lv_con">
+								<div class="box_flex">
+									<p class="con_sub_tit">SPECIAL BENEFIT GIFT 01</p>
+									<p class="con_tit">공항라운지 이용권 1인 1매</p>
+									<p class="box_img"><img src="https://cdn.hddfs.com/files/op/20231230/b1ceda38_202312300131145890.png" alt="AIRPORT LOUNGE TICKET"></p>
+									<p class="lv_reserve"><span class="en">LUX.3~LUX.5</span> 고객님께만 드리는 혜택입니다.</p>
+									<ul class="evt_list_caution">
+										<li>공항라운지 이용권은 무역센터점/동대문점 멤버십 데스크 방문시<br>수령 가능합니다.</li>
+										<li>이용기간 : <span class="en">2025</span>년 <span class="en">1</span>월 <span class="en">31</span>일까지</li> 
+									</ul>
+								</div>
+							</div>
+						</div><!--//lv_benefit -special-->
+
+						<div class="lv_benefit -regular">
+							<div class="evt_banner">
+								<img src="https://cdn.hddfs.com/files/op/20230906/6ccc5411_202309061046118520.png" alt="LUX 정기 혜택">
+								<p class="regular_benefit"><strong>LUX</strong> <em>‘</em><span class="lv_num">1</span><em>’</em> 정기 혜택</p>
+							</div>
+							
+							<div class="list_benefit">
+								<div class="tit_lv"><strong>LUX.<em class="lv_num">1</em></strong> <span>BENEFIT</span></div>
+								<div class="lv_view">
+									<img src="https://cdn.hddfs.com/files/op/20231230/4803eaeb_202312300133362380.png" alt="LUX.1 Benfits" class="lux_benefit_detail lv_lux1"/>
+									<img src="https://cdn.hddfs.com/files/op/20231230/6d398ae0_202312300133479770.png" alt="LUX.2 Benfits" class="lux_benefit_detail lv_lux2"/>
+									<img src="https://cdn.hddfs.com/files/op/20231230/96cfe1e9_202312300133567350.png" alt="LUX.3 Benfits" class="lux_benefit_detail lv_lux3"/>
+									<img src="https://cdn.hddfs.com/files/op/20231230/13890d75_202312300134074510.png" alt="LUX.4 Benfits" class="lux_benefit_detail lv_lux4"/>
+									<img src="https://cdn.hddfs.com/files/op/20231230/b2f6daff_202312300134171950.png" alt="LUX.5 Benfits" class="lux_benefit_detail lv_lux5"/>
+									<ul class="evt_list_caution">
+										<li>시내점용 H선불카드 (유효기간 : 지급일 기준 3년)</li>
+									</ul>
+								</div>
+							</div><!--//list_benefit-->
+						</div><!--//lv_benefit -regular-->
+
+						<div class="lv_benefit -prepaid">
+							<a href="https://m.hddfs.com/shop/mm/my/offSptmCard.do"><img src="https://cdn.hddfs.com/files/op/20230903/f42bd0ba_202309032314045340.png" alt="나의 선불카드 확인하기"></a>
+						</div>
+					</div><!--//evt_temp-->
+				</div><!--//회원 hluxury_benefit_content-->
+			</div><!--//hluxury_content-->
+		</div><!--//hluxury_section-->
+	</div><!--//hluxury_tab_content-->
+</section><!--//hluxury_contents_box-->
+
+<!--S: 가입완료 Dialog-->
+<div class="benefit_pop" id="benefitPop00">
+	<img src="https://cdn.hddfs.com/files/op/20230831/c5e99c96_202308312343554480.jpg" alt="감사합니다. 고객님의 H.LUX Club 가입이 완료되었습니다. 자세한 혜택은 아래 내용을 통해 확인해 주세요."/><!-- 760 x 653 -->
+	<button type="button" onclick="javascript:modalClose();">닫기</button>
+</div>
+<!--E: 가입완료 Dialog-->
+
+<link href="https://cdn.hddfs.com/front/css/KO/aos.css" rel="stylesheet"><!-- aos -->
+<script src="https://cdn.hddfs.com/front/js/KO/aos.js"></script><!-- aos -->
+
+<script>
+//AOS
+var evtAOS = function() {
+	AOS.init({
+		offset: 0, // default: 120
+		duration: 600, //default: 400
+		easing: 'ease-in-out', //default: ease
+		// once: true
+	});
+}
+setTimeout(function() {
+	evtAOS();
+}, 400);
+
+hluxuryButtonController = function(_type){
+	if( _type == "see_benefits" ){
+		//등급별 혜택 보러가기
+		$('.evt_tab [data-tab="hluxury_membership_content"]').click();
+	}
+};
+
+// S: 멤버십 가입 여부
+saveLuxMbshLvl = function(_evntId) {
+	if (isLogin) {
+		$.ajax({
+			async: false,
+			url: ctx_curr + '/op/evnt/otsdEvnt/saveLuxMbshLvl.json',
+			dataType: 'json',
+			type: 'POST',
+			data: {
+				evntId: _evntId
+			},
+			success: function (data, textStatus, jqXHR) {
+				if (!crew.ajaxValidate(data)) { return; }
+				$("#benefitPop00").dialog("open"); //가입성공시 팝업 띄움
+			},
+			error: function (jqXHR, textStatus, errorThrown) {}
+		});
+	} else{
+		alert("로그인후 이용이 가능합니다.");
+		login();
+		return;
+	};
+},
+// E: 멤버십 가입 여부
+
+// S: 현재등급, 이전등급
+luxMbshInfo = function() {
+	$.ajax({
+		async: false,
+		url: ctx_curr + '/op/evnt/otsdEvnt/selectLuxMbshInfo.json',
+		dataType: 'json',
+		type: 'POST',
+		success: function (data, textStatus, jqXHR) {
+			if (!crew.ajaxValidate(data)) { return; }
+
+			var thisYear = parseInt(new Date().getFullYear());
+
+			// $('#hluxury_benefit_content .user_name_txt').text(data.luxMbshInfo.mbshHnglNm); //User 이름 노출
+
+			/* 가져와지는 등급 데이터
+			1 ~ 4등급: LevelLux.1 ~ LevelLux.4
+			5등급: LevelLux.H*/
+
+			//작년 등급 가져오기(Lux.1 ~ Lux.5)
+			var prevLevel = data.luxMbshInfo.luxMinLvlNm;
+			if (prevLevel == "비회원"){
+				$('.hlux_prevLevel').text("10");
+			} else if (prevLevel == "Lux.1"){
+				$('.hlux_prevLevel').text("1");
+			} else if (prevLevel == "Lux.2"){
+				$('.hlux_prevLevel').text("2");
+			} else if (prevLevel == "Lux.3"){
+				$('.hlux_prevLevel').text("3");
+			} else if (prevLevel == "Lux.4"){
+				$('.hlux_prevLevel').text("4");
+			} else if (prevLevel == "Lux.H"){
+				$('.hlux_prevLevel').text("5");
+			}
+
+			//현재 등급 가져오기(Lux.1 ~ Lux.5)
+			var currentLevel = data.luxMbshInfo.luxLvlNm;
+			if (currentLevel == "Lux.1"){
+				$('.hlux_currentLevel').text("1");
+			} else if (currentLevel == "Lux.2"){
+				$('.hlux_currentLevel').text("2");
+			} else if (currentLevel == "Lux.3"){
+				$('.hlux_currentLevel').text("3");
+			} else if (currentLevel == "Lux.4"){
+				$('.hlux_currentLevel').text("4");
+			} else if (currentLevel == "Lux.H"){
+				$('.hlux_currentLevel').text("5");
+			}
+
+			var prevLevelNum = $('.hlux_prevLevel').text().replace(/\D/g, ""); //작년등급 숫자만 남김
+			console.log("Previous Level:" + data.luxMbshInfo.luxMinLvlNm);
+
+			var levelNum = $('.hlux_currentLevel').text().replace(/\D/g, ""); //현재등급 숫자만 남김
+			console.log("Current Level:" + data.luxMbshInfo.luxMinLvlNm);
+			
+			$('#hluxury_tab_content').addClass("lux" + levelNum); //현재등급으로 클래스 추가(lux1 ~ lux5)
+			$('#hluxury_benefit_content .tit_user_name .ico_level').text(levelNum); //아이콘에 등급 숫자 표기
+			$('#hluxury_benefit_content .user_level_txt').text(levelNum); //나의 등급 표기
+
+			$('.lv_con.themall .themall_benefit .en_name').text(data.luxMbshInfo.mbshEngLstnm + " " + data.luxMbshInfo.mbshEngFstnm); //the mall 혜택에 영문이름 노출
+			console.log("한글이름: " + data.luxMbshInfo.mbshHnglNm);
+			console.log("영문이름: " + data.luxMbshInfo.mbshEngLstnm + data.luxMbshInfo.mbshEngFstnm);
+
+			$('.lv_con.themall .themall_benefit .level_num').text(levelNum); //the mall 혜택에 등급 숫자 노출
+
+			//나의 혜택에서 등급에 맞게 혜택 노출. 스와이퍼 이동
+			$('#hluxury_tab_content .lv_benefit.-regular .regular_benefit .lv_num').text(levelNum); //정기혜택 배너에 레벨 노출
+			$('#hluxury_tab_content .lv_benefit.-regular .list_benefit .tit_lv .lv_num').text(levelNum); //등급별 혜택에 레벨노출
+			$('#hluxury_benefit_content .list_benefit .lux_benefit_detail.lv_lux'+levelNum).show(); //등급별 혜택상세 노출
+
+			//직전년도 등급 가져오기 (작년 미가입자는 "비회원")
+			if (prevLevelNum == "5" && levelNum == "5") { //우수고객
+				$(".lv_benefit.-grade").show();
+				$(".lv_benefit.-grade .box_flex.lv_vip").addClass("active");
+			} else if (prevLevelNum < levelNum) {
+				let lvCoupon = $(".lv_benefit.-grade .box_flex.lv_up .box_coupon span"), //쿠폰이미지 금액
+					lvHcard = $(".lv_benefit.-grade .box_flex.lv_up .lv_reserve .hcard"); //안내문구내 금액
+				$(".lv_benefit.-grade").show();
+				$(".lv_benefit.-grade .box_flex.lv_up").addClass("active");
+				if (levelNum == "2") {
+					lvCoupon.text("10,000");
+					lvHcard.text("1");
+				} else if (levelNum == "3") {
+					lvCoupon.text("30,000");
+					lvHcard.text("3");
+				} else if (levelNum == "4") {
+					lvCoupon.text("50,000");
+					lvHcard.text("5");
+				} else if (levelNum == "5") {
+					lvCoupon.text("100,000");
+					lvHcard.text("10");
+				}
+			}
+		},
+		error: function (jqXHR, textStatus, errorThrown) {
+			alert('오류가 발생했습니다.');
+			return;
+		}
+	});
+},
+// E: 현재등급, 이전등급
+
+// S: 화면 진입 시 user 확인
+initDisp = function(){
+	// 로그인 시 화면 동작 Start
+	if (isLogin) {
+		// 현백면 로그인이 된 사용자에 한해 H.Luxury 가입 여부 확인
+		$.ajax({
+			async: false,
+			url: ctx_curr + '/op/evnt/otsdEvnt/selectLuxMbshInfo.json',
+			dataType: 'json',
+			type: 'POST',
+			success: function (data, textStatus, jqXHR) {
+
+				// 오류 발생 시 Default 화면 표기 Start
+				if (!crew.ajaxValidate(data)) {
+					alert('오류가 발생했습니다.');
+					ctrlHLuxuryPrint('default', null);
+				};
+				// 오류 발생 시 Default 화면 표기 End
+
+				//멤버십 가입했을 시 Start
+				if(data.luxMbshInfo){
+					ctrlHLuxuryPrint('hluxury', null);
+					luxMbshInfo(); //현재등급, 이전등급
+				//멤버십 가입했을 시 End
+
+				// 멤버십 미 가입했을 시 Default 화면 표기 Start
+				} else{
+					ctrlHLuxuryPrint('default', null);
+				};
+				// 멤버십 미 가입했을 시 Default 화면 표기 End
+			},
+
+			// 오류 발생 시 Default 화면 표기 Start
+			error: function (jqXHR, textStatus, errorThrown) {
+				alert('오류가 발생했습니다.');
+				ctrlHLuxuryPrint('default', null);
+			}
+			// 오류 발생 시 Default 화면 표기 End
+		});
+	// 로그인 시 화면 동작 End
+
+	// 미 로그인 시 Default 화면 표기 Start
+	} else {
+		ctrlHLuxuryPrint('default', null);
+	};
+	// 미 로그인 시 Default 화면 표기 End
+};
+// E: 화면 진입 시 user 확인
+
+//회원, 비회원 구분
+ctrlHLuxuryPrint = function(_type, _val){
+	if( _type == 'default' ){
+		$('#hluxury_main_box').addClass('type_default'); //비회원 클래스 추가
+		$('#hluxury_main_box').find('#btn_xluxury_join').show(); //가입하기 버튼 노출
+	} else if( _type == 'hluxury' ){
+		// var hluxLevel = $();
+		$('#hluxury_main_box').addClass('type_hluxury'); //회원 클래스 추가
+		$('#hluxury_main_box').find('#btn_xluxury_join').remove(); //가입하기 버튼 숨김
+	} 
+};
+
+$(document).ready(function(){
+	//진입시 실행
+	initDisp();
+
+	//Tab Contents
+	//맴버십소개
+	$("[data-tab='hluxury_membership_content']").click(function(){
+		$(".evt_tab li").removeClass("active");
+		$(".hluxury_content .cont_box").removeClass("active");
+		$(this).addClass("active");
+		$("#hluxury_membership_content").addClass("active");
+	});
+
+	//나의 혜택 확인하기
+	$("[data-tab='hluxury_benefit_content']").click(function(){
+		if ($("#hluxury_main_box").hasClass('type_default')){
+			if(!isLogin){ alert("로그인 후 이용해주세요."); login(); return; }
+			if (isLogin) { alert('H.LUX Club 가입 후, 확인 가능합니다.'); return;}
+		}
+		//initDisp(); 진입시 체크하는 펑션 다시 실행
+		$(".evt_tab li").removeClass("active");
+		$(".hluxury_content .cont_box").removeClass("active");
+		$(this).addClass("active");
+		$("#hluxury_benefit_content").addClass("active");
+	});
+
+	//가입 완료 팝업
+	$("#benefitPop00").dialog({
+		autoOpen: false,
+		resizable: false,
+		width: 760,
+		Height: 653,
+		modal: true,
+		open: function() {
+				$('.ui-widget-overlay').bind('click', function() {
+				$('#benefitPop00').dialog('close');
+				location.reload();
+			});
+			$("#benefitPop00").prev(".ui-dialog-titlebar").hide();
+		}
+	});
+	$("[data-tab='hluxury_membership_content']").click();
+});
+function modalClose(){
+	$('#benefitPop00').dialog('close');
+	location.reload();
+	$("[data-tab='hluxury_membership_content']").click();
+};
+</script>
+<!-- E : BO 등록 영역 -->
+
+
+
+
+
+
+                </div><!--//ev_editarea-->
+                <div class="attention_area pdb_no">
+                    <p class="attention_tit">유의사항</p>
+                    <ul class="dot_list_new">
+                        <li>내용</li>
+                    </ul>
+                </div>
+            </div><!--//contents_area-->
+        </div><!--//gnbev_view-->
+    </div>
+    <!-- E : container -->
+    <!-- S : footer -->
+    <script src="../../../M_KO/html/include/footer.js"></script>
+    <!-- E : footer -->
+    <div class="gnb_dimmed"></div>
+</body>
+</html>

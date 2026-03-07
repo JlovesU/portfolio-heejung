@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>현대백화점인터넷면세점</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="../../../M_KO/js/M_KO/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+
+<!-- S : BO 등록 영역 -->
+<style type="text/css">
+.game_box {position: relative; width: 1050px; height: 1050px; background:floralwhite; box-sizing: border-box; padding: 10px;}
+.game_box .dice_box {position:absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 510px; height: 510px; border: 1px solid #dfdfdf; background:cornflowerblue;box-sizing: border-box;}
+.brand_box  {position: relative; }
+.brand_box ul {margin: 0; padding: 0;}
+.brand_box li {position: absolute; width: 250px; height: 250px; border: 1px solid #dfdfdf; list-style: none;background:#fff;box-sizing: border-box;}
+.brand_box li.on:before {content: ""; display: block; position: absolute; width: 100%; height: 100%; }
+.brand_box .brand1 {top:0; left: 260px;}
+.brand_box .brand2 {top:0; left: 520px;}
+.brand_box .brand3 {top:0; left: 780px;}
+.brand_box .brand4 {top:260px; left: 780px;}
+.brand_box .brand5 {top:520px; left: 780px;}
+.brand_box .brand6 {top:780px; left: 780px;}
+.brand_box .brand7 {top:780px; left: 520px;}
+.brand_box .brand8 {top:780px; left: 260px;}
+.brand_box .brand9 {top:780px; left: 0px;}
+.brand_box .brand10 {top:520px; left: 0px;}
+.brand_box .brand11 {top:260px; left: 0px;}
+.brand_box .brand12 {top:0px; left: 0px;}
+.ico_plane {position: absolute;display: block; width: 250px; height: 250px; top: 0; left: 0; opacity: 0; z-index:0; background: url(cat.png) center center no-repeat; background-size: 120px 120px; }
+.ico_plane.on {z-index:2; opacity: 1;}
+.ico_plane.goto2 {animation: Goto2 .5s ease-out forwards;}
+.ico_plane.goto3 {animation: Goto3 .8s ease-out forwards;}
+.ico_plane.goto4 {animation: Goto4 .8s ease-out forwards;}
+.ico_plane.goto5 {animation: Goto5 1s ease-out forwards;}
+.ico_plane.goto6 {animation: Goto6 1.2s ease-out forwards;}
+.ico_plane.goto7 {animation: Goto7 1.3s ease-out forwards;}
+.ico_plane.goto8 {animation: Goto8 1.5s ease-out forwards;}
+.ico_plane.goto9 {animation: Goto9 1.5s ease-out forwards;}
+.ico_plane.goto10 {animation: Goto10 1.8s ease-out forwards;}
+.ico_plane.goto11 {animation: Goto11 1.8s ease-out forwards;}
+.ico_plane.goto12 {animation: Goto12 2s ease-out forwards;}
+@keyframes Goto2 {
+	0%   {top: 0; left: 0;}
+	100% {top: 0; left: 520px;}
+}
+@keyframes Goto3 {
+	0%   {top: 0; left: 0;}
+	100% {top: 0; left: 780px;}
+}
+@keyframes Goto4 {
+	0%   {top: 0; left: 0;}
+	50%   {top: 0; left: 780px;}
+	100% {top: 260px; left: 780px;}
+}
+@keyframes Goto5 {
+	0%   {top: 0; left: 0;}
+	50%   {top: 0; left: 780px;}
+	100% {top: 520px; left: 780px;}
+}
+@keyframes Goto6 {
+	0%   {top: 0; left: 0;}
+	50%   {top: 0; left: 780px;}
+	100% {top: 780px; left: 780px;}
+}
+@keyframes Goto7 {
+	0%   {top: 0; left: 0;}
+	35%   {top: 0; left: 780px;}
+	70%   {top: 780px; left: 780px;}
+	100% {top: 780px; left: 520px;}
+}
+@keyframes Goto8 {
+	0%   {top: 0; left: 0;}
+	35%   {top: 0; left: 780px;}
+	70%   {top: 780px; left: 780px;}
+	100% {top: 780px; left: 260px;}
+}
+@keyframes Goto9 {
+	0%   {top: 0; left: 0;}
+	35%   {top:0; left: 780px;}
+	70%   {top: 780px; left: 780px;}
+	100% {top: 780px; left: 0px;}
+}
+@keyframes Goto10 {
+	0%   {top: 0; left: 0;}
+	30%   {top: 0; left: 780px;}
+	50%   {top: 780px; left: 780px;}
+	80% {top: 780px; left: 0px;}
+	100% {top: 520px; left: 0px;}
+}
+@keyframes Goto11 {
+	0%   {top: 0; left: 0;}
+	30%   {top: 0; left: 780px;}
+	50%   {top: 780px; left: 780px;}
+	80% {top: 780px; left: 0px;}
+	100% {top: 260px; left: 0px;}
+}
+@keyframes Goto12 {
+	0%   {top: 0; left: 0;}
+	30%   {top: 0; left: 780px;}
+	50%   {top: 780px; left: 780px;}
+	80% {top: 780px; left: 0px;}
+	100% {top: 0px; left: 0px;}
+}
+</style>
+
+<div class="evt_temp">
+	<div class="game_box">
+		<div class="dice_box">
+			<button class="btn_brand2">brand2</button>
+			<button class="btn_brand3">brand3</button>
+			<button class="btn_brand4">brand4</button>
+			<button class="btn_brand5">brand5</button>
+			<button class="btn_brand6">brand6</button>
+			<button class="btn_brand7">brand7</button>
+			<button class="btn_brand8">brand8</button>
+			<button class="btn_brand9">brand9</button>
+			<button class="btn_brand10">brand10</button>
+			<button class="btn_brand11">brand11</button>
+			<button class="btn_brand12">brand12</button>
+		</div>
+		<div class="brand_box">
+			<div class="ico_plane"></div>
+			<ul>
+				<li class="brand1" data-block="1">brand1</li>
+				<li class="brand2" data-block="2">brand2</li>
+				<li class="brand3" data-block="3">brand3</li>
+				<li class="brand4" data-block="4">brand4</li>
+				<li class="brand5" data-block="5">brand5</li>
+				<li class="brand6" data-block="6">brand6</li>
+				<li class="brand7" data-block="7">brand7</li>
+				<li class="brand8" data-block="8">brand8</li>
+				<li class="brand9" data-block="9">brand9</li>
+				<li class="brand10" data-block="10">brand10</li>
+				<li class="brand11" data-block="11">brand11</li>
+				<li class="brand12" data-block="12">brand12</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<script>
+$(".btn_brand2").click(function(){
+	$(".ico_plane").addClass('on');
+	$(".ico_plane").addClass('goto2');
+});
+$(".btn_brand3").click(function(){
+	$(".ico_plane").addClass('on');
+	$(".ico_plane").addClass('goto3');
+});
+$(".btn_brand4").click(function(){
+	$(".ico_plane").addClass('on');
+	$(".ico_plane").addClass('goto4');
+});
+$(".btn_brand5").click(function(){
+	$(".ico_plane").addClass('on');
+	$(".ico_plane").addClass('goto5');
+});
+$(".btn_brand6").click(function(){
+	$(".ico_plane").addClass('on');
+	$(".ico_plane").addClass('goto6');
+});
+$(".btn_brand7").click(function(){
+	$(".ico_plane").addClass('on');
+	$(".ico_plane").addClass('goto7');
+});
+$(".btn_brand8").click(function(){
+	$(".ico_plane").addClass('on');
+	$(".ico_plane").addClass('goto8');
+});
+$(".btn_brand9").click(function(){
+	$(".ico_plane").addClass('on');
+	$(".ico_plane").addClass('goto9');
+});
+$(".btn_brand10").click(function(){
+	$(".ico_plane").addClass('on');
+	$(".ico_plane").addClass('goto10');
+});
+$(".btn_brand11").click(function(){
+	$(".ico_plane").addClass('on');
+	$(".ico_plane").addClass('goto11');
+});
+$(".btn_brand12").click(function(){
+	$(".ico_plane").addClass('on');
+	$(".ico_plane").addClass('goto12');
+});
+</script>
+<!-- E : BO 등록 영역 -->
+</body>
+</html>
