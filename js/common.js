@@ -15,12 +15,14 @@ function openDrawer() {
   mobileMenu.classList.add('open');
   drawerDim.classList.add('open');
   document.body.style.overflow = 'hidden';
+  hamburger.setAttribute("aria-expanded", "true");
 }
 function closeDrawer() {
   hamburger.classList.remove('open');
   mobileMenu.classList.remove('open');
   drawerDim.classList.remove('open');
   document.body.style.overflow = '';
+  hamburger.setAttribute("aria-expanded", "false");
 }
 
 hamburger.addEventListener('click', () => {
