@@ -52,19 +52,19 @@ const obs = new IntersectionObserver(entries => {
 document.querySelectorAll('.fade-up').forEach((el, i) => { el.dataset.d = i % 5; obs.observe(el); });
 
 /* ── 현재 섹션 하이라이트 ── */
-const navAs = document.querySelectorAll('nav a');
-// nav 링크에 대응하는 섹션 ID만 추출
-const navSecs = Array.from(navAs)
-  .map(a => document.querySelector(a.getAttribute('href')))
-  .filter(Boolean);
+// const navAs = document.querySelectorAll('nav a');
+// // nav 링크에 대응하는 섹션 ID만 추출
+// const navSecs = Array.from(navAs)
+//   .map(a => document.querySelector(a.getAttribute('href')))
+//   .filter(Boolean);
 
-function updateActive() {
-  let cur = '';
-  navSecs.forEach(s => {
-    if (scrollY >= s.offsetTop - 90) cur = s.id;
-  });
-  navAs.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
-}
+// function updateActive() {
+//   let cur = '';
+//   navSecs.forEach(s => {
+//     if (scrollY >= s.offsetTop - 90) cur = s.id;
+//   });
+//   navAs.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+// }
 
 // 페이지 로드 시 초기 활성화
 updateActive();
@@ -76,3 +76,13 @@ window.addEventListener('scroll', () => {
   gotoTop.classList.toggle('visible', scrollY > 400);
 });
 gotoTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+//모바일 새창 띄우기
+function openMobile(e){
+  e.preventDefault();
+  window.open(
+    e.currentTarget.href,
+    "mobile",
+    "width=375,height=812,resizable=yes,scrollbars=yes"
+  );
+}
