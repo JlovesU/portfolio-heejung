@@ -40,17 +40,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-/* ── 스크롤 fade-up ── */
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(en => {
-    if (en.isIntersecting) {
-      setTimeout(() => en.target.classList.add('visible'), +(en.target.dataset.d||0) * 120);
-      obs.unobserve(en.target);
-    }
-  });
-}, { threshold: 0.1 });
-document.querySelectorAll('.fade-up').forEach((el, i) => { el.dataset.d = i % 5; obs.observe(el); });
-
 /* ── 현재 섹션 하이라이트 ── */
 // const navAs = document.querySelectorAll('nav a');
 // // nav 링크에 대응하는 섹션 ID만 추출
@@ -66,7 +55,7 @@ document.querySelectorAll('.fade-up').forEach((el, i) => { el.dataset.d = i % 5;
 //   navAs.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
 // }
 
-// 페이지 로드 시 초기 활성화
+// //페이지 로드 시 초기 활성화
 // updateActive();
 
 /* ── Go to Top 버튼 ── */
@@ -93,20 +82,8 @@ function openMobile(e){
   );
 }
 
-//포트폴리오 type2
-// gsap.registerPlugin(ScrollSmoother);
-
-// const smoother = ScrollSmoother.create({
-//   wrapper: "#smooth-wrapper",
-//   content: "#smooth-content",
-//   smooth: 2,
-//   normalizeScroll: true,
-//   ignoreMobileResize: true,
-//   preventDefault: true
-// });
-
 var swiper = new Swiper(".works-wrap2", {
-  slidesPerView: 2.5,
+  slidesPerView: 1.5,
   spaceBetween: 20,
   freeMode: true,
   scrollbar: {
@@ -120,8 +97,8 @@ var swiper = new Swiper(".works-wrap2", {
   // },
   breakpoints: {
     320: {
-      slidesPerView: 2.5,
-      spaceBetween: 10,
+      slidesPerView: 1.5,
+      spaceBetween: 15,
     },
     768: {
       slidesPerView: 3.5,
@@ -136,7 +113,7 @@ var swiper = new Swiper(".works-wrap2", {
 document.querySelectorAll('.works-other').forEach(el => {
   new Swiper(el, {
     slidesPerView: 2.5,
-    spaceBetween: 20,
+    spaceBetween: 30,
     freeMode: true,
     scrollbar: {
       el: el.querySelector('.swiper-scrollbar'),
@@ -148,16 +125,16 @@ document.querySelectorAll('.works-other').forEach(el => {
     // },
     breakpoints: {
       320: {
-        slidesPerView: 2.5,
-        spaceBetween: 10,
+        slidesPerView: 1.5,
+        spaceBetween: 20,
       },
       768: {
         slidesPerView: 3.5,
-        spaceBetween: 15,
+        spaceBetween: 40,
       },
       1024: {
-        slidesPerView: 4.5,
-        spaceBetween: 20,
+        slidesPerView: 3.5,
+        spaceBetween: 50,
       },
     }
   });
