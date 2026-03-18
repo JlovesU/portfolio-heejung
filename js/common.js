@@ -67,12 +67,12 @@ document.querySelectorAll('.fade-up').forEach((el, i) => { el.dataset.d = i % 5;
 // }
 
 // 페이지 로드 시 초기 활성화
-updateActive();
+// updateActive();
 
 /* ── Go to Top 버튼 ── */
 const gotoTop = document.getElementById('gotoTop');
 window.addEventListener('scroll', () => {
-  updateActive();
+  // updateActive();
   gotoTop.classList.toggle('visible', scrollY > 400);
 });
 gotoTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
@@ -80,9 +80,127 @@ gotoTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smo
 //모바일 새창 띄우기
 function openMobile(e){
   e.preventDefault();
+  var width = 375;
+  var height = 650;
+
+  var left = (screen.availWidth - width) / 2;
+  var top = (screen.availHeight - height) / 2;
+
   window.open(
     e.currentTarget.href,
     "mobile",
-    "width=375,height=812,resizable=yes,scrollbars=yes"
+    "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top + ",resizable=yes,scrollbars=yes"
   );
 }
+
+//포트폴리오 type2
+// gsap.registerPlugin(ScrollSmoother);
+
+// const smoother = ScrollSmoother.create({
+//   wrapper: "#smooth-wrapper",
+//   content: "#smooth-content",
+//   smooth: 2,
+//   normalizeScroll: true,
+//   ignoreMobileResize: true,
+//   preventDefault: true
+// });
+
+var swiper = new Swiper(".works-wrap2", {
+  slidesPerView: 2.5,
+  spaceBetween: 20,
+  freeMode: true,
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true,
+    // hide: true,
+  },
+  // mousewheel: {
+  //   enabled: true,
+  //   releaseOnEdges: true,
+  // },
+  breakpoints: {
+    320: {
+      slidesPerView: 2.5,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 3.5,
+      spaceBetween: 15,
+    },
+    1024: {
+      slidesPerView: 4.5,
+      spaceBetween: 20,
+    },
+  }
+});
+document.querySelectorAll('.works-other').forEach(el => {
+  new Swiper(el, {
+    slidesPerView: 2.5,
+    spaceBetween: 20,
+    freeMode: true,
+    scrollbar: {
+      el: el.querySelector('.swiper-scrollbar'),
+      draggable: true,
+    },
+    // mousewheel: {
+    //   enabled: true,
+    //   releaseOnEdges: true,
+    // },
+    breakpoints: {
+      320: {
+        slidesPerView: 2.5,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 3.5,
+        spaceBetween: 15,
+      },
+      1024: {
+        slidesPerView: 4.5,
+        spaceBetween: 20,
+      },
+    }
+  });
+});
+
+// 슬라이드 클릭 → 팝업 열기
+const overlay = document.getElementById('popupOverlay');
+const popupView = document.querySelector('.popup-view');
+const popupImg = document.getElementById('popupImg');
+const body = document.querySelector('body');
+
+// 슬라이드 클릭 → 팝업
+document.querySelectorAll('.works-other .swiper-wrapper').forEach(wrapper => {
+  wrapper.addEventListener('click', e => {
+    const slide = e.target.closest('.works-other .swiper-slide');
+    if (!slide) return;
+
+    popupImg.classList.remove('loaded');
+    popupImg.src = '';
+
+    popupImg.onload = () => {
+      popupImg.classList.add('loaded');
+    };
+
+    popupImg.src = slide.querySelector('img').src;
+    overlay.classList.add('active');
+    body.classList.add('scroll-hidden');
+    popupView.scrollTop = 0;
+  });
+});
+
+// 닫기 공통 함수
+const closePopup = () => {
+  overlay.classList.remove('active');
+  body.classList.remove('scroll-hidden');
+};
+// 딤드 클릭 닫기
+overlay.addEventListener('click', e => {
+  if (e.target === overlay) {
+    overlay.classList.remove('active');
+    body.classList.remove('scroll-hidden');
+  }
+});
+// X버튼 또는 이미지 클릭시 닫기
+document.getElementById('popupClose').addEventListener('click', closePopup);
+popupView.addEventListener('click', closePopup);

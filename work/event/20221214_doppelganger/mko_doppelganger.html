@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>현대백화점인터넷면세점</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+	<script src="../js/m_common.ui.js"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/jquery-ui.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+	<link rel="stylesheet" href="../css/m_common.css">
+	<link rel="stylesheet" href="../css/m_layout.css">
+
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- S : container -->
+    <div class="container new_type">
+        <div class="gnbev_view">
+            <div class="contents_area no_space">
+                <div class="btn_share_wrap">
+                    <div class="btn_share_area">
+                        <a href="javascript:void(0);" class="btn_ev_share sharePopup"></a>
+                        <a href="javascript:mergeMyEvnt('0003167');" class="btn_ev_like"></a>
+                    </div> 
+                </div>
+                <div class="ev_editarea">
+
+
+
+
+
+<!-- S : BO 등록 영역 -->
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+<style type="text/css">
+/* reset */
+.location, .event_top_share, .event_detail_btn {display:none;}
+.contents_area {border-bottom:none;}
+/* common */
+.evt_section {position:relative; width:100%; overflow:hidden;}
+.evt_section .evt_content {position:relative; width:100%; height:100%;}
+#event00 .main_tit {position:absolute; left:0; right:0; bottom:6%; width:81%; margin:0 auto;}
+
+/* Test Bg */
+#event01 .evt_bg_open_door {position:absolute; width:100%; left:0; top:0; height:100%; z-index:0;}
+#event01 .evt_bg_question,
+#event01 .evt_bg_result,
+#event01 .evt_bg_speed_light {display:none; width:100%; height:100%;}
+#event01 .evt_bg_speed_light { position:absolute; top:0; width:auto; height:100%; left:50%; transform:translateX(-50%)}
+#event01 .evt_bg_speed_light {z-index:2;}
+#event01 .evt_bg_speed_light video {width:auto; height:100%;}
+#event01 .evt_bg_question {background:#0e0516}
+
+/* Test */
+.box_dopple {position:absolute; width:100%; top:23%; left:0; color:#fff; font-size:14px; text-align:center; line-height:1.5;}
+.dopple_intro {width:100%; margin-top:78%;}
+.dopple_intro p {margin-top:22px;}
+
+.doppel_test,
+.doppel_test .dopple_quiz,
+.dopple_result,
+.event_random_reserves {display:none}
+/* .doppel_test {position:absolute; bottom:10; width:100%;} */
+.doppel_test .dopple_quiz.active {display:block}
+.doppel_test .dopple_q {height:26vw; font-size:14px; margin-top: 20vw}
+.doppel_test .dopple_step {font-family:"DM Sans"; font-size:12px; color:#ebccff; letter-spacing:1px;}
+.doppel_test .dopple_step strong {font-family:"DM Sans"; color:#fff; font-weight:400;}
+.doppel_test .dopple_step em {font-family:"DM Sans"; color:#d69bff;}
+.doppel_test .dopple_a {margin-top:32vw;}
+.doppel_test .dopple_a p {position:relative;}
+.doppel_test .dopple_a p + p {margin-top:8px;}
+.doppel_test input[type="file"] {display:none; margin: 0; padding: 0; border: none; }
+.doppel_test .txt_caution {/*position:absolute; left:0; right:0; bottom:-28px;*/ font-size:12px; margin: 5px auto 0; width:45%;}
+.doppel_test .img_preview {width: 1px; margin: 0; height: 1px; position: absolute; opacity: 0; padding: 0; font-size: 0;}
+
+.dopple_quiz.last {margin-bottom:-12vw;}
+.dopple_quiz.last .dopple_q {margin-top: 16vw}
+.dopple_quiz.last .dopple_a {margin-top: 3vw}
+.doppel_test .confirm {position:relative; margin:13vw auto 0; width:69%;}
+.doppel_test .confirm input[id="agreeCheckBox"] {overflow:hidden; position:absolute; top:10px; left:0; width:1px; height:1px; padding:0; margin:-1px; clip:rect(0,0,0,0); border:0;}
+.doppel_test .confirm input[id="agreeCheckBox"] + label { width:auto; height:12px; font-size:13px; color:#fff; cursor:pointer; margin:0; padding:0 0 0 18px; background:none; min-width:auto;}
+.doppel_test .confirm input[id="agreeCheckBox"] + label:after {display:none;}
+.doppel_test .confirm input[id="agreeCheckBox"] + label:before {content:''; display:block; position:absolute; top:50%; left:0; width:12px; height:12px; color:#fff; transform:translateY(-50%); -webkit-transform:translateY(-50%); -moz-transform:translateY(-50%); border:1px solid #cf9af6;}
+.doppel_test .confirm input[id="agreeCheckBox"]:checked + label:before {background:url('https://cdn.hddfs.com/files/editor/20220705/4f347b31_202207051637101630.png') center center no-repeat; background-size:9px 9px;}
+.doppel_test .confirm p {margin-top:5px; font-size:12px;}
+.doppel_test .confirm strong {display:inline-block; border-bottom:1px solid #fff}
+
+/* Button, Label */
+.box_dopple input[type='checkbox'], .box_dopple input[type='radio'] {width:0; height:0;}
+.evt__btn_dopple,
+.doppel_test label {position:relative; display:inline-flex !important; justify-content:center; align-items:center; cursor:pointer; background:url('https://cdn.hddfs.com/files/editor/20230110/cd019f3f_202301101558503810.png') no-repeat; background-size:300px 63px; width:300px; height:63px; color:#fff !important; font-size:14px; }
+/* .evt__btn_dopple:after,
+.doppel_test label:after {content:""; position:absolute; right:-70px; top:0; display:block; background:url('https://cdn.hddfs.com/files/editor/20230110/cd019f3f_202301101558503810.png') no-repeat 100% 100%; background-size:auto 63px; width:70px; height:63px;} */
+.evt__btn_dopple.-type2 {background:url('https://cdn.hddfs.com/files/editor/20230110/40204595_202301101559185180.png') no-repeat; background-size:157px 63px; width:157px;}
+
+/*결과*/
+.dopple_result {margin-top:-25%; height:100%;}/*결과보기 bg넣기*/
+.dopple_result .con_result {width:100%; height:100%;text-align:center;}
+.dopple_result .image_bg {position:relative; margin-bottom:-10%}
+.dopple_result .image {position:absolute; top:38%; left:50%; transform: translateX(-50%); display:inline-block; width:44%; height:43%; border:1px solid #ecc5ff; background-image:url('https://cdn.hddfs.com/files/editor/20230119/6b9262af_202301191115132430.jpg'); background-repeat:no-repeat !important; background-size:cover !important; background-position:center center !important;}
+.dopple_result .image:after {content:""; width:100%; position:absolute; bottom:0; left:0; height:10%; background: rgb(0,0,0); background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(5,5,5,0) 100%);}
+/* .dopple_result .image img {width:100%;} */
+.dopple_result .sub_txt {/*margin-top:4vh;*/ width:70%; display:inline-block;}
+.dopple_result .desc {margin-top:4.5vw; font-size:14px; color:#fff; width:88%; word-break:keep-all; display:inline-block; height:19vh;}
+.dopple_result .hash {margin-top:4.5vw; font-size:14px; color:#debaff; display:inline-block;}
+.dopple_result .result_info {margin-top:4.5vw; width:88%; font-size:14px; background-color:#2f0d52; padding:3% 0; display:inline-block; }
+.dopple_result .result_info strong {color:#d19fff;}
+.dopple_result .box_dopple_btn {margin-top:7vw;}
+.dopple_result .box_dopple_btn a + a {margin-left:8px;}
+@media (max-width:375px) {
+	.dopple_quiz.last .dopple_q {margin-top: 14vw; height: 24vw; font-size: 13px;}
+	.doppel_test .confirm {margin:9vw auto 0; width:75%;}
+	.doppel_test .confirm p{font-size:11px;}
+    .evt__btn_dopple,
+    .doppel_test label {font-size:12px; background-size: 280px 55px; width: 280px; height: 55px;}
+    .evt__btn_dopple.-type2 {background-size: 160px 55px; width: 160px; height: 55px;}
+	.dopple_result .desc,
+	.dopple_result .hash,
+	.dopple_result .result_info {font-size:13px;}
+}
+@media (max-width:320px) {
+    .box_dopple {font-size:13px;}
+    .evt__btn_dopple,
+    .doppel_test label {font-size:12px; background-size: 230px 42px; width: 230px; height: 42px;}
+    .evt__btn_dopple.-type2 {background-size: 150px 42px; width: 150px;}
+    .doppel_test .dopple_q {font-size:12px; margin-top: 20vw; height: 24vw;}
+    .doppel_test .dopple_a {margin-top:30vw}
+    .dopple_result .desc {font-size:12px; width:85%; height: 35vw;}
+    .dopple_result .hash {font-size:12px;}
+    .dopple_result .result_info {font-size:12px; width:90%;}
+    .dopple_result .box_dopple_btn a + a {margin-left:3px;}
+	.doppel_test.last .dopple_q {font-size:12px; margin-top: 13vw; height: 24vw;}
+	.doppel_test .txt_caution{font-size:10px;}
+	.doppel_test .confirm {margin:8vw auto 0; width:75%;}
+	.doppel_test .confirm input[id="agreeCheckBox"] + label{font-size:11px;}
+	.doppel_test .confirm p {font-size:10px;}
+}
+/*-- Popup --*/
+/*sns*/
+.evt_share_pop {width:90%;}
+.evt_share_pop .pop_tit {font-size:13px; color:#222; text-align:center; height:60px; display:flex; justify-content:center; align-items:center; border-bottom:1px solid #ccc;}
+.evt_share_pop .evt_temp {padding:10% 7%;}
+.evt_share_pop .btn_dopple_share {display:inline-flex; align-items:center; flex-wrap: wrap; justify-content:center; gap:20px 14px;}
+.evt_share_pop .btn_dopple_share li {margin-right:auto;}
+.evt_share_pop .btn_dopple_share a {display:inline-block; background:url('https://cdn.hddfs.com/files/editor/20230110/82ef782b_202301101559345290.png') no-repeat; background-size:215px auto; width:66px; height:66px; text-indent:-9999px; overflow:hidden; vertical-align:top;}
+.evt_share_pop .btn_dopple_share .ico_kakao {background-position: 0px 0;}
+.evt_share_pop .btn_dopple_share .ico_blog {background-position: -75px 0;}
+.evt_share_pop .btn_dopple_share .ico_facebook {background-position: -150px 0;}
+.evt_share_pop .btn_dopple_share .ico_story {background-position: 0px -82px;}
+.evt_share_pop .btn_dopple_share .ico_hpoint {background-position: -75px -82px;}
+.evt_share_pop .btn_dopple_share .ico_sms {background-position: -150px -82px;}
+.evt_share_pop .btn_dopple_share .ico_url {background-position: 0 -163px;}
+.evt_share_pop .ev_btn.btn_close {position:absolute; right:16px; top:17px; height:26px; width:26px; display: flex; justify-content: center; align-items: center; }
+
+/*prize*/
+.evt_prize_pop .ev_btn.btn_close {right:8px; top:8px; height:26px; width:26px}
+.evt_prize_pop img {display:none;}
+.evt_prize_pop .type_actived {display:block;}
+.sec_02 {margin-top:20px;}
+.sec_02 a {display:inline-block; width:250px; height:40px; line-height:40px; border:1px solid #ccc; text-align:center;}
+</style>
+<section class="evt_section" id="event00">
+	<div class="evt_content evt_temp">
+		<img alt="visual bg" src="https://cdn.hddfs.com/files/editor/20230110/21c451fc_202301101559526310.jpg" />
+		<p class="main_tit">
+			<img alt="당신의 도플갱어를 찾아드립니다. 다른 나라에 내 도플갱어가 살고 있다고? 지금 바로 '나의 도플갱어'를 찾는 여행을 떠나보자!" src="https://cdn.hddfs.com/files/editor/20230110/0d0c24cd_202301101600056500.png" /></p>
+	</div>
+</section>
+<section class="evt_section" id="event01">
+	<div class="evt_content evt_temp">
+		<img alt="test bg" class="test_bg" src="https://cdn.hddfs.com/files/editor/20230110/4684abe8_202301101600180570.jpg" />
+		<div class="evt_bg_open_door" data-aos="fade" data-aos-delay="700" data-aos-duration="1800">
+			<img alt="Door Open" src="https://cdn.hddfs.com/files/editor/20230110/4a081ebf_202301101600298630.jpg" /></div>
+		<!--//열린문 이미지-->
+		<div class="evt_bg_speed_light">
+			<video autoplay="" loop="" muted="" playsinline="">
+				<source src="https://cdn.hddfs.com/files/editor/20230104/fbea741f_202301041734172850.mp4" type="video/mp4" /></video>
+		</div>
+		<!-- //섬광영상-->
+		<div class="evt_bg_question">
+			<img alt="" src="https://cdn.hddfs.com/files/editor/20230110/5a0254b9_202301101600419560.jpg" /></div>
+		<!-- 테스트 배경-->
+		<div class="evt_bg_result">
+			<img alt="" src="https://cdn.hddfs.com/files/editor/20230110/e9dce71e_202301101624265800.jpg" /></div>
+		<!-- 결과 배경-->
+		<div class="box_dopple">
+			<div class="dopple_intro">
+				지금부터 이 지구에 있는<br />
+				당신의 도플갱어를 찾아보겠습니다.<br />
+				<strong>준비되셨나요?</strong>
+				<p><a class="evt__btn_dopple btn_start" href="javascript:void(0)">테스트 시작하기</a></p>
+			</div>
+			<div class="doppel_test">
+				<div class="dopple_quiz active">
+					<p class="dopple_step"><strong>01</strong> / <em>07</em></p>
+					<p class="dopple_q">
+						도플갱어를 찾아가는<br />
+						여정의 시작.<br />
+						처음부터 갈림길이 나타났다.<br />
+						어디로 가야할까?</p>
+					<div class="dopple_a">
+						<p>
+							<input id="doppleQuiz1_1" name="doppleQuiz1" type="radio" /><label for="doppleQuiz1_1">자연의 상쾌함이 느껴지는 곳</label></p>
+						<p>
+							<input id="doppleQuiz1_2" name="doppleQuiz1" type="radio" /><label for="doppleQuiz1_2">도시의 소음이 느껴지는 곳</label></p>
+					</div>
+				</div>
+				<!--//dopple_quiz1-->
+				<div class="dopple_quiz">
+					<p class="dopple_step"><strong>02</strong> / <em>07</em></p>
+					<p class="dopple_q">
+						주변을 한번 둘러볼까?<br />
+						우선 여기가 어딘지 알고싶어</p>
+					<div class="dopple_a">
+						<p>
+							<input id="doppleQuiz2_1" name="doppleQuiz2" type="radio" /><label for="doppleQuiz2_1">주변을 만져본다</label></p>
+						<p>
+							<input id="doppleQuiz2_2" name="doppleQuiz2" type="radio" /><label for="doppleQuiz2_2">주변의 냄새를 맡아본다</label></p>
+					</div>
+				</div>
+				<!--//dopple_quiz2-->
+				<div class="dopple_quiz">
+					<p class="dopple_step"><strong>03</strong> / <em>07</em></p>
+					<p class="dopple_q">
+						아직 이곳이 어딘지<br />
+						잘 모르겠어</p>
+					<div class="dopple_a">
+						<p>
+							<input id="doppleQuiz3_1" name="doppleQuiz3" type="radio" /><label for="doppleQuiz3_1">긴장은 좀 되지만 끝까지 잘 찾아가보자!</label></p>
+						<p>
+							<input id="doppleQuiz3_2" name="doppleQuiz3" type="radio" /><label for="doppleQuiz3_2">두근두근. 그래서 더 흥미로운걸!</label></p>
+					</div>
+				</div>
+				<!--//dopple_quiz3-->
+				<div class="dopple_quiz">
+					<p class="dopple_step"><strong>04</strong> / <em>07</em></p>
+					<p class="dopple_q">
+						그 사람은 지금<br />
+						무슨 옷을 입고 있을까?</p>
+					<div class="dopple_a">
+						<p>
+							<input id="doppleQuiz4_1" name="doppleQuiz4" type="radio" /><label for="doppleQuiz4_1">활동이 편한 복장</label></p>
+						<p>
+							<input id="doppleQuiz4_2" name="doppleQuiz4" type="radio" /><label for="doppleQuiz4_2">전문가 포스가 느껴지는 복장</label></p>
+					</div>
+				</div>
+				<!--//dopple_quiz4-->
+				<div class="dopple_quiz">
+					<p class="dopple_step"><strong>05</strong> / <em>07</em></p>
+					<p class="dopple_q">
+						그 사람과 만날 수 있는 곳에<br />
+						가까워지고 있나봐..!</p>
+					<div class="dopple_a">
+						<p>
+							<input id="doppleQuiz5_1" name="doppleQuiz5" type="radio" /><label for="doppleQuiz5_1">주변의 소리가 들려</label></p>
+						<p>
+							<input id="doppleQuiz5_2" name="doppleQuiz5" type="radio" /><label for="doppleQuiz5_2">촉감이 생생하게 느껴져</label></p>
+					</div>
+				</div>
+				<!--//dopple_quiz5-->
+				<div class="dopple_quiz">
+					<p class="dopple_step"><strong>06</strong> / <em>07</em></p>
+					<p class="dopple_q">
+						앗..! 눈부셔!<br />
+						눈 앞에 세가지 문이<br />
+						나타났다.</p>
+					<div class="dopple_a">
+						<p>
+							<input id="doppleQuiz6_1" name="doppleQuiz6" type="radio" /><label for="doppleQuiz6_1">차분히 살펴보고 하나를 고른다</label></p>
+						<p>
+							<input id="doppleQuiz6_2" name="doppleQuiz6" type="radio" /><label for="doppleQuiz6_2">고민은 NO! 끌리는 하나를 고른다</label></p>
+					</div>
+				</div>
+				<!--//dopple_quiz6-->
+				<div class="dopple_quiz last">
+					<p class="dopple_step"><strong>07</strong> / <em>07</em></p>
+					<p class="dopple_q">
+						여정의 종착지에<br />
+						도착하셨군요.<br />
+						이제 사진을 업로드하면<br />
+						도플갱어를 만나게 됩니다.
+					</p>
+					<p class="txt_caution">* 눈, 코, 입이 가려진 사진, 마스크 착용 사진, 너무 가까이서 촬영한 셀카 사진은 얼굴이 인식되지 않을 수 있습니다.</p>
+					<div class="confirm">
+						<input id="agreeCheckBox" type="checkbox" /> <label for="agreeCheckBox">아래 내용을 확인하였으며 동의합니다.</label>
+						<p>도플갱어 찾기 테스트 목적으로 업로드된 사진 정보를 수집하고 있으며, <strong>2/28 이후 폐기</strong>됩니다. 동의를 거부하실 수 있으며, 동의 거부 시 도플갱어 찾기 테스트에 참여하실 수 없습니다.</p>
+					</div>
+					
+					<div class="dopple_a">
+						<p>
+							<input accept="image/*" id="getPicFile" name="pic" type="file" /><label for="getPicFile">사진 업로드하기</label></p>
+						<p>
+							<a class="evt__btn_dopple btn_result" href="javascript:void(0)">결과확인하기</a></p>
+					</div>
+					<!-- <div class="img_preview"><img src="" id="evtPicPreview"></div> -->
+				</div><!--//dopple_picture-->
+			</div>
+			<!--//doppelTest-->
+			<div class="dopple_result" id="doppleResult">
+				<div class="con_result">
+					<div class="image_bg">
+						<img src="https://cdn.hddfs.com/files/editor/20230110/9aebad61_202301101601206390.png" />
+						<div class="image">
+							&nbsp;</div>
+					</div>
+					<!-- <span class="title">&nbsp;</span> / <span class="country">&nbsp;</span> -->
+					<div class="sub_txt">
+						&nbsp;</div>
+					<div class="desc">
+						&nbsp;</div>
+					<div class="hash">
+						&nbsp;</div>
+					<div class="result_info">
+						<strong>테스트 결과를 캡쳐</strong>해서, SNS에 올리고<br />
+						선착순 선물받아가세요!</div>
+					<div class="box_dopple_btn" data-html2canvas-ignore="true">
+						<a class="evt__btn_dopple -type2 btn_restart" href="javascript:void(0)">테스트 다시하기</a> <a class="evt__btn_dopple -type2 btn_result_share" href="javascript:void(0)" onclick="javascript:$('#evt_share_pop').dialog('open')">이벤트 공유하기</a></div>
+				</div>
+				<!--//con_result--></div>
+			<!--//dopple_result--></div>
+		<!--//box_dopple--></div>
+	<!--//evt_temp--></section>
+<!--//event01-->
+<div class="evt_section" id="event02">
+	<div class="evt_temp">
+		<img alt="" src="https://cdn.hddfs.com/files/editor/20230118/4c427e33_202301181425426540.jpg" />
+		<a class="ev_btn" href="javascript:doppelEvnt('0004045');" style="height: 4.2%; width: 63.57%; left: 17.8%; top: 90.3%"><i class="blind">응모하기</i></a>
+	</div>
+</div>
+<div class="evt_section" id="event03">
+	<div class="evt_temp">
+		<img alt="" src="https://cdn.hddfs.com/files/editor/20230118/3458f9d1_202301181651237250.jpg" />
+		<a class="ev_btn" href="https://www.instagram.com/p/CnnhgoJy8QI/?utm_source=ig_web_copy_link" style="height: 4.2%; width: 63.57%; left: 17.8%; top: 92.2%" target="_blank"><i class="blind">이벤트 더 알아보기</i></a>
+	</div>
+</div>
+<!-- S : 공유하기 팝업 -->
+<div class="evt_share_pop" id="evt_share_pop">
+	<div class="pop_tit">
+		공유하기</div>
+	<div class="evt_temp">
+		<ul class="btn_dopple_share">
+            <li><a href="javascript:void(0);" class="ico_kakao shareKakaoTalk">Kakao Talk</a></li>
+            <li><a href="javascript:void(0);" class="ico_blog shareNaver">Naver Blog</a></li>
+            <li><a href="javascript:void(0);" class="ico_facebook shareFacebook">Facebook</a></li>
+            <li><a href="javascript:void(0);" class="ico_story shareKakao">Kakao Story</a></li>
+            <li><a href="javascript:void(0);" class="ico_hpoint shareHpoint">H.Point</a></li>
+            <li><a href="javascript:void(0);" class="ico_sms shareSms">SMS</a></li>
+            <li><a href="javascript:void(0);" class="ico_url shareClipboard">URL</a></li>
+        </ul>
+	</div>
+	<a class="ev_btn btn_close" href="javascript:void(0);" onclick="javascript:$('#evt_share_pop').dialog('close');"><i class="ico_com i_close">닫기</i></a></div>
+<!-- E : 공유하기 팝업 --><!-- S : 경품 당첨 팝업 -->
+<div class="evt_prize_pop" id="evt_prize_pop">
+	<div class="evt_temp">
+		<div class="prizeResult">
+			<img alt="커피 당첨되었습니다" class="result_coffee" src="https://cdn.hddfs.com/files/editor/20230104/f5412d86_202301041705435520.jpg" /> <img alt="적립금 500원 당첨되었습니다" class="result_reserve" src="https://cdn.hddfs.com/files/editor/20230104/ef59bd83_202301041705557220.jpg" /></div>
+		<a class="ev_btn btn_close" href="javascript:void(0);" onclick="javascript:$('.evt_prize_pop').dialog('close');"><i class="blind">닫기</i></a></div>
+</div>
+<!-- E : 경품 당첨 팝업 --><!-- <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script> -->
+<link href="https://cdn.hddfs.com/front/css/KO/aos.css" rel="stylesheet" />
+<script src="https://cdn.hddfs.com/front/js/KO/aos.js"></script><script>
+$(window).load(function() {
+	// AOS
+	var evtAOS = function() {
+		AOS.init({
+			duration: 600, //default: 400
+			easing: 'ease-out' //default: ease
+		});
+	}
+	evtAOS();
+});
+$(document).ready(function(){
+	//시작버튼
+	$('.btn_start').click(function(){
+		$('.evt_bg_speed_light').fadeIn(1000);
+		setTimeout(function() {
+			$('.evt_bg_speed_light').fadeOut(1000);
+			$(".test_bg").hide();
+			$(".dopple_intro").hide();
+			$(".evt_bg_open_door").hide();
+			$('.doppel_test').fadeIn(500);
+			$('.evt_bg_question').fadeIn(500);
+		}, "1500")
+	});
+
+	//다음으로 진행
+	$('.dopple_quiz input[type="radio"]').each(function(){
+		$(this).click(function(){
+			var quizBox = $(this).parents(".dopple_quiz");
+			var quizBoxChk = $(this).parents(".dopple_quiz").find("input[type='radio']");
+			quizBox.hide();
+			quizBox.next().fadeIn();
+		});
+	});
+
+	//파일 업데이트 얼럿
+	$('#getPicFile').on("change", function(){
+		alert("사진이 등록되었습니다.\n결과를 확인해주세요~")
+	});
+
+	//파일 업데이트 후 미리보기 이미지
+	// var file = document.querySelector('#getPicFile');
+
+	// file.onchange = function () {
+	// 	var fileList = file.files ;
+
+	// 	// 읽기
+	// 	var reader = new FileReader();
+	// 	reader.readAsDataURL(fileList [0]);
+
+	// 	//로드 한 후
+	// 	reader.onload = function  () {
+	// 		document.querySelector('#evtPicPreview').src = reader.result ;
+	// 	};
+	// };
+
+	//다시시작버튼
+	$('.btn_restart').click(function(){
+		$(".dopple_result").hide();
+		$(".evt_bg_result").hide();
+		$('.dopple_quiz input[type="radio"]').attr('checked',false);
+		$('.doppel_test').fadeIn();
+		$('.evt_bg_question').fadeIn();
+		$('.dopple_quiz').hide();
+		$('.dopple_quiz:first-child').show();
+		$('#getPicFile').val('');
+		$('#agreeCheckBox').attr('checked',false);
+		// $('#evtPicPreview').attr('src','');
+		ResultTit.text("");
+		ResultCoun.text("");
+		ResultDesc.html("");
+		ResultHash.html("");
+		ResultImg.css('background-image','');
+	});
+
+    //공유 팝업
+    $(".evt_share_pop").dialog({
+        autoOpen: false,
+        resizable: false,
+        width: 265,
+        minHeight: 120,
+        maxHeight: 720,
+        modal: true,
+        open: function() {
+                $('.ui-widget-overlay').bind('click', function() {
+                $('.evt_share_pop').dialog('close');
+            });
+            $(this).prev(".ui-dialog-titlebar").hide();
+        }
+    });
+
+	//당첨 팝업
+	$(".evt_prize_pop").dialog({
+		autoOpen: false,
+		resizable: false,
+		modal: true,
+		open: function() {
+				$('.ui-widget-overlay').bind('click', function() {
+				$('.evt_prize_pop').dialog('close');
+			});
+			$(this).prev(".ui-dialog-titlebar").hide();
+		}
+	});
+
+});
+
+//결과확인하기
+var qzResult = $(".dopple_result");
+var ResultTit = $(".dopple_result .title");
+var ResultImg = $(".dopple_result .image");
+var ResultSubTxt =$(".dopple_result .sub_txt");
+var ResultCoun = $(".dopple_result .country");
+var ResultDesc = $(".dopple_result .desc");
+var ResultHash = $(".dopple_result .hash");
+
+$(".doppel_test .btn_result").click(function(){
+	if(!$("#agreeCheckBox").prop("checked")){
+		alert("사진정보수집에 동의해주세요 :)");
+	}
+	else if(!$('#getPicFile').val()) {
+		alert("사진을 등록해주세요 :)")
+	} else {
+		$(".doppel_test").hide();
+		$(".evt_bg_result").fadeIn();
+		$(".evt_bg_question").hide();
+		$(".dopple_result").fadeIn();
+		var qz1_1 = $("#doppleQuiz1_1").is(':checked');
+		var qz1_2 = $("#doppleQuiz1_2").is(':checked');
+		var qz4_1 = $("#doppleQuiz4_1").is(':checked');
+		var qz4_2 = $("#doppleQuiz4_2").is(':checked');
+		var qz6_1 = $("#doppleQuiz6_1").is(':checked');
+		var qz6_2 = $("#doppleQuiz6_2").is(':checked');
+
+		if(qz1_1 && qz4_2 && qz6_2){
+			ResultTit.text("훌라댄서");
+			ResultCoun.text("하와이");
+			ResultSubTxt.html("<img src='https://cdn.hddfs.com/files/editor/20230109/c20a461f_202301091047308100.png' alt='“음악에 몸을 맡겨♪ 난 춤으로 소통해”'>");
+			ResultDesc.html("당신의 도플갱어는 태평양의 낙원 하와이의 흥 넘치는 훌라댄서입니다. <br>현란한 훌라 댄스로 지나가던 여행객마저 춤추게 하는 타고난 춤꾼으로, 훌라 장인의 경지에 올라 후학 양성에 힘쓰고 있습니다.");
+			ResultHash.html("#훌라장인 #하와이훌라협회회장<br>#흥부자");
+			
+			var imgSrc = "https://cdn.hddfs.com/files/editor/20230111/d29b6266_202301111644290800.jpg"
+		} else if(qz1_1 && qz4_1 && qz6_2){
+			ResultTit.text("보헤미안");
+			ResultCoun.text("국적불문");
+			ResultSubTxt.html("<img src='https://cdn.hddfs.com/files/editor/20230109/168972b0_202301091047399730.png' alt='“자연과 이 세계가 바로 나의 집이죠”'>");
+			ResultDesc.html("당신의 도플갱어는 국경에도 얽매이지 않는 국적 불명 보헤미안입니다. <br>내가 눕는 곳이 곧 집이요 하늘이 곧 지붕이다 라는 생각을 가진 자유로운 영혼이며, 천부적인 음악적 재능을 가지고 있어 길거리 공연으로 생계를 유지하고 있습니다.");
+			ResultHash.html("#음악천재 #신비주의보헤미안<br>#사실은건물주일지도");
+			
+			var imgSrc = "https://cdn.hddfs.com/files/editor/20230111/62165e30_202301111635049990.jpg"
+		} else if(qz1_1 && qz4_2 && qz6_1){
+			ResultTit.text("마사지샵 사장");
+			ResultCoun.text("태국");
+			ResultSubTxt.html("<img src='https://cdn.hddfs.com/files/editor/20230109/85a0c2bd_202301091047475730.png' alt='“내가 직접 개발한 아로마 오일이 전세계에서 팔리고 있다네”'>");
+			ResultDesc.html("당신의 도플갱어는 일년 내내 따뜻한 태국의 쿨한 마사지샵 사장입니다. <br>가업을 이어받아 시작한 마사지샵을 부흥시켜 태국 전역에 체인점을 둔 성공한 사업가이며, &lt;가업을 억대 비즈니스로&gt;, &lt;마사지샵, 이렇게 경영하라!&gt; 등의 저서를 쓴 작가이기도 합니다.");
+			ResultHash.html("#이제는강연까지 #프로N잡러<br>#갓생");
+
+			var imgSrc = "https://cdn.hddfs.com/files/editor/20230111/c4527ca0_202301111644444620.jpg"
+		} else if(qz1_1 && qz4_1 && qz6_1){
+			ResultTit.text("요기니");
+			ResultCoun.text("인도");
+			ResultSubTxt.html("<img src='https://cdn.hddfs.com/files/editor/20230109/f74b7796_202301091048000640.png' alt='“지금 이순간, 지금 바로 여기, 나 자신 그대로를 받아들이세요”'>");
+			ResultDesc.html("당신의 도플갱어는 북적이는 인구로 활력이 넘치는 인도에서도 항상 평온함을 유지하는 요기니입니다. <br>요가로 다져진 코어 힘과 몸의 밸런스로 어떤 요가 자세든 쉽게 해내는 프로이며, 엄청난 기초 대사량으로 하루 다섯 끼를 먹는 대식가로 요가와 먹방을 테마로 한 유튜브 채널을 운영하고 있습니다.");
+			ResultHash.html("#최강코어 #산은산이요물은물이로다<br> #명최몇(명상 최대 몇 분)");
+
+			var imgSrc = "https://cdn.hddfs.com/files/editor/20230119/b6ab5264_202301190845047080.png"
+		} else if(qz1_2 && qz4_2 && qz6_2){
+			ResultTit.text("툭툭 기사");
+			ResultCoun.text("베트남");
+			ResultSubTxt.html("<img src='https://cdn.hddfs.com/files/editor/20230112/691bdd46_202301121004208650.png' alt='“베트남 쌀국수 맛집 지도는 내가 다 꿰고 있지!”'>");
+			ResultDesc.html("당신의 도플갱어는 쌀국수의 나라 베트남의 쌀국수러버 툭툭 기사님입니다. <br>베트남 방방곡곡 모든 쌀국수집을 찾아다니다 베트남의 지리를 꿰뚫게 되어 택시기사로 전향 후 손님들에게도 쌀국수 맛집을 전파하고 있으며, 명예 쌀국수 홍보대사로 활동하고 있습니다.");
+			ResultHash.html("#이툭툭만탄다면 #베트남현지맛집  <br>#어디든갈수있어");
+			
+			var imgSrc = "https://cdn.hddfs.com/files/editor/20230112/f1fe1023_202301120930258350.jpg"
+		} else if(qz1_2 && qz4_1 && qz6_2){
+			ResultTit.text("소설가");
+			ResultCoun.text("프랑스");
+			ResultSubTxt.html("<img src='https://cdn.hddfs.com/files/editor/20230109/03b98335_202301091048271060.png' alt='“내가 쓴 소설에서는 프랑스 소금빵 냄새가 난다고 하더군요”'>");
+			ResultDesc.html("당신의 도플갱어는 제빵의 나라 프랑스에서 소금빵을 그 누구보다 많이 먹는 빵순이 소설가입니다. <br>그녀가 쓴 소설에서 소금빵 냄새가 난다는 루머가 있을 정도로 아침으로 플레인 소금빵을, 점심으로 잠봉 소금빵을, 저녁으로는 크림 소금빵을 먹는다고 합니다.");
+			ResultHash.html("#소금빵 #영감의원천 <br>#다내꺼야");
+			
+			var imgSrc = "https://cdn.hddfs.com/files/editor/20230111/1d999255_202301111644593640.jpg"
+		} else if(qz1_2 && qz4_2 && qz6_1){
+			ResultTit.text("기자");
+			ResultCoun.text("뉴욕");
+			ResultSubTxt.html("<img src='https://cdn.hddfs.com/files/editor/20230109/628bb7f1_202301091048373350.png' alt='“화려한 도시 속, 이렇게 아껴야만 찐이죠”'>");
+			ResultDesc.html("당신의 도플갱어는 화려한 도시 뉴욕에서 근검절약을 모토로하는 짠돌이 기자입니다. <br>취재 시, 집에서 아무리 먼 곳이어도 버스나 택시는 금물! <br>무조건 걷거나 자전거를 타고 가는 것이 절대원칙이라고 합니다.");
+			ResultHash.html("#무지출챌린지 #나에겐그저일상 <br>#현대판자린고비");
+			
+			var imgSrc = "https://cdn.hddfs.com/files/editor/20230111/677562f2_202301111645158130.jpg"
+		} else if(qz1_2 && qz4_1 && qz6_1){
+			ResultTit.text("헬스트레이너");
+			ResultCoun.text("이탈리아");
+			ResultSubTxt.html("<img src='https://cdn.hddfs.com/files/editor/20230109/0afc29b7_202301091048449170.png' alt='“오늘의 운동도 가뿐히 완료, 오운완!”'>");
+			ResultDesc.html("당신의 도플갱어는 피자의 나라 이탈리아 북부 도시에서 핸썸한 얼굴과 탄탄한 몸을 소유한 헬스 트레이너 입니다. <br>철저한 몸관리를 위해, 피자를 먹을땐 1조각당 1닭가슴살을 곁들여 꼭 탄단지를 맞추어 먹는다고 합니다.");
+			ResultHash.html("#오운완 #단백질못참지 <br>#내근육은소중하니까");
+			
+			var imgSrc = "https://cdn.hddfs.com/files/editor/20230111/8a26b010_202301111645270050.jpg"
+		}
+	}
+	// API 함수 호출
+	manuPhoto(imgSrc);
+});
+
+// 2023
+async function manuPhoto(src_img){
+var fileInput = document.querySelector('#getPicFile'); // 업로드한 이미지
+var form = new FormData();
+
+var visual_source = src_img; //이미지 경로
+var visual_ext = visual_source.split('.').pop();
+var visual = await fetch(visual_source);
+var visual_as_blob = await visual.blob();
+var visual_as_file = new File([visual_as_blob], 'file-name-renamed.' + visual_ext, { lastModified: new Date().getTime(), type: visual_as_blob.type });
+
+    form.append("user_id", " Hyundai1");
+form.append("src_img", visual_as_file, "serverFile.jpg"); // 서버에 있는 이미지
+form.append("target_img", fileInput.files[0], "uploadFile.jpg"); // 업로드한 이미지
+
+
+fetch("https://api.fliption.us/api/api/v1/images/swap",{
+	method: "POST",
+	headers: {
+		"Accept": "multipart/form-data",
+		"token": "token1"
+	},
+	body: form,
+	redirect: "follow"
+	}).then(function(response){
+	if(response.ok){
+		return response.blob();
+	}
+
+throw new Error('Wrong');
+})
+.then(function(blob){
+var reader = new FileReader();
+reader.readAsDataURL(blob);
+reader.onload = function(e){
+// $("#evtPicResult").attr('src', reader.result);
+ResultImg.css({'background':"url('" + reader.result + "')"});
+}
+})
+.catch(function(error){
+	console.log('Request Failed', error);
+	ResultImg.css({'background':"url('https://cdn.hddfs.com/files/editor/20230119/181d0e7b_202301191313263380.jpg')"});
+});
+}
+
+//이벤트 참여 로직
+function doppelEvnt(evntId, bnfSeq, fn){
+	if(!isLogin){ alert("로그인 후 이용 가능합니다."); login(); return; }
+
+	// 기본값 설정
+	var bnfSeq = typeof(bnfSeq) == "undefined" ? 0 : bnfSeq;
+
+	// 전송
+	$.ajax({
+		async       : false,
+		url         : ctx_curr + "/op/evnt/evntJoinValidation.json",
+		dataType    : "json",
+		type        : "POST",
+		data        : { evntId : evntId, bnfSeq : bnfSeq },
+		success     : function(data, textStatus, jqXHR){
+			
+			if(!crew.ajaxValidate(data)){ return; }
+			$.ajax({
+				async       : false,
+				url         : ctx_curr + "/op/evnt/evntJoin.json",
+				dataType    : "json",
+				type        : "POST",
+				data        : { evntId : evntId, bnfSeq : bnfSeq },
+				success     : function(data, textStatus, jqXHR){
+					if(!crew.ajaxValidate(data)){ return; }
+					// 이벤트 참여 결과 내용 구성
+
+					var winInfo = [];
+
+					
+					var evntWinClsCd = data.info.evntWinClsCd;
+					if(evntWinClsCd == "001" || evntWinClsCd == "002" || evntWinClsCd == "004"){
+						var bnfListWinResult = data.info.bnfListWinResult;
+
+						// 참여당첨의 경우 당첨혜택정보가 없을때(블랙회원 or 대량구매회원) 참여완료 알림으로 처리
+						if(evntWinClsCd == "001" && bnfListWinResult.length == 0) {
+							alert("참여되었습니다.");
+						} else {
+							// 상세항목 구성
+							for(var i=0, bnf ; bnf = bnfListWinResult[i] ; i++){
+								//아이패드 경품
+								// if(bnf.evntGvawCommNm == "아이패드"){
+								// 	//$('#evt_prize_pop .evt_temp').find('img').removeClass();
+								// 	$(".evt_prize_pop.result_ipad").addClass("type_actived");
+								// 	$(".evt_prize_pop").dialog("open");
+								// }
+
+								//커피 경품
+								if(bnf.evntGvawCommNm !== null){
+									// $('.evt_prize_pop .evt_temp img').removeClass();
+									$(".evt_prize_pop .result_coffee").addClass("type_actived");
+									$(".evt_prize_pop").dialog("open");
+								}
+								//적립금
+								if(bnf.svmtId != null){
+									// $('.evt_prize_pop .evt_temp img').removeClass();
+									$(".evt_prize_pop .result_reserve").addClass("type_actived");
+									$(".evt_prize_pop").dialog("open");
+								}
+							};
+						}
+					};
+					// 콜백함수가 존재하는 경우
+					if(typeof(fn) == "function"){ fn(data); }
+				},
+				error       : function(jqXHR, textStatus, errorThrown){
+					//console.log(jqXHR.status);
+				}
+			});
+		},
+		error       : function(jqXHR, textStatus, errorThrown){
+			//console.log(jqXHR.status);
+		}
+	});
+};
+</script>
+<!-- E : BO 등록 영역 -->
+
+
+
+
+
+
+                </div><!--//ev_editarea-->
+                <div class="attention_area pdb_no">
+                    <p class="attention_tit">유의사항</p>
+                    <ul class="dot_list_new">
+                        <li>내용</li>
+                    </ul>
+                </div>
+            </div><!--//contents_area-->
+        </div><!--//gnbev_view-->
+    </div>
+    <!-- E : container -->
+    <div class="gnb_dimmed"></div>
+</body>
+</html>

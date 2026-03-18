@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>박희정의 포트폴리오</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+	<script src="../js/common.ui.js"></script>
+	<script src="../js/product.js"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/jquery-ui.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/layout.css">
+
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+CJK+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="wrap">
+	<!-- S : container -->
+	<main id="container" class="container">
+		<article id="content">
+			<section class="event">
+				<div class="benefit_img">
+
+
+
+
+
+
+<!-- S : BO 등록 영역 -->
+<style type="text/css">
+/* reset */
+.location, .event_top_share, .event_detail_btn {display:none;}
+#content {width:100%;}
+.attention_area, .tab-action, .evntGoosListArea, .spexGoosListArea {width:1080px; margin:0px auto;}
+.attention_area {margin:80px auto 100px;}
+/* common */
+.evt_wrap {width:100%; min-width:1340px; background: #eeeef4;}
+.evt_wrap .evt_sect {position:relative; width:100%; overflow:hidden}
+.evt_wrap .evt_temp {position:relative; width:1080px; height:100%; margin:0 auto;}
+
+/* evt_sect-0 */
+.evt_sect-0 {height:885px; background:url("https://cdn.hddfs.com/files/editor/20230125/943b2317_202301251416385660.png") no-repeat center top;}
+.evt_sect-0 .img_blank {height:885px !important;}
+
+/* rabbit */
+.img_rabbit1 {position:absolute; bottom:65px; left:100px; display:inline-block; -webkit-animation:ani-hop 1.2s infinite; animation:ani-hop 1.2s infinite; z-index:2;}
+.img_rabbit2 {position:absolute; bottom:65px; left:700px; display:inline-block; -webkit-animation:ani-hop2 2s infinite; animation:ani-hop2 2s infinite; z-index:2;}
+.img_top_bg1,
+.img_top_bg2 {position: absolute; left: 0; bottom: 0; width: 1921px; will-change: transform;}
+.img_top_bg1 {animation: ani-mountain 25s infinite linear;}
+.img_top_bg2 {left: 1920px; animation: ani-mountain 25s infinite linear;}
+@keyframes ani-hop {
+	/* 0% {transform:rotate(-5deg)}
+	40% {transform:rotate(-15deg) translatey(-80px);}
+	65% {transform:rotate(20deg) translatey(-80px);}
+	90% {transform:rotate(30deg) translatey(-20px)}
+	100% {transform:rotate(20deg) translatey(5px)} */
+	/* 0%. 시작: 지면, 살짝 웅크림 (기본 자세) */
+    0%, 100% {
+        transform: rotate(-3deg) translateY(0);
+        animation-timing-function: ease-out; /* 올라갈 때 서서히 가속 */
+    }
+    /* 40%. 최고점: 가장 높은 곳, 고개 살짝 숙임 (점프의 반동) */
+    40% {
+        transform: rotate(-10deg) translateY(-60px); /* 높이는 살짝 낮춤 */
+        animation-timing-function: ease-in; /* 내려올 때 서서히 가속 */
+    }
+    /* 65%~90%. 하강: 고개를 자연스럽게 듦 */
+    70% {
+        transform: rotate(10deg) translateY(-20px);
+    }
+    /* 95%. 착지 직전: 반동으로 살짝 숙임 */
+    95% {
+        transform: rotate(5deg) translateY(5px);
+    }
+}
+@keyframes ani-hop2 {
+	/* 10% {transform:rotate(-5deg)}
+	55% {transform:rotate(-15deg) translatey(-120px);}
+	75% {transform:rotate(40deg) translatey(-100px);}
+	100% {transform:rotate(40deg) translatey(5px)} */
+	0%, 100% {
+        transform: rotate(-3deg) translateY(0);
+        animation-timing-function: ease-out; /* 올라갈 때 서서히 가속 */
+    }
+    /* 40%. 최고점: 가장 높은 곳, 고개 살짝 숙임 (점프의 반동) */
+    40% {
+        transform: rotate(-10deg) translateY(-100px); /* 높이는 살짝 낮춤 */
+        animation-timing-function: ease-in; /* 내려올 때 서서히 가속 */
+    }
+    /* 65%~90%. 하강: 고개를 자연스럽게 듦 */
+    70% {
+        transform: rotate(10deg) translateY(-20px);
+    }
+    /* 95%. 착지 직전: 반동으로 살짝 숙임 */
+    95% {
+        transform: rotate(5deg) translateY(5px);
+    }
+}
+@keyframes ani-mountain {
+    from { transform: translateX(0); }
+    to { transform: translateX(-1919px); } /* 이미지 너비만큼 왼쪽으로 이동 */
+}
+
+/* evt_sect-1  */
+.evt_sect-1 {background:url("https://cdn.hddfs.com/files/editor/20230125/30918639_202301251417135120.png") no-repeat center bottom; text-align:center; padding-bottom:335px;}/*하단 이미지*/
+.evt_sect-1 .tit {margin-top:115px;}
+.evt_sect-1 .box_btn {margin-top:5vw;}
+.evt_sect-1 .evt_btn {display:inline-block; width:386px; height:75px; background:url("https://cdn.hddfs.com/files/editor/20230125/2b4555ee_202301251417305390.png") no-repeat; text-indent:-9999px; overflow:hidden; vertical-align:top;}
+
+/* tab */
+.tab_evt {height:57px; margin:39px 0 28px;}
+.tab_evt ul {margin:0 auto; width:1031px; display:flex; justify-content: space-between;}
+.tab_evt li a {display:block; width:198px; height:57px; background:url('https://cdn.hddfs.com/files/editor/20230125/803710f6_202301251417400260.png') no-repeat; text-indent:-9999px; overflow:hidden;}
+.tab_evt .btn_tab1 a {background-position-x: 0px;}
+.tab_evt .btn_tab2 a {background-position-x:-208px;}
+.tab_evt .btn_tab3 a {background-position-x:-416px;}
+.tab_evt .btn_tab4 a {background-position-x:-624px;}
+.tab_evt .btn_tab5 a {background-position-x:-833px;}
+.tab_evt li a.active,
+.tab_evt li a:hover {background-position-y:100%;}
+.ev_tab_sub_cont {display:none;}
+.ev_tab_sub_cont.active {display:block;}
+</style>
+<div class="evt_wrap">
+	<section class="evt_sect evt_sect-0">
+		<div class="evt_temp">
+			<img alt="설맞이" class="img_blank" src="https://cdn.hddfs.com/files/editor/20190723/c02feac9_201907231257212110.gif">
+			<span class="img_rabbit1"><img src="https://cdn.hddfs.com/files/editor/20230125/56c0cf91_202301251417508820.png"></span>
+			<span class="img_rabbit2"><img src="https://cdn.hddfs.com/files/editor/20230125/56c0cf91_202301251417508820.png"></span>
+		</div>
+		<span class="img_top_bg1"><img src="https://cdn.hddfs.com/files/editor/20230125/ea819327_202301251418069800.png"></span>
+		<span class="img_top_bg2"><img src="https://cdn.hddfs.com/files/editor/20230125/ed73d586_202301251418149070.png"></span>
+	</section><!--//evt_sect-0-->
+
+	<section class="evt_sect evt_sect-1">
+		<p class="tit"><img src="https://cdn.hddfs.com/files/editor/20230125/58ee89b5_202301251418244330.png" alt="당신의 행복한 연휴를 위해 현대백화점면세점이 단독으로 준비했어요!"></p>
+		<div class="tab_evt">
+			<ul>
+				<li class="btn_tab1"><a class="active" href="javascript:void(0)" data-tab="tab-1_1">멜린앤게츠</a></li>
+				<li class="btn_tab2"><a href="javascript:void(0)" data-tab="tab-1_2">리퀴드퍼퓸바</a></li>
+				<li class="btn_tab3"><a href="javascript:void(0)" data-tab="tab-1_3">조러브스</a></li>
+				<li class="btn_tab4"><a href="javascript:void(0)" data-tab="tab-1_4">루나솔 가네보</a></li>
+				<li class="btn_tab5"><a href="javascript:void(0)" data-tab="tab-1_5">쓰리</a></li>
+			</ul>
+		</div><!--//evt_tab-->
+
+		<!-- Sub Tab 1-->
+		<div id="tab-1_1" class="ev_tab_sub_cont active">
+			<div class="evt_temp">
+				<img src="https://cdn.hddfs.com/files/editor/20230125/8370264e_202301251418339190.png" alt="멜린앤게츠">
+				<p class="box_btn"><a href="https://www.hddfs.com/shop/dm/bran/brand.do?onlnBranCd=066501" class="evt_btn" target="_blank">멜린앤게츠 사은품 받으러가기</a></p>
+			</div>
+		</div><!-- Sub Tab 1-->
+
+		<!-- Sub Tab 2-->
+		<div id="tab-1_2" class="ev_tab_sub_cont">
+			<div class="evt_temp">
+				<img src="https://cdn.hddfs.com/files/editor/20230125/3c2a4a2c_202301251418416000.png" alt="리퀴드퍼퓸바">
+				<p class="box_btn"><a href="https://www.hddfs.com/shop/dm/bran/brand.do?onlnBranCd=066701" class="evt_btn" target="_blank">리퀴드퍼퓸바 사은품 받으러가기</a></p>
+			</div>
+		</div><!-- Sub Tab 2-->
+
+		<!-- Sub Tab 3-->
+		<div id="tab-1_3" class="ev_tab_sub_cont">
+			<div class="evt_temp">
+				<img src="https://cdn.hddfs.com/files/editor/20230125/49aceea4_202301251418490570.png" alt="조러브스">
+				<div href="javascript:;" class="ev_btn stamp sold-out-m-blue" title="$1 Gift Sold Out" style="top: 10.86%;left: 17.6%;width:17.31%;height:10.18%"><i class="blind">$1 Gift Sold Out</i></div>
+				<p class="box_btn"><a href="https://www.hddfs.com/shop/dm/bran/brand.do?onlnBranCd=066901" class="evt_btn" target="_blank">조러브스 사은품 받으러가기</a></p>
+			</div>
+		</div><!-- Sub Tab 3-->
+
+		<!-- Sub Tab 4-->
+		<div id="tab-1_4" class="ev_tab_sub_cont">
+			<div class="evt_temp">
+				<img src="https://cdn.hddfs.com/files/editor/20230125/54d4969c_202301251418567290.png" alt="루나솔 가네보">
+				<p class="box_btn"><a href="https://www.hddfs.com/shop/dm/bran/brand.do?onlnBranCd=063601" class="evt_btn" target="_blank">루나솔 가네보 사은품 받으러가기</a></p>
+			</div>
+		</div><!-- Sub Tab 4-->
+
+		<!-- Sub Tab 5-->
+		<div id="tab-1_5" class="ev_tab_sub_cont">
+			<div class="evt_temp">
+				<img src="https://cdn.hddfs.com/files/editor/20230125/2789ab18_202301251419044700.png" alt="쓰리">
+				<p class="box_btn"><a href="https://www.hddfs.com/shop/dm/bran/brand.do?onlnBranCd=063501" class="evt_btn" target="_blank">쓰리 사은품 받으러가기</a></p>
+			</div>
+		</div><!-- Sub Tab 5-->
+	</section><!--//evt_sect-1-->
+</div><!--//evt_wrap-->
+<link href="https://cdn.hddfs.com/front/css/KO/aos.css" rel="stylesheet" />
+<script src="https://cdn.hddfs.com/front/js/KO/aos.js"></script>
+<script>
+$(window).load(function(){
+	AOS.init({
+		duration: 600, //default: 400
+		easing: 'ease-out' //default: ease
+	});
+});
+	
+$(document).ready(function(){	
+	$('.tab_evt li a').click(function(){
+		var tab_id = $(this).attr('data-tab');
+		$('.tab_evt li a').removeClass('active');
+		$('.ev_tab_sub_cont').removeClass('active');
+		$(this).addClass('active');
+		$("#"+tab_id).addClass('active');
+	});
+});
+</script>
+<!-- E : BO 등록 영역 -->
+
+
+
+
+
+				</div>
+			</section><!--//event-->
+		</article><!--//content-->
+	</main>
+	<!-- E : container -->
+</div><!--//wrap-->
+</body>
+</html>

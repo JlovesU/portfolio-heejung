@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>박희정의 포트폴리오</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+	<script src="../js/common.ui.js"></script>
+	<script src="../js/product.js"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/jquery-ui.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/layout.css">
+
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+CJK+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="wrap">
+	<!-- S : container -->
+	<main id="container" class="container">
+		<article id="content">
+			<section class="event">
+				<div class="benefit_img">
+
+
+
+
+
+<!-- S : BO 등록 영역 운영
+노출용(껍데기) : 0005317
+세팅 가입용 : 0005331 
+코지모지 응모: 0005645
+코지모지 퀴즈: 0005657
+하입드로우: 0005515 -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+/* reset */
+#content {width:100%;}
+.event_detail_btn, .event_detail_con, .event_reserves_new, .event_random_reserves {display:none;}
+.attention_area, .benefit_content, .tab-action, .spexGoosListArea, .evntGoosListArea, #frmIntgLgin + div {width:1080px; margin:0px auto;}
+#header.area-gnb {min-width:1420px;}
+.attention_area, .benefit_content {margin-top:60px;}
+.location_all {width:1356px; padding:0;}
+.location {margin:0; padding:15px 0;}
+.event_top_share {position:absolute; top:10px; left:0; right:0; margin:0 auto; width:1356px;}
+
+/* common */
+.evt_wrap {overflow:hidden; width:100%; min-width:1420px; max-width:1920px; margin:0 auto; background-image:none;}
+.evt_wrap .abs {position:absolute;}
+.evt_wrap .obj {position:absolute; display:inline-block; z-index:2;}
+.evt_wrap .txt-info {font-size:16px; color:#373737;}
+.evt_wrap .hide {position:absolute;}
+.evt_wrap .eng {font-family: 'Montserrat', 'Noto Sans CJK KR', 'sans-serif';}
+.evt_wrap .evt_btn {position:absolute; display:inline-block; text-indent:-9999px; overflow:hidden; /*outline:1px solid red;*/}
+
+/* evt_top */
+.evt_top {width:100%; height:1077px; background:#c2dcff url('https://cdn.hddfs.com/files/op/20240708/2055a68d_202407081310458260.jpg') center top no-repeat;}
+.evt_top .wrapper {position:relative; width:1420px; height:100%; margin:0 auto;}
+.evt_top .wrapper .evt_top_box {top:24%; left:0; right:0; text-align:center; }
+/* .evt_top .wrapper .evt_tit {top:8%; left:0; right:0; transform:scale(.3); opacity:0; text-align:center; -webkit-animation:ani_zoomin .8s .5s ease-out forwards; animation:ani_zoomin .8s .5s ease-out forwards;} */
+.evt_top .wrapper .evt_tit {top:8%; left:0; right:0; opacity:0; text-align:center; -webkit-animation:ani_fade .8s .5s ease-out forwards; animation:ani_fade .8s .5s ease-out forwards;}
+@keyframes ani_zoomin {
+	0% {transform:scale(.5); opacity:1;}
+	40% {transform:scale(1.1); opacity:1;}
+	100% {transform:scale(1); opacity:1;}
+}
+@keyframes ani_fade {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+.evt_top .wrapper .evt_tit_sub {margin-top:60px; font-size:22px; color:#2f2f2f;}
+/*가입하기 버튼*/
+.evt_top .evt_btn_wrap {position:relative; margin-top:40px; width:398px; height:147px; display:inline-block; overflow:hidden; background:url('https://cdn.hddfs.com/files/op/20240704/f49d30c3_202407041116398220.png') no-repeat;}/*가입하기*/
+.hype-mem .evt_top .evt_btn_wrap {background:url('https://cdn.hddfs.com/files/op/20240430/2d6edbc4_202404300845012350.png') no-repeat;}/*가입완료 처리*/
+.evt_top .evt_btn_wrap .btn_hype_join {position:absolute; top:0; left:0; right:0; margin:0 auto; width:100%; height:100%; display:block; text-indent:-9999px; overflow:hidden; background:none; z-index:2;}/*a 태그*/
+/*반짝임*/
+.evt_wrap .evt_shine {position:absolute; background:url('https://cdn.hddfs.com/files/op/20240326/0ee89320_202403261458303070.png') no-repeat; background-size:contain; text-indent:-9999px; overflow:hidden;}
+.evt_wrap .evt_shine.type1 {width:35px; height:35px; top:17%; left:8.5%; -webkit-animation:ani-shine1 1.2s ease infinite; animation:ani-shine1 1.2s ease infinite;}
+.evt_wrap .evt_shine.type2 {width:25px; height:25px; top:24.5%; left:85.5%; -webkit-animation:ani-shine2 1s ease infinite; animation:ani-shine2 1s ease infinite;}
+.evt_wrap .evt_shine.type3 {width:30px; height:30px; top:64%; left:80%; -webkit-animation:ani-shine1 1s ease infinite; animation:ani-shine1 1s ease infinite;}
+.evt_wrap .evt_shine.type4 {width:25px; height:25px; top:80%; left:74%; -webkit-animation:ani-shine2 .8s ease infinite; animation:ani-shine2 .8s ease infinite;}
+.evt_wrap .evt_shine.type5 {width:20px; height:20px; top:53.5%; left:8%; -webkit-animation:ani-shine2 .5s ease infinite; animation:ani-shine2 .5s ease infinite;}
+@keyframes ani-shine1 {
+	0% {transform:scale(1);}
+	50% {transform:scale(1.2);}
+	100% {transform:scale(1);}
+}
+@keyframes ani-shine2 {
+	0% {transform:scale(0.7);}
+	50% {transform:scale(1);}
+	100% {transform:scale(0.7);}
+}
+.evt_wrap.hype-mem .btn_hype_join {pointer-events: none;}
+
+/* evt_nav */
+.evt_nav {position:relative; overflow:hidden; width:100%; min-width:1420px; max-width:1920px; height:150px; transition: all .5s; z-index:3;}
+.evt_nav .wrapper {width:100%; height:150px; transition: all .3s;}
+/*.evt_nav[data-section="0"] .wrapper {background:rgba(230, 215, 245, .8);}보라*/
+.evt_nav[data-section="0"] .wrapper {background:rgba(255, 223, 249, .8);}/*핑크*/
+.evt_nav[data-section="1"] .wrapper {background:rgba(208, 238, 249, .8);}/*스카이*/
+.evt_nav[data-section="2"] .wrapper {background:rgba(189, 237, 230, .8);}/*그린*/
+.evt_nav .wrapper ul {display:flex; justify-content:space-between; align-items:center; width:820px; height:100%; margin:0 auto;}
+.evt_nav .wrapper ul li {width:258px; height:79px;}
+.evt_nav .wrapper ul li a {display:block; width:100%; height:100%; background-size:100% auto; background-position:center top; background-repeat:no-repeat; font-size:0; text-indent:-9999em; overflow:hidden;}
+.evt_nav .wrapper ul li:hover a,
+.evt_nav .wrapper ul li.current a {background-position-y:bottom;}
+.evt_nav .wrapper ul li.nav1 a {background-image:url('https://cdn.hddfs.com/files/op/20240703/0a8dbfd6_202407031523097280.png');}/*코지모지*/
+.evt_nav .wrapper ul li.nav2 a {background-image:url('https://cdn.hddfs.com/files/op/20240703/58c7dc5c_202407031523181760.png');}/*품절템 드로우*/
+.evt_nav .wrapper ul li.nav3 a {background-image:url('https://cdn.hddfs.com/files/op/20240703/fcb12bd4_202407031523273290.png');}/*하입템*/
+
+.evt_nav.fixed {height:100px;}
+.evt_nav.fixed .wrapper {position:fixed; z-index:10; top:0; left:0; right:0; margin:0 auto; height:100px;}
+.evt_nav.static .wrapper {position:static;}
+
+/* evt_content */
+.evt_content,
+.evt_content section {position:relative; width:100%;}
+.evt_content section .wrapper {position:relative; width:1420px; height:100%; margin:0 auto;}
+
+/*유의사항*/
+.evt_caution {width:1080px; margin:0 auto; background:rgba(255, 255, 255, .6); padding:40px 60px; border-radius:15px; text-align:left;}
+.evt_caution .caution_tit {display:flex; align-items:center; gap:0 7px; color:#464546; font-size:20px; font-weight:700;}
+.evt_caution .caution_tit:before {content:""; display:inline-block; background:url("https://cdn.hddfs.com/files/op/20240430/39b2108f_202404300845522260.png") no-repeat; width:25px; height:25px;}
+.evt_caution ul {margin-top:18px;}
+.evt_caution li {position:relative; padding-left:10px; color:#282828; font-size:16px;}
+.evt_caution li + li {margin-top:10px;}
+.evt_caution li:before {content:""; position:absolute; top:10px; left:0; width:2px; height:2px; background:#282828;}
+
+/*Swiper 공통*/
+.evt_swiper {position:relative;}
+.evt_swiper .swiper_pagination {position:relative; height:13px; margin-top:33px; display:flex; align-items:center; justify-content:center; gap:0 10px; bottom:0;}
+.evt_swiper .swiper-pagination-bullet {width:13px; height:13px; background:#fff; margin:0 !important; vertical-align:top; opacity:.6;}
+.evt_swiper .swiper-pagination-bullet-active {opacity:1;}
+
+.evt_swiper :is(.swiper-button-next, .swiper-button-prev) {width:42px; height:42px; background-size:contain; margin:0; background: url("https://cdn.hddfs.com/files/op/20240430/15452212_202404300846028040.png") no-repeat center center; z-index:2;}
+.evt_swiper :is(.swiper-button-next.type-white, .swiper-button-prev.type-white) {background: url("https://cdn.hddfs.com/files/op/20240703/5ed5a5b0_202407031536391820.png") no-repeat center center;}
+.evt_swiper .swiper-button-prev {transform:rotate(-180deg)}
+.evt_swiper .swiper-scrollbar {position:relative; left:0; height:3px; margin-top:45px; background:#fff; width:100%; border-radius: 0; z-index:1;}
+.evt_swiper .swiper-scrollbar-drag  {background:#505050; border-radius: 0;}
+
+/*anchor 1 코지모지*/
+#anchor1 .evt_content1 {background:url('https://cdn.hddfs.com/files/op/20240704/a16039a6_202407041117297820.jpg') no-repeat center top; padding:130px 0; text-align:center;}
+#anchor1 .evt_content1 .box_cosy {position:relative; margin:40px auto 0; background:url('https://cdn.hddfs.com/files/op/20240703/09dcb46a_202407031450272310.png') no-repeat center top #fff; width:1080px; border-radius:20px; padding:125px 0 84px; border:1px solid #dfdfdf; box-shadow:3px 3px 2px rgba(162, 124, 153, .2);}
+#anchor1 .evt_content1 .box_cosy .remain {position:relative; display:inline-block; margin-top:50px; width:453px; font-size:23px; font-weight:600; border:1px solid #d5d5d5; border-radius:20px; padding:40px 0;}
+#anchor1 .evt_content1 .box_cosy .remain .level_remain {margin-right:10px; font-size:72px; font-weight:700; font-family: 'Montserrat', 'Noto Sans CJK KR', 'sans-serif';}
+#anchor1 .evt_content1 .box_cosy .remain span {font-size:27px;}
+#anchor1 .evt_content1 .box_cosy.evt_end .remain:before {position:absolute; left:0; right:0; top:0; width:100%; height:100%; background:rgba(0, 0, 0, .8); color:#fff; font-size:30px; display:flex; align-items:center; justify-content:center; border-radius:20px; white-space: pre;}
+#anchor1 .evt_content1 .box_cosy.evt_end.type_coming .remain:before {content:"입양 준비 중\A 13시에 만나요 :)";}
+#anchor1 .evt_content1 .box_cosy.evt_end.type_finish .remain:before {content:"오늘의 선착순 마감\A 내일 13시에 다시 만나요!";}
+#anchor1 .evt_content1 .box_cosy .btn {margin-top:35px;}
+#anchor1 .evt_content1 .box_cosy .btn + .btn {margin-top:20px;}
+#anchor1 .evt_content1 .box_cosy .box_address {display:none;}
+#anchor1 .evt_content1 .box_cosy .box_address.active {display:block;}
+#anchor1 .evt_content1 .box_cosy .box_address .txt-info {margin-top:10px;}
+#anchor1 .evt_content1 .box_cosy.evt_end.type_coming .button_cosy {pointer-events: none;}/*오픈 전 버튼 클릭 불가*/
+
+#anchor1 .evt_content1 .evt_swiper {margin-top:40px; width: 1080px;}
+#anchor1 .evt_content1 .evt_swiper .swiper-slide img {width:100%;}
+#anchor1 .evt_content1 .evt_swiper .swiper-button-prev {left:57px;}
+#anchor1 .evt_content1 .evt_swiper .swiper-button-next {right:57px;}
+#anchor1 .evt_content1 .evt_swiper .swiper_pagination {position:absolute; bottom:57px; z-index:2;}
+#anchor1 .evt_content1 .evt_swiper .swiper-scrollbar {display:none;}
+
+#anchor1 .evt_content1 .obj_cosy1 {top:14.5%; left:-3.5%;}
+#anchor1 .evt_content1 .obj_cosy1 span {display:inline-block; animation:ani-float1 1.2s infinite both;}
+#anchor1 .evt_content1 .obj_cosy2 {top:55.5%; right:-8.5%;}
+#anchor1 .evt_content1 .obj_cosy2 span {display:inline-block; animation:ani-float2 1.5s infinite both;}
+@keyframes ani-float1 {
+	0% {transform:translatey(0px);}
+	50% {transform:translatey(-20px);}
+	100% {transform:translatey(0px);}
+}
+@keyframes ani-float2 {
+	0% {transform:translatey(-15px);}
+	50% {transform:translatey(0px);}
+	100% {transform:translatey(-15px);}
+}
+
+/* 코지모지 퀴즈 */
+#anchor1 .evt_content2 {position:relative; height:1643px; background:url('https://cdn.hddfs.com/files/op/20240704/51197c3d_202407041118084970.jpg') no-repeat center top; padding:130px 0; text-align:center;}
+#anchor1 .evt_content2.quiz-close:before {content:"오픈 준비 중\A 13시에 만나요 :)"; position:absolute; left:0; right:0; top:23%; width:1080px; height:1151px; margin:0 auto; background:rgba(0, 0, 0, .8); color:#fff; font-size:40px; font-weight:700; display:flex; align-items:center; justify-content:center; border-radius:16px; white-space: pre; z-index:2;}
+#anchor1 .evt_content2 .box_quiz {position:absolute; bottom:7%; left:0; right:0; width:499px; margin:0 auto;}
+#anchor1 .evt_content2 .box_quiz .evt__input {display: block; width: 100%; padding: 0; margin: 0 auto; background-color: #fff; height:94px; border: 1px solid #e1dbdd; border-radius:999em; overflow:hidden;}
+#anchor1 .evt_content2 .box_quiz .evt__input input {display: inline-block; width: 100%; padding: 0;height:94px; line-height: 94px; font-size:25px; text-align:center; border:none;}
+#anchor1 .evt_content2 .box_quiz .evt_basic_button {margin-top:20px;}
+
+/* 코지모지 팝업스토어 */
+#anchor1 .evt_content3 {background:url('https://cdn.hddfs.com/files/op/20240704/22107174_202407041118201410.jpg') no-repeat center top/cover; padding:130px 0; text-align:center;}
+#anchor1 .evt_content3 .box_popstore {position:relative; width:1080px; margin:40px auto 0; background:url('https://cdn.hddfs.com/files/op/20240703/09dcb46a_202407031450272310.png') no-repeat center top; padding-top:63px; border-radius:20px; box-shadow:3px 3px 2px rgba(162, 124, 153, .2);}
+#anchor1 .evt_content3 .swiper_popstore {position:initial; border-radius:0 0 20px 20px; overflow:hidden;}
+#anchor1 .evt_content3 .box_popstore .swiper-slide img {width:100%;}
+
+#anchor1 .evt_content3 .box_popstore :is(.swiper-button-next, .swiper-button-prev) {width:42px; height:42px; background-size:contain; margin:0; background: url("https://cdn.hddfs.com/files/op/20240430/15452212_202404300846028040.png") no-repeat center center; z-index:2;}
+#anchor1 .evt_content3 .box_popstore .swiper-button-prev {transform:rotate(-180deg); left:-80px;}
+#anchor1 .evt_content3 .box_popstore .swiper-button-next {right:-80px}
+#anchor1 .evt_content3 .box_popstore .swiper-scrollbar {position:absolute; left:0; right:0; bottom:-50px; margin:0; height:3px; margin-top:45px; background:#fff; width:100%; border-radius: 0; z-index:1;}
+#anchor1 .evt_content3 .box_popstore .swiper-scrollbar-drag  {background:#505050; border-radius: 0;}
+#anchor1 .evt_content3 .btn {margin-top:105px;}
+#anchor1 .evt_content3 .evt_caution {margin-top:85px;}
+
+/*anchor 2 하입드로우 응모*/
+#anchor2 .evt_content1 {background:url('https://cdn.hddfs.com/files/op/20240611/5858edfe_202406111626007670.jpg') no-repeat center center; padding:130px 0; text-align:center;}
+#anchor2 .evt_content1 .evt_info {margin-top:20px; color:#272727; font-size:20px;}
+#anchor2 .evt_content1 .evt_info strong {font-weight:700;}
+#anchor2 .wrap_vote {position:relative; width:1086px; margin:38px auto 0; }
+#anchor2 .vote_swiper {position:relative; height:1322px; overflow:hidden; background:url("https://cdn.hddfs.com/files/op/20240621/b4382d39_202406211126529060.png") no-repeat; padding-top:323px;}
+#anchor2 .wrap_vote .box_vote {margin-top:50px; text-align:center;}
+#anchor2 .wrap_vote .evt_btn {position:relative;}
+#anchor2 .vote_img_swiper {width:693px; margin:0 auto; border:1px solid #d8d8d8;}
+#anchor2 .wrap_vote .swiper_pagination {position:absolute; left:0; right:0; width:100%; bottom:226px; height:12px; display:flex; align-items:center; justify-content:center; gap:0 5px; z-index:2;}
+#anchor2 .wrap_vote .swiper-pagination-bullet {width:12px; height:12px; background:#fff;}
+#anchor2 .wrap_vote .swiper-pagination-bullet {margin:0; vertical-align:top;}
+#anchor2 .wrap_vote .swiper-pagination-bullet + .swiper-pagination-bullet {margin:0; margin-left:5px;}
+
+#anchor2 .wrap_vote :is(.swiper-button-next, .swiper-button-prev) {width:42px; height:42px; background-size:contain; margin:0; background: url("https://cdn.hddfs.com/files/op/20240430/15452212_202404300846028040.png") no-repeat center center; z-index:2;}
+#anchor2 .wrap_vote .swiper-button-prev {transform:rotate(-180deg)}
+#anchor2 .wrap_vote .swiper-button-prev {left:-80px}
+#anchor2 .wrap_vote .swiper-button-next {right:-80px}
+#anchor2 .evt_content1 .evt_caution {margin-top:70px;}
+
+/*anchor 3 하입템 매거진*/
+#anchor3 .evt_content1 {background:url('https://cdn.hddfs.com/files/op/20240528/14008596_202405281048165180.jpg') no-repeat center top; /*height:2551px;*/ padding:240px 0; text-align:center;}
+#anchor3 .evt_content1 .obj {width:407px; height:640px; text-indent:-9999px; overflow:hidden;}
+#anchor3 .evt_content1 .img_pic1 {background:url('https://cdn.hddfs.com/files/op/20240708/b4fdc714_202407081347326270.png') no-repeat;}
+#anchor3 .evt_content1 .img_pic2 {background:url('https://cdn.hddfs.com/files/op/20240708/35efa98d_202407081349078970.png') no-repeat;}
+#anchor3 .evt_content1 .img_pic1.type-back {top:37%; left:-9%;}
+/* #anchor3 .evt_content1 .img_pic1.type-front {top:17.6%; left:5%; z-index:2;} */
+#anchor3 .evt_content1 .img_pic2.type-back {top:59%; right:-9%;}
+/* #anchor3 .evt_content1 .img_pic2.type-front {top:43.5%; right:4%; z-index:2;} */
+
+/*하입클럽 가입 완료 팝업*/
+#hypeJoinPop {display:none;}
+#hypeJoinPop button {position: absolute; top:25px; right:29px; width:50px; height:50px; text-indent:-9999px; overflow:hidden;}
+
+/* 공통 타이틀 */
+.evt_wrap .tit {font-size:42.5px; color:#000;}
+.evt_wrap .tit_num + .tit {margin-top:10px;}
+.evt_wrap .tit_sub {font-size:20px; color:#000;}
+.evt_wrap .date {font-size:20px; color:#373737; font-weight:400; margin-top:15px;}
+.evt_wrap .date .eng {font-weight:500; letter-spacing:0;}
+
+/* 공통 서브 정보 */
+.evt_wrap .date.type2 {display:flex; align-items:center; justify-content:center; margin-top:20px;}
+.evt_wrap .date.type2 dd {position:relative; margin-left:15px; padding-left:15px;}
+.evt_wrap .date.type2 dd:before {content:""; position:absolute; left:0; top:50%; transform:translateY(-50%); width:1px; height:18px; background:#333; display:inline-block;}
+.evt_wrap .date.type2 dd + dt {margin-left:23px;}
+.evt_wrap .date.type2 dd .eng { letter-spacing:0;}
+
+/*코지모지 응모 결과 팝업*/
+#popCozyKeyring {}
+#popCozyKeyring .pop_img {display:none;}
+#popCozyKeyring .pop_img.active {display:block;}
+#popCozyKeyring .pop_img .evt_delivery {position:absolute; left:0; right:0; bottom:56px; width:386px; height:100px; margin:0 auto; text-indent:-9999px; overflow:hidden;}
+#popCozyKeyring button {position: absolute; top:20px; right:24px; width:50px; height:60px; text-indent:-9999px; overflow:hidden;}
+
+/*코지모지 응모 결과 팝업*/
+#popCozyQuiz {}
+#popCozyQuiz .pop_img {display:none;}
+#popCozyQuiz .pop_img.active {display:block;}
+#popCozyQuiz .pop_img .evt_mypage {position:absolute; left:0; right:0; bottom:52px; width:386px; height:46px; margin:0 auto; text-indent:-9999px; overflow:hidden;}
+#popCozyQuiz button {position: absolute; top:20px; right:24px; width:50px; height:50px; text-indent:-9999px; overflow:hidden;}
+
+/* evt basic button*/
+.evt_basic_button {position:relative; display:inline-flex; justify-content:center; align-items:center; width:499px; height:102px; color:#fff !important; font-size:25px; font-weight:700; background-size:contain; background-position:center center; background-repeat:no-repeat;}
+.evt_basic_button span {display:inline-block; }
+.evt_basic_button:after {content:""; position:absolute; right:60px; top:50%; margin-top:-7px; display:inline-block; width:10px; height:15px; background:url('https://cdn.hddfs.com/files/op/20240430/633abd4f_202404300847214320.png') no-repeat;}/*버튼의 횐색 화살표*/
+.evt_basic_button.type-red {background-image:url('https://cdn.hddfs.com/files/op/20240430/df64edaf_202404300847406790.png');}/*빨간버튼*/
+.evt_basic_button.type-gray {background-image:url('https://cdn.hddfs.com/files/op/20240430/cdd5a54b_202404300847489420.png');}/*회색버튼*/
+.evt_basic_button.type-blue {background-image:url('https://cdn.hddfs.com/files/op/20240430/27b2ea06_202404300848220560.png');}/*파랑버튼*/
+.evt_basic_button.type-blue2 {background-image:url('https://cdn.hddfs.com/files/op/20240703/35a242b8_202407031443162540.png');}/*연한파랑버튼*/
+.evt_basic_button.type-pink {background-image:url('https://cdn.hddfs.com/files/op/20240703/989c6d0b_202407031443265360.png');}/*핑크버튼*/
+</style>
+<div class="evt_wrap">
+	<div class="evt_top">
+		<div class="wrapper wrap-hype__join">
+			<div class="obj evt_top_box">
+				<p class="evt_tit"><img src="https://cdn.hddfs.com/files/op/20240704/cbe28538_202407041119024540.png" alt="이제 HYPE하게 살기로 했어 HYPE CLUB"></p>
+				<p class="evt_tit_sub">
+					다양한 면세 쇼핑 혜택은 물론 리미티드 아이템 이벤트까지!<br>
+					현대백화점면세점에선 일년 내내 혜택이 가득해요.<br>
+					<strong>무료 라이프스타일 멤버십 '하입클럽'에 지금 JOIN!</strong>
+				</p>
+				<div class="evt_btn_wrap">
+					<a href="javascript:hypeJoin('0005331')" class="btnxl_type1 btn_hype_join">맴버 가입하기</a>
+					<div class="abs evt_shine type1">Shine1</div>
+					<div class="abs evt_shine type2">Shine2</div>
+					<div class="abs evt_shine type3">Shine3</div>
+					<div class="abs evt_shine type4">Shine4</div>
+					<div class="abs evt_shine type5">Shine5</div>
+				</div>
+			</div>
+		</div>
+	</div><!--// evt_top -->
+	
+	<div class="evt_nav" data-section="0">
+		<div class="wrapper">
+			<ul>
+				<li class="nav1 current"><a href="#anchor1">리미티드 굿즈드랍</a></li>
+				<li class="nav2"><a href="#anchor2">품절템 드로우</a></li>
+				<li class="nav3"><a href="#anchor3">하입템(매거진)</a></li>
+			</ul>
+		</div>
+	</div><!--// evt_nav -->
+
+	<div class="evt_content">
+		<section class="anchor" id="anchor1">
+			<div class="evt_content1">
+				<div class="wrapper">
+					<p class="evt_tit"><img src="https://cdn.hddfs.com/files/op/20240703/847f5a81_202407031523496730.png" alt="Limited Benefit [현대백화점면세점 X COSYMOSY]"></p>
+					<div class="box_cosy">
+						<p class="tit_num"><img src="https://cdn.hddfs.com/files/op/20240704/de42883f_202407041119219000.png" alt="EVENT 1"></p>
+						<p class="tit"><strong>「 하입클럽 한정판 코지모지 키링 」</strong><br>매일 오후 1시부터 선착순 증정 !</p>
+						<div class="date">
+							<p>· 이벤트 기간 : <span class="eng">07.08(월) - 08.16(금)</span></p>
+							<p>· 참여방법 : 선착순 당첨 고객 대상 개별 택배 배송</p>
+						</div>
+						
+						<div class="evt_swiper">
+							<div class="swiper cosy_swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide"><img src="https://cdn.hddfs.com/files/op/20240704/8b650465_202407041119374580.png" alt="Cosymosy 1"></div>
+									<div class="swiper-slide"><img src="https://cdn.hddfs.com/files/op/20240704/5dbc67cf_202407041120185310.png" alt="Cosymosy 2"></div>
+									<div class="swiper-slide"><img src="https://cdn.hddfs.com/files/op/20240704/0430d8c9_202407041120277720.png" alt="Cosymosy 3"></div>
+									<div class="swiper-slide"><img src="https://cdn.hddfs.com/files/op/20240704/5a14cdb6_202407041121095310.png" alt="Cosymosy 4"></div>
+									<div class="swiper-slide"><img src="https://cdn.hddfs.com/files/op/20240704/a4615c7e_202407041121219840.png" alt="Cosymosy 5"></div>
+									<div class="swiper-slide"><img src="https://cdn.hddfs.com/files/op/20240704/cd708e64_202407041121312200.png" alt="Cosymosy 6"></div>
+									<div class="swiper-slide"><img src="https://cdn.hddfs.com/files/op/20240704/8dd53696_202407041121400870.png" alt="Cosymosy 7"></div>
+								</div>
+								<div class="swiper-button-prev type-white"><i class="hide">Previous</i></div>
+								<div class="swiper-button-next type-white"><i class="hide">Next</i></div>
+								<div class="swiper_pagination"><i class="hide">Pagination</i></div>
+							</div><!--//cosy_swiper-->
+						</div><!--//evt_swiper-->
+						
+						<p class="remain">오늘의 선착순 드랍<br><strong class="level_remain">50</strong><span>명</span><br>남았습니다.</p>
+						<p class="btn"><a href="javascript:cosyJoinCheck('0005645')" class="evt_basic_button type-pink button_cosy"><span>선착순 응모하기</span></a></p>
+						<div class="btn box_address">
+							<a href="https://moaform.com/q/VMQPZI" target="_blank" class="evt_basic_button type-blue2"><span>당첨자 배송정보 입력</span></a>
+							<p class="txt-info">※ 정확하게 정보를 입력해주세요.</p>
+						</div>
+					</div><!--//box_cosy-->
+
+					<div class="obj obj_cosy1" data-aos="fade-up-right"><span><img src="https://cdn.hddfs.com/files/op/20240704/2af70730_202407041123211810.png" alt="Cosymosy 1"/></span></div>
+					<div class="obj obj_cosy2" data-aos="fade-left"><span><img src="https://cdn.hddfs.com/files/op/20240704/30c47628_202407041123329010.png" alt="Cosymosy 2"/></span></div>
+				</div>
+			</div><!--//evt_content1-->
+			
+			<div class="evt_content2">
+				<div class="wrapper">
+					<p class="tit_num"><img src="https://cdn.hddfs.com/files/op/20240704/2bc22b75_202407041124013920.png" alt="EVENT 2"></p>
+					<p class="tit"><strong>「 3천명 즉시 당첨 HYPE QUIZ EVENT 」</strong></p>
+					<p class="tit_sub">매일매일 커피쿠폰 당첨 도전</p>
+					<dl class="date type2">
+						<dt>이벤트 기간</dt>
+						<dd><span class="eng">07.08</span>(월) - <span class="eng">08.16</span>(금)</dd>
+					</dl>
+					<div class="box_quiz">
+						<div class="evt__input"><input type="text" id="inputCustom1" placeholder="정답을 한글로 입력해주세요." class="evt__input" style="ime-mode:active;"></div>
+						<a href="javascript:cosyQuizCheck('0005657')" class="evt_basic_button type-pink"><span>즉시 당첨 확인</span></a>
+					</div>
+				</div>
+			</div><!--//evt_content2-->
+			
+			<div class="evt_content3">
+				<div class="wrapper">
+					<p class="tit_num"><img src="https://cdn.hddfs.com/files/op/20240704/42f91d55_202407041124251050.png" alt="EVENT 3"></p>
+					<p class="tit"><strong>「 현대 '면새' 팝업스토어 오픈 」</strong></p>
+					<p class="tit_sub">COSYMOSY 한남점에서 만나요!</p>
+					<dl class="date type2">
+						<dt>면새 팝업스토어 기간 </dt>
+						<dd><span class="eng">07.10</span>(수) - <span class="eng">08.16</span>(금)</dd>
+						<dt><span class="eng">COSYMOSY</span> 한남점 위치 </dt>
+						<dd>서울 용산구 한남동 <span class="eng">685-37 2F</span></dd>
+					</dl>
+					<div class="box_popstore">
+						<div class="swiper_popstore">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="https://cdn.hddfs.com/files/op/20240711/ec23f8f2_202407111337569180.jpg" alt="Cosymosy 1"/></div>
+								<div class="swiper-slide"><img src="https://cdn.hddfs.com/files/op/20240711/754ede46_202407111338500220.jpg" alt="Cosymosy 2"/></div>
+								<div class="swiper-slide"><img src="https://cdn.hddfs.com/files/op/20240711/2e13f4a1_202407111338594800.jpg" alt="Cosymosy 3"/></div>
+								<div class="swiper-slide"><img src="https://cdn.hddfs.com/files/op/20240711/d3f404ec_202407111339082750.jpg" alt="Cosymosy 4"/></div>
+								<div class="swiper-slide"><img src="https://cdn.hddfs.com/files/op/20240711/3a29ed46_202407111339165280.jpg" alt="Cosymosy 5"/></div>
+							</div>
+						</div><!--//swiper_popstore-->
+						<div class="swiper-button-prev"><i class="hide">Previous</i></div>
+						<div class="swiper-button-next"><i class="hide">Next</i></div>
+						<div class="swiper-scrollbar"><i class="hide">Scroll Bar</i></div>
+					</div><!--//box_popstore-->
+					<p class="btn"><a href="https://www.instagram.com/hddfs.official/" target="_blank" class="evt_basic_button type-blue2"><span>더 알아보기</span></a></p>
+
+					<div class="evt_caution">
+						<p class="caution_tit">유의사항</p>
+						<ul>
+							<li>코지모지 키링 선착순 드랍 이벤트는 당첨 시, 이후 이벤트 참여가 불가합니다. (기간 내 ID당 1회 당첨)</li>
+							<li>코지모지 키링 당첨자는 경품 수령을 위한 배송 주소, 연락처, 인터넷면세점 ID 를 반드시 기한(8/16)내 입력해야 합니다. 정보 오기입 등으로 인한 경품 재당첨 및 재발송은 절대 불가합니다.</li>
+							<li>코지모지 키링 선착순 이벤트 및 퀴즈 이벤트는 내국인 국적 회원만 참여 가능합니다.</li>
+							<li>당첨자 분께는 정보 입력 기준 14일 이내 순차적으로 경품을 배송해드릴 예정입니다.</li>
+							<li>코지모지 키링 경품은 내국인 국적 당첨자 및 국내 주소지에 한해서만 배송 가능합니다. </li>
+							<li>키링 경품 구성품 중 종이 박스는 서비스로 제공되기 때문에, 배송 과정에서 손상된 경우 별도 교환 및 재발송이 불가합니다.</li>
+							<li>퀴즈 이벤트는 한 ID당 매일 1회 참여 가능합니다. </li>
+							<li>커피 기프티콘은 당첨자 대상으로 8월 23일 이내 발송 예정입니다. 마이현대에 입력된 휴대폰 번호로 발송될 예정이오니,<br>당첨자는 휴대폰 번호를 확인해주시기 바랍니다. 휴대폰 번호 오기입 등의 사유로 인한 기프티콘 재지급은 불가합니다.</li>
+							<li>이벤트 참여자의 귀책(회원 탈퇴 등)으로 경품을 받지 못한 경우, 경품 재지급은 불가합니다.</li>
+							<li>본 이벤트는 당사 사정에 의해 사전 고지 없이 내용 변경 및 조기 종료될 수 있습니다.</li>
+						</ul>
+					</div><!--//evt_caution-->
+
+				</div><!--//wrapper-->
+			</div><!--//evt_content3-->
+		</section><!--//Event1 코지모지-->
+
+		<section class="anchor" id="anchor2">
+			<div class="evt_content1">
+				<div class="wrapper">
+					<p class="evt_tit"><img src="https://cdn.hddfs.com/files/op/20240611/51b684d7_202406111632485300.png" alt="HYPE DRAW 품절대란템 래플 이벤트"></p>
+					<p class="evt_info">
+						지금 가장 HYPE한 아이템으로 골랐어요.<br>
+						<strong>하입클럽 멤버들만 참여할 수 있는 럭키드로우 찬스!</strong>
+					</p>
+					<dl class="date type2">
+						<dt>참여 기간</dt>
+						<dd><span class="eng">07.01</span>(월) - <span class="eng">07.14</span>(일)</dd>
+						<dt>당첨자 발표</dt>
+						<dd><span class="eng">07.17</span>(수)</dd>
+					</dl>
+					<div class="wrap_vote">
+						<div class="vote_swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="img_vote">
+										<div class="vote_img_swiper">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<img src="https://cdn.hddfs.com/files/op/20240621/5a3feea3_202406211120278700.jpg" alt="크록스 X 시몬 로샤 클래식 블랙"/>
+												</div>
+												<div class="swiper-slide">
+													<img src="https://cdn.hddfs.com/files/op/20240621/dcd8899a_202406211120421820.jpg" alt="크록스 X 시몬 로샤 클래식 블랙"/>
+												</div>
+											</div>
+										</div>
+									</div><!--//img_vote-->
+								</div>
+							</div>
+						</div><!--//vote_swiper-->
+						<p class="box_vote"><a href="javascript:drawJoinCheck('0005601')" class="type_draw"><img src="https://cdn.hddfs.com/files/op/20240611/71bf9b0a_202406111627293930.png" alt="지금 하입클럽 멤버되고, 품절템 응모하기"></a></p>
+					</div><!--//wrap_draw-->
+					<div class="evt_caution">
+						<p class="caution_tit">유의사항</p>
+						<ul>
+							<li>당첨자 발표 : 24.07.17 (수) 공지사항 당첨자 발표 게시판</li>
+							<li>당첨자 발표 후 영업일 기준 10일 내 개별 연락을 통해 경품 발송 및 수령에 필요한 제반 사항에 대해 안내 드릴 예정입니다.</li>
+							<li>당첨 안내는 내정보 > 회원정보에 등록된 휴대폰번호로 안내되오니, 반드시 본인 인증을 통한 휴대폰 번호 등록 후 이벤트에 참여해주세요.</li>
+							<li>당첨자가 경품 안내 연락에 응답하지 않을 경우 당첨이 취소될 수 있습니다.</li>
+							<li>이벤트 경품 사이즈는 랜덤이며, 재고 상황에 따라 다른 상품 및 옵션으로 변경될 수 있습니다.</li>
+							<li>이벤트 상품 수령 후 교환 및 환불은 불가합니다.</li>
+							<li>당첨된 경품은 타인에게 양도 및 판매할 수 없으며, 비정상적인 방법으로 참여하실 경우 현대백화점면세점 운영 정책에 따라,<br>이벤트 참여가 취소되거나, 향후 참여가 제한될 수 있습니다.</li>
+							<li>해당 이벤트는 경품으로 제공되는 상품 브랜드와 무관한 현대백화점면세점의 자체 이벤트이며,<br>경품 A/S 및 사용 관련 문의는 상품 제조사 고객센터로 문의 바랍니다.</li>
+							<li>해당 이벤트는 내국인 회원 전용 이벤트로, 외국 국적 회원은 참여가 어렵습니다.</li>
+						</ul>
+					</div>
+				</div>
+			</div><!--//evt_content1-->
+		</section><!--//품절템 드로우-->
+
+		<section class="anchor" id="anchor3">
+			<div class="evt_content1">
+				<div class="wrapper">
+					<p class="img_con" data-aos="fade-up">
+						<img src="https://cdn.hddfs.com/files/op/20240708/1b75f196_202407081345119300.png" alt="HYPE ITEM 누구보다 HYPE한 취향을 가진 우리 멤버의 추천템. 내꿈은 바다정복! (이승현)">
+						<img src="https://cdn.hddfs.com/files/op/20240708/dd3c4bfa_202407081345342870.png" alt="">
+					</p>
+					<p class="obj img_pic1 type-back" data-aos="fade-down-right">이승현1</p>
+					<p class="obj img_pic2 type-back" data-aos="fade-up-left">이승현2</p>
+				</div>
+			</div>
+		</section><!--//하입템-->
+
+</div><!--//evt_wrap-->
+
+<!--S: 하입클럽 가입완료 팝업-->
+<div class="benefit_pop" id="hypeJoinPop">
+	<img src="https://cdn.hddfs.com/files/op/20240430/33db14d8_202404300905169130.jpg" alt="감사합니다. 하입클럽 가입이 완료되었습니다. 자세한 혜택은 아래 내용을 통해 확인해 주세요."/><!-- 760 x 653 -->
+	<button type="button" onclick="javascript:modalClose();">닫기</button>
+</div>
+<!--E: 하입클럽 가입완료 팝업-->
+
+<!--S: 코지모지 키링 팝업-->
+<div class="evt_popup" id="popCozyKeyring">
+	<!-- 당첨 -->
+	<div class="pop_img nonmember_win">
+		<img src="https://cdn.hddfs.com/files/op/20240704/e27969d2_202407041125250970.jpg" alt="하입클럽 가입 완료. 난 이제 너의 면새. 날 입양받을 주소를 입력해줘">
+		<a href="https://moaform.com/q/VMQPZI" target="_blank" class="evt_delivery">키링 배송정보 입력하러 가기</a>
+	</div>
+	<div class="pop_img member_win">
+		<img src="https://cdn.hddfs.com/files/op/20240704/91e1d029_202407041125377070.jpg" alt="난 이제 너의 면새. 날 입양받을 주소를 입력해줘">
+		<a href="https://moaform.com/q/VMQPZI" target="_blank" class="evt_delivery">키링 배송정보 입력하러 가기</a>
+	</div>
+	
+	<!-- 마감 -->
+	<div class="pop_img nonmember_lose"><img src="https://cdn.hddfs.com/files/op/20240704/652f8c23_202407041325301370.jpg" alt="하입클럽 가입 완료. 오늘의 선착순 마감 내일 13시에 다시 만나요!">하입클럽 가입 완료. 오늘의 선착순 마감 내일 13시에 다시 만나요!</div>
+	<!-- <div class="pop_img member_lose"><img src="https://cdn.hddfs.com/files/" alt="오늘의 선착순 마감 내일 13시에 다시 만나요!">오늘의 선착순 마감 내일 13시에 다시 만나요!</div> -->
+
+	<button type="button">닫기</button>
+</div>
+<!--E: 코지모지 키링 팝업-->
+
+<!--S: 코지모지 퀴즈 팝업-->
+<div class="evt_popup" id="popCozyQuiz">
+	<!-- 당첨 -->
+	<div class="pop_img nonmember_coffee">
+		<img src="https://cdn.hddfs.com/files/op/20240704/049ca08a_202407041127515560.jpg" alt="하입클럽 가입완료. 축하합니다! 스타벅스 아메리카노에 당첨되었습니다!">
+		<a href="https://www.hddfs.com/shop/mm/my/myMain.do" class="evt_mypage">마이현대 바로가기</a>
+	</div>
+	<div class="pop_img member_coffee">
+		<img src="https://cdn.hddfs.com/files/op/20240704/bcffbd7e_202407041126497840.jpg" alt="축하합니다! 스타벅스 아메리카노에 당첨되었습니다!">
+		<a href="https://www.hddfs.com/shop/mm/my/myMain.do" class="evt_mypage">마이현대 바로가기</a>
+	</div>
+	
+	<!-- 꽝 -->
+	<div class="pop_img nonmember_lose"><img src="https://cdn.hddfs.com/files/op/20240704/edf0a6d9_202407041310380300.jpg" alt="하입클럽 가입완료. 꽝! 내일 다시 도전해보세요!"></div>
+	<div class="pop_img member_lose"><img src="https://cdn.hddfs.com/files/op/20240704/619acac8_202407041310474720.jpg" alt="꽝! 내일 다시 도전해보세요!"></div>
+
+	<button type="button">닫기</button>
+</div>
+<!--E: 코지모지 퀴즈 팝업-->
+
+<link href="https://cdn.hddfs.com/front/css/KO/aos.css" rel="stylesheet"><!-- aos -->
+<script src="https://cdn.hddfs.com/front/js/KO/aos.js"></script><!-- aos -->
+<script>
+$(document).ready(function(){
+	//mainInit(); //이벤트 진입시 실행. 로컬에서 페이지 확인하려면 주석처리 해야함
+
+	var evtAOS = function() {
+		AOS.init({
+			offset: 200, // default: 120
+			duration: 600, //default: 400
+			easing: 'ease-out' //default: ease
+		});
+	}
+	setTimeout(function() {
+		evtAOS();
+	}, 400);
+
+	//탭버튼
+	var fixGap = 0;
+
+	// tab
+	$(".evt_nav ul li a").on("click", function(e) {
+		e.preventDefault();
+		$('html,body').animate({
+			scrollTop:$(this.hash).offset().top - fixGap - 95
+		}, 500);
+	});
+	
+	// nav
+	$(window).on("scroll", function(e) {
+		var $evt = $(".evt_wrap");
+		var $nav = $(".evt_nav");
+
+		if ($nav.length) {
+			var scrollTop = $(this).scrollTop();
+			var navHeight = $nav.height();
+			var navTop = $nav.offset().top;
+			var evtHeight = $evt.offset().top + $evt.height();
+
+			$(".anchor").each(function(i, v) {
+				if ($(this).offset().top - (fixGap + navHeight) <= scrollTop && ($(this).offset().top + $(this).parent().height()) - navHeight >= scrollTop) {
+					if (!$(".evt_nav").find("li").eq(i).is(".current")) {
+						$(".evt_nav").find("li").eq(i).addClass("current").siblings().removeClass("current");
+						$(".evt_nav").attr("data-section", i);
+					}
+				}
+			});
+			if (scrollTop >= navTop - fixGap && (evtHeight) - (fixGap + navHeight) >= scrollTop) {
+				if (!$nav.is(".fixed")) {
+					$nav.addClass("fixed").removeClass("static");
+				}
+			} else {
+				if ($nav.is(".fixed")) {
+					$nav.removeClass("fixed");
+				}
+				if ((evtHeight) - (fixGap + navHeight) <= scrollTop) {
+					if (!$nav.is(".static")) {
+						$nav.addClass("static").removeClass("fixed");
+					}
+				}
+			}
+		}
+	});
+
+	// 코지모지 비주얼 swiperSlider
+	setTimeout(function() {
+		var cosySwiper = new Swiper(".cosy_swiper", {
+			autoplay:{
+				delay: 2000,
+			},
+			effect : 'fade', 
+			fadeEffect: { 
+				crossFade: true 
+			},
+			speed: 500,
+			spaceBetween: 0,
+			slidesPerView: 1,
+			// centeredSlides: true,
+			loop: true,
+			observer: true,
+			observeParents: true,
+			roundLengths: true, //일반 해상도 화면에서 텍스트가 흐려지는 것을 방지하기 위해 슬라이드 너비와 높이 값을 반올림
+			pagination: {
+				el: '.cosy_swiper .swiper_pagination',
+			},
+			navigation: {
+				nextEl: '.cosy_swiper .swiper-button-next',
+				prevEl: '.cosy_swiper .swiper-button-prev',
+			},
+			on: {
+				init: function() {
+					if($(".cosy_swiper .swiper-slide").length == 1) {
+						$(".cosy_swiper .swiper-button-next").remove();
+						$(".cosy_swiper .swiper-button-prev").remove();
+						$(".cosy_swiper .swiper_pagination").remove();
+					}
+				}
+			},
+		});
+	}, 500);
+
+	// 코지모지 팝업스토어 swiperSlider
+	setTimeout(function() {
+		var popstoreSwiper = new Swiper('.swiper_popstore', {
+			autoplay:{
+				delay: 2500,
+			},
+			speed: 600,
+			spaceBetween: 0,
+			slidesPerView: 1,
+			// loop: true,
+			observer: true,
+			observeParents: true,
+			roundLengths: true, //일반 해상도 화면에서 텍스트가 흐려지는 것을 방지하기 위해 슬라이드 너비와 높이 값을 반올림
+			navigation: {
+				nextEl: '.box_popstore .swiper-button-next',
+				prevEl: '.box_popstore .swiper-button-prev',
+			},
+			scrollbar: {
+				el: '.box_popstore .swiper-scrollbar',
+				draggable: true,
+			},
+			on: {
+				init: function() {
+					if($(".box_popstore .swiper-slide").length == 1) {
+						$(".box_popstore .swiper-button-next").remove();
+						$(".box_popstore .swiper-button-prev").remove();
+						$(".box_popstore .swiper-scrollbar").remove();
+					}
+				}
+			},
+		});
+	}, 500);
+
+	//래플템 투표 swiperSlider
+	var voteSwiper = new Swiper(".vote_swiper", {
+		speed: 500,
+		spaceBetween: 0,
+		slidesPerView: 1,
+		// centeredSlides: true,
+		roundLengths: true,
+		observer: true,
+		observeParents: true,
+		roundLengths: true, //일반 해상도 화면에서 텍스트가 흐려지는 것을 방지하기 위해 슬라이드 너비와 높이 값을 반올림
+		// pagination: {
+		// 	el: '.wrap_vote .swiper_pagination',
+		// },
+		// navigation: {
+		// 	nextEl: '.wrap_vote .swiper-button-next',
+		// 	prevEl: '.wrap_vote .swiper-button-prev',
+		// },
+		nested: true,
+	});
+	//래플템 상품이미지 swiperSlider
+	var voteImfSwiper = new Swiper(".vote_img_swiper", {
+		speed: 1000,
+		autoplay:{
+			delay: 2500,
+			disableOnInteraction: false,
+		},
+		effect : 'fade', 
+		fadeEffect: { 
+			//crossFade: true 
+		},
+		roundLengths: true, //일반 해상도 화면에서 텍스트가 흐려지는 것을 방지하기 위해 슬라이드 너비와 높이 값을 반올림
+		loop: true,
+	});
+
+	//코지모지 응모 팝업
+	$("#popCozyKeyring").dialog({
+		autoOpen: false,
+		resizable: false,
+		width: 550,
+		dialogClass:"event_type",
+		modal: true,
+		open: function() {
+			$('.ui-widget-overlay').bind('click', function() {
+				$('#popCozyKeyring').dialog('close');
+				location.reload();
+			});
+			$("#popCozyKeyring button").bind('click', function() {
+				$('#popCozyKeyring').dialog('close');
+				location.reload();
+			});
+		},
+        position: {
+            my: "center",
+            at: "center",
+            of: window
+        },
+	});
+
+	//코지모지 퀴즈 팝업
+	$("#popCozyQuiz").dialog({
+		autoOpen: false,
+		resizable: false,
+		width: 550,
+		dialogClass:"event_type",
+		modal: true,
+		open: function() {
+			$('.ui-widget-overlay').bind('click', function() {
+				$('#popCozyQuiz').dialog('close');
+				location.reload();
+			});
+			$("#popCozyQuiz button").bind('click', function() {
+				$('#popCozyKeyring').dialog('close');
+				location.reload();
+			});
+		},
+        position: {
+            my: "center",
+            at: "center",
+            of: window
+        },
+	});
+
+	//하입클럽 가입 완료 팝업
+	$("#hypeJoinPop").dialog({
+		autoOpen: false,
+		resizable: false,
+		width: 618,
+		Height: 605,
+		modal: true,
+		open: function() {
+			$('.ui-widget-overlay').bind('click', function() {
+				$('#hypeJoinPop').dialog('close');
+				location.reload();
+			});
+			$("#hypeJoinPop").prev(".ui-dialog-titlebar").hide();
+		}
+	});
+});
+//하입클럽 가입 완료 팝업 닫기
+function modalClose(){
+	$('#hypeJoinPop').dialog('close');
+	location.reload();
+};
+
+// 날짜, 시간 체크
+function getTimeFunc(){
+	const today = new Date();
+
+	const year = today.getFullYear(); // year
+	const month = today.getMonth(); // month
+	const day = today.getDate(); // day
+	
+	let hour = today.getHours();
+	let minute = today.getMinutes();
+	let second = today.getSeconds();
+
+	//매일 코지모지 오픈 시간. 13:00 ~ 24:00
+	let startDate = new Date(2024,month,day,13,00,00);
+	let endDate = new Date(2024,month,day,23,59,59);
+	if (today <= endDate && today >= startDate) {
+		//오픈
+		$(".evt_wrap").removeClass('cozy-close');
+		$("#anchor1 .evt_content1 .box_cosy").removeClass("evt_end").removeClass("type_coming");
+		$(".button_cosy").addClass("type-pink").removeClass("type-gray").attr("href","javascript:cosyJoinCheck('0005645')");
+	} else {
+		//오픈전
+		$(".evt_wrap").addClass("cozy-close");
+		$("#anchor1 .evt_content1 .box_cosy").addClass("evt_end").addClass("type_coming");
+		$(".button_cosy").addClass("type-gray").removeClass("type-pink").attr("href","javascript:void(0)");
+	}
+
+	//남은 코지모지 수량 표기. 로컬에서 페이지 확인하려면 주석처리 해야함
+	//leftPrize('0005645',1);
+
+	//퀴즈 시작 전. 7월 8일 13까지는 준비중 노출.
+	let quizStart = new Date("2024-07-08T13:00:00");
+	if (today <= quizStart) {
+		$("#anchor1 .evt_content2 ").addClass('quiz-close');
+	}
+
+}
+getTimeFunc();
+
+function initTime(){
+	setInterval(getTimeFunc, 1000);
+}
+initTime();
+
+//===+=== S: mainInit =======
+function mainInit(){
+	if(isLogin){
+		
+		// 하입클럽 가입 체크
+		$.ajax({
+			async: true,
+			url: ctx_curr + '/op/evnt/checkEvntJoinYn.json',
+			dataType: 'json',
+			type: 'POST',
+			data: {evntId : "0005331"},
+			success: function (data, textStatus, jqXHR) {
+				if (!crew.ajaxValidate(data)) {
+					return;
+				};
+				//이벤트 참여 확인 로직
+				if (data.checkEvntYn == 'Y') {  //이벤트 참여했으면
+					$('.evt_wrap').addClass("hype-mem"); //클래스 추가
+					$('.btn_hype_join').attr("href","javascript:void(0)").text("맴버 가입완료")//가입버튼 비활성
+				};
+			},
+			error: function (jqXHR, textStatus, errorThrown) {
+				alert('오류가 발생했습니다.');
+			}
+		});
+
+		// 코지모지 응모 체크
+		$.ajax({
+			async: true,
+			url: ctx_curr + '/op/evnt/checkEvntJoinYn.json',
+			dataType: 'json',
+			type: 'POST',
+			data: {evntId : "0005645"},
+			success: function (data, textStatus, jqXHR) {
+				if (!crew.ajaxValidate(data)) {
+					return;
+				};
+				//이벤트 참여 확인 로직
+				if (data.checkEvntYn == 'Y') {  //이벤트 참여했으면
+					$('.evt_wrap').addClass("cosy-join"); //클래스 추가
+					$('#anchor1 .evt_content1 .box_cosy .box_address').addClass('active');//당첨자 배송정보 입력 버튼 노출
+				};
+			},
+			error: function (jqXHR, textStatus, errorThrown) {
+				alert('오류가 발생했습니다.');
+			}
+		});
+	}
+}
+//====== E: mainInit =======
+
+// 하입클럽 가입하기
+function hypeJoin(evntId){
+	// 로그인체크
+	if(!isLogin){ alert("로그인 후 이용해주세요."); login(); return; }
+	
+	// 전송
+	$.ajax({
+		async	   : false,
+		url		 : ctx_curr + "/op/evnt/evntJoinValidation.json",
+		dataType	: "json",
+		type		: "POST",
+		data		: { evntId : evntId },
+		success	 : function(data, textStatus, jqXHR){
+	
+			if(!crew.ajaxValidate(data)){ return; }
+			$.ajax({
+				async	   : false,
+				url		 : ctx_curr + "/op/evnt/evntJoin.json",
+				dataType	: "json",
+				type		: "POST",
+				data		: { evntId : evntId },
+				success	 : function(data, textStatus, jqXHR){
+					if(!crew.ajaxValidate(data)){ return; }
+
+					/* 이벤트 신청 및 당첨, 응모 성공 시 동작 */
+					$("#hypeJoinPop").dialog("open"); //가입성공시 팝업 띄움
+				},
+					error	   : function(jqXHR, textStatus, errorThrown){
+					//console.log(jqXHR.status);
+					/* 이벤트 신청 및 당첨, 응모 실패 시 동작 */
+				}
+			});
+		},
+			error	   : function(jqXHR, textStatus, errorThrown){
+			//console.log(jqXHR.status);
+			/* 이벤트 신청 및 당첨, 응모 실패 시 동작 */
+		}
+	});
+};
+
+// 하입클럽 팝업 안띄우고 가입 완료 처리
+function hypeJoinNonPop(evntId){
+	// 로그인체크
+	if(!isLogin){ alert("로그인 후 이용해주세요."); login(); return; }
+	
+	// 전송
+	$.ajax({
+		async	   : false,
+		url		 : ctx_curr + "/op/evnt/evntJoinValidation.json",
+		dataType	: "json",
+		type		: "POST",
+		data		: { evntId : evntId },
+		success	 : function(data, textStatus, jqXHR){
+	
+			if(!crew.ajaxValidate(data)){ return; }
+			$.ajax({
+				async	   : false,
+				url		 : ctx_curr + "/op/evnt/evntJoin.json",
+				dataType	: "json",
+				type		: "POST",
+				data		: { evntId : evntId },
+				success	 : function(data, textStatus, jqXHR){
+					if(!crew.ajaxValidate(data)){ return; }
+
+					/* 이벤트 신청 및 당첨, 응모 성공 시 동작 */
+				},
+					error	   : function(jqXHR, textStatus, errorThrown){
+					//console.log(jqXHR.status);
+					/* 이벤트 신청 및 당첨, 응모 실패 시 동작 */
+				}
+			});
+		},
+			error	   : function(jqXHR, textStatus, errorThrown){
+			//console.log(jqXHR.status);
+			/* 이벤트 신청 및 당첨, 응모 실패 시 동작 */
+		}
+	});
+};
+
+//코지모지 응모하기
+function cosyJoinCheck(evntId){
+	// 로그인체크
+	if(!isLogin){ alert("로그인 후 이용해주세요."); login(); return; }
+	
+	$.ajax({
+		async       : false,
+		url         : ctx_curr + "/op/evnt/evntJoinValidation.json",
+		dataType    : "json",
+		type        : "POST",
+		data        : { evntId : evntId },
+		success     : function(data, textStatus, jqXHR){
+	
+			if(!crew.ajaxValidate(data)){ return; }
+			$.ajax({
+				async       : false,
+				url         : ctx_curr + "/op/evnt/evntJoin.json",
+				dataType    : "json",
+				type        : "POST",
+				data        : { evntId : evntId },
+				success     : function(data, textStatus, jqXHR){
+					if(!crew.ajaxValidate(data)){ return; }
+	
+					/* 이벤트 신청 및 당첨, 응모 성공 시 동작 */
+					//하입클럽 가입 체크
+					$.ajax({
+						async: true,
+						url: ctx_curr + '/op/evnt/checkEvntJoinYn.json',
+						dataType: 'json',
+						type: 'POST',
+						data: {evntId : "0005331"}, //하입클럽 가입체크
+						success: function (data, textStatus, jqXHR) {
+							if (!crew.ajaxValidate(data)) {
+								return;
+							};
+							//이벤트 참여 확인 로직
+							if (data.checkEvntYn == 'Y') {
+								//하입클럽 회원용 당첨 팝업
+								$('#popCozyKeyring .pop_img').removeClass("active");
+								$('#popCozyKeyring .member_win').addClass("active");
+								setTimeout(function() {$('#popCozyKeyring').dialog('open');}, 300);
+							} else {
+								//하입클럽 비회원용 당첨 팝업
+								$('#popCozyKeyring .pop_img').removeClass("active");
+								$('#popCozyKeyring .nonmember_win').addClass("active");
+								setTimeout(function() {$('#popCozyKeyring').dialog('open');}, 300);
+								setTimeout(function() {hypeJoinNonPop('0005331');}, 310); //하입가입 처리
+							};
+						},
+						error: function (jqXHR, textStatus, errorThrown) {
+							alert('오류가 발생했습니다.');
+						}
+					});
+				},
+					error       : function(jqXHR, textStatus, errorThrown){
+					//console.log(jqXHR.status);
+					/* 이벤트 신청 및 당첨, 응모 실패 시 동작 */
+				}
+			});
+		},
+			error       : function(jqXHR, textStatus, errorThrown){
+			//console.log(jqXHR.status);
+			/* 이벤트 신청 및 당첨, 응모 실패 시 동작 */
+		}
+	});
+}
+//코지모지 마감 후 응모하기 클릭 시
+function cosyCloseCheck() {
+	// 로그인체크
+	if(!isLogin){ alert("로그인 후 이용해주세요."); login(); return; }
+
+	//하입클럽 가입 체크
+	$.ajax({
+		async: true,
+		url: ctx_curr + '/op/evnt/checkEvntJoinYn.json',
+		dataType: 'json',
+		type: 'POST',
+		data: {evntId : "0005331"}, //하입클럽 가입체크
+		success: function (data, textStatus, jqXHR) {
+			if (!crew.ajaxValidate(data)) {
+				return;
+			};
+			//이벤트 참여 확인 로직
+			if (data.checkEvntYn == 'Y') {
+				//하입클럽 회원용 마감 팝업
+				alert('오늘의 선착순 마감\n내일 13시에 다시 만나요!');
+				// $('#popCozyKeyring .member_lose').addClass("active");
+				// $('#popCozyKeyring').dialog('open');
+			} else {
+				//하입클럽 비회원용 마감 팝업
+				$('#popCozyKeyring .pop_img').removeClass("active");
+				$('#popCozyKeyring .nonmember_lose').addClass("active");
+				setTimeout(function() {$('#popCozyKeyring').dialog('open');}, 300);
+				setTimeout(function() {hypeJoinNonPop('0005331');}, 310); //하입가입 처리
+			};
+		},
+		error: function (jqXHR, textStatus, errorThrown) {
+			alert('오류가 발생했습니다.');
+		}
+	});
+}
+
+//코지모지 남은 곗수 노출
+function leftPrize(evntId,bnfSeq){
+	$.ajax({
+		async: false,
+		url: ctx_curr + "/op/evnt/otsdEvnt/otsdEvntGvawFirstCnt.json",
+		dataType: "json",
+		type: "POST",
+		data		: { evntId : evntId },
+		success: function (data, textStatus, jqXHR) {
+			var bnfList = data.bnCntfList;
+			// console.log(bnfList[bnfSeq-1]);
+			var dayMaxWinrCnt = bnfList[bnfSeq-1].dayMaxWinrCnt;	//일최대 당첨자수
+			var allWinrCnt = bnfList[bnfSeq-1].allWinrCnt;  //최대 당첨자수
+			var winrCntDay = bnfList[bnfSeq-1].winrCntDay;  //오늘 당첨자수
+			var winrCntAll = bnfList[bnfSeq-1].winrCntAll;  //전체 당첨자수
+			
+			// console.log("일최대 당첨자수: "+dayMaxWinrCnt);
+			// console.log("최대 당첨자수: "+allWinrCnt);
+			// console.log("오늘 당첨자수: "+winrCntDay);
+			// console.log("전체 당첨자수: "+winrCntAll);
+
+			let leftNum = dayMaxWinrCnt - winrCntDay;
+			$("#anchor1 .level_remain").text(leftNum);
+			
+			//코지모지 수량 소진시
+			if(leftNum <= 0) {
+				$("#anchor1 .evt_content1 .box_cosy").addClass('evt_end').addClass("type_finish");
+				$(".button_cosy").addClass("type-gray").removeClass("type-pink").attr("href","javascript:cosyCloseCheck()");
+			}
+		},
+		error: function (jqXHR, textStatus, errorThrown) {
+			//console.log(jqXHR.status);
+		}
+	});
+}
+
+// 코지모지 퀴즈 정답체크
+function cosyQuizCheck(evntId){
+	// 로그인체크
+	if(!isLogin){ alert("로그인 후 이용해주세요."); login(); return; }
+
+	var inputText1 = $("#inputCustom1").val().replace(/(\s*)/g,"");
+	if(inputText1 == "면새"){
+		cosyQuizJoin(evntId); //이벤트 실행
+	}  else if(inputText1 == ""){
+		alert("정답을 입력해주세요.");
+		return;
+	} else {
+		alert("정답이 아닙니다 T^T\n확인 후 다시 입력해주세요.");
+		return;
+	}
+};
+function cosyQuizJoin(evntId){
+	// 로그인체크
+	if(!isLogin){ alert("로그인 후 이용해주세요."); login(); return; }
+
+	// 기본값 설정
+	var bnfSeq = typeof(bnfSeq) == "undefined" ? 0 : bnfSeq;
+	
+	// 전송
+	$.ajax({
+		async       : false,
+		url         : ctx_curr + "/op/evnt/evntJoinValidation.json",
+		dataType    : "json",
+		type        : "POST",
+		data        : { evntId : evntId, bnfSeq : bnfSeq },
+		success     : function(data, textStatus, jqXHR){
+			
+			if(!crew.ajaxValidate(data)){ return; }
+			$.ajax({
+				async       : false,
+				url         : ctx_curr + "/op/evnt/evntJoin.json",
+				dataType    : "json",
+				type        : "POST",
+				data        : { evntId : evntId, bnfSeq : bnfSeq },
+				success     : function(data, textStatus, jqXHR){
+					if(!crew.ajaxValidate(data)){ return; }
+					// 이벤트 참여 결과 내용 구성
+					var winInfo = [];
+
+					
+					var evntWinClsCd = data.info.evntWinClsCd;
+					if(evntWinClsCd == "001" || evntWinClsCd == "002" || evntWinClsCd == "004"){
+						var bnfListWinResult = data.info.bnfListWinResult;
+
+						// 참여당첨의 경우 당첨혜택정보가 없을때(블랙회원 or 대량구매회원) 참여완료 알림으로 처리
+						if(evntWinClsCd == "001" && bnfListWinResult.length == 0) {
+							alert("참여되었습니다.");
+						} else {
+							// 상세항목 구성
+							for(var i=0, bnf ; bnf = bnfListWinResult[i] ; i++){
+								
+								//경품 선택
+								if(bnf.evntGvawCommNm == "커피 기프티콘"){
+									//하입클럽 가입 체크
+									$.ajax({
+										async: true,
+										url: ctx_curr + '/op/evnt/checkEvntJoinYn.json',
+										dataType: 'json',
+										type: 'POST',
+										data: {evntId : "0005331"}, //하입클럽 가입체크
+										success: function (data, textStatus, jqXHR) {
+											if (!crew.ajaxValidate(data)) {
+												return;
+											};
+											//이벤트 참여 확인 로직
+											if (data.checkEvntYn == 'Y') {
+												//하입클럽 회원용 커피 당첨 팝업
+												$('#popCozyQuiz .pop_img').removeClass("active");
+												$('#popCozyQuiz .member_win').addClass("active");
+												setTimeout(function() {$('#popCozyQuiz').dialog('open');}, 300);
+											} else {
+												//하입클럽 비회원용 커피 당첨 팝업
+												$('#popCozyQuiz .pop_img').removeClass("active");
+												$('#popCozyQuiz .nonmember_win').addClass("active");
+												setTimeout(function() {$('#popCozyQuiz').dialog('open');}, 300);
+												setTimeout(function() {hypeJoinNonPop('0005331');}, 310); //하입가입 처리
+											};
+										},
+										error: function (jqXHR, textStatus, errorThrown) {
+											alert('오류가 발생했습니다.');
+										}
+									});
+								}
+								else if(bnf.evntGvawCommNm == "꽝"){
+									//하입클럽 가입 체크
+									$.ajax({
+										async: true,
+										url: ctx_curr + '/op/evnt/checkEvntJoinYn.json',
+										dataType: 'json',
+										type: 'POST',
+										data: {evntId : "0005331"}, //하입클럽 가입체크
+										success: function (data, textStatus, jqXHR) {
+											if (!crew.ajaxValidate(data)) {
+												return;
+											};
+											//이벤트 참여 확인 로직
+											if (data.checkEvntYn == 'Y') {
+												//하입클럽 회원용 꽝 팝업
+												$('#popCozyQuiz .pop_img').removeClass("active");
+												$('#popCozyQuiz .member_lose').addClass("active");
+												setTimeout(function() {$('#popCozyQuiz').dialog('open');}, 300);
+											} else {
+												//하입클럽 비회원용 꽝 팝업
+												$('#popCozyQuiz .pop_img').removeClass("active");
+												$('#popCozyQuiz .nonmember_lose').addClass("active");
+												setTimeout(function() {$('#popCozyQuiz').dialog('open');}, 300);
+												setTimeout(function() {hypeJoinNonPop('0005331');}, 310); //하입가입 처리
+											};
+										},
+										error: function (jqXHR, textStatus, errorThrown) {
+											alert('오류가 발생했습니다.');
+										}
+									});
+									// alert('내일 다시 도전해보세요~!');
+								}
+							};
+						}
+					};
+					// 콜백함수가 존재하는 경우
+					if(typeof(fn) == "function"){ fn(data); }
+				},
+				error       : function(jqXHR, textStatus, errorThrown){
+					//console.log(jqXHR.status);
+				}
+			});
+		},
+		error       : function(jqXHR, textStatus, errorThrown){
+			//console.log(jqXHR.status);
+		}
+	});
+};
+
+//하입드로우 응모 전 하입클럽 가입 체크
+function drawJoinCheck(evntId){
+	// 로그인체크
+	if(!isLogin){ alert("로그인 후 이용해주세요."); login(); return; }
+
+	$.ajax({
+		async: true,
+		url: ctx_curr + '/op/evnt/checkEvntJoinYn.json',
+		dataType: 'json',
+		type: 'POST',
+		data: {evntId : "0005331"}, //하입클럽 가입체크
+		success: function (data, textStatus, jqXHR) {
+			if (!crew.ajaxValidate(data)) {
+				return;
+			};
+			//이벤트 참여 확인 로직
+			if (data.checkEvntYn == 'Y') {
+				//하입클럽 가입했으면 그냥 응모
+				drawJoin(evntId);
+			} else {
+				//하입클럽 가입 안했으면 하입클럽 가입 처리 후 응모
+				hypeJoin("0005331");
+				setTimeout(function() {
+					drawJoin(evntId);
+				}, 1000);
+			};
+		},
+		error: function (jqXHR, textStatus, errorThrown) {
+			alert('오류가 발생했습니다.');
+		}
+	});
+}
+
+//하입드로우 응모하기
+function drawJoin(evntId){
+	// 로그인체크
+	if(!isLogin){ alert("로그인 후 이용해주세요."); login(); return; }
+
+	$.ajax({
+		async	   : false,
+		url		 : ctx_curr + "/op/evnt/evntJoinValidation.json",
+		dataType	: "json",
+		type		: "POST",
+		data		: { evntId : evntId },
+		success	 : function(data, textStatus, jqXHR){
+
+			if(!crew.ajaxValidate(data)){ return; }
+			$.ajax({
+				async	   : false,
+				url		 : ctx_curr + "/op/evnt/evntJoin.json",
+				dataType	: "json",
+				type		: "POST",
+				data		: { evntId : evntId },
+				success	 : function(data, textStatus, jqXHR){
+					if(!crew.ajaxValidate(data)){ return; }
+
+					/* 이벤트 신청 및 당첨, 응모 성공 시 동작 */
+					alert("응모 완료했습니다 :)");
+				},
+					error	   : function(jqXHR, textStatus, errorThrown){
+					//console.log(jqXHR.status);
+					/* 이벤트 신청 및 당첨, 응모 실패 시 동작 */
+				}
+			});
+		},
+			error	   : function(jqXHR, textStatus, errorThrown){
+			//console.log(jqXHR.status);
+			/* 이벤트 신청 및 당첨, 응모 실패 시 동작 */
+		}
+	});
+}
+</script>
+<!-- E : BO 등록 영역 -->
+
+
+
+
+
+				</div>
+			</section><!--//event-->
+		</article><!--//content-->
+	</main>
+	<!-- E : container -->
+</div><!--//wrap-->
+</body>
+</html>
