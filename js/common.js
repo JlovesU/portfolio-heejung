@@ -41,24 +41,34 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 /* ── 현재 섹션 하이라이트 ── */
-// const navAs = document.querySelectorAll('nav a');
-// // nav 링크에 대응하는 섹션 ID만 추출
-// const navSecs = Array.from(navAs)
-//   .map(a => document.querySelector(a.getAttribute('href')))
-//   .filter(Boolean);
+const navAs = document.querySelectorAll('nav a');
+// nav 링크에 대응하는 섹션 ID만 추출
+const navSecs = Array.from(navAs)
+  .map(a => document.querySelector(a.getAttribute('href')))
+  .filter(Boolean);
 
-// function updateActive() {
-//   let cur = '';
-//   navSecs.forEach(s => {
-//     if (scrollY >= s.offsetTop - 90) cur = s.id;
-//   });
-//   navAs.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
-// }
+function updateActive() {
+  // 페이지 최하단 도달 시 마지막 섹션 활성화
+  const isBottom = window.innerHeight + scrollY >= document.body.scrollHeight - 5;
+  
+  if (isBottom) {
+    const lastSec = navSecs[navSecs.length - 1];
+    navAs.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + lastSec.id));
+    return;
+  }
 
-// //페이지 로드 시 초기 활성화
-// updateActive();
+  let cur = '';
+  navSecs.forEach(s => {
+    if (scrollY >= s.offsetTop - 90) cur = s.id;
+  });
+  navAs.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+}
 
-//메인 date
+//페이지 로드 시 초기 활성화
+updateActive();
+window.addEventListener('scroll', updateActive);
+
+/* ── 메인 날짜 ── */
 const dateEl = document.querySelector('.date-text');
 
 const now = new Date();
@@ -76,7 +86,7 @@ window.addEventListener('scroll', () => {
 });
 gotoTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-//모바일 새창 띄우기
+/* ── 모바일 새창 띄우기 ── */
 function openMobile(e){
   e.preventDefault();
   var width = 375;
@@ -92,7 +102,7 @@ function openMobile(e){
   );
 }
 
-// 포트폴리오 스와이퍼
+/* ── 포트폴리오 스와이퍼 ── */
 var swiper = new Swiper(".works-wrap2", {
   slidesPerView: 1.5,
   spaceBetween: 20,
@@ -122,7 +132,7 @@ var swiper = new Swiper(".works-wrap2", {
   }
 });
 
-//그 밖의 작업 스와이퍼
+/* ── 그 밖의 작업 스와이퍼 ── */
 document.querySelectorAll('.works-other').forEach(el => {
   new Swiper(el, {
     slidesPerView: 2.5,
@@ -138,7 +148,7 @@ document.querySelectorAll('.works-other').forEach(el => {
     // },
     breakpoints: {
       320: {
-        slidesPerView: 1.5,
+        slidesPerView: 2.5,
         spaceBetween: 20,
       },
       768: {
@@ -153,7 +163,7 @@ document.querySelectorAll('.works-other').forEach(el => {
   });
 });
 
-// 슬라이드 클릭 → 팝업 열기
+/* ── 슬라이드 클릭 → 팝업 열기 ── */ 
 const overlay = document.getElementById('popupOverlay');
 const popupView = document.querySelector('.popup-view');
 const popupImg = document.getElementById('popupImg');
