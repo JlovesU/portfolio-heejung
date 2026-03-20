@@ -1,7 +1,10 @@
 (function () {
   AOS.init({
+    startEvent: 'DOMContentLoaded',
+    easing: 'ease-out-cubic',
     duration: 800,
     once: true,
+    offset: 120,
   });
 });
 

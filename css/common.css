@@ -215,7 +215,7 @@ nav a.active {
 /* ─── HERO ─── */
 #hero {
 	width: 100%;
-	min-height: 100vh;
+	height: max(100vh, 800px);
 	display: grid;
 	place-items: center;
 	padding: 120px 5% 100px;
@@ -437,7 +437,7 @@ nav a.active {
 .hero-date {
 	position: absolute;
 	top: 67vh;
-	left: 48%;
+	left: 44%;
 	padding: 4vh 2% 3vh;
 	display: flex;
 	flex-direction: column;
@@ -447,7 +447,7 @@ nav a.active {
 	transform: translateX(-50%);
 	background: url(../images/img_bg_date.webp) no-repeat;
 	background-size: contain;
-	width: 41vh;
+	width: 21vw;
 	height: 18vh;
 	font-family: 'Press Start 2P';
 	font-size: .7rem;
@@ -458,28 +458,11 @@ nav a.active {
 .hero-date span {
 	font-size: .9rem;
 }
-.img-bg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 0;
-}
-.img-bg:after {
-	/* content: ""; */
-	position: absolute;
-	left: 0;
-	top: 0;
-	/* width:	100%;
-	height: 100%; */
-	background:url(../images/img_noise.webp);
-}
 .img-bg .obj-cloud {
 	left: 2.5%;
 	top: 8vh;
 	background-image: url(../images/img_bg_cloud.webp);
-	width: 197vh;
+	width: 93vw;
 	height: 64vh;
 }
 .img-bg .obj-grid {
@@ -495,10 +478,10 @@ nav a.active {
 	bottom: -15vh;
 }
 .img-bg .obj-planet {
-	left: 14.5%;
+	left: 13.5%;
 	top: 22vh;
 	background-image: url(../images/img_bg_planet.webp);
-	width: 15vh;
+	width: 8vw;
 	height: 13vh;
 	animation: floating 2.5s ease-in-out infinite both;
 }
@@ -513,36 +496,36 @@ nav a.active {
 	right: -0.5%;
 	bottom: -8vh;
 	background-image: url(../images/img_bg_tree1.webp);
-	width: 29vh;
+	width: 14vw;
 	height: 45vh;
-	animation: heroFadeUp .8s .6s both;
+	animation: heroFadeUp .8s 1s both;
 }
 .img-bg .obj-tree2 {
 	left: -0.5%;
 	bottom: -6vh;
 	background-image: url(../images/img_bg_tree2.webp);
-	width: 42vh;
+	width: 20vw;
 	height: 45vh;
-	animation: heroFadeUp .9s .8s both;
+	animation: heroFadeUp .9s 1.2s both;
 }
 .img-bg .obj-folder {
 	right: 12.5%;
 	bottom: 5vh;
 	background-image: url(../images/img_bg_folder4.webp);
-	width: 24vh;
+	width: 12vw;
 	height: 17vh;
 }
 .img-bg .obj-memo {
 	right: 10.5%;
 	top: 16vh;
 	background-image: url(../images/img_bg_memo.webp);
-	width: 9.5vh;
+	width: 5vw;
 	height: 10vh;
 }
 .img-bg .obj-load {
 	left: 28.5%;
 	bottom: 17vh;
-	width: 3vh;
+	width: 2vw;
 	height: 5.5vh;
 	overflow: visible;
 	animation: floating 1.25s ease-in-out infinite both;
@@ -557,9 +540,9 @@ nav a.active {
 }
 .img-bg .obj-computer {
 	right: 22.5%;
-	top: 26vh;
+	top: 20%;
 	background-image: url(../images/img_bg_computer.webp);
-	width: 49vh;
+	width: 25vw;
 	height: 49vh;
 	opacity: 0;
 	animation: leftdown .8s ease-out .5s forwards;
@@ -647,7 +630,7 @@ nav a.active {
 	text-indent: 100%;
 	white-space: nowrap;
 	width: 100%;
-	height:100vh;
+	/* height:100vh; */
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
@@ -835,7 +818,7 @@ nav a.active {
 }
 .about-wrap {
 	display: grid;
-	grid-template-columns: 1fr 1.4fr;
+	grid-template-columns: 1fr 1.5fr;
 	gap: 5rem;
 	align-items: center;
 }
