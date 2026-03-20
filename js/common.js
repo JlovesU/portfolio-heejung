@@ -58,6 +58,16 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 // //페이지 로드 시 초기 활성화
 // updateActive();
 
+//메인 date
+const dateEl = document.querySelector('.date-text');
+
+const now = new Date();
+dateEl.textContent = now.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
 /* ── Go to Top 버튼 ── */
 const gotoTop = document.getElementById('gotoTop');
 window.addEventListener('scroll', () => {
@@ -82,6 +92,7 @@ function openMobile(e){
   );
 }
 
+// 포트폴리오 스와이퍼
 var swiper = new Swiper(".works-wrap2", {
   slidesPerView: 1.5,
   spaceBetween: 20,
@@ -110,6 +121,8 @@ var swiper = new Swiper(".works-wrap2", {
     },
   }
 });
+
+//그 밖의 작업 스와이퍼
 document.querySelectorAll('.works-other').forEach(el => {
   new Swiper(el, {
     slidesPerView: 2.5,
@@ -133,7 +146,7 @@ document.querySelectorAll('.works-other').forEach(el => {
         spaceBetween: 40,
       },
       1024: {
-        slidesPerView: 3.5,
+        slidesPerView: 4.5,
         spaceBetween: 50,
       },
     }
