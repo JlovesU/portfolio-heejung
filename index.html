@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,6 +33,7 @@
 </head>
 
 <body>
+  <a href="#hero" class="skip-nav">본문 바로가기</a>
   <!-- HEADER -->
   <header>
     <a href="#hero" class="logo">Park Heejung's <span>portfolio ✦</span></a>
@@ -65,15 +65,14 @@
       <!-- <div class="hero-chips">
       <span class="chip chip-main chip-dot">Available for work</span>
       <span class="chip chip-outline">Web Publisher</span>
-      <span class="chip chip-outline">Web Design</span>
     </div> -->
       <h1 class="hero-title">
         <span>Heejung's</span><br>
         <span class="gr">PORTFOLIO</span>
       </h1>
       <p class="hero-desc">
-        안녕하세요! 저의 포트폴리오 사이트에 오신것을 환영합니다.<br>
-        즐거운 시간 되시기를 바랍니다.
+        안녕하세요! 웹퍼블리셔 박희정입니다.<br>
+        환영합니다
       </p>
       <!-- <div class="hero-btns">
       <a href="#works" class="btn-grad">작업물 보기 →</a>
@@ -89,26 +88,26 @@
     <span>scroll</span>
   </div> -->
     <div class="img-bg">
-      <span class="obj-cloud">cloud</span>
-      <span class="obj-grid grid1">grid</span>
-      <span class="obj-grid grid2">grid</span>
-      <span class="obj-planet">planet</span>
+      <span class="obj-cloud" aria-hidden="true">cloud</span>
+      <span class="obj-grid grid1" aria-hidden="true">grid</span>
+      <span class="obj-grid grid2" aria-hidden="true">grid</span>
+      <span class="obj-planet" aria-hidden="true">planet</span>
       <!-- <span class="obj-sun">sun</span> -->
-      <span class="obj-tree1">tree1</span>
-      <span class="obj-tree2">tree2</span>
-      <span class="obj-folder">folder</span>
-      <span class="obj-memo">memo</span>
-      <span class="obj-load"><i>load</i></span>
-      <span class="obj-star star1"><i>✦</i></span>
-      <span class="obj-star star2"><i>✦</i></span>
-      <span class="obj-star star3"><i>✦</i></span>
-      <span class="obj-star star4"><i>✦</i></span>
-      <span class="obj-star star5"><i>✦</i></span>
-      <span class="obj-star star6"><i>✦</i></span>
-      <span class="obj-star star7"><i>✦</i></span>
-      <span class="obj-star star8"><i>✦</i></span>
-      <span class="obj-star star9"><i>✦</i></span>
-      <span class="obj-computer">computer</span>
+      <span class="obj-tree1" aria-hidden="true">tree1</span>
+      <span class="obj-tree2" aria-hidden="true">tree2</span>
+      <span class="obj-folder" aria-hidden="true">folder</span>
+      <span class="obj-memo" aria-hidden="true">memo</span>
+      <span class="obj-load" aria-hidden="true"><i>load</i></span>
+      <span class="obj-star star1" aria-hidden="true"><i>✦</i></span>
+      <span class="obj-star star2" aria-hidden="true"><i>✦</i></span>
+      <span class="obj-star star3" aria-hidden="true"><i>✦</i></span>
+      <span class="obj-star star4" aria-hidden="true"><i>✦</i></span>
+      <span class="obj-star star5" aria-hidden="true"><i>✦</i></span>
+      <span class="obj-star star6" aria-hidden="true"><i>✦</i></span>
+      <span class="obj-star star7" aria-hidden="true"><i>✦</i></span>
+      <span class="obj-star star8" aria-hidden="true"><i>✦</i></span>
+      <span class="obj-star star9" aria-hidden="true"><i>✦</i></span>
+      <span class="obj-computer" aria-hidden="true">computer</span>
     </div>
   </section><!-- //HERO -->
 
@@ -116,7 +115,7 @@
 
   <!-- ABOUT -->
   <section class="sec-wrap" id="about">
-    <div class="sec-inner">
+    <div class="sec-inner" data-aos="fade-up">
       <div class="sec-label">about me</div>
       <h2 class="sec-title">안녕하세요, <span>웹 퍼블리셔</span> 박희정입니다.</h2>
       <div class="about-wrap">
@@ -176,22 +175,22 @@
   <!-- WORKS -->
   <section class="sec-wrap" id="works">
     <div class="sec-inner">
-      <div class="sec-label">works</div>
-      <h2 class="sec-title">작업 <span>포트폴리오</span></h2>
+      <div class="sec-label" data-aos="fade-up">works</div>
+      <h2 class="sec-title" data-aos="fade-up">작업 <span>포트폴리오</span></h2>
 
-      <h3 class="sec-subtitle">현대백화점면세점 스크립트 작업한 이벤트</h3>
-      <div class="works-wrap">
+      <h3 class="sec-subtitle" data-aos="fade-up">현대백화점면세점 스크립트 작업한 이벤트</h3>
+      <div class="works-wrap" data-aos="fade-up">
         <div class="work-card">
           <div class="work-thumb">
             <a href="work/event/20240510_hype_club/1_ko_hype_club.html" target="_blank">
-              <img src="images/img_project1.webp" alt="project1" loading="lazy">
+              <img src="images/img_project1.webp" alt="스크립트 위주 포트폴리오 1" loading="lazy">
               <span class="work-thumb-overlay"></span>
             </a>
           </div>
           <div class="work-body">
             <div class="work-chips"><span class="wchip">HTML/CSS</span><span class="wchip">json</span><span
                 class="wchip">jQuery</span><span class="wchip">Swiper</span><span class="wchip">Animation</span></div>
-            <h3>하입클럽 전용 선착순 경품지급 이벤트 1</h3>
+            <h4>하입클럽 전용 선착순 경품지급 이벤트 1</h4>
             <p class="work-role">퍼블리싱 및 이벤트 참여 로직 스크립트 구현</p>
             <p>백오피스(BO) 데이터 연동하여 선착순 경품지급 이벤트 로직 스크립트 작업했습니다. 데이터를 가져오는 함수는 개발팀에서 전달해줬습니다.</p>
             <ul>
@@ -212,14 +211,14 @@
         <div class="work-card">
           <div class="work-thumb">
             <a href="work/event/20240702_hype_club/1_ko_hype_club.html" target="_blank">
-              <img src="images/img_project5.webp" alt="project5" loading="lazy">
+              <img src="images/img_project5.webp" alt="스크립트 위주 프로젝트 2" loading="lazy">
               <span class="work-thumb-overlay"></span>
             </a>
           </div>
           <div class="work-body">
             <div class="work-chips"><span class="wchip">HTML/CSS</span><span class="wchip">json</span><span
                 class="wchip">jQuery</span><span class="wchip">Swiper</span><span class="wchip">Animation</span></div>
-            <h3>하입클럽 전용 선착순 경품지급 이벤트 2 + 퀴즈 이벤트</h3>
+            <h4>하입클럽 전용 선착순 경품지급 이벤트 2 + 퀴즈 이벤트</h4>
             <p class="work-role">퍼블리싱 및 이벤트 참여 로직 스크립트 구현, 퀴즈 스크립트 구현</p>
             <p>기존 경품지급 이벤트 1과 로직은 같으나 이번엔 하입클럽 비회원이 이벤트 응모시 회원가입도 되면서 이벤트 참여되게 작업했습니다.</p>
             <ul>
@@ -239,14 +238,14 @@
         <div class="work-card">
           <div class="work-thumb">
             <a href="work/event/20221214_doppelganger/ko_doppelganger.html" target="_blank">
-              <img src="images/img_project2.webp" alt="project2" loading="lazy">
+              <img src="images/img_project2.webp" alt="스크립트 위주 프로젝트 3" loading="lazy">
               <span class="work-thumb-overlay"></span>
             </a>
           </div>
           <div class="work-body">
             <div class="work-chips"><span class="wchip">HTML/CSS</span><span class="wchip">jQuery</span><span
                 class="wchip">Animation</span></div>
-            <h3>심리테스트 이벤트</h3>
+            <h4>심리테스트 이벤트</h4>
             <p class="work-role">퍼블리싱 및 참여 로직 스크립트 구현</p>
             <p>얼굴 합성해주는 Fliption의 api를 연동하여 심리테스트 작업했습니다.</p>
             <ul>
@@ -266,14 +265,14 @@
         <div class="work-card">
           <div class="work-thumb">
             <a href="work/event/20230315_trade_center_qr/mko_trade_center_qr.html" onclick="openMobile(event)">
-              <img src="images/img_project4.webp" alt="project4" loading="lazy">
+              <img src="images/img_project4.webp" alt="스크립트 위주 프로젝트 4" loading="lazy">
               <span class="work-thumb-overlay"></span>
             </a>
           </div>
           <div class="work-body">
             <div class="work-chips"><span class="wchip">HTML/CSS</span><span class="wchip">jQuery</span><span
                 class="wchip">Animation</span></div>
-            <h3>퀴즈 이벤트</h3>
+            <h4>퀴즈 이벤트</h4>
             <p class="work-role">퍼블리싱 및 퀴즈 스크립트 구현</p>
             <p>모바일 전용 퀴즈 이벤트 입니다.</p>
             <ul>
@@ -286,23 +285,24 @@
         </div><!--//work-card-->
       </div><!--//works-wrap-->
 
-      <h3 class="sec-subtitle">현대백화점면세점 모션 위주 이벤트</h3><p class="sec-subtext">주로 PC버전에 모션 작업이 되어있습니다.</p>
+      <h3 class="sec-subtitle" data-aos="fade-up">현대백화점면세점 모션 위주 이벤트</h3>
+      <p class="sec-subtext" data-aos="fade-up">주로 PC버전에 모션 작업이 되어있습니다.</p>
       <div class="works-wrap2">
-        <div class="work-card">
+        <div class="work-card" data-aos="fade" data-aos-delay="300">
           <div class="work-thumb">
             <a href="work/event/20210701_bluemarble/ko_bluemarble.html" target="_blank">
-              <img src="images/img_project3.webp" alt="project3" loading="lazy">
+              <img src="images/img_project3.webp" alt="모션 위주 프로젝트 1" loading="lazy">
               <span class="work-thumb-overlay"></span>
             </a>
           </div>
           <div class="work-body">
             <!-- <div class="work-chips"><span class="wchip">HTML/CSS</span><span class="wchip">jQuery</span><span class="wchip">Animation</span></div> -->
-            <h3>부루마블</h3>
+            <h4>부루마블</h4>
             <p>주사위 돌아가는 스크립트, 주사위 결과값에 따라 비행기 이동 애니메이션</p>
           </div>
           <div class="work-view"><a href="work/event/20210701_bluemarble/ko_bluemarble.html" target="_blank" class="work-link">PC View →</a></div>
         </div><!--//work-card-->
-        <div class="work-card">
+        <div class="work-card" data-aos="fade" data-aos-delay="100">
           <div class="work-thumb">
             <a href="work/event/20230220_spring/ko_spring.html" target="_blank">
               <img src="images/img_project6.webp" alt="project6" loading="lazy">
@@ -310,12 +310,12 @@
             </a>
           </div>
           <div class="work-body">
-            <h3>패션 브랜드</h3>
+            <h4>패션 브랜드</h4>
             <p>패럴랙스 스크롤 효과, aos 스크롤 애니메이션</p>
           </div>
           <div class="work-view"><a href="work/event/20230220_spring/ko_spring.html" target="_blank" class="work-link">PC View →</a></div>
         </div><!--//work-card-->
-        <div class="work-card">
+        <div class="work-card" data-aos="fade" data-aos-delay="400">
           <div class="work-thumb">
             <a href="work/event/20230912_luxury_duty_free_new/ko_luxury_duty_free_new.html" target="_blank">
               <img src="images/img_project9.webp" alt="project9" loading="lazy">
@@ -323,12 +323,12 @@
             </a>
           </div>
           <div class="work-body">
-            <h3>럭셔리 듀티 프리</h3>
+            <h4>럭셔리 듀티 프리</h4>
             <p>글리터 오브젝트 효과</p>
           </div>
           <div class="work-view"><a href="work/event/20230912_luxury_duty_free_new/ko_luxury_duty_free_new.html" target="_blank" class="work-link">PC View →</a></div>
         </div><!--//work-card-->
-        <div class="work-card">
+        <div class="work-card" data-aos="fade" data-aos-delay="200">
           <div class="work-thumb">
             <a href="work/event/20240131_luxury_duty_free/ko_luxury_duty_free.html" target="_blank">
               <img src="images/img_project12.webp" alt="project12" loading="lazy">
@@ -336,12 +336,12 @@
             </a>
           </div>
           <div class="work-body">
-            <h3>럭셔리 콜랙션</h3>
+            <h4>럭셔리 콜랙션</h4>
             <p>카드 진열 효과</p>
           </div>
           <div class="work-view"><a href="work/event/20240131_luxury_duty_free/ko_luxury_duty_free.html" target="_blank" class="work-link">PC View →</a></div>
         </div><!--//work-card-->
-        <div class="work-card">
+        <div class="work-card" data-aos="fade" data-aos-delay="100">
           <div class="work-thumb">
             <a href="work/event/20230817_mens_fashion/ko_mens_fashion.html" target="_blank">
               <img src="images/img_project8.webp" alt="project8" loading="lazy">
@@ -349,12 +349,12 @@
             </a>
           </div>
           <div class="work-body">
-            <h3>맨즈 패션 위크</h3>
+            <h4>맨즈 패션 위크</h4>
             <p>aos, swiper, 탭 컨텐츠</p>
           </div>
           <div class="work-view"><a href="work/event/20230817_mens_fashion/ko_mens_fashion.html" target="_blank" class="work-link">PC View →</a></div>
         </div><!--//work-card-->
-        <div class="work-card">
+        <div class="work-card" data-aos="fade" data-aos-delay="300">
           <div class="work-thumb">
             <a href="work/event/20240124_seoll/ko_seoll.html" target="_blank">
               <img src="images/img_project10.webp" alt="project10" loading="lazy">
@@ -362,12 +362,12 @@
             </a>
           </div>
           <div class="work-body">
-            <h3>2024년 설</h3>
+            <h4>2024년 설</h4>
             <p>(귀여운)애니메이션, swiper</p>
           </div>
           <div class="work-view"><a href="work/event/20240124_seoll/ko_seoll.html" target="_blank" class="work-link">PC View →</a></div>
         </div><!--//work-card-->
-        <div class="work-card">
+        <div class="work-card" data-aos="fade" data-aos-delay="200">
           <div class="work-thumb">
             <a href="work/event/20230125_abroad_cosmetic/ko_abroad_cosmetic.html" target="_blank">
               <img src="images/img_project15.webp" alt="project15" loading="lazy">
@@ -375,12 +375,12 @@
             </a>
           </div>
           <div class="work-body">
-            <h3>설맞이</h3>
+            <h4>설맞이</h4>
             <p>(나름 귀여운)애니메이션</p>
           </div>
           <div class="work-view"><a href="work/event/20230125_abroad_cosmetic/ko_abroad_cosmetic.html" target="_blank" class="work-link">PC View →</a></div>
         </div><!--//work-card-->
-        <div class="work-card">
+        <div class="work-card" data-aos="fade" data-aos-delay="400">
           <div class="work-thumb">
             <a href="work/event/20240130_galaxy/ko_galaxy.html" target="_blank">
               <img src="images/img_project11.webp" alt="project11" loading="lazy">
@@ -388,12 +388,12 @@
             </a>
           </div>
           <div class="work-body">
-            <h3>갤럭시 S24 시리즈</h3>
+            <h4>갤럭시 S24 시리즈</h4>
             <p>aos, swiper</p>
           </div>
           <div class="work-view"><a href="work/event/20240130_galaxy/ko_galaxy.html" target="_blank" class="work-link">PC View →</a></div>
         </div><!--//work-card-->
-        <div class="work-card">
+        <div class="work-card" data-aos="fade" data-aos-delay="200">
           <div class="work-thumb">
             <a href="work/event/20240806_moschino/ko_moschino.html" target="_blank">
               <img src="images/img_project13.webp" alt="project13" loading="lazy">
@@ -401,12 +401,12 @@
             </a>
           </div>
           <div class="work-body">
-            <h3>모스키노</h3>
+            <h4>모스키노</h4>
             <p>가로스크롤 효과</p>
           </div>
           <div class="work-view"><a href="work/event/20240806_moschino/ko_moschino.html" target="_blank" class="work-link">PC View →</a></div>
         </div><!--//work-card-->
-        <div class="work-card">
+        <div class="work-card" data-aos="fade" data-aos-delay="100">
           <div class="work-thumb">
             <a href="work/event/20230323_spring_mood/ko_spring_mood.html" target="_blank">
               <img src="images/img_project7.webp" alt="project7" loading="lazy">
@@ -414,12 +414,12 @@
             </a>
           </div>
           <div class="work-body">
-            <h3>스프링 무드</h3>
+            <h4>스프링 무드</h4>
             <p>배경색 변경, aos, 탭 컨텐츠</p>
           </div>
           <div class="work-view"><a href="work/event/20230323_spring_mood/ko_spring_mood.html" target="_blank" class="work-link">PC View →</a></div>
         </div><!--//work-card-->
-        <!-- <div class="work-card">
+        <!-- <div class="work-card" data-aos="fade">
           <div class="work-thumb">
             <a href="work/event/20231207_plus_week/ko_plus_week.html" target="_blank">
               <img src="images/img_project14.webp" alt="project14" loading="lazy">
@@ -427,7 +427,7 @@
             </a>
           </div>
           <div class="work-body">
-            <h3>플러스 위크</h3>
+            <h4>플러스 위크</h4>
             <p>aos, 애니메이션</p>
           </div>
           <div class="work-view"><a href="work/event/20231207_plus_week/ko_plus_week.html" target="_blank" class="work-link">PC View →</a></div>
@@ -435,36 +435,36 @@
         <!--//work-card-->
       </div><!--//works-wrap2-->
 
-      <h3 class="sec-subtitle">사이트 제작</h3>
-      <p class="sec-subtext">퍼블리싱 100% 작업이며 HTML, CSS, jQuery 위주로 작업했습니다.</p>
-      <ul class="works-list" id="worksList">
+      <h3 class="sec-subtitle" data-aos="fade-up">사이트 제작</h3>
+      <p class="sec-subtext" data-aos="fade-up">퍼블리싱 100% 작업이며 HTML, CSS, jQuery 위주로 작업했습니다.</p>
+      <ul class="works-list" id="worksList" data-aos="fade-up">
         <li class="work-list-item">
-          <h3>현대백화점면세점 운영</h3>
+          <h4>현대백화점면세점 운영</h4>
           <p>현대백화점면세점 오픈, 영문몰 오픈, 내수통관 면세품 전용몰 고도몰로 작업, 구글 애널리틱스 4 작업.</p>
           <p>작업기간: 4년 8개월</p>
         </li>
         <li class="work-list-item">
-          <h3>롯데 엘포인트/엘페이 통합 리뉴얼</h3>
+          <h4>롯데 엘포인트/엘페이 통합 리뉴얼</h4>
           <p>2개 앱을 하나로 통합 리뉴얼</p>
           <p>작업기간: 3개월</p>
         </li>
         <li class="work-list-item">
-          <h3>차란차 중고차 거래 플랫폼</h3>
+          <h4>차란차 중고차 거래 플랫폼</h4>
           <p>PC/MO 사이트 신규 구축</p>
           <p>작업기간: 3개월</p>
         </li>
         <li class="work-list-item">
-          <h3>핀크 하이브리드앱 리뉴얼</h3>
+          <h4>핀크 하이브리드앱 리뉴얼</h4>
           <p>앱태크 플랫폼 핀크 리뉴얼. 알메이트 차트 컴포넌트 커스텀 작업.</p>
           <p>작업기간: 4개월</p>
         </li>
         <li class="work-list-item">
-          <h3>T World 리뉴얼</h3>
+          <h4>T World 리뉴얼</h4>
           <p>T World내 T 다이렉트 컨텐츠 구축</p>
           <p>작업기간: 7개월</p>
         </li>
         <li class="work-list-item">
-          <h3>한국관광공사 웹접근성 마크 획득 및 운영</h3>
+          <h4>한국관광공사 웹접근성 마크 획득 및 운영</h4>
           <p>웹접근성 마크 획득 및 다국어 사이트 운영</p>
           <p>작업기간: 7개월</p>
         </li>
@@ -478,70 +478,21 @@
   <!-- OTHER -->
   <section class="sec-wrap" id="other">
     <div class="sec-inner">
-      <div class="sec-label">OTHER</div>
-      <h2 class="sec-title">그 외의 <span>작업들</span></h2>
+      <div class="sec-label" data-aos="fade-up">OTHER</div>
+      <h2 class="sec-title" data-aos="fade-up">그 외의 <span>작업들</span></h2>
 
-      <h3 class="sec-subtitle">디자인이라고 불러도 될까요</h3>
-      <p class="sec-subtext">오래전 리틀팍스에서 재직할 때 작업한 것입니다. 클릭하면 전체 이미지를 보실 수 있습니다.</p>
-      <div class="works-other swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="work/design/img_popup1.webp" alt="popup1" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/design/img_popup2.webp" alt="popup2" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/design/img_popup3.webp" alt="popup3" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/design/img_popup4.webp" alt="popup4" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/design/img_popup5.webp" alt="popup5" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/design/img_popup6.webp" alt="popup6" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/design/img_popup7.webp" alt="popup7" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/design/img_popup8.webp" alt="popup8" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/design/img_popup9.webp" alt="popup9" loading="lazy"></div>
-          <!-- <div class="swiper-slide"><img src="work/design/img_mail1.webp" alt="mailing1" loading="lazy"></div> -->
-          <div class="swiper-slide"><img src="work/design/img_mail2.webp" alt="mailing2" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/design/img_mail3.webp" alt="mailing3" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/design/img_mail4.webp" alt="mailing4" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/design/img_mail5.webp" alt="mailing5" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/design/img_mail6.webp" alt="mailing6" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/design/img_mail7.webp" alt="mailing7" loading="lazy"></div>
+      <h3 class="sec-subtitle" data-aos="fade-up">디자인이라고 불러도 될까요</h3>
+      <p class="sec-subtext" data-aos="fade-up">오래전 리틀팍스에서 재직할 때 작업한 것입니다. 클릭하면 전체 이미지를 보실 수 있습니다.</p>
+      <div class="works-other swiper" data-aos="fade-up">
+        <div class="swiper-wrapper" id="designSlider">
         </div><!--//swiper-wrapper-->
         <div class="swiper-scrollbar"></div>
       </div><!--//works-wrap-->
 
-      <h3 class="sec-subtitle">맑고 투명한 수채화</h3>
-      <p class="sec-subtext">핀터레스트에 있는 이미지, 우치다신야의 모작, 물고기 아트 아뜰리에 클래스 수업에서 그렸습니다. 클릭하면 전체 이미지를 보실 수 있습니다.</p>
-      <div class="works-other swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="work/painting/img_painting1.webp" alt="painting1" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting2.webp" alt="painting2" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting3.webp" alt="painting3" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting4.webp" alt="painting4" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting5.webp" alt="painting5" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting6.webp" alt="painting6" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting7.webp" alt="painting7" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting8.webp" alt="painting8" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting9.webp" alt="painting9" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting10.webp" alt="painting10" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting11.webp" alt="painting11" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting12.webp" alt="painting12" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting13.webp" alt="painting13" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting14.webp" alt="painting14" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting15.webp" alt="painting15" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting16.webp" alt="painting16" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting17.webp" alt="painting17" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting18.webp" alt="painting18" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting19.webp" alt="painting19" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting20.webp" alt="painting20" loading="lazy"></div>
-          <!-- <div class="swiper-slide"><img src="work/painting/img_painting21.webp" alt="painting21" loading="lazy"></div> -->
-          <div class="swiper-slide"><img src="work/painting/img_painting22.webp" alt="painting22" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting23.webp" alt="painting23" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting24.webp" alt="painting24" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting25.webp" alt="painting25" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting26.webp" alt="painting26" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting27.webp" alt="painting27" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting28.webp" alt="painting28" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting29.webp" alt="painting29" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting30.webp" alt="painting30" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting31.webp" alt="painting31" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting32.webp" alt="painting32" loading="lazy"></div>
-          <div class="swiper-slide"><img src="work/painting/img_painting33.webp" alt="painting33" loading="lazy"></div>
+      <h3 class="sec-subtitle" data-aos="fade-up">맑고 투명한 수채화</h3>
+      <p class="sec-subtext" data-aos="fade-up">핀터레스트에 있는 이미지, 우치다신야의 모작, 물고기 아트 아뜰리에 클래스 수업에서 그렸습니다. 클릭하면 전체 이미지를 보실 수 있습니다.</p>
+      <div class="works-other swiper" data-aos="fade-up">
+        <div class="swiper-wrapper" id="paintingSlider">
         </div><!--//swiper-wrapper-->
         <div class="swiper-scrollbar"></div>
       </div><!--//works-wrap-->
@@ -554,9 +505,9 @@
   <!-- CONTACT -->
   <section class="sec-wrap" id="contact-sec">
     <div class="sec-inner">
-      <div class="sec-label">contact</div>
-      <h2 class="sec-title">함께 <span>만들어요</span></h2>
-      <div class="contact-card">
+      <div class="sec-label" data-aos="fade-up">contact</div>
+      <h2 class="sec-title" data-aos="fade-up">함께 <span>만들어요</span></h2>
+      <div class="contact-card" data-aos="fade-up">
         <!-- <span class="contact-emoji">Smile</span> -->
         <h3 class="sec-subtitle">프로젝트 문의 환영합니다!</h3>
         <p>퍼블리싱 협업, 채용 제안, 프리랜서 의뢰 등<br>어떤 내용이든 편하게 연락주세요.<br>
@@ -568,14 +519,14 @@
       </div><!--//contact-card-->
     </div><!--//sec-inner-->
     <div class="img-bg">
-      <span class="obj-star star1"><i>✦</i></span>
-      <span class="obj-star star2"><i>✦</i></span>
-      <span class="obj-star star3"><i>✦</i></span>
-      <span class="obj-star star4"><i>✦</i></span>
-      <span class="obj-star star5"><i>✦</i></span>
-      <span class="obj-star star6"><i>✦</i></span>
-      <span class="obj-star star7"><i>✦</i></span>
-      <span class="obj-star star9"><i>✦</i></span>
+      <span class="obj-star star1" aria-hidden="true"><i>✦</i></span>
+      <span class="obj-star star2" aria-hidden="true"><i>✦</i></span>
+      <span class="obj-star star3" aria-hidden="true"><i>✦</i></span>
+      <span class="obj-star star4" aria-hidden="true"><i>✦</i></span>
+      <span class="obj-star star5" aria-hidden="true"><i>✦</i></span>
+      <span class="obj-star star6" aria-hidden="true"><i>✦</i></span>
+      <span class="obj-star star7" aria-hidden="true"><i>✦</i></span>
+      <span class="obj-star star9" aria-hidden="true"><i>✦</i></span>
     </div>
   </section><!-- //CONTACT -->
 

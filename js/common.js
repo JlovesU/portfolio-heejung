@@ -1,11 +1,9 @@
-(function () {
-  AOS.init({
-    startEvent: 'DOMContentLoaded',
-    easing: 'ease-out-cubic',
-    duration: 800,
-    once: true,
-    offset: 120,
-  });
+AOS.init({
+  startEvent: 'DOMContentLoaded',
+  easing: 'ease-out-cubic',
+  duration: 800,
+  once: true,
+  offset: 120,
 });
 
 /* ── 햄버거 드로어 ── */
@@ -136,6 +134,84 @@ function openMobile(e){
 // });
 
 /* ── 그 밖의 작업 스와이퍼 ── */
+//디자인 슬라이더 데이터
+const designSlides = [
+  { src: 'work/design/img_popup1.webp', alt: '팝업 디자인 1' },
+  { src: 'work/design/img_popup2.webp', alt: '팝업 디자인 2' },
+  { src: 'work/design/img_popup3.webp', alt: '팝업 디자인 3' },
+  { src: 'work/design/img_popup4.webp', alt: '팝업 디자인 4' },
+  { src: 'work/design/img_popup5.webp', alt: '팝업 디자인 5' },
+  { src: 'work/design/img_popup6.webp', alt: '팝업 디자인 6' },
+  { src: 'work/design/img_popup7.webp', alt: '팝업 디자인 7' },
+  { src: 'work/design/img_popup8.webp', alt: '팝업 디자인 8' },
+  { src: 'work/design/img_popup9.webp', alt: '팝업 디자인 9' },
+  // { src: 'work/design/img_mail1.webp', alt: '뉴스레터 디자인 1' },
+  { src: 'work/design/img_mail2.webp', alt: '뉴스레터 디자인 2' },
+  { src: 'work/design/img_mail3.webp', alt: '뉴스레터 디자인 3' },
+  { src: 'work/design/img_mail4.webp', alt: '뉴스레터 디자인 4' },
+  { src: 'work/design/img_mail5.webp', alt: '뉴스레터 디자인 5' },
+  { src: 'work/design/img_mail6.webp', alt: '뉴스레터 디자인 6' },
+  { src: 'work/design/img_mail7.webp', alt: '뉴스레터 디자인 7' }, 
+];
+
+const designWrapper = document.getElementById('designSlider');
+
+designWrapper.innerHTML = designSlides.map(item => `
+  <div class="swiper-slide">
+    <button type="button" class="popup-trigger" aria-label="팝업으로 크게 보기">
+      <img src="${item.src}" alt="${item.alt}" loading="lazy">
+    </button>
+  </div>
+`).join('');
+
+
+//수채화 슬라이더 데이터
+const paintingSlides = [
+  { src: 'work/painting/img_painting1.webp', alt: '수채화 1' },
+  { src: 'work/painting/img_painting2.webp', alt: '수채화 2' },
+  { src: 'work/painting/img_painting3.webp', alt: '수채화 3' },
+  { src: 'work/painting/img_painting4.webp', alt: '수채화 4' },
+  { src: 'work/painting/img_painting5.webp', alt: '수채화 5' },
+  { src: 'work/painting/img_painting6.webp', alt: '수채화 6' },
+  { src: 'work/painting/img_painting7.webp', alt: '수채화 7' },
+  { src: 'work/painting/img_painting8.webp', alt: '수채화 8' },
+  { src: 'work/painting/img_painting9.webp', alt: '수채화 9' },
+  { src: 'work/painting/img_painting10.webp', alt: '수채화 10' },
+  { src: 'work/painting/img_painting11.webp', alt: '수채화 11' },
+  { src: 'work/painting/img_painting12.webp', alt: '수채화 12' },
+  { src: 'work/painting/img_painting13.webp', alt: '수채화 13' },
+  { src: 'work/painting/img_painting14.webp', alt: '수채화 14' },
+  { src: 'work/painting/img_painting15.webp', alt: '수채화 15' },
+  { src: 'work/painting/img_painting16.webp', alt: '수채화 16' },
+  { src: 'work/painting/img_painting17.webp', alt: '수채화 17' },
+  { src: 'work/painting/img_painting18.webp', alt: '수채화 18' },
+  { src: 'work/painting/img_painting19.webp', alt: '수채화 19' },
+  { src: 'work/painting/img_painting20.webp', alt: '수채화 20' },
+  // { src: 'work/painting/img_painting21.webp', alt: '수채화 21' },
+  { src: 'work/painting/img_painting22.webp', alt: '수채화 22' },
+  { src: 'work/painting/img_painting23.webp', alt: '수채화 23' },
+  { src: 'work/painting/img_painting24.webp', alt: '수채화 24' },
+  { src: 'work/painting/img_painting25.webp', alt: '수채화 25' },
+  { src: 'work/painting/img_painting26.webp', alt: '수채화 26' },
+  { src: 'work/painting/img_painting27.webp', alt: '수채화 27' },
+  { src: 'work/painting/img_painting28.webp', alt: '수채화 28' },
+  { src: 'work/painting/img_painting29.webp', alt: '수채화 29' },
+  { src: 'work/painting/img_painting30.webp', alt: '수채화 30' },
+  { src: 'work/painting/img_painting31.webp', alt: '수채화 31' },
+  { src: 'work/painting/img_painting32.webp', alt: '수채화 32' },
+  { src: 'work/painting/img_painting33.webp', alt: '수채화 33' },
+];
+
+const paintingWrapper = document.getElementById('paintingSlider');
+
+paintingWrapper.innerHTML = paintingSlides.map(item => `
+  <div class="swiper-slide">
+    <button type="button" class="popup-trigger" aria-label="팝업으로 크게 보기">
+      <img src="${item.src}" alt="${item.alt}" loading="lazy">
+    </button>
+  </div>
+`).join('');
+
 document.querySelectorAll('.works-other').forEach(el => {
   new Swiper(el, {
     slidesPerView: 2.5,
@@ -170,40 +246,57 @@ document.querySelectorAll('.works-other').forEach(el => {
 const overlay = document.getElementById('popupOverlay');
 const popupView = document.querySelector('.popup-view');
 const popupImg = document.getElementById('popupImg');
+const popupClose = document.getElementById('popupClose');
 const body = document.querySelector('body');
 
+let lastFocusedEl = null;
+
 // 슬라이드 클릭 → 팝업
-document.querySelectorAll('.works-other .swiper-wrapper').forEach(wrapper => {
-  wrapper.addEventListener('click', e => {
-    const slide = e.target.closest('.works-other .swiper-slide');
-    if (!slide) return;
+const initSlider = (wrapperId, slides) => {
+  const wrapper = document.getElementById(wrapperId);
 
-    popupImg.classList.remove('loaded');
-    popupImg.src = '';
+  wrapper.innerHTML = slides.map(item => `
+    <div class="swiper-slide">
+      <button type="button" class="popup-trigger" aria-label="팝업으로 크게 보기">
+        <img src="${item.src}" alt="${item.alt}" loading="lazy">
+      </button>
+    </div>
+  `).join('');
 
-    popupImg.onload = () => {
-      popupImg.classList.add('loaded');
-    };
-
-    popupImg.src = slide.querySelector('img').src;
-    overlay.classList.add('active');
-    body.classList.add('scroll-hidden');
-    popupView.scrollTop = 0;
+  wrapper.querySelectorAll('.popup-trigger').forEach(btn => {
+    btn.addEventListener('click', () => {
+      lastFocusedEl = btn;
+      popupImg.classList.remove('loaded');
+      popupImg.src = '';
+      popupImg.onload = () => popupImg.classList.add('loaded');
+      popupImg.src = btn.querySelector('img').src;
+      popupImg.alt = btn.querySelector('img').alt;
+      overlay.classList.add('active');
+      body.classList.add('scroll-hidden');
+      popupView.scrollTop = 0;
+      popupClose.focus();
+    });
   });
-});
+};
+
+// 각각 호출만 하면 끝
+initSlider('designSlider', designSlides);
+initSlider('paintingSlider', paintingSlides);
 
 // 닫기 공통 함수
 const closePopup = () => {
   overlay.classList.remove('active');
   body.classList.remove('scroll-hidden');
+  if (lastFocusedEl) lastFocusedEl.focus();
 };
 // 딤드 클릭 닫기
 overlay.addEventListener('click', e => {
   if (e.target === overlay) {
     overlay.classList.remove('active');
     body.classList.remove('scroll-hidden');
+    if (lastFocusedEl) lastFocusedEl.focus();
   }
 });
 // X버튼 또는 이미지 클릭시 닫기
-document.getElementById('popupClose').addEventListener('click', closePopup);
+popupClose.addEventListener('click', closePopup);
 popupView.addEventListener('click', closePopup);
