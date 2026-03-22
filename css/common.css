@@ -1352,6 +1352,85 @@ footer strong {
 }
 
 /* ─── RESPONSIVE ─── */
+/* tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+	.hero-inner {
+		margin-left: -33vw;
+		margin-top: 8vh;
+		background-size: 64% auto;
+	}
+	.hero-date {
+		top: 67%;
+		left: 38%;
+		width: 26vw;
+	}
+
+	/* 오브젝트 크기/위치 */
+	.img-bg .obj-cloud {
+		left: -3%;
+		top: 10%;
+		width: 110vw;
+	}
+	.img-bg .obj-grid {
+		width: 28vw;
+		right: -4%;
+		top: -6%;
+	}
+	.img-bg .obj-grid.grid2 {
+		bottom: -10%;
+	}
+	.img-bg .obj-planet {
+		left: 10%;
+		top: 20%;
+		width: 11vw;
+	}
+	.img-bg .obj-computer {
+		right: 15%;
+        top: 34%;
+        width: 30vw;
+	}
+	.img-bg .obj-tree1 {
+		width: 18vw;
+		right: 0;
+		bottom: -5%;
+	}
+	.img-bg .obj-tree2 {
+		width: 26vw;
+		left: -0.5%;
+		bottom	: -4%;
+	}
+	.img-bg .obj-folder {
+		right: 12%;
+		bottom: 3%;
+		width: 16vw;
+	}
+	.img-bg .obj-memo {
+		right: 8%;
+		top: 14%;
+		width: 7vw;
+	}
+	.img-bg .obj-load {
+		left: 29%;
+		bottom: 18%;
+		width: 2.5vw;
+	}
+
+	/* 별 */
+	.img-bg .obj-star.star1 { left: 34%; font-size: 1.8rem; }
+	.img-bg .obj-star.star2 { left: 38%; font-size: 1.2rem; }
+	.img-bg .obj-star.star8 { right: 15%; font-size: 1.6rem; }
+
+	/* works 그리드 */
+	.works-wrap2 {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	/* about */
+	.about-wrap {
+		gap: 3rem;
+	}
+}
+
 /*Mobile*/
 @media (max-width: 768px) {
 	nav {
@@ -1512,11 +1591,6 @@ footer strong {
 	.popup-box {
 		max-width: 90%;
 	}
-}
-
-/* tablet */
-@media (max-width: 1024px) {
-
 }
 
 @media (min-width: 769px) {
