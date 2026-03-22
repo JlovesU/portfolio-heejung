@@ -838,10 +838,10 @@ nav a.active {
 	position: relative;
 	display: inline-block;
 	width: 30vh;
-	height: 33vh;
 	margin-bottom: 1.2rem;
 	background: url(../images/img_tv.webp) no-repeat 50% 50%;
 	background-size: contain;
+	aspect-ratio: 376 / 411;
 }
 .avatar video {
     position: absolute;
@@ -1559,7 +1559,7 @@ footer strong {
 
 	#contact-sec {
 		padding: 17vw 5% 23vw;
-		background: url(../images/bg_contact_mo.webp) no-repeat 50% 50%;
+		background: url(../images/bg_contact_mo.webp) no-repeat 50% 62%;
     	background-size: cover;
 	}
 	.contact-card {
