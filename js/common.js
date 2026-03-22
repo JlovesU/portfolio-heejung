@@ -106,34 +106,34 @@ function openMobile(e){
 }
 
 /* ── 포트폴리오 스와이퍼 ── */
-var swiper = new Swiper(".works-wrap2", {
-  slidesPerView: 1.5,
-  spaceBetween: 20,
-  freeMode: true,
-  scrollbar: {
-    el: ".swiper-scrollbar",
-    draggable: true,
-    // hide: true,
-  },
-  // mousewheel: {
-  //   enabled: true,
-  //   releaseOnEdges: true,
-  // },
-  breakpoints: {
-    320: {
-      slidesPerView: 1.5,
-      spaceBetween: 15,
-    },
-    768: {
-      slidesPerView: 3.5,
-      spaceBetween: 15,
-    },
-    1024: {
-      slidesPerView: 4.5,
-      spaceBetween: 20,
-    },
-  }
-});
+// var swiper = new Swiper(".works-wrap2", {
+//   slidesPerView: 1.5,
+//   spaceBetween: 20,
+//   freeMode: true,
+//   scrollbar: {
+//     el: ".swiper-scrollbar",
+//     draggable: true,
+//     // hide: true,
+//   },
+//   // mousewheel: {
+//   //   enabled: true,
+//   //   releaseOnEdges: true,
+//   // },
+//   breakpoints: {
+//     320: {
+//       slidesPerView: 2.1,
+//       spaceBetween: 15,
+//     },
+//     768: {
+//       slidesPerView: 3.5,
+//       spaceBetween: 15,
+//     },
+//     1024: {
+//       slidesPerView: 4.5,
+//       spaceBetween: 20,
+//     },
+//   }
+// });
 
 /* ── 그 밖의 작업 스와이퍼 ── */
 document.querySelectorAll('.works-other').forEach(el => {
@@ -151,16 +151,16 @@ document.querySelectorAll('.works-other').forEach(el => {
     // },
     breakpoints: {
       320: {
-        slidesPerView: 2.5,
-        spaceBetween: 20,
+        slidesPerView: 2.1,
+        spaceBetween: 15,
       },
       768: {
         slidesPerView: 3.5,
-        spaceBetween: 40,
+        spaceBetween: 15,
       },
       1024: {
         slidesPerView: 4.5,
-        spaceBetween: 50,
+        spaceBetween: 20,
       },
     }
   });

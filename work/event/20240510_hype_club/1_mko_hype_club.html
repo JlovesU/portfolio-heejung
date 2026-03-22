@@ -90,7 +90,7 @@
 .evt_wrap.hype-mem .btn_hype_join {pointer-events: none;}
 
 /* evt_nav */
-.evt_nav {position:relative; overflow:hidden; width:100%; height:20vw; transition: all .5s; z-index:3;}
+.evt_nav {position:relative; overflow:hidden; width:100%; height:20vw; transition: all .5s; z-index:8;}
 .evt_nav .wrapper {width:100%; height:20vw; transition: all .3s;}
 .evt_nav[data-section="0"] .wrapper {background:rgba(225, 201, 244, .8);}/*보라*/
 .evt_nav[data-section="1"] .wrapper {background:rgba(208, 238, 249, .8);}/*스카이*/
@@ -107,7 +107,7 @@
 .evt_nav .wrapper ul li.nav4 a {background-image:url('https://cdn.hddfs.com/files/op/20240503/18202d1a_202405031518268100.png');}
 
 .evt_nav.fixed {height:17vw;}
-.evt_nav.fixed .wrapper {position:fixed; z-index:10; top:60px!important; left:0; right:0; margin:0 auto; height:17vw;}
+.evt_nav.fixed .wrapper {position:fixed; z-index:10; top:0px; left:0; right:0; margin:0 auto; height:17vw;}
 .evt_nav.static .wrapper {position:static;}
 
 /* evt_content */
@@ -218,7 +218,7 @@
 /*anchor 3 래플템 투표 및 응모*/
 #anchor3 .wrapper {height:374vw; overflow:hidden;}
 #anchor3 .wrap_vote {position:absolute; top:13%; left:0; right:0; width:82.5%; margin:0 auto; background:url('https://cdn.hddfs.com/files/op/20240503/4d73850a_202405031614186190.png') no-repeat center top/contain; padding-top:8.4vw;}
-#anchor3 .wrap_vote.next_week {top:47.5%;}
+#anchor3 .wrap_vote.next_week {display: none; top:47.5%;}
 #anchor3 .vote_swiper {position:relative; overflow:hidden;}
 #anchor3 .wrap_vote .img_vote {border-radius:0 0 20px 20px; border:1px solid #dadada; overflow:hidden; box-shadow: 2px 2px 4px 0px rgba(162,124,153,0.3);}
 #anchor3 .wrap_vote .box_vote {margin-top:6vw; text-align:center;}
@@ -608,7 +608,7 @@
 <script src="https://cdn.hddfs.com/front/js/KO/aos.js"></script><!-- aos -->
 <script>
 $(document).ready(function(){
-	mainInit(); //이벤트 진입시 실행
+	// mainInit(); //이벤트 진입시 실행
 
 	var evtAOS = function() {
 		AOS.init({
@@ -622,7 +622,7 @@ $(document).ready(function(){
 	}, 400);
 
 	//탭버튼
-	var fixGap = 60;
+	var fixGap = 0;
 
 	// tab
 	$(".evt_nav ul li a").on("click", function(e) {
@@ -864,14 +864,14 @@ function getTimeFunc(){
 	}
 
 	//테디 이벤트 종료. 6월 11일부터는 테디 컨텐츠 삭제.
-	let eventEnd2 = new Date("2024-06-11T00:00:00");
-	if (today >= eventEnd2) {
-		$("#anchor1 .evt_content1").remove();
-	}
+	// let eventEnd2 = new Date("2024-06-11T00:00:00");
+	// if (today >= eventEnd2) {
+	// 	$("#anchor1 .evt_content1").remove();
+	// }
 
 	//남은 경품 수량 표기
-	leftPrize1('0005334',1);
-	leftPrize2('0005335',1);
+	// leftPrize1('0005334',1);
+	// leftPrize2('0005335',1);
 	//신용산 수량 소진
 	if($(".txt-teddy1").text() == "0") {
 		$(".box-teddy.-young").addClass("evt_end");
