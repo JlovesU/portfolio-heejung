@@ -23,7 +23,10 @@
 }
 a {text-decoration: none;}
 html {scroll-behavior: smooth;}
-
+img {
+	max-width: 100%;
+	height: auto;
+}
 body {
 	background: var(--bg);
 	color: var(--text);
@@ -314,7 +317,6 @@ nav a.active {
 	font-size: clamp(0.85rem, 0.762rem + 0.3756vw, 1.1rem);
 	/* color: var(--muted); */
 	text-align: center;
-	max-width: 560px;
 	/* line-height: 1.9; */
 	animation: heroFadeUp .9s .4s both;
 }
@@ -1078,7 +1080,7 @@ nav a.active {
 	display: inline-flex;
 	align-items: center;
 	gap: 5px;
-	font-size: .82rem;
+	font-size: clamp(0.6rem, 0.5225rem + 0.3305vw, 0.82rem);
 	font-weight: 600;
 	background: var(--gradient);
 	-webkit-background-clip: text;
@@ -1380,7 +1382,7 @@ footer strong {
 		margin-bottom: .3rem;
 	}
 	.hero-date {
-		top: 72%;
+		top: 70%;
 		left: 12%;
 	}
 	.img-bg .obj-cloud {
@@ -1404,19 +1406,21 @@ footer strong {
 	.img-bg .obj-tree1 {
 		right: 0.5%;
 		bottom: -1%;
-		width: 20vw;
+		width: 27vw;
 	}
 	.img-bg .obj-tree2 {
 		left: -0.5%;
 		bottom: -2%;
-		width: 32vw;
+		width: 38vw;
 	}
 	.img-bg .obj-folder {
+		display: none;
 		right: 22.5%;
 		bottom: 2%;
 		width: 29vw;
 	}
 	.img-bg .obj-memo {
+		display: none;
 		right: 7.5%;
 		top: 13%;
 		width: 9vw;
@@ -1432,12 +1436,12 @@ footer strong {
 	.img-bg .obj-star.star3 {
 		top: 48%;
 		left: 5%;
-		font-size: 1.8rem;
+		font-size: 1.4rem;
 	}
 	.img-bg .obj-star.star5 {
 		top: 58%;
 		left: 9%;
-		font-size: 1.2rem;
+		font-size: 1rem;
 	}
 	.img-bg .obj-star.star6 {
 		left: 84%;
@@ -1447,6 +1451,9 @@ footer strong {
 		top: 43%;
 	}
 
+	#about {
+		background-image: url(../images/bg_about3_mo.webp);
+	}
 	#about .sec-inner {
 		padding: 5vh 8%;
 	}
@@ -1460,6 +1467,7 @@ footer strong {
 		gap: 1rem;
 		grid-template-columns: repeat(auto-fill, minmax(80%, 1fr));
 	}
+	.work-view {left: 1rem;}
     .works-wrap2 {
 		gap: 1rem;
 		grid-template-columns: repeat(2, 1fr);
@@ -1504,6 +1512,11 @@ footer strong {
 	.popup-box {
 		max-width: 90%;
 	}
+}
+
+/* tablet */
+@media (max-width: 1024px) {
+
 }
 
 @media (min-width: 769px) {
