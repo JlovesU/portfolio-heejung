@@ -975,8 +975,7 @@ nav a.active {
 	border: 1px solid var(--border);
 	border-radius: 100px;
 	font-size: clamp(0.65rem, 0.6077rem + 0.1803vw, 0.77rem);
-	color: var(--accent);
-	font-weight: 500;
+	color: var(--accent4);
 }
 
 /* ─── WORKS ─── */
@@ -1041,8 +1040,8 @@ nav a.active {
 	background: var(--accent-light);
 	border: 1px solid var(--border);
 	font-size: clamp(0.6rem, 0.5718rem + 0.1202vw, 0.68rem);
-	color: var(--accent);
-	font-weight: 600;
+	color: var(--accent4);
+	font-weight: 500;
 }
 
 .work-body h4 {
