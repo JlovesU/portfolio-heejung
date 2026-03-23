@@ -300,3 +300,34 @@ overlay.addEventListener('click', e => {
 // X버튼 또는 이미지 클릭시 닫기
 popupClose.addEventListener('click', closePopup);
 popupView.addEventListener('click', closePopup);
+
+/* ── 이메일 보내기 ── */ 
+emailjs.init('velH76jflZaYXkST1'); //Public Key
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const btn = document.getElementById('submitBtn');
+  const msg = document.getElementById('formMsg');
+
+  btn.textContent = '전송 중...';
+  btn.disabled = true;
+
+  emailjs.send('service_4abgkoe', 'template_lq0phts', {
+    from_email: document.getElementById('fromEmail').value,
+    message: document.getElementById('message').value,
+  })
+  .then(() => {
+    msg.textContent = '메시지가 전송됐어요!';
+    msg.style.color = 'green';
+    btn.textContent = '보내기';
+    btn.disabled = false;
+    document.getElementById('contactForm').reset();
+  })
+  .catch(() => {
+    msg.textContent = '전송에 실패했어요. 다시 시도해주세요.';
+    msg.style.color = 'red';
+    btn.textContent = '보내기';
+    btn.disabled = false;
+  });
+});
