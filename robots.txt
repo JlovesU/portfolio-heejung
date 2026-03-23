@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jlovesu.github.io/portfolio-heejung/sitemap.xml
