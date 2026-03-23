@@ -221,6 +221,7 @@ document.querySelectorAll('.works-other').forEach(el => {
       el: el.querySelector('.swiper-scrollbar'),
       draggable: true,
     },
+    a11y: false,
     // mousewheel: {
     //   enabled: true,
     //   releaseOnEdges: true,
@@ -255,8 +256,8 @@ let lastFocusedEl = null;
 const initSlider = (wrapperId, slides) => {
   const wrapper = document.getElementById(wrapperId);
 
-  wrapper.innerHTML = slides.map(item => `
-    <div class="swiper-slide">
+  wrapper.innerHTML = slides.map(( item, index ) => `
+    <div class="swiper-slide" role="group" aria-label="${index + 1} / ${slides.length}">
       <button type="button" class="popup-trigger" aria-label="팝업으로 크게 보기">
         <img src="${item.src}" alt="${item.alt}" loading="lazy">
       </button>
@@ -264,7 +265,9 @@ const initSlider = (wrapperId, slides) => {
   `).join('');
 
   wrapper.querySelectorAll('.popup-trigger').forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+
       lastFocusedEl = btn;
       popupImg.classList.remove('loaded');
       popupImg.src = '';
@@ -287,19 +290,20 @@ initSlider('paintingSlider', paintingSlides);
 const closePopup = () => {
   overlay.classList.remove('active');
   body.classList.remove('scroll-hidden');
-  if (lastFocusedEl) lastFocusedEl.focus();
+  if (lastFocusedEl) lastFocusedEl.focus({ preventScroll: true });
 };
 // 딤드 클릭 닫기
 overlay.addEventListener('click', e => {
   if (e.target === overlay) {
     overlay.classList.remove('active');
     body.classList.remove('scroll-hidden');
-    if (lastFocusedEl) lastFocusedEl.focus();
+    if (lastFocusedEl) lastFocusedEl.focus({ preventScroll: true });
   }
 });
 // X버튼 또는 이미지 클릭시 닫기
 popupClose.addEventListener('click', closePopup);
 popupView.addEventListener('click', closePopup);
+
 
 /* ── 이메일 보내기 ── */ 
 emailjs.init('velH76jflZaYXkST1'); //Public Key

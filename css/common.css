@@ -1306,6 +1306,9 @@ nav a.active {
 	margin-bottom: 1rem;
 	font-weight: 500;
 }
+.contact-message h4 a {
+	color: var(--text);
+}
 #contactForm {
 	display: grid;
 	place-items: center;
@@ -1337,6 +1340,10 @@ nav a.active {
 #contact-sec .img-bg {
 	left: -1vh;
     top: -9vh;
+}
+#contact-sec .img-bg .obj-star.star4 {
+	top: 59%;
+	left: 30%;
 }
 #contact-sec .img-bg .obj-star.star5 {
 	top: 40%;
