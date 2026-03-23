@@ -154,17 +154,6 @@ const designSlides = [
   { src: 'work/design/img_mail7.webp', alt: '뉴스레터 디자인 7' }, 
 ];
 
-const designWrapper = document.getElementById('designSlider');
-
-designWrapper.innerHTML = designSlides.map(item => `
-  <div class="swiper-slide">
-    <button type="button" class="popup-trigger" aria-label="팝업으로 크게 보기">
-      <img src="${item.src}" alt="${item.alt}" loading="lazy">
-    </button>
-  </div>
-`).join('');
-
-
 //수채화 슬라이더 데이터
 const paintingSlides = [
   { src: 'work/painting/img_painting1.webp', alt: '수채화 1' },
@@ -202,15 +191,6 @@ const paintingSlides = [
   { src: 'work/painting/img_painting33.webp', alt: '수채화 33' },
 ];
 
-const paintingWrapper = document.getElementById('paintingSlider');
-
-paintingWrapper.innerHTML = paintingSlides.map(item => `
-  <div class="swiper-slide">
-    <button type="button" class="popup-trigger" aria-label="팝업으로 크게 보기">
-      <img src="${item.src}" alt="${item.alt}" loading="lazy">
-    </button>
-  </div>
-`).join('');
 
 document.querySelectorAll('.works-other').forEach(el => {
   new Swiper(el, {
@@ -258,7 +238,7 @@ const initSlider = (wrapperId, slides) => {
 
   wrapper.innerHTML = slides.map(( item, index ) => `
     <div class="swiper-slide" role="group" aria-label="${index + 1} / ${slides.length}">
-      <button type="button" class="popup-trigger" aria-label="팝업으로 크게 보기">
+      <button type="button" class="popup-trigger" aria-label="${item.alt} 팝업으로 크게 보기">
         <img src="${item.src}" alt="${item.alt}" loading="lazy">
       </button>
     </div>
@@ -290,20 +270,43 @@ initSlider('paintingSlider', paintingSlides);
 const closePopup = () => {
   overlay.classList.remove('active');
   body.classList.remove('scroll-hidden');
-  if (lastFocusedEl) lastFocusedEl.focus({ preventScroll: true });
+  if (lastFocusedEl) lastFocusedEl.focus();
 };
 // 딤드 클릭 닫기
 overlay.addEventListener('click', e => {
   if (e.target === overlay) {
     overlay.classList.remove('active');
     body.classList.remove('scroll-hidden');
-    if (lastFocusedEl) lastFocusedEl.focus({ preventScroll: true });
+    if (lastFocusedEl) lastFocusedEl.focus();
+  }
+});
+overlay.addEventListener('keydown', e => {
+  if (e.key !== 'Tab') return;
+  const focusable = popupBox.querySelectorAll('button, a, input, textarea');
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+
+  if (e.shiftKey) {
+    if (document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    }
+  } else {
+    if (document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
   }
 });
 // X버튼 또는 이미지 클릭시 닫기
 popupClose.addEventListener('click', closePopup);
 popupView.addEventListener('click', closePopup);
-
+// esc키로 닫기
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && overlay.classList.contains('active')) {
+    closePopup();
+  }
+});
 
 /* ── 이메일 보내기 ── */ 
 emailjs.init('velH76jflZaYXkST1'); //Public Key

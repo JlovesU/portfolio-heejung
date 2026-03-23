@@ -545,7 +545,7 @@ nav a.active {
 	right: 10.5%;
 	top: 16%;
 	background-image: url(../images/img_bg_memo.webp);
-	width: 5vw;
+	width: 4vw;
 	aspect-ratio: 89 / 105;
 	opacity: 0;
 	animation: leftdown .5s ease-out .9s forwards;
@@ -1313,6 +1313,14 @@ nav a.active {
 	display: grid;
 	place-items: center;
 	gap: .5rem;
+}
+#contactForm label {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	white-space: nowrap;
 }
 #contactForm button {
 	width: 100%;
