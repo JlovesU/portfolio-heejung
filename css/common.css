@@ -1301,13 +1301,19 @@ nav a.active {
 	/* border: 1px solid var(--surface); */
 	font-size: clamp(0.8rem, 0.7648rem + 0.1502vw, 0.9rem);
 }
-.contact-message h4 {
+.contact-message .message-title {
 	font-size: clamp(0.85rem, 0.7972rem + 0.2254vw, 1rem); 
 	margin-bottom: 1rem;
 	font-weight: 500;
 }
-.contact-message h4 a {
+.contact-message .message-title a {
+	text-decoration: none;
+	background: linear-gradient(135deg, #7c3aed, #a855f7, #ec4899);
+	background-size: 100% 2px;
+	background-repeat: no-repeat;
+	background-position: 0 100%;
 	color: var(--text);
+	padding-bottom: 3px;
 }
 #contactForm {
 	display: grid;
@@ -1682,7 +1688,7 @@ footer strong {
 		margin-top: 1rem;
 		padding: .8rem 1rem 1.8rem;
 	}
-	.contact-message h4 {
+	.contact-message .message-title {
 		margin-bottom: .5rem;
 	}
 	#contactForm {
