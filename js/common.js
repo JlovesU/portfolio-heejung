@@ -319,14 +319,14 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   })
   .then(() => {
     msg.textContent = '메시지가 전송됐어요!';
-    msg.style.color = 'green';
+    // msg.style.color = 'green';
     btn.textContent = '보내기';
     btn.disabled = false;
     document.getElementById('contactForm').reset();
   })
   .catch(() => {
     msg.textContent = '전송에 실패했어요. 다시 시도해주세요.';
-    msg.style.color = 'red';
+    // msg.style.color = 'red';
     btn.textContent = '보내기';
     btn.disabled = false;
   });
