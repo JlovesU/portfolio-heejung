@@ -8,11 +8,11 @@
   <meta name="description" content="웹퍼블리셔 박희정의 포트폴리오 사이트입니다. HTML, CSS, JavaScript 기반의 반응형 웹으로 퍼블리싱했으며 프로젝트를 소개합니다.">
   <meta name="robots" content="index, follow">
   <title>박희정 웹퍼블리셔 포트폴리오</title>
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="박희정의 웹 포트폴리오" />
-  <meta property="og:description" content="웹퍼블리셔 박희정의 웹포트폴리오 입니다." />
-  <meta property="og:image" content="https://jlovesu.github.io/portfolio-heejung/images/img_share.jpg" />
-  <meta property="og:url" content="https://jlovesu.github.io/portfolio-heejung/" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="박희정의 웹 포트폴리오">
+  <meta property="og:description" content="웹퍼블리셔 박희정의 웹포트폴리오 입니다.">
+  <meta property="og:image" content="https://jlovesu.github.io/portfolio-heejung/images/img_share.jpg">
+  <meta property="og:url" content="https://jlovesu.github.io/portfolio-heejung/">
   <link rel="canonical" href="https://jlovesu.github.io/portfolio-heejung/">
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
@@ -21,8 +21,10 @@
   rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="css/common.css">
 
+  <link rel="preload" as="image" href="images/img_bg_computer.webp">
+
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RG1LRJFTT6"></script>
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-RG1LRJFTT6"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -95,8 +97,8 @@
       <!-- <span class="obj-sun">sun</span> -->
       <span class="obj-tree1">tree1</span>
       <span class="obj-tree2">tree2</span>
-      <span class="obj-folder">folder</span>
-      <span class="obj-memo">memo</span>
+      <!-- <span class="obj-folder">folder</span>
+      <span class="obj-memo">memo</span> -->
       <span class="obj-load"><i>load</i></span>
       <span class="obj-star star1"><i>✦</i></span>
       <span class="obj-star star2"><i>✦</i></span>
@@ -121,8 +123,8 @@
       <div class="about-wrap">
         <div class="about-profile">
           <div class="avatar-wrap">
-            <div class="avatar"><video muted autoplay loop playsinline>
-                <source src="images/me_avi.mp4" type="video/mp4">
+            <div class="avatar"><video preload="none" poster="images/me_avi_poster.webp" muted autoplay loop playsinline>
+                <source data-src="images/me_avi.mp4" type="video/mp4">
               </video></div>
             <!-- <div class="avatar-ring"></div> -->
           </div><!--//avatar-wrap-->
@@ -287,8 +289,8 @@
 
       <h3 class="sec-subtitle" data-aos="fade-up">현대백화점면세점 모션 위주 이벤트</h3>
       <p class="sec-subtext" data-aos="fade-up">주로 PC버전에 모션 작업이 되어있습니다.</p>
-      <div class="works-wrap2">
-        <div class="work-card" data-aos="fade" data-aos-delay="300">
+      <div class="works-wrap2" data-aos="fade-up">
+        <div class="work-card">
           <div class="work-thumb">
             <a href="work/event/20210701_bluemarble/ko_bluemarble.html" target="_blank" aria-label="부루마블 이벤트 PC버전 새 탭으로 열기">
               <img src="images/img_project3.webp" alt="부루마블 이벤트" loading="lazy">
@@ -302,7 +304,7 @@
           </div>
           <div class="work-view"><a href="work/event/20210701_bluemarble/ko_bluemarble.html" target="_blank" class="work-link" aria-label="부루마블 이벤트 PC버전 새 탭으로 열기">PC View →</a></div>
         </div><!--//work-card-->
-        <div class="work-card" data-aos="fade" data-aos-delay="100">
+        <div class="work-card">
           <div class="work-thumb">
             <a href="work/event/20230220_spring/ko_spring.html" target="_blank" aria-label="패션 브랜드 이벤트 PC버전 새 탭으로 열기">
               <img src="images/img_project6.webp" alt="패션 브랜드 이벤트" loading="lazy">
@@ -315,7 +317,7 @@
           </div>
           <div class="work-view"><a href="work/event/20230220_spring/ko_spring.html" target="_blank" class="work-link" aria-label="패션 브랜드 이벤트 PC버전 새 탭으로 열기">PC View →</a></div>
         </div><!--//work-card-->
-        <div class="work-card" data-aos="fade" data-aos-delay="400">
+        <div class="work-card">
           <div class="work-thumb">
             <a href="work/event/20230912_luxury_duty_free_new/ko_luxury_duty_free_new.html" target="_blank" aria-label="럭셔리 듀티 프리 이벤트 PC버전 새 탭으로 열기">
               <img src="images/img_project9.webp" alt="럭셔리 듀티 프리 이벤트" loading="lazy">
@@ -328,7 +330,7 @@
           </div>
           <div class="work-view"><a href="work/event/20230912_luxury_duty_free_new/ko_luxury_duty_free_new.html" target="_blank" class="work-link" aria-label="럭셔리 듀티 프리 이벤트 PC버전 새 탭으로 열기">PC View →</a></div>
         </div><!--//work-card-->
-        <div class="work-card" data-aos="fade" data-aos-delay="200">
+        <div class="work-card">
           <div class="work-thumb">
             <a href="work/event/20240131_luxury_duty_free/ko_luxury_duty_free.html" target="_blank" aria-label="럭셔리 콜랙션 이벤트 PC버전 새 탭으로 열기">
               <img src="images/img_project12.webp" alt="럭셔리 콜랙션 이벤트" loading="lazy">
@@ -341,7 +343,7 @@
           </div>
           <div class="work-view"><a href="work/event/20240131_luxury_duty_free/ko_luxury_duty_free.html" target="_blank" class="work-link" aria-label="럭셔리 콜랙션 이벤트 PC버전 새 탭으로 열기">PC View →</a></div>
         </div><!--//work-card-->
-        <div class="work-card" data-aos="fade" data-aos-delay="100">
+        <div class="work-card">
           <div class="work-thumb">
             <a href="work/event/20230817_mens_fashion/ko_mens_fashion.html" target="_blank" aria-label="맨즈 패션 위크 이벤트 PC버전 새 탭으로 열기">
               <img src="images/img_project8.webp" alt="맨즈 패션 위크 이벤트" loading="lazy">
@@ -354,7 +356,7 @@
           </div>
           <div class="work-view"><a href="work/event/20230817_mens_fashion/ko_mens_fashion.html" target="_blank" class="work-link" aria-label="맨즈 패션 위크 이벤트 PC버전 새 탭으로 열기">PC View →</a></div>
         </div><!--//work-card-->
-        <div class="work-card" data-aos="fade" data-aos-delay="300">
+        <div class="work-card">
           <div class="work-thumb">
             <a href="work/event/20240124_seoll/ko_seoll.html" target="_blank" aria-label="2024년 설 이벤트 PC버전 새 탭으로 열기">
               <img src="images/img_project10.webp" alt="2024년 설 이벤트" loading="lazy">
@@ -367,7 +369,7 @@
           </div>
           <div class="work-view"><a href="work/event/20240124_seoll/ko_seoll.html" target="_blank" class="work-link" aria-label="2024년 설 이벤트 PC버전 새 탭으로 열기">PC View →</a></div>
         </div><!--//work-card-->
-        <div class="work-card" data-aos="fade" data-aos-delay="200">
+        <div class="work-card">
           <div class="work-thumb">
             <a href="work/event/20230125_abroad_cosmetic/ko_abroad_cosmetic.html" target="_blank" aria-label="설맞이 이벤트 PC버전 새 탭으로 열기">
               <img src="images/img_project15.webp" alt="설맞이 이벤트" loading="lazy">
@@ -380,7 +382,7 @@
           </div>
           <div class="work-view"><a href="work/event/20230125_abroad_cosmetic/ko_abroad_cosmetic.html" target="_blank" class="work-link" aria-label="설맞이 이벤트 PC버전 새 탭으로 열기">PC View →</a></div>
         </div><!--//work-card-->
-        <div class="work-card" data-aos="fade" data-aos-delay="400">
+        <div class="work-card">
           <div class="work-thumb">
             <a href="work/event/20240130_galaxy/ko_galaxy.html" target="_blank" aria-label="갤럭시 S24 시리즈 이벤트 PC버전 새 탭으로 열기">
               <img src="images/img_project11.webp" alt="갤럭시 S24 시리즈 이벤트" loading="lazy">
@@ -393,7 +395,7 @@
           </div>
           <div class="work-view"><a href="work/event/20240130_galaxy/ko_galaxy.html" target="_blank" class="work-link" aria-label="갤럭시 S24 시리즈 이벤트 PC버전 새 탭으로 열기">PC View →</a></div>
         </div><!--//work-card-->
-        <div class="work-card" data-aos="fade" data-aos-delay="200">
+        <div class="work-card">
           <div class="work-thumb">
             <a href="work/event/20240806_moschino/ko_moschino.html" target="_blank" aria-label="모스키노 이벤트 PC버전 새 탭으로 열기">
               <img src="images/img_project13.webp" alt="모스키노 이벤트" loading="lazy">
@@ -406,7 +408,7 @@
           </div>
           <div class="work-view"><a href="work/event/20240806_moschino/ko_moschino.html" target="_blank" class="work-link" aria-label="모스키노 이벤트 PC버전 새 탭으로 열기">PC View →</a></div>
         </div><!--//work-card-->
-        <div class="work-card" data-aos="fade" data-aos-delay="100">
+        <div class="work-card">
           <div class="work-thumb">
             <a href="work/event/20230323_spring_mood/ko_spring_mood.html" target="_blank" aria-label="스프링 무드 이벤트 PC버전 새 탭으로 열기">
               <img src="images/img_project7.webp" alt="스프링 무드 이벤트" loading="lazy">
@@ -419,7 +421,7 @@
           </div>
           <div class="work-view"><a href="work/event/20230323_spring_mood/ko_spring_mood.html" target="_blank" class="work-link" aria-label="스프링 무드 이벤트 PC버전 새 탭으로 열기">PC View →</a></div>
         </div><!--//work-card-->
-        <!-- <div class="work-card" data-aos="fade">
+        <!-- <div class="work-card">
           <div class="work-thumb">
             <a href="work/event/20231207_plus_week/ko_plus_week.html" target="_blank" aria-label="플러스 위크 이벤트 PC버전 새 탭으로 열기">
               <img src="images/img_project14.webp" alt="플러스 위크 이벤트" loading="lazy">
@@ -518,7 +520,7 @@
           <a href="images/ParkHeejung_resume.pdf" class="citem resume" target="_blank">Resume</a>
         </div>
         <div class="contact-message">
-          <p class="message-title">Drop me a message at <a href="mailto:parkvamp@gmail.com">parkvamp@gmail.com</a></ㅔ>
+          <p class="message-title">Drop me a message at <a href="mailto:parkvamp@gmail.com">parkvamp@gmail.com</a>
           <form id="contactForm">
             <label for="fromEmail">이메일 주소</label><input type="email" id="fromEmail" placeholder="보내는 분 이메일 주소" required>
             <label for="message">메시지</label><textarea id="message" placeholder="메시지를 입력해주세요" required></textarea>
@@ -555,7 +557,7 @@
   <div class="popup-overlay" id="popupOverlay">
     <div class="popup-box" id="popupBox">
       <div class="popup-view">
-        <img id="popupImg" src="" alt="">
+        <img id="popupImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="팝업이미지">
       </div>
       <button class="popup-close" id="popupClose" aria-label="팝업닫기">✕</button>
     </div>
