@@ -1104,7 +1104,7 @@ nav a.active {
 	display: inline-flex;
 	align-items: center;
 	gap: 5px;
-	font-size: clamp(0.6rem, 0.5225rem + 0.3305vw, 0.82rem);
+	font-size: clamp(0.65rem, 0.6087rem + 0.1761vw, 0.82rem);
 	font-weight: 600;
 	background: var(--gradient);
 	-webkit-background-clip: text;
@@ -1121,6 +1121,22 @@ nav a.active {
 	.popup-view::-webkit-scrollbar-thumb:hover {
 		background: rgba(0, 0, 0, 0.8);
 	}
+}
+.work-link:before {
+	content: "";
+	display: inline-flex;
+	width: 18px;
+	height:18px;
+	background-size: contain;
+}
+.work-link.ico-pc:before {
+	background-image: url(../images/ico_pc.svg);
+}
+.work-link.ico-mo:before {
+	background-image: url(../images/ico_mo.svg);
+}
+.work-link.ico-git:before {
+	background-image: url(../images/ico_git.svg);
 }
 
 /* 4열 타입 포트폴리오*/
@@ -1661,7 +1677,10 @@ footer strong {
 		gap: 1rem;
 		grid-template-columns: repeat(auto-fill, minmax(80%, 1fr));
 	}
-	.work-view {left: 1rem;}
+	.work-view {
+		left: 1rem;
+		bottom: 1rem;
+	}
     .works-wrap2 {
 		gap: 1rem;
 		grid-template-columns: repeat(2, 1fr);

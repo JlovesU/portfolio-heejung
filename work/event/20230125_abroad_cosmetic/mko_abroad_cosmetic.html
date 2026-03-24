@@ -5,20 +5,19 @@
     <title>현대백화점인터넷면세점</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <script src="../../../M_KO/js/M_KO/jquery-1.12.4.min.js"></script>
-    <script src="../../../M_KO/js/M_KO/jquery-ui.js"></script>
-    <script src="../../../M_KO/js/M_KO/jquery.bxslider.js"></script>
-    <script src="../../../M_KO/js/M_KO/swiper.min.js"></script>
-    <script src="../../../M_KO/js/M_KO/common.ui.js"></script>
-    <link rel="stylesheet" href="../../../M_KO/css/M_KO/jquery-ui.css">
-    <link rel="stylesheet" href="../../../M_KO/css/M_KO/swiper.min.css">
-    <link rel="stylesheet" href="../../../M_KO/css/M_KO/common.css">
-    <link rel="stylesheet" href="../../../M_KO/css/M_KO/layout.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+	<script src="../js/m_common.ui.js"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/jquery-ui.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+	<link rel="stylesheet" href="../css/m_common.css">
+	<link rel="stylesheet" href="../css/m_layout.css">
+
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- S : header -->
-    <script src="../../../M_KO/html/include/header.js"></script>
-    <!-- E : header-->
     <!-- S : container -->
     <div class="container new_type">
         <div class="gnbev_view">
@@ -45,28 +44,65 @@
 /* rabbit */
 .img_rabbit1 {position:absolute; bottom:7%; left:10%; display:inline-block; -webkit-animation:ani-hop 1.5s infinite; animation:ani-hop 1.25s infinite; z-index:2; width:27%;}
 .img_rabbit2 {position:absolute; bottom:7%; left:60%; display:inline-block; -webkit-animation:ani-hop2 2s infinite; animation:ani-hop2 2s infinite; z-index:2; width:27%;}
-.img_top_bg1 {position:absolute; left:0; bottom:0; display:inline-block; width:350%; -webkit-animation:ani-mountain1 25s infinite linear; animation:ani-mountain1 25s infinite linear;}
-.img_top_bg2 {position:absolute; left:0; bottom:0; display:inline-block; width:350%; -webkit-animation:ani-mountain2 25s infinite linear; animation:ani-mountain2 25s infinite linear;}
+
+.img_top_bg1,
+.img_top_bg2 {position: absolute; left: 0; bottom: 0; width: 350%; will-change: transform;}
+.img_top_bg1 {animation: ani-mountain 25s infinite linear;}
+.img_top_bg2 {left: 350%; animation: ani-mountain 25s infinite linear;}
+
+/* .img_top_bg1 {position:absolute; left:0; bottom:0; display:inline-block; width:350%; -webkit-animation:ani-mountain1 25s infinite linear; animation:ani-mountain1 25s infinite linear;}
+.img_top_bg2 {position:absolute; left:0; bottom:0; display:inline-block; width:350%; -webkit-animation:ani-mountain2 25s infinite linear; animation:ani-mountain2 25s infinite linear;} */
 @keyframes ani-hop {
-    0% {transform:rotate(-5deg)}
-    40% {transform:rotate(-15deg) translatey(-40px);}
-    65% {transform:rotate(20deg) translatey(-40px);}
-    90% {transform:rotate(30deg) translatey(-10px)}
-    100% {transform:rotate(20deg) translatey(5px)}
+	/* 0% {transform:rotate(-5deg)}
+	40% {transform:rotate(-15deg) translatey(-80px);}
+	65% {transform:rotate(20deg) translatey(-80px);}
+	90% {transform:rotate(30deg) translatey(-20px)}
+	100% {transform:rotate(20deg) translatey(5px)} */
+	/* 0%. 시작: 지면, 살짝 웅크림 (기본 자세) */
+    0%, 100% {
+        transform: rotate(-3deg) translateY(0);
+        animation-timing-function: ease-out; /* 올라갈 때 서서히 가속 */
+    }
+    /* 40%. 최고점: 가장 높은 곳, 고개 살짝 숙임 (점프의 반동) */
+    40% {
+        transform: rotate(-10deg) translateY(-60px); /* 높이는 살짝 낮춤 */
+        animation-timing-function: ease-in; /* 내려올 때 서서히 가속 */
+    }
+    /* 65%~90%. 하강: 고개를 자연스럽게 듦 */
+    70% {
+        transform: rotate(10deg) translateY(-20px);
+    }
+    /* 95%. 착지 직전: 반동으로 살짝 숙임 */
+    95% {
+        transform: rotate(5deg) translateY(5px);
+    }
 }
 @keyframes ani-hop2 {
-    10% {transform:rotate(-5deg)}
-    55% {transform:rotate(-15deg) translatey(-60px);}
-    75% {transform:rotate(40deg) translatey(-40px);}
-    100% {transform:rotate(40deg) translatey(5px)}
+	/* 10% {transform:rotate(-5deg)}
+	55% {transform:rotate(-15deg) translatey(-120px);}
+	75% {transform:rotate(40deg) translatey(-100px);}
+	100% {transform:rotate(40deg) translatey(5px)} */
+	0%, 100% {
+        transform: rotate(-3deg) translateY(0);
+        animation-timing-function: ease-out; /* 올라갈 때 서서히 가속 */
+    }
+    /* 40%. 최고점: 가장 높은 곳, 고개 살짝 숙임 (점프의 반동) */
+    40% {
+        transform: rotate(-10deg) translateY(-100px); /* 높이는 살짝 낮춤 */
+        animation-timing-function: ease-in; /* 내려올 때 서서히 가속 */
+    }
+    /* 65%~90%. 하강: 고개를 자연스럽게 듦 */
+    70% {
+        transform: rotate(10deg) translateY(-20px);
+    }
+    /* 95%. 착지 직전: 반동으로 살짝 숙임 */
+    95% {
+        transform: rotate(5deg) translateY(5px);
+    }
 }
-@keyframes ani-mountain1 {
-    from {transform: translateX(100%);}
-    to {transform: translateX(0%);}
-}	
-@keyframes ani-mountain2 {
-    from { transform: translateX(0%); }
-    to { transform: translateX(-100%); }
+@keyframes ani-mountain {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); } /* 이미지 너비만큼 왼쪽으로 이동 */
 }
 
 /* evt_sect-1  */
@@ -179,9 +215,6 @@ $(document).ready(function(){
 
 
 
-
-
-
                 </div><!--//ev_editarea-->
                 <div class="attention_area pdb_no">
                     <p class="attention_tit">유의사항</p>
@@ -193,9 +226,6 @@ $(document).ready(function(){
         </div><!--//gnbev_view-->
     </div>
     <!-- E : container -->
-    <!-- S : footer -->
-    <script src="../../../M_KO/html/include/footer.js"></script>
-    <!-- E : footer -->
     <div class="gnb_dimmed"></div>
 </body>
 </html>
