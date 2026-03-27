@@ -134,7 +134,7 @@ function openMobile(e){
 // });
 
 /* ── 그 밖의 작업 스와이퍼 ── */
-//디자인 슬라이더 데이터
+//디자인 팝업 슬라이더 데이터
 const designSlides = [
   { src: 'work/design/img_popup1.webp', alt: '팝업 디자인 1' },
   { src: 'work/design/img_popup2.webp', alt: '팝업 디자인 2' },
@@ -145,6 +145,10 @@ const designSlides = [
   { src: 'work/design/img_popup7.webp', alt: '팝업 디자인 7' },
   { src: 'work/design/img_popup8.webp', alt: '팝업 디자인 8' },
   { src: 'work/design/img_popup9.webp', alt: '팝업 디자인 9' },
+];
+
+//디자인 뉴스레터 슬라이더 데이터
+const letterSlides = [
   // { src: 'work/design/img_mail1.webp', alt: '뉴스레터 디자인 1' },
   { src: 'work/design/img_mail2.webp', alt: '뉴스레터 디자인 2' },
   { src: 'work/design/img_mail3.webp', alt: '뉴스레터 디자인 3' },
@@ -225,18 +229,18 @@ document.querySelectorAll('.works-other').forEach(el => {
 
 /* ── 슬라이드 클릭 → 팝업 열기 ── */ 
 const overlay = document.getElementById('popupOverlay');
-const popupView = document.querySelector('.popup-view');
-const popupImg = document.getElementById('popupImg');
+const popupBox = document.getElementById('popupBox');
 const popupClose = document.getElementById('popupClose');
 const body = document.querySelector('body');
 
 let lastFocusedEl = null;
+let popupSwiper = null;
 
 // 슬라이드 클릭 → 팝업
-const initSlider = (wrapperId, slides) => {
+const initSlider = (wrapperId, slides, popupClass) => {
   const wrapper = document.getElementById(wrapperId);
 
-  wrapper.innerHTML = slides.map(( item, index ) => `
+  wrapper.innerHTML = slides.map((item, index) => `
     <div class="swiper-slide" role="group" aria-label="${index + 1} / ${slides.length}">
       <button type="button" class="popup-trigger" aria-label="${item.alt} 팝업으로 크게 보기">
         <img src="${item.src}" alt="${item.alt}" loading="lazy">
@@ -244,39 +248,71 @@ const initSlider = (wrapperId, slides) => {
     </div>
   `).join('');
 
-  wrapper.querySelectorAll('.popup-trigger').forEach(btn => {
+  wrapper.querySelectorAll('.popup-trigger').forEach((btn, index) => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
-
       lastFocusedEl = btn;
-      popupImg.classList.remove('loaded');
-      popupImg.src = '';
-      popupImg.onload = () => popupImg.classList.add('loaded');
-      popupImg.src = btn.querySelector('img').src;
-      popupImg.alt = btn.querySelector('img').alt;
+
+      popupBox.className = 'popup-box'; // 초기화
+      if (popupClass) {
+        popupBox.classList.add(popupClass); // 전달받은 클래스 추가 (예: 'is-design')
+      }
+
+      // 팝업 스와이퍼 슬라이드 생성
+      const swiperWrapper = document.getElementById('popup-swiper-wrapper');
+      swiperWrapper.innerHTML = slides.map(item => `
+        <div class="swiper-slide">
+          <img src="${item.src}" alt="${item.alt}">
+        </div>
+      `).join('');
+
+      // 기존 스와이퍼 destroy 후 재초기화
+      if (popupSwiper) {
+        popupSwiper.destroy(true, true);
+        popupSwiper = null;
+      }
+
+      popupSwiper = new Swiper('.other-popup-swiper', {
+        initialSlide: index,  // 클릭한 이미지부터 시작
+        // autoHeight: true,
+        loop: true,
+        centeredSlides: true, 
+        // pagination: {
+        //   el: '.popup-box .swiper-pagination',
+        // },
+        navigation: {
+          nextEl: '.popup-box .swiper-button-next',
+          prevEl: '.popup-box .swiper-button-prev',
+        },
+        keyboard: { enabled: true },
+      });
+
       overlay.classList.add('active');
-      body.classList.add('scroll-hidden');
-      popupView.scrollTop = 0;
+      // body.classList.add('scroll-hidden');
       popupClose.focus();
+
     });
   });
 };
 
 // 각각 호출만 하면 끝
-initSlider('designSlider', designSlides);
-initSlider('paintingSlider', paintingSlides);
+initSlider('designSlider', designSlides, 'is-design');
+initSlider('letterSlider', letterSlides, 'is-letter');
+initSlider('paintingSlider', paintingSlides, 'is-painting');
 
 // 닫기 공통 함수
 const closePopup = () => {
   overlay.classList.remove('active');
-  body.classList.remove('scroll-hidden');
+  popupBox.className = 'popup-box';
+  // body.classList.remove('scroll-hidden');
   if (lastFocusedEl) lastFocusedEl.focus();
 };
 // 딤드 클릭 닫기
 overlay.addEventListener('click', e => {
   if (e.target === overlay) {
     overlay.classList.remove('active');
-    body.classList.remove('scroll-hidden');
+    popupBox.className = 'popup-box';
+    // body.classList.remove('scroll-hidden');
     if (lastFocusedEl) lastFocusedEl.focus();
   }
 });
@@ -300,7 +336,7 @@ overlay.addEventListener('keydown', e => {
 });
 // X버튼 또는 이미지 클릭시 닫기
 popupClose.addEventListener('click', closePopup);
-popupView.addEventListener('click', closePopup);
+
 // esc키로 닫기
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && overlay.classList.contains('active')) {
