@@ -1082,6 +1082,8 @@ nav a.active {
 .work-role {
 	margin-bottom: 1vh;
 	padding-left: 14px;
+	font-weight: 500;
+	color: var(--text);
 }
 .work-role:before {
 	content: "✦";

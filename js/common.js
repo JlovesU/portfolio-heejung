@@ -136,14 +136,14 @@ function openMobile(e){
 /* ── 그 밖의 작업 스와이퍼 ── */
 //디자인 팝업 슬라이더 데이터
 const designSlides = [
-  { src: 'work/design/img_popup1.webp', alt: '팝업 디자인 1' },
   { src: 'work/design/img_popup2.webp', alt: '팝업 디자인 2' },
   { src: 'work/design/img_popup3.webp', alt: '팝업 디자인 3' },
+  { src: 'work/design/img_popup7.webp', alt: '팝업 디자인 7' },
+  { src: 'work/design/img_popup8.webp', alt: '팝업 디자인 8' },
+  { src: 'work/design/img_popup1.webp', alt: '팝업 디자인 1' },
   { src: 'work/design/img_popup4.webp', alt: '팝업 디자인 4' },
   { src: 'work/design/img_popup5.webp', alt: '팝업 디자인 5' },
   { src: 'work/design/img_popup6.webp', alt: '팝업 디자인 6' },
-  { src: 'work/design/img_popup7.webp', alt: '팝업 디자인 7' },
-  { src: 'work/design/img_popup8.webp', alt: '팝업 디자인 8' },
   { src: 'work/design/img_popup9.webp', alt: '팝업 디자인 9' },
 ];
 
