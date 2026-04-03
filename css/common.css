@@ -1054,12 +1054,12 @@ nav a.active {
 .work-body p {
 	position: relative;
 	font-size: clamp(0.8rem, 0.7648rem + 0.1502vw, 0.9rem);
-	color: var(--muted);
+	color: var(--text);
 	line-height: 1.7;
 }
 .work-body ul {
 	font-size: clamp(0.8rem, 0.7648rem + 0.1502vw, 0.9rem);
-	color: var(--muted);
+	color: var(--text);
 	line-height: 1.7;
 	padding: 0;
 	margin: 2px 0 0 0;
